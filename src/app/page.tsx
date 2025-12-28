@@ -13,14 +13,12 @@ export default function Home() {
       interval = setInterval(() => {
         setTime((prevTime) => prevTime + 1);
       }, 1000);
-    } else if (!isRunning && time !== 0) {
-      if (interval) clearInterval(interval);
     }
     
     return () => {
       if (interval) clearInterval(interval);
     };
-  }, [isRunning, time]);
+  }, [isRunning]);
 
   const formatTime = (seconds: number) => {
     const hrs = Math.floor(seconds / 3600);
