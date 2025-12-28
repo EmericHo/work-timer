@@ -8,6 +8,18 @@ export default function WorkCalculator() {
   const [breakEnd, setBreakEnd] = useState("");
   const [endTime, setEndTime] = useState("");
   const [dailyHoursTarget, setDailyHoursTarget] = useState("7");
+  const [currentTime, setCurrentTime] = useState(new Date());
+
+  // Update current time every minute for real-time calculations when no end time is set
+  useEffect(() => {
+    if (!endTime && startTime) {
+      const interval = setInterval(() => {
+        setCurrentTime(new Date());
+      }, 60000); // Update every minute
+
+      return () => clearInterval(interval);
+    }
+  }, [endTime, startTime]);
 
   // Load from localStorage on mount
   useEffect(() => {
@@ -39,8 +51,12 @@ export default function WorkCalculator() {
 
   // Convert time string (HH:MM) to minutes since midnight
   const timeToMinutes = (time: string): number => {
-    if (!time) return 0;
-    const [hours, minutes] = time.split(":").map(Number);
+    if (!time || !time.includes(":")) return 0;
+    const parts = time.split(":");
+    if (parts.length !== 2) return 0;
+    const hours = parseInt(parts[0], 10);
+    const minutes = parseInt(parts[1], 10);
+    if (isNaN(hours) || isNaN(minutes)) return 0;
     return hours * 60 + minutes;
   };
 
@@ -78,8 +94,7 @@ export default function WorkCalculator() {
       }
     } else if (start) {
       // Calculate current work time (without end time)
-      const now = new Date();
-      const currentMinutes = now.getHours() * 60 + now.getMinutes();
+      const currentMinutes = currentTime.getHours() * 60 + currentTime.getMinutes();
       workedMinutes = currentMinutes - start;
       
       if (breakStart && breakEnd) {
@@ -105,10 +120,13 @@ export default function WorkCalculator() {
 
     let targetCompletionMinutes = start + targetMinutes;
 
-    // Add break time if applicable
+    // Add break time if both start and end are set
     if (breakStart && breakEnd) {
       const pauseMinutes = pauseEnd - pauseStart;
       targetCompletionMinutes += pauseMinutes;
+    } else if (breakStart) {
+      // If break has started but not ended, assume a 1-hour break for estimation
+      targetCompletionMinutes += 60;
     }
 
     return targetCompletionMinutes;
