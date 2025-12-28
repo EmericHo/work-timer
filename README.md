@@ -1,52 +1,63 @@
 # Work Timer - Timer Focus Gratuit pour Travail
 
-Application Next.js 15 de suivi de temps et technique Pomodoro pour améliorer la productivité.
+A productivity timer application built with Next.js 15, React, TypeScript, and Tailwind CSS, featuring Pomodoro technique support.
 
-## Fonctionnalités
+## Features
 
-- **Timer Standard**: Timer HH:MM:SS avec boutons Démarrer/Arrêter/Reset
-- **Mode Pomodoro Focus**: Cycles de 25 minutes de travail / 5 minutes de pause
-- **Notifications Browser**: Alertes automatiques pour les transitions Pomodoro
-- **Persistance LocalStorage**: Sauvegarde automatique de l'état du timer
-- **AdSense Ready**: Placeholders pour publicités (300x250 sidebar, 728x90 footer)
-- **SEO Optimisé**: Metadata complète, og:image, schema WebApplication
-- **Accessibilité**: aria-live pour timer, labels, contraste 4.5:1, focus visible
-- **Design Responsive**: Tailwind CSS mobile-first avec minimum 16px de police
+- **Timer Standard**: Full HH:MM:SS timer with Start/Stop/Reset controls
+- **Mode Pomodoro Focus**: 25 minutes work / 5 minutes break cycles with automatic switching
+- **Browser Notifications**: Desktop notifications when Pomodoro sessions complete
+- **LocalStorage Persistence**: Timer state is saved and restored on page reload
+- **AdSense Ready**: Placeholder components for 300x250 sidebar and 728x90 footer ads
+- **SEO Optimized**: Complete metadata, Open Graph tags, and WebApplication schema
+- **Accessibility**: 
+  - `aria-live` regions for timer updates
+  - `aria-label` on all interactive elements
+  - WCAG 4.5:1 contrast ratios
+  - Visible focus indicators
+- **Responsive Design**: Mobile-first Tailwind CSS with minimum 16px font size
+- **French Localization**: Complete French interface
 
-## Installation
+## Getting Started
+
+First, install the dependencies:
 
 ```bash
 npm install
 ```
 
-## Développement
+Then, run the development server:
 
 ```bash
 npm run dev
 ```
 
-Ouvrez [http://localhost:3000](http://localhost:3000) dans votre navigateur.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the application.
 
-## Build Production
+## Development Commands
 
-```bash
-npm run build
-npm start
-```
+- `npm run dev` - Start the development server
+- `npm run build` - Build the application for production
+- `npm run start` - Start the production server
+- `npm run lint` - Run ESLint to check code quality
 
-## Structure
+## Project Structure
 
-- `/app` - Pages Next.js (App Router)
-  - `/timer` - Page du timer avec mode Pomodoro
-- `/components` - Composants React réutilisables
-  - `PomodoroFocus.tsx` - Composant Pomodoro avec notifications
-  - `AdSenseAd.tsx` - Placeholder pour AdSense
+- `/app` - Next.js App Router pages
+  - `/timer` - Timer page with Pomodoro mode
+- `/components` - Reusable React components
+  - `PomodoroFocus.tsx` - Pomodoro component with notifications
+  - `AdSenseAd.tsx` - AdSense placeholder component
 
-## Technologies
+## Technologies Used
 
-- Next.js 15
-- React 19
-- TypeScript
-- Tailwind CSS
-- LocalStorage API
-- Notifications API
+- [Next.js 15](https://nextjs.org/) - React framework with App Router
+- [React 19](https://reactjs.org/) - UI library
+- [TypeScript](https://www.typescriptlang.org/) - Type safety
+- [Tailwind CSS](https://tailwindcss.com/) - Styling framework
+- LocalStorage API - State persistence
+- Notifications API - Browser alerts
+
+## License
+
+MIT License - see [LICENSE](LICENSE) file for details.
