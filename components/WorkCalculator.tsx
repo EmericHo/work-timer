@@ -109,9 +109,21 @@ export default function WorkCalculator() {
     return Math.max(0, workedMinutes);
   };
 
+  // Default break duration assumption for ongoing breaks (in minutes)
+  const DEFAULT_BREAK_DURATION = 60;
+
+  // Get validated daily target in minutes
+  const getValidatedDailyTarget = (): number => {
+    const target = parseFloat(dailyHoursTarget);
+    if (isNaN(target) || target <= 0) {
+      return 7 * 60; // Default to 7 hours
+    }
+    return target * 60;
+  };
+
   // Calculate target completion time
   const calculateTargetTime = () => {
-    const targetMinutes = parseFloat(dailyHoursTarget) * 60;
+    const targetMinutes = getValidatedDailyTarget();
     const start = timeToMinutes(startTime);
     const pauseStart = timeToMinutes(breakStart);
     const pauseEnd = timeToMinutes(breakEnd);
@@ -125,8 +137,8 @@ export default function WorkCalculator() {
       const pauseMinutes = pauseEnd - pauseStart;
       targetCompletionMinutes += pauseMinutes;
     } else if (breakStart) {
-      // If break has started but not ended, assume a 1-hour break for estimation
-      targetCompletionMinutes += 60;
+      // If break has started but not ended, assume default break duration for estimation
+      targetCompletionMinutes += DEFAULT_BREAK_DURATION;
     }
 
     return targetCompletionMinutes;
@@ -135,14 +147,15 @@ export default function WorkCalculator() {
   // Calculate remaining time
   const calculateRemainingTime = () => {
     const workedMinutes = calculateWorkTime();
-    const targetMinutes = parseFloat(dailyHoursTarget) * 60;
+    const targetMinutes = getValidatedDailyTarget();
     return Math.max(0, targetMinutes - workedMinutes);
   };
 
   const workedMinutes = calculateWorkTime();
   const targetTime = calculateTargetTime();
   const remainingMinutes = calculateRemainingTime();
-  const targetReached = remainingMinutes === 0 && workedMinutes >= parseFloat(dailyHoursTarget) * 60;
+  const targetMinutes = getValidatedDailyTarget();
+  const targetReached = remainingMinutes === 0 && workedMinutes >= targetMinutes;
 
   return (
     <div className="space-y-6">
