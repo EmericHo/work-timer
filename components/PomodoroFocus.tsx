@@ -22,26 +22,30 @@ export default function PomodoroFocus() {
 
   // Load state from localStorage
   useEffect(() => {
-    const savedMode = localStorage.getItem("pomodoroMode") as PomodoroMode;
-    const savedTimeLeft = localStorage.getItem("pomodoroTimeLeft");
-    const savedIsRunning = localStorage.getItem("pomodoroIsRunning");
+    if (typeof window !== "undefined") {
+      const savedMode = localStorage.getItem("pomodoroMode") as PomodoroMode;
+      const savedTimeLeft = localStorage.getItem("pomodoroTimeLeft");
+      const savedIsRunning = localStorage.getItem("pomodoroIsRunning");
 
-    if (savedMode) {
-      setMode(savedMode);
-    }
-    if (savedTimeLeft) {
-      setTimeLeft(parseInt(savedTimeLeft, 10));
-    }
-    if (savedIsRunning === "true") {
-      setIsRunning(true);
+      if (savedMode) {
+        setMode(savedMode);
+      }
+      if (savedTimeLeft) {
+        setTimeLeft(parseInt(savedTimeLeft, 10));
+      }
+      if (savedIsRunning === "true") {
+        setIsRunning(true);
+      }
     }
   }, []);
 
   // Save state to localStorage
   useEffect(() => {
-    localStorage.setItem("pomodoroMode", mode);
-    localStorage.setItem("pomodoroTimeLeft", timeLeft.toString());
-    localStorage.setItem("pomodoroIsRunning", isRunning.toString());
+    if (typeof window !== "undefined") {
+      localStorage.setItem("pomodoroMode", mode);
+      localStorage.setItem("pomodoroTimeLeft", timeLeft.toString());
+      localStorage.setItem("pomodoroIsRunning", isRunning.toString());
+    }
   }, [mode, timeLeft, isRunning]);
 
   const handleTimerComplete = useCallback(() => {
@@ -173,7 +177,7 @@ export default function PomodoroFocus() {
           className="px-6 py-3 text-base font-semibold rounded-lg bg-gray-600 text-white hover:bg-gray-700 transition-colors focus-visible:outline-2 focus-visible:outline-gray-600"
           aria-label="Réinitialiser le Pomodoro"
         >
-          Reset
+          Réinitialiser
         </button>
       </div>
 

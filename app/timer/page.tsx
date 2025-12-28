@@ -11,21 +11,25 @@ export default function TimerPage() {
 
   // Load state from localStorage on mount
   useEffect(() => {
-    const savedTime = localStorage.getItem("timerTime");
-    const savedIsRunning = localStorage.getItem("timerIsRunning");
-    
-    if (savedTime) {
-      setTime(parseInt(savedTime, 10));
-    }
-    if (savedIsRunning === "true") {
-      setIsRunning(true);
+    if (typeof window !== "undefined") {
+      const savedTime = localStorage.getItem("timerTime");
+      const savedIsRunning = localStorage.getItem("timerIsRunning");
+      
+      if (savedTime) {
+        setTime(parseInt(savedTime, 10));
+      }
+      if (savedIsRunning === "true") {
+        setIsRunning(true);
+      }
     }
   }, []);
 
   // Save state to localStorage whenever it changes
   useEffect(() => {
-    localStorage.setItem("timerTime", time.toString());
-    localStorage.setItem("timerIsRunning", isRunning.toString());
+    if (typeof window !== "undefined") {
+      localStorage.setItem("timerTime", time.toString());
+      localStorage.setItem("timerIsRunning", isRunning.toString());
+    }
   }, [time, isRunning]);
 
   // Timer logic
@@ -118,7 +122,7 @@ export default function TimerPage() {
                   className="px-6 py-3 text-base sm:text-lg font-semibold rounded-lg bg-gray-600 text-white hover:bg-gray-700 transition-colors focus-visible:outline-2 focus-visible:outline-gray-600"
                   aria-label="Réinitialiser le timer"
                 >
-                  Reset
+                  Réinitialiser
                 </button>
               </div>
             </section>

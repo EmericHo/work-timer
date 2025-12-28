@@ -41,7 +41,6 @@ export default function RootLayout({
               "@type": "WebApplication",
               "name": "Timer Focus Gratuit pour Travail",
               "description": "Application de timer et Pomodoro pour améliorer votre productivité et votre concentration au travail.",
-              "url": typeof window !== "undefined" ? window.location.origin : "",
               "applicationCategory": "ProductivityApplication",
               "operatingSystem": "Any",
               "offers": {
