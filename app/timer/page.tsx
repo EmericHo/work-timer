@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import PomodoroFocus from "@/components/PomodoroFocus";
+import WorkCalculator from "@/components/WorkCalculator";
 import AdSenseAd from "@/components/AdSenseAd";
 
 export default function TimerPage() {
@@ -133,6 +134,14 @@ export default function TimerPage() {
                 Mode Pomodoro Focus
               </h2>
               <PomodoroFocus />
+            </section>
+
+            {/* Work Calculator Section */}
+            <section className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 sm:p-8">
+              <h2 className="text-2xl font-semibold mb-6 text-center">
+                Calculateur de Temps de Travail
+              </h2>
+              <WorkCalculator />
             </section>
 
             {/* Footer Ad */}
