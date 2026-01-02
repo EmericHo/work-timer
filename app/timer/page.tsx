@@ -3,7 +3,6 @@
 import { useState, useEffect, useRef } from "react";
 import PomodoroFocus from "@/components/PomodoroFocus";
 import WorkCalculator from "@/components/WorkCalculator";
-import AdSenseAd from "@/components/AdSenseAd";
 
 export default function TimerPage() {
   const [time, setTime] = useState(0);
@@ -76,23 +75,24 @@ export default function TimerPage() {
   };
 
   return (
-    <div className="min-h-screen p-4 sm:p-8">
-      <div className="max-w-7xl mx-auto">
-        <h1 className="text-3xl sm:text-4xl font-bold text-center mb-8">
+    <div className="h-screen flex flex-col p-4 sm:p-6 overflow-hidden">
+      <div className="flex-shrink-0 mb-4">
+        <h1 className="text-2xl sm:text-3xl font-bold text-center">
           Timer Focus Gratuit pour Travail
         </h1>
+      </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
-          {/* Main content area */}
-          <div className="lg:col-span-3 space-y-8">
-            {/* Timer Section */}
-            <section className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 sm:p-8">
-              <h2 className="text-2xl font-semibold mb-6 text-center">
-                Timer Standard
-              </h2>
-              
+      <div className="flex-1 overflow-hidden">
+        <div className="h-full grid grid-cols-1 lg:grid-cols-2 gap-4">
+          {/* Timer Section - Top Left */}
+          <section className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-4 flex flex-col overflow-hidden">
+            <h2 className="text-xl font-semibold mb-3 text-center flex-shrink-0">
+              Timer Standard
+            </h2>
+            
+            <div className="flex-1 flex flex-col justify-center items-center min-h-0">
               <div
-                className="text-6xl sm:text-7xl md:text-8xl font-mono font-bold text-center mb-8 text-blue-600 dark:text-blue-400"
+                className="text-4xl sm:text-5xl lg:text-6xl font-mono font-bold text-center mb-4 text-blue-600 dark:text-blue-400"
                 aria-live="polite"
                 aria-atomic="true"
                 role="timer"
@@ -101,11 +101,11 @@ export default function TimerPage() {
                 {formatTime(time)}
               </div>
 
-              <div className="flex flex-wrap gap-4 justify-center">
+              <div className="flex flex-wrap gap-2 sm:gap-3 justify-center">
                 <button
                   onClick={handleStart}
                   disabled={isRunning}
-                  className="px-6 py-3 text-base sm:text-lg font-semibold rounded-lg bg-green-600 text-white hover:bg-green-700 disabled:bg-gray-400 disabled:cursor-not-allowed transition-colors focus-visible:outline-2 focus-visible:outline-green-600"
+                  className="px-4 py-2 text-sm sm:text-base font-semibold rounded-lg bg-green-600 text-white hover:bg-green-700 disabled:bg-gray-400 disabled:cursor-not-allowed transition-colors focus-visible:outline-2 focus-visible:outline-green-600"
                   aria-label="Démarrer le timer"
                 >
                   Démarrer
@@ -113,61 +113,41 @@ export default function TimerPage() {
                 <button
                   onClick={handleStop}
                   disabled={!isRunning}
-                  className="px-6 py-3 text-base sm:text-lg font-semibold rounded-lg bg-red-600 text-white hover:bg-red-700 disabled:bg-gray-400 disabled:cursor-not-allowed transition-colors focus-visible:outline-2 focus-visible:outline-red-600"
+                  className="px-4 py-2 text-sm sm:text-base font-semibold rounded-lg bg-red-600 text-white hover:bg-red-700 disabled:bg-gray-400 disabled:cursor-not-allowed transition-colors focus-visible:outline-2 focus-visible:outline-red-600"
                   aria-label="Arrêter le timer"
                 >
                   Arrêter
                 </button>
                 <button
                   onClick={handleReset}
-                  className="px-6 py-3 text-base sm:text-lg font-semibold rounded-lg bg-gray-600 text-white hover:bg-gray-700 transition-colors focus-visible:outline-2 focus-visible:outline-gray-600"
+                  className="px-4 py-2 text-sm sm:text-base font-semibold rounded-lg bg-gray-600 text-white hover:bg-gray-700 transition-colors focus-visible:outline-2 focus-visible:outline-gray-600"
                   aria-label="Réinitialiser le timer"
                 >
                   Réinitialiser
                 </button>
               </div>
-            </section>
+            </div>
+          </section>
 
-            {/* Pomodoro Section */}
-            <section className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 sm:p-8">
-              <h2 className="text-2xl font-semibold mb-6 text-center">
-                Mode Pomodoro Focus
-              </h2>
+          {/* Pomodoro Section - Top Right */}
+          <section className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-4 flex flex-col overflow-hidden">
+            <h2 className="text-xl font-semibold mb-3 text-center flex-shrink-0">
+              Mode Pomodoro Focus
+            </h2>
+            <div className="flex-1 overflow-y-auto min-h-0">
               <PomodoroFocus />
-            </section>
+            </div>
+          </section>
 
-            {/* Work Calculator Section */}
-            <section className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 sm:p-8">
-              <h2 className="text-2xl font-semibold mb-6 text-center">
-                Calculateur de Temps de Travail
-              </h2>
+          {/* Work Calculator Section - Bottom (Full Width on Large Screens) */}
+          <section className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-4 flex flex-col overflow-hidden lg:col-span-2">
+            <h2 className="text-xl font-semibold mb-3 text-center flex-shrink-0">
+              Calculateur de Temps de Travail
+            </h2>
+            <div className="flex-1 overflow-y-auto min-h-0">
               <WorkCalculator />
-            </section>
-
-            {/* Footer Ad */}
-            <div className="flex justify-center">
-              <AdSenseAd
-                slot="footer"
-                format="horizontal"
-                style={{ width: "728px", height: "90px" }}
-              />
             </div>
-          </div>
-
-          {/* Sidebar */}
-          <aside className="lg:col-span-1 space-y-6">
-            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-4">
-              <h3 className="text-lg font-semibold mb-4">À propos</h3>
-              <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
-                Utilisez notre timer pour suivre votre temps de travail et la technique Pomodoro pour améliorer votre concentration.
-              </p>
-              <AdSenseAd
-                slot="sidebar"
-                format="rectangle"
-                style={{ width: "300px", height: "250px" }}
-              />
-            </div>
-          </aside>
+          </section>
         </div>
       </div>
     </div>
