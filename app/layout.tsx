@@ -162,11 +162,6 @@ export default function RootLayout({
               "operatingSystem": "Any",
               "browserRequirements": "Requires JavaScript. Requires HTML5.",
               "softwareVersion": "1.0",
-              "aggregateRating": {
-                "@type": "AggregateRating",
-                "ratingValue": "4.8",
-                "ratingCount": "150"
-              },
               "offers": {
                 "@type": "Offer",
                 "price": "0",
