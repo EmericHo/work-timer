@@ -28,9 +28,7 @@ export default function GoogleAnalytics() {
     const url = pathname + (searchParams?.toString() ? `?${searchParams.toString()}` : "");
 
     // Envoyer l'événement de page vue à Google Analytics
-    // @ts-expect-error - gtag is loaded by external script
     if (typeof window.gtag !== "undefined") {
-      // @ts-expect-error - gtag is loaded by external script
       window.gtag("config", measurementId, {
         page_path: url,
       });
