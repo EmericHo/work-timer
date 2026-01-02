@@ -4,6 +4,9 @@ import { useState, useEffect, useRef } from "react";
 import PomodoroFocus from "@/components/PomodoroFocus";
 import WorkCalculator from "@/components/WorkCalculator";
 
+// Note: Client components can't export metadata directly
+// Metadata is defined in layout.tsx or a separate metadata file
+
 export default function TimerPage() {
   const [time, setTime] = useState(0);
   const [isRunning, setIsRunning] = useState(false);
@@ -76,11 +79,14 @@ export default function TimerPage() {
 
   return (
     <div className="h-screen flex flex-col p-4 sm:p-6 overflow-hidden">
-      <div className="flex-shrink-0 mb-4">
+      <header className="flex-shrink-0 mb-4">
         <h1 className="text-2xl sm:text-3xl font-bold text-center">
-          Timer Focus Gratuit pour Travail
+          Timer Focus Gratuit pour Travail - Pomodoro en Ligne
         </h1>
-      </div>
+        <p className="text-center text-gray-600 dark:text-gray-400 mt-2 text-sm sm:text-base">
+          Gérez votre temps avec notre chronomètre, timer Pomodoro et calculateur de productivité
+        </p>
+      </header>
 
       <div className="flex-1 overflow-hidden">
         <div className="h-full grid grid-cols-1 lg:grid-cols-2 gap-4">
