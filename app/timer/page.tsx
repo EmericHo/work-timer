@@ -80,10 +80,10 @@ export default function TimerPage() {
   return (
     <div className="h-screen flex flex-col p-4 sm:p-6 overflow-hidden">
       <header className="flex-shrink-0 mb-4">
-        <h1 className="text-2xl sm:text-3xl font-bold text-center" id="page-title">
+        <h1 className="text-2xl sm:text-3xl font-bold text-center">
           Timer Focus Gratuit pour Travail - Pomodoro en Ligne
         </h1>
-        <p className="text-center text-gray-600 dark:text-gray-400 mt-2 text-sm sm:text-base" aria-describedby="page-title">
+        <p className="text-center text-gray-600 dark:text-gray-400 mt-2 text-sm sm:text-base">
           Gérez votre temps avec notre chronomètre, timer Pomodoro et calculateur de productivité
         </p>
       </header>
