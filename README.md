@@ -8,7 +8,7 @@ A productivity timer application built with Next.js 15, React, TypeScript, and T
 - **Mode Pomodoro Focus**: 25 minutes work / 5 minutes break cycles with automatic switching
 - **Browser Notifications**: Desktop notifications when Pomodoro sessions complete
 - **LocalStorage Persistence**: Timer state is saved and restored on page reload
-- **AdSense Ready**: Placeholder components for 300x250 sidebar and 728x90 footer ads
+- **AdSense Ready**: Placeholder components for 300x250 sidebar and 728x90 footer ads (see [PUBLICITE.md](PUBLICITE.md))
 - **SEO Optimized**: Complete metadata, Open Graph tags, and WebApplication schema
 - **Accessibility**: 
   - `aria-live` regions for timer updates
@@ -40,6 +40,15 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 - `npm run build` - Build the application for production
 - `npm run start` - Start the production server
 - `npm run lint` - Run ESLint to check code quality
+
+## Advertising Integration
+
+This application is ready for Google AdSense or other advertising networks. See [PUBLICITE.md](PUBLICITE.md) for:
+- Complete Google AdSense setup guide
+- Domain name requirements
+- Policy specifications and requirements
+- Technical implementation instructions
+- Alternative advertising solutions
 
 ## Project Structure
 
