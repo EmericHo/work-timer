@@ -5,11 +5,12 @@ Ce document explique comment intégrer des publicités (Google AdSense ou altern
 ## Table des Matières
 
 1. [Google AdSense](#google-adsense)
-2. [Nom de Domaine](#nom-de-domaine)
-3. [Spécifications et Politiques](#spécifications-et-politiques)
-4. [Implémentation Technique](#implémentation-technique)
-5. [Alternatives à AdSense](#alternatives-à-adsense)
-6. [Optimisation des Revenus](#optimisation-des-revenus)
+2. [Google Analytics](#google-analytics)
+3. [Nom de Domaine](#nom-de-domaine)
+4. [Spécifications et Politiques](#spécifications-et-politiques)
+5. [Implémentation Technique](#implémentation-technique)
+6. [Alternatives à AdSense](#alternatives-à-adsense)
+7. [Optimisation des Revenus](#optimisation-des-revenus)
 
 ## Google AdSense
 
@@ -34,6 +35,265 @@ Google AdSense est le programme publicitaire de Google qui permet aux éditeurs 
    - Votre pays/territoire
 4. Acceptez les conditions d'utilisation
 5. Google examinera votre demande (cela peut prendre quelques jours à quelques semaines)
+
+## Google Analytics
+
+### Qu'est-ce que Google Analytics ?
+
+Google Analytics est un service gratuit d'analyse web qui vous permet de suivre et d'analyser le trafic de votre site web. C'est **essentiel** pour :
+- Comprendre votre audience (géographie, comportement, pages visitées)
+- Suivre vos performances (visiteurs, taux de rebond, temps de session)
+- Prouver votre trafic lors de la demande AdSense
+- Optimiser votre contenu et vos publicités
+
+### Pourquoi Google Analytics est Important pour AdSense
+
+1. **Preuve de Trafic** : Google peut demander des preuves de trafic lors de l'approbation AdSense
+2. **Optimisation** : Identifiez les pages les plus visitées pour placer vos publicités
+3. **Revenus** : Correlez le trafic avec vos gains AdSense pour calculer le RPM (Revenue Per Mille)
+4. **Conformité** : Détecter le trafic invalide ou suspect qui pourrait violer les politiques AdSense
+
+### Configuration de Google Analytics
+
+#### Étape 1 : Créer un Compte
+
+1. Rendez-vous sur [https://analytics.google.com](https://analytics.google.com)
+2. Connectez-vous avec votre compte Google (utilisez le même que pour AdSense)
+3. Cliquez sur "Commencer la mesure"
+4. Créez un compte :
+   - **Nom du compte** : Work Timer (ou votre nom de projet)
+   - Cochez les options de partage de données (recommandé)
+
+#### Étape 2 : Créer une Propriété
+
+1. **Nom de la propriété** : Work Timer App
+2. **Fuseau horaire** : Europe/Paris (ou votre fuseau)
+3. **Devise** : EUR
+4. Cliquez sur "Suivant"
+
+#### Étape 3 : Informations sur l'Entreprise
+
+1. **Secteur d'activité** : Productivité et collaboration
+2. **Taille de l'entreprise** : Petite (1-10 employés) ou selon votre cas
+3. **Utilisation** : Cochez les options pertinentes
+4. Cliquez sur "Créer"
+5. Acceptez les conditions d'utilisation
+
+#### Étape 4 : Configuration du Flux de Données
+
+1. Choisissez **"Web"**
+2. Entrez l'**URL de votre site** : `https://votre-domaine.com`
+3. **Nom du flux** : Work Timer Website
+4. Cliquez sur "Créer un flux"
+
+#### Étape 5 : Obtenir votre ID de Mesure
+
+1. Vous verrez votre **ID de mesure** (format : `G-XXXXXXXXXX`)
+2. **Copiez cet ID** - vous en aurez besoin pour la configuration
+
+### Implémentation de Google Analytics
+
+Le code Google Analytics est déjà intégré dans votre application ! Il vous suffit de :
+
+#### 1. Configurer la Variable d'Environnement
+
+Ajoutez dans votre fichier `.env.local` :
+
+```bash
+NEXT_PUBLIC_GA_MEASUREMENT_ID=G-XXXXXXXXXX
+```
+
+Remplacez `G-XXXXXXXXXX` par votre véritable ID de mesure.
+
+#### 2. Déployer l'Application
+
+Configurez la même variable d'environnement sur votre plateforme de déploiement :
+
+**Vercel** :
+1. Allez dans Project Settings → Environment Variables
+2. Ajoutez `NEXT_PUBLIC_GA_MEASUREMENT_ID` avec votre ID
+3. Redéployez
+
+**Netlify** :
+1. Allez dans Site Settings → Environment Variables
+2. Ajoutez `NEXT_PUBLIC_GA_MEASUREMENT_ID` avec votre ID
+3. Redéployez
+
+#### 3. Vérifier l'Installation
+
+1. Visitez votre site en production
+2. Ouvrez les DevTools (F12)
+3. Allez dans l'onglet "Réseau" (Network)
+4. Recherchez des requêtes vers `google-analytics.com` ou `analytics.google.com`
+5. Dans Google Analytics, allez dans "Rapports" → "Temps réel" pour voir les visiteurs actuels
+
+### Métriques Importantes à Suivre
+
+#### 1. Trafic et Engagement
+
+- **Utilisateurs** : Nombre de visiteurs uniques
+- **Sessions** : Nombre de visites
+- **Pages vues** : Nombre total de pages consultées
+- **Taux de rebond** : % de visiteurs qui quittent après une page
+- **Durée moyenne des sessions** : Temps passé sur le site
+
+#### 2. Acquisition
+
+- **Sources de trafic** :
+  - Recherche organique (Google, Bing)
+  - Direct (URL tapée ou favoris)
+  - Réseaux sociaux
+  - Référents (autres sites)
+
+#### 3. Comportement
+
+- **Pages populaires** : Quelles pages sont les plus visitées ?
+- **Chemin de navigation** : Comment les visiteurs naviguent-ils ?
+- **Événements** : Actions spécifiques (clics, téléchargements, etc.)
+
+#### 4. Données Démographiques et Géographiques
+
+- **Pays et villes** : D'où viennent vos visiteurs ?
+- **Langues** : Quelles langues parlent-ils ?
+- **Appareils** : Desktop, mobile, tablette ?
+
+### Objectifs pour AdSense
+
+Pour être éligible et rentable avec AdSense, visez :
+
+| Métrique | Minimum | Idéal |
+|----------|---------|-------|
+| **Visiteurs/mois** | 500-1000 | 5000+ |
+| **Pages vues/mois** | 1000-2000 | 10000+ |
+| **Durée de session** | 1 min | 3+ min |
+| **Taux de rebond** | < 70% | < 50% |
+| **Sessions organiques** | 50%+ | 70%+ |
+
+### Rapports Utiles
+
+#### Rapport en Temps Réel
+
+- **Accès** : Rapports → Temps réel → Vue d'ensemble
+- **Utilité** : Vérifier que le tracking fonctionne
+- **Données** : Visiteurs actuels, pages vues en direct, sources
+
+#### Rapport d'Acquisition
+
+- **Accès** : Rapports → Acquisition → Vue d'ensemble
+- **Utilité** : Comprendre d'où viennent vos visiteurs
+- **Données** : Canaux, sources, campagnes
+
+#### Rapport d'Engagement
+
+- **Accès** : Rapports → Engagement → Pages et écrans
+- **Utilité** : Identifier les pages les plus performantes
+- **Données** : Pages vues, temps moyen, taux de rebond
+
+### Intégration Analytics ↔ AdSense
+
+#### Lier les Comptes (Recommandé)
+
+1. Dans Google Analytics, allez dans "Admin" (roue dentée en bas à gauche)
+2. Dans la colonne "Propriété", cliquez sur "Liens Google Ads"
+3. Vous pouvez aussi lier AdSense pour voir les revenus directement dans Analytics
+
+**Avantages** :
+- Voir les revenus AdSense dans Analytics
+- Comprendre quelles pages génèrent le plus de revenus
+- Optimiser le placement des publicités basé sur les données
+
+#### Créer des Segments d'Audience
+
+Utilisez Analytics pour créer des audiences basées sur le comportement :
+- Visiteurs engagés (> 3 min de session)
+- Visiteurs récurrents
+- Visiteurs de pages spécifiques
+
+Ces audiences peuvent être utilisées pour optimiser vos publicités.
+
+### Événements Personnalisés (Avancé)
+
+Vous pouvez tracker des événements spécifiques dans votre application :
+
+**Exemples pour Work Timer** :
+- Démarrage d'un timer
+- Complétion d'une session Pomodoro
+- Utilisation du calculateur de temps
+
+**Implémentation** :
+
+```typescript
+// Dans votre composant
+const trackTimerStart = () => {
+  if (typeof window !== 'undefined' && window.gtag) {
+    window.gtag('event', 'timer_start', {
+      event_category: 'engagement',
+      event_label: 'Standard Timer',
+    });
+  }
+};
+```
+
+### Confidentialité et RGPD
+
+Google Analytics collecte des données personnelles. Vous devez :
+
+1. **Bannière de Consentement** : Demander le consentement avant de charger Analytics
+2. **Politique de Confidentialité** : Mentionner l'utilisation de Google Analytics
+3. **Anonymisation IP** : Activer dans les paramètres (GA4 le fait par défaut)
+
+**Note** : Le code fourni charge Analytics automatiquement. Pour être 100% conforme RGPD, vous devriez ajouter une bannière de consentement qui charge Analytics seulement après acceptation.
+
+### Solutions de Consentement
+
+- **Cookiebot** : [https://www.cookiebot.com](https://www.cookiebot.com)
+- **Axeptio** : [https://www.axeptio.eu](https://www.axeptio.eu) (français)
+- **Google Consent Mode** : Intégration native avec Analytics
+
+### Alternatives à Google Analytics
+
+Si vous préférez des alternatives plus respectueuses de la vie privée :
+
+#### 1. Plausible Analytics
+
+- **Avantages** : Léger, respecte la vie privée, pas de cookies, pas de RGPD
+- **Inconvénients** : Payant (9€/mois pour 10k pages vues)
+- **URL** : [https://plausible.io](https://plausible.io)
+
+#### 2. Fathom Analytics
+
+- **Avantages** : Simple, respectueux de la vie privée, conforme RGPD
+- **Inconvénients** : Payant (14$/mois)
+- **URL** : [https://usefathom.com](https://usefathom.com)
+
+#### 3. Matomo (anciennement Piwik)
+
+- **Avantages** : Open source, auto-hébergé, propriété totale des données
+- **Inconvénients** : Configuration technique requise
+- **URL** : [https://matomo.org](https://matomo.org)
+
+#### 4. Umami
+
+- **Avantages** : Open source, gratuit, simple, auto-hébergé
+- **Inconvénients** : Moins de fonctionnalités que GA
+- **URL** : [https://umami.is](https://umami.is)
+
+### Dépannage Google Analytics
+
+#### Les données n'apparaissent pas
+
+1. **Vérifiez l'ID de mesure** : Format correct `G-XXXXXXXXXX` ?
+2. **Vérifiez la variable d'environnement** : Bien déployée en production ?
+3. **Attendez** : Les données peuvent prendre 24-48h pour apparaître dans les rapports standards
+4. **Utilisez le rapport Temps Réel** : Les données apparaissent instantanément
+5. **Vérifiez les bloqueurs de pub** : Désactivez AdBlock pour tester
+6. **Console du navigateur** : Cherchez des erreurs JavaScript
+
+#### Trafic incohérent
+
+- **Bots et crawlers** : Analytics filtre automatiquement les bots connus
+- **Trafic de développement** : Assurez-vous que GA ne se charge qu'en production
+- **Trafic interne** : Filtrez votre propre IP dans les paramètres Analytics
 
 ## Nom de Domaine
 

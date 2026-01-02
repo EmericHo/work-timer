@@ -45,6 +45,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 This application is ready for Google AdSense or other advertising networks. See [PUBLICITE.md](PUBLICITE.md) for:
 - Complete Google AdSense setup guide
+- Complete Google Analytics setup guide (for tracking traffic)
 - Domain name requirements
 - Policy specifications and requirements
 - Technical implementation instructions
