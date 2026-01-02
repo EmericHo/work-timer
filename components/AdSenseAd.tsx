@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 
 interface AdSenseAdProps {
   slot: string;
@@ -29,18 +29,21 @@ interface AdSenseAdProps {
 export default function AdSenseAd({ slot, format, style }: AdSenseAdProps) {
   const clientId = process.env.NEXT_PUBLIC_ADSENSE_CLIENT_ID;
   const isProduction = process.env.NODE_ENV === "production";
+  const isInitialized = useRef(false);
 
   useEffect(() => {
     // En production avec un client ID configuré, initialiser les publicités
-    if (isProduction && clientId && typeof window !== "undefined") {
+    // Utiliser un ref pour éviter les initialisations multiples
+    if (isProduction && clientId && typeof window !== "undefined" && !isInitialized.current) {
       try {
         // @ts-expect-error - adsbygoogle is loaded by external script
         (window.adsbygoogle = window.adsbygoogle || []).push({});
+        isInitialized.current = true;
       } catch (error) {
         console.error("Erreur lors du chargement de la publicité AdSense:", error);
       }
     }
-  }, [clientId, isProduction]);
+  }, [clientId, isProduction, slot]);
 
   // En développement ou sans client ID, afficher un placeholder
   if (!isProduction || !clientId) {
@@ -70,8 +73,13 @@ export default function AdSenseAd({ slot, format, style }: AdSenseAdProps) {
   }
 
   // Format mapping pour AdSense
-  const adFormat = format === "horizontal" ? "auto" : format === "rectangle" ? "rectangle" : "vertical";
-  const fullWidth = format === "horizontal";
+  const formatMap = {
+    horizontal: { adFormat: "auto", fullWidth: true },
+    rectangle: { adFormat: "rectangle", fullWidth: false },
+    vertical: { adFormat: "vertical", fullWidth: false },
+  };
+  
+  const { adFormat, fullWidth } = formatMap[format];
 
   // En production avec client ID, afficher la vraie publicité AdSense
   return (

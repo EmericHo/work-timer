@@ -486,7 +486,7 @@ Cela dépend de nombreux facteurs :
 **NON**, AdSense fonctionne dans toutes les langues. Cependant :
 - CPC généralement plus bas qu'en anglais
 - Moins d'annonceurs pour certaines niches
-- But: le marché français reste lucratif
+- Mais : le marché français reste lucratif
 
 ### Puis-je cliquer sur mes propres annonces ?
 
