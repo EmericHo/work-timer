@@ -84,7 +84,17 @@ export default function TimerPage() {
 
       <div className="flex-1 overflow-hidden">
         <div className="h-full grid grid-cols-1 lg:grid-cols-2 gap-4">
-          {/* Timer Section - Top Left */}
+          {/* Work Calculator Section - Position 1 (Top, Full Width on Large Screens) */}
+          <section className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-4 flex flex-col overflow-hidden lg:col-span-2">
+            <h2 className="text-xl font-semibold mb-3 text-center flex-shrink-0">
+              Calculateur de Temps de Travail
+            </h2>
+            <div className="flex-1 overflow-y-auto min-h-0">
+              <WorkCalculator />
+            </div>
+          </section>
+
+          {/* Timer Section - Position 2 (Bottom Left) */}
           <section className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-4 flex flex-col overflow-hidden">
             <h2 className="text-xl font-semibold mb-3 text-center flex-shrink-0">
               Timer Standard
@@ -129,23 +139,13 @@ export default function TimerPage() {
             </div>
           </section>
 
-          {/* Pomodoro Section - Top Right */}
+          {/* Pomodoro Section - Position 3 (Bottom Right) */}
           <section className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-4 flex flex-col overflow-hidden">
             <h2 className="text-xl font-semibold mb-3 text-center flex-shrink-0">
               Mode Pomodoro Focus
             </h2>
             <div className="flex-1 overflow-y-auto min-h-0">
               <PomodoroFocus />
-            </div>
-          </section>
-
-          {/* Work Calculator Section - Bottom (Full Width on Large Screens) */}
-          <section className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-4 flex flex-col overflow-hidden lg:col-span-2">
-            <h2 className="text-xl font-semibold mb-3 text-center flex-shrink-0">
-              Calculateur de Temps de Travail
-            </h2>
-            <div className="flex-1 overflow-y-auto min-h-0">
-              <WorkCalculator />
             </div>
           </section>
         </div>

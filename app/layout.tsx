@@ -1,10 +1,24 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+  userScalable: true,
+  themeColor: "#3b82f6",
+};
 
 export const metadata: Metadata = {
   title: "Timer Focus Gratuit pour Travail",
   description: "Application de timer et Pomodoro pour améliorer votre productivité et votre concentration au travail.",
+  manifest: "/manifest.json",
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "default",
+    title: "Timer Focus",
+  },
   openGraph: {
     title: "Timer Focus Gratuit pour Travail",
     description: "Application de timer et Pomodoro pour améliorer votre productivité et votre concentration au travail.",
@@ -37,6 +51,12 @@ export default function RootLayout({
   return (
     <html lang="fr">
       <head>
+        {/* PWA Meta Tags */}
+        <link rel="apple-touch-icon" href="/icon-192x192.png" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        <meta name="mobile-web-app-capable" content="yes" />
+        
         {/* Google Analytics - Chargé uniquement si NEXT_PUBLIC_GA_MEASUREMENT_ID est défini */}
         {gaMeasurementId && (
           <>

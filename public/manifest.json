@@ -1,0 +1,24 @@
+{
+  "name": "Timer Focus Gratuit pour Travail",
+  "short_name": "Timer Focus",
+  "description": "Application de timer et Pomodoro pour améliorer votre productivité et votre concentration au travail",
+  "start_url": "/timer",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#3b82f6",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
