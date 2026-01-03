@@ -21,7 +21,10 @@ export default function CountdownTimer() {
 
       if (savedHours) setHours(savedHours);
       if (savedMinutes) setMinutes(savedMinutes);
-      if (savedTimeLeft) setTimeLeft(parseInt(savedTimeLeft, 10));
+      if (savedTimeLeft) {
+        const parsedTimeLeft = parseInt(savedTimeLeft, 10);
+        if (!isNaN(parsedTimeLeft)) setTimeLeft(parsedTimeLeft);
+      }
       if (savedIsRunning === "true") setIsRunning(true);
       if (savedIsConfiguring) setIsConfiguring(savedIsConfiguring === "true");
     }
@@ -83,8 +86,14 @@ export default function CountdownTimer() {
   const handleStart = () => {
     if (isConfiguring) {
       // Initialize countdown from input values
-      const h = parseInt(hours, 10) || 0;
-      const m = parseInt(minutes, 10) || 0;
+      const h = parseInt(hours, 10);
+      const m = parseInt(minutes, 10);
+      
+      // Validate input values
+      if (isNaN(h) || isNaN(m) || h < 0 || m < 0) {
+        return; // Don't start with invalid values
+      }
+      
       const totalSeconds = h * 3600 + m * 60;
       
       if (totalSeconds > 0) {
