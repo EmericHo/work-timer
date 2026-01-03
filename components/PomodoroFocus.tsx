@@ -139,13 +139,13 @@ export default function PomodoroFocus() {
   const modeLabel = mode === "work" ? "Travail" : "Pause";
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-3">
       <div className="text-center">
-        <div className={`text-2xl font-semibold mb-2 ${modeColor}`}>
+        <div className={`text-lg font-semibold mb-1 ${modeColor}`}>
           Mode: {modeLabel}
         </div>
         <div
-          className="text-5xl sm:text-6xl font-mono font-bold text-center mb-6"
+          className="text-3xl sm:text-4xl lg:text-5xl font-mono font-bold text-center mb-3"
           aria-live="polite"
           aria-atomic="true"
           role="timer"
@@ -155,11 +155,11 @@ export default function PomodoroFocus() {
         </div>
       </div>
 
-      <div className="flex flex-wrap gap-4 justify-center">
+      <div className="flex flex-wrap gap-2 justify-center">
         <button
           onClick={handleStart}
           disabled={isRunning}
-          className="px-6 py-3 text-base font-semibold rounded-lg bg-green-600 text-white hover:bg-green-700 disabled:bg-gray-400 disabled:cursor-not-allowed transition-colors focus-visible:outline-2 focus-visible:outline-green-600"
+          className="px-4 py-2 text-sm font-semibold rounded-lg bg-green-600 text-white hover:bg-green-700 disabled:bg-gray-400 disabled:cursor-not-allowed transition-colors focus-visible:outline-2 focus-visible:outline-green-600"
           aria-label="Démarrer le Pomodoro"
         >
           Démarrer
@@ -167,14 +167,14 @@ export default function PomodoroFocus() {
         <button
           onClick={handleStop}
           disabled={!isRunning}
-          className="px-6 py-3 text-base font-semibold rounded-lg bg-red-600 text-white hover:bg-red-700 disabled:bg-gray-400 disabled:cursor-not-allowed transition-colors focus-visible:outline-2 focus-visible:outline-red-600"
+          className="px-4 py-2 text-sm font-semibold rounded-lg bg-red-600 text-white hover:bg-red-700 disabled:bg-gray-400 disabled:cursor-not-allowed transition-colors focus-visible:outline-2 focus-visible:outline-red-600"
           aria-label="Arrêter le Pomodoro"
         >
           Arrêter
         </button>
         <button
           onClick={handleReset}
-          className="px-6 py-3 text-base font-semibold rounded-lg bg-gray-600 text-white hover:bg-gray-700 transition-colors focus-visible:outline-2 focus-visible:outline-gray-600"
+          className="px-4 py-2 text-sm font-semibold rounded-lg bg-gray-600 text-white hover:bg-gray-700 transition-colors focus-visible:outline-2 focus-visible:outline-gray-600"
           aria-label="Réinitialiser le Pomodoro"
         >
           Réinitialiser
@@ -182,13 +182,13 @@ export default function PomodoroFocus() {
       </div>
 
       {!notificationsEnabled && (
-        <div className="bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded-lg p-4">
-          <p className="text-sm text-gray-700 dark:text-gray-300 mb-2">
+        <div className="bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded-lg p-2">
+          <p className="text-xs text-gray-700 dark:text-gray-300 mb-1">
             Activez les notifications pour être averti quand votre session se termine.
           </p>
           <button
             onClick={handleRequestNotifications}
-            className="px-4 py-2 text-sm font-semibold rounded-lg bg-yellow-600 text-white hover:bg-yellow-700 transition-colors focus-visible:outline-2 focus-visible:outline-yellow-600"
+            className="px-3 py-1.5 text-xs font-semibold rounded-lg bg-yellow-600 text-white hover:bg-yellow-700 transition-colors focus-visible:outline-2 focus-visible:outline-yellow-600"
             aria-label="Activer les notifications"
           >
             Activer les notifications
@@ -196,11 +196,11 @@ export default function PomodoroFocus() {
         </div>
       )}
 
-      <div className="text-sm text-gray-600 dark:text-gray-400">
-        <p className="mb-2">
+      <div className="text-xs text-gray-600 dark:text-gray-400">
+        <p className="mb-1">
           <strong>Technique Pomodoro:</strong>
         </p>
-        <ul className="list-disc list-inside space-y-1 ml-2">
+        <ul className="list-disc list-inside space-y-0.5 ml-2">
           <li>25 minutes de travail concentré</li>
           <li>5 minutes de pause</li>
           <li>Répétez pour rester productif</li>
