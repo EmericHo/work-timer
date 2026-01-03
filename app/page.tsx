@@ -21,11 +21,17 @@ export default function Home() {
           Outil simple et efficace pour gérer votre temps de travail et augmenter votre concentration.
         </p>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-3xl text-left my-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 w-full max-w-5xl text-left my-4">
           <div className="p-4 bg-white dark:bg-gray-800 rounded-lg shadow">
             <h2 className="text-xl font-semibold mb-2">⏱️ Timer Précis</h2>
             <p className="text-gray-600 dark:text-gray-400">
               Chronomètre avec affichage heures, minutes et secondes pour suivre votre temps de travail
+            </p>
+          </div>
+          <div className="p-4 bg-white dark:bg-gray-800 rounded-lg shadow">
+            <h2 className="text-xl font-semibold mb-2">⏳ Compte à Rebours</h2>
+            <p className="text-gray-600 dark:text-gray-400">
+              Timer inversé avec pause : définissez votre durée de travail et comptez jusqu&apos;à 0
             </p>
           </div>
           <div className="p-4 bg-white dark:bg-gray-800 rounded-lg shadow">

@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 import PomodoroFocus from "@/components/PomodoroFocus";
 import WorkCalculator from "@/components/WorkCalculator";
+import CountdownTimer from "@/components/CountdownTimer";
 
 // Note: Client components can't export metadata directly
 // Metadata is defined in layout.tsx or a separate metadata file
@@ -145,7 +146,17 @@ export default function TimerPage() {
             </div>
           </section>
 
-          {/* Pomodoro Section - Position 3 (Bottom Right) */}
+          {/* Countdown Timer Section - Position 3 (Bottom Middle) */}
+          <section className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-4 flex flex-col overflow-hidden">
+            <h2 className="text-xl font-semibold mb-3 text-center flex-shrink-0">
+              Compte à Rebours
+            </h2>
+            <div className="flex-1 overflow-y-auto min-h-0">
+              <CountdownTimer />
+            </div>
+          </section>
+
+          {/* Pomodoro Section - Position 4 (Bottom Right) */}
           <section className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-4 flex flex-col overflow-hidden">
             <h2 className="text-xl font-semibold mb-3 text-center flex-shrink-0">
               Mode Pomodoro Focus
