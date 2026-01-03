@@ -91,8 +91,8 @@ export default function TimerPage() {
 
       <div className="flex-1 overflow-hidden">
         <div className="h-full grid grid-cols-1 lg:grid-cols-2 gap-4">
-          {/* Work Calculator Section - Position 1 (Top, Full Width on Large Screens) */}
-          <section className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-4 flex flex-col overflow-hidden lg:col-span-2">
+          {/* Work Calculator Section - Position 1 */}
+          <section className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-4 flex flex-col overflow-hidden">
             <h2 className="text-xl font-semibold mb-3 text-center flex-shrink-0">
               Calculateur de Temps de Travail
             </h2>
@@ -101,7 +101,7 @@ export default function TimerPage() {
             </div>
           </section>
 
-          {/* Timer Section - Position 2 (Bottom Left) */}
+          {/* Timer Section - Position 2 */}
           <section className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-4 flex flex-col overflow-hidden">
             <h2 className="text-xl font-semibold mb-3 text-center flex-shrink-0">
               Timer Standard
@@ -146,7 +146,7 @@ export default function TimerPage() {
             </div>
           </section>
 
-          {/* Countdown Timer Section - Position 3 (Bottom Middle) */}
+          {/* Countdown Timer Section - Position 3 */}
           <section className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-4 flex flex-col overflow-hidden">
             <h2 className="text-xl font-semibold mb-3 text-center flex-shrink-0">
               Compte à Rebours
@@ -156,7 +156,7 @@ export default function TimerPage() {
             </div>
           </section>
 
-          {/* Pomodoro Section - Position 4 (Bottom Right) */}
+          {/* Pomodoro Section - Position 4 */}
           <section className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-4 flex flex-col overflow-hidden">
             <h2 className="text-xl font-semibold mb-3 text-center flex-shrink-0">
               Mode Pomodoro Focus
