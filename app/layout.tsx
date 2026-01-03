@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
+import { Suspense } from "react";
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -247,7 +248,11 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-screen antialiased">
-        {gaMeasurementId && <GoogleAnalytics />}
+        {gaMeasurementId && (
+          <Suspense fallback={null}>
+            <GoogleAnalytics />
+          </Suspense>
+        )}
         {children}
       </body>
     </html>
