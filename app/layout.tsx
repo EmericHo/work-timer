@@ -105,6 +105,9 @@ export default function RootLayout({
   return (
     <html lang="fr">
       <head>
+        {/* Google AdSense Verification */}
+        <meta name="google-adsense-account" content="ca-pub-7974922980225669" />
+        
         {/* SEO Meta Tags */}
         <meta name="language" content="French" />
         <meta name="geo.region" content="FR" />
