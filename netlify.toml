@@ -1,6 +1,5 @@
 [build]
   command = "npm run build"
-  publish = ".next"
 
 [build.environment]
   # Omit public environment variables from secrets scanning
