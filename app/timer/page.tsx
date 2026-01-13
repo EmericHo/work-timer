@@ -167,6 +167,82 @@ export default function TimerPage() {
           </section>
         </div>
       </div>
+
+      {/* Informative content section for publisher content */}
+      <footer className="flex-shrink-0 mt-4 max-w-7xl mx-auto">
+        <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-4 sm:p-6 space-y-4">
+          <article className="prose dark:prose-invert max-w-none">
+            <h2 className="text-xl sm:text-2xl font-bold mb-3">
+              Maîtrisez votre temps avec nos outils de productivité
+            </h2>
+            
+            <section className="mb-4">
+              <h3 className="text-lg font-semibold mb-2">Le pouvoir de la mesure du temps</h3>
+              <p className="text-sm sm:text-base text-gray-700 dark:text-gray-300 mb-2">
+                Mesurer votre temps est la première étape vers une meilleure productivité. Notre chronomètre vous permet 
+                de suivre précisément le temps consacré à chaque tâche, vous aidant à identifier où va réellement votre 
+                temps et comment l&apos;optimiser. Cette prise de conscience est essentielle pour améliorer votre efficacité 
+                professionnelle.
+              </p>
+              <p className="text-sm sm:text-base text-gray-700 dark:text-gray-300">
+                Le calculateur de temps de travail vous aide à planifier vos journées en estimant la durée nécessaire 
+                pour vos différents projets. En combinant ces outils avec la technique Pomodoro, vous créez un système 
+                complet de gestion du temps adapté à vos besoins professionnels.
+              </p>
+            </section>
+
+            <section className="mb-4">
+              <h3 className="text-lg font-semibold mb-2">Les bénéfices scientifiquement prouvés du Pomodoro</h3>
+              <p className="text-sm sm:text-base text-gray-700 dark:text-gray-300 mb-2">
+                Des études en psychologie cognitive ont démontré que notre capacité de concentration décline après 
+                environ 25-30 minutes de travail soutenu. La technique Pomodoro tire parti de cette connaissance en 
+                structurant le travail en cycles courts et intenses, suivis de pauses réparatrices. Cette approche 
+                permet de maintenir un niveau de performance optimal tout au long de la journée.
+              </p>
+              <p className="text-sm sm:text-base text-gray-700 dark:text-gray-300">
+                Les pauses régulières ne sont pas une perte de temps, mais un investissement dans votre productivité. 
+                Elles permettent à votre cerveau de consolider les informations, de traiter les apprentissages et de 
+                recharger votre énergie mentale. Les utilisateurs réguliers de la technique Pomodoro rapportent une 
+                réduction significative de la fatigue mentale et une augmentation de leur capacité à rester concentrés.
+              </p>
+            </section>
+
+            <section className="mb-4">
+              <h3 className="text-lg font-semibold mb-2">Combiner les outils pour un maximum d&apos;efficacité</h3>
+              <p className="text-sm sm:text-base text-gray-700 dark:text-gray-300 mb-2">
+                L&apos;utilisation combinée de nos quatre outils crée une synergie puissante pour votre productivité. 
+                Commencez votre journée en utilisant le calculateur pour estimer le temps nécessaire à vos tâches. 
+                Utilisez ensuite le mode Pomodoro pour les tâches demandant une concentration intense, le chronomètre 
+                standard pour mesurer le temps passé sur des projets spécifiques, et le compte à rebours pour respecter 
+                vos deadlines importantes.
+              </p>
+              <p className="text-sm sm:text-base text-gray-700 dark:text-gray-300">
+                Cette approche multi-outils vous permet d&apos;adapter votre méthode de travail selon le type de tâche. 
+                Les tâches créatives bénéficient particulièrement du mode Pomodoro, tandis que les réunions ou 
+                présentations sont mieux gérées avec le compte à rebours. Le chronomètre reste idéal pour facturer 
+                précisément votre temps si vous êtes freelance ou consultant.
+              </p>
+            </section>
+
+            <section>
+              <h3 className="text-lg font-semibold mb-2">Développez des habitudes de travail saines</h3>
+              <p className="text-sm sm:text-base text-gray-700 dark:text-gray-300 mb-2">
+                Au-delà de la simple mesure du temps, l&apos;utilisation régulière d&apos;un timer développe des habitudes 
+                professionnelles bénéfiques. Vous apprenez à mieux estimer la durée des tâches, à identifier vos 
+                moments de productivité maximale dans la journée, et à maintenir un équilibre sain entre travail et 
+                repos. Ces compétences sont particulièrement précieuses dans le contexte du télétravail où les 
+                frontières entre vie professionnelle et personnelle peuvent devenir floues.
+              </p>
+              <p className="text-sm sm:text-base text-gray-700 dark:text-gray-300">
+                N&apos;oubliez pas que la productivité n&apos;est pas une course vers l&apos;épuisement, mais une gestion 
+                intelligente de votre énergie et de votre temps. Notre timer gratuit vous accompagne dans cette 
+                démarche en vous offrant les outils nécessaires pour travailler de manière plus efficace et plus 
+                sereine. Commencez dès aujourd&apos;hui à transformer votre façon de travailler !
+              </p>
+            </section>
+          </article>
+        </div>
+      </footer>
     </div>
   );
 }
