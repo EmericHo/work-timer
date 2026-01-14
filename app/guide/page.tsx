@@ -20,7 +20,7 @@ export default function GuidePage() {
         </header>
 
         <main className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-4 sm:p-6 md:p-8">
-          <article className="prose prose-sm sm:prose-base lg:prose-lg dark:prose-invert max-w-none">
+          <article className="prose prose-sm sm:prose-base lg:prose-lg dark:prose-invert max-w-3xl mx-auto">
             <section className="mb-8">
               <h2 className="text-2xl sm:text-3xl font-bold mb-4">
                 Maîtrisez votre temps avec nos outils de productivité
