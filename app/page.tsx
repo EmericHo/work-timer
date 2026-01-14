@@ -55,6 +55,12 @@ export default function Home() {
           >
             Commencer le Timer Gratuit
           </Link>
+          <Link
+            href="/guide"
+            className="rounded-full border border-solid border-gray-300 dark:border-gray-600 transition-colors flex items-center justify-center bg-transparent text-gray-900 dark:text-gray-100 gap-2 hover:bg-gray-100 dark:hover:bg-gray-800 text-base sm:text-lg h-12 sm:h-14 px-6 sm:px-8 focus-visible:outline-2 focus-visible:outline-gray-500"
+          >
+            Lire le Guide
+          </Link>
         </div>
 
         <section className="mt-8 text-left max-w-2xl">
