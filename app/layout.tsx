@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
+import Footer from "@/components/Footer";
 import { Suspense } from "react";
 
 export const viewport: Viewport = {
@@ -250,13 +251,14 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="min-h-screen antialiased">
+      <body className="min-h-screen antialiased flex flex-col">
         {gaMeasurementId && (
           <Suspense fallback={null}>
             <GoogleAnalytics />
           </Suspense>
         )}
-        {children}
+        <div className="flex-1">{children}</div>
+        <Footer />
       </body>
     </html>
   );
