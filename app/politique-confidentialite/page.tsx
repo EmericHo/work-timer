@@ -24,7 +24,7 @@ export default function PrivacyPolicyPage() {
             Politique de Confidentialité
           </h1>
           <p className="text-gray-600 dark:text-gray-400 text-sm sm:text-base">
-            Dernière mise à jour : {new Date().toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' })}
+            Dernière mise à jour : 15 janvier 2026
           </p>
         </header>
 
