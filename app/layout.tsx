@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 import Footer from "@/components/Footer";
+import CookieConsent from "@/components/CookieConsent";
 import { Suspense } from "react";
 
 export const viewport: Viewport = {
@@ -135,6 +136,28 @@ export default function RootLayout({
           </>
         )}
         
+        {/* Google Consent Mode - Default to denied for GDPR compliance */}
+        {(gaMeasurementId || adsenseClientId) && (
+          <script
+            id="google-consent-mode"
+            dangerouslySetInnerHTML={{
+              __html: `
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                
+                // Set default consent to denied for GDPR compliance
+                gtag('consent', 'default', {
+                  'analytics_storage': 'denied',
+                  'ad_storage': 'denied',
+                  'ad_user_data': 'denied',
+                  'ad_personalization': 'denied',
+                  'wait_for_update': 500
+                });
+              `,
+            }}
+          />
+        )}
+        
         {/* Google Analytics - Chargé uniquement si NEXT_PUBLIC_GA_MEASUREMENT_ID est défini */}
         {gaMeasurementId && (
           <>
@@ -149,7 +172,20 @@ export default function RootLayout({
                   window.dataLayer = window.dataLayer || [];
                   function gtag(){dataLayer.push(arguments);}
                   gtag('js', new Date());
-                  gtag('config', '${gaMeasurementId}');
+                  
+                  // Check if consent was previously given
+                  if (typeof window !== 'undefined' && typeof localStorage !== 'undefined') {
+                    const consentGiven = localStorage.getItem('cookie-consent');
+                    if (consentGiven === 'accepted') {
+                      gtag('consent', 'update', {
+                        'analytics_storage': 'granted'
+                      });
+                    }
+                  }
+                  
+                  gtag('config', '${gaMeasurementId}', {
+                    'anonymize_ip': true
+                  });
                 `,
               }}
             />
@@ -157,11 +193,33 @@ export default function RootLayout({
         )}
         {/* Google AdSense Script - Chargé uniquement si NEXT_PUBLIC_ADSENSE_CLIENT_ID est défini */}
         {adsenseClientId && (
-          <script
-            async
-            src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${adsenseClientId}`}
-            crossOrigin="anonymous"
-          />
+          <>
+            <script
+              id="adsense-consent"
+              dangerouslySetInnerHTML={{
+                __html: `
+                  // Check if consent was previously given for AdSense
+                  if (typeof window !== 'undefined' && typeof localStorage !== 'undefined') {
+                    const consentGiven = localStorage.getItem('cookie-consent');
+                    if (consentGiven === 'accepted') {
+                      window.dataLayer = window.dataLayer || [];
+                      function gtag(){dataLayer.push(arguments);}
+                      gtag('consent', 'update', {
+                        'ad_storage': 'granted',
+                        'ad_user_data': 'granted',
+                        'ad_personalization': 'granted'
+                      });
+                    }
+                  }
+                `,
+              }}
+            />
+            <script
+              async
+              src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${adsenseClientId}`}
+              crossOrigin="anonymous"
+            />
+          </>
         )}
         <script
           type="application/ld+json"
@@ -259,6 +317,8 @@ export default function RootLayout({
         )}
         <div className="flex-1">{children}</div>
         <Footer />
+        {/* GDPR Cookie Consent Banner */}
+        <CookieConsent />
       </body>
     </html>
   );
