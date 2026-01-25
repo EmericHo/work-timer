@@ -16,6 +16,12 @@ export default function CookieConsent() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
+    // Ensure we're on the client side
+    if (typeof window === "undefined" || typeof localStorage === "undefined") {
+      setIsLoading(false);
+      return;
+    }
+    
     // Check if user has already made a choice
     const consentGiven = localStorage.getItem("cookie-consent");
     
@@ -64,9 +70,6 @@ export default function CookieConsent() {
     // Load analytics and ads
     loadAnalytics();
     loadAdSense();
-    
-    // Reload page to ensure all scripts are loaded properly
-    window.location.reload();
   };
 
   const handleReject = () => {

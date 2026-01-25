@@ -174,11 +174,13 @@ export default function RootLayout({
                   gtag('js', new Date());
                   
                   // Check if consent was previously given
-                  const consentGiven = localStorage.getItem('cookie-consent');
-                  if (consentGiven === 'accepted') {
-                    gtag('consent', 'update', {
-                      'analytics_storage': 'granted'
-                    });
+                  if (typeof window !== 'undefined' && typeof localStorage !== 'undefined') {
+                    const consentGiven = localStorage.getItem('cookie-consent');
+                    if (consentGiven === 'accepted') {
+                      gtag('consent', 'update', {
+                        'analytics_storage': 'granted'
+                      });
+                    }
                   }
                   
                   gtag('config', '${gaMeasurementId}', {
@@ -197,15 +199,17 @@ export default function RootLayout({
               dangerouslySetInnerHTML={{
                 __html: `
                   // Check if consent was previously given for AdSense
-                  const consentGiven = localStorage.getItem('cookie-consent');
-                  if (consentGiven === 'accepted') {
-                    window.dataLayer = window.dataLayer || [];
-                    function gtag(){dataLayer.push(arguments);}
-                    gtag('consent', 'update', {
-                      'ad_storage': 'granted',
-                      'ad_user_data': 'granted',
-                      'ad_personalization': 'granted'
-                    });
+                  if (typeof window !== 'undefined' && typeof localStorage !== 'undefined') {
+                    const consentGiven = localStorage.getItem('cookie-consent');
+                    if (consentGiven === 'accepted') {
+                      window.dataLayer = window.dataLayer || [];
+                      function gtag(){dataLayer.push(arguments);}
+                      gtag('consent', 'update', {
+                        'ad_storage': 'granted',
+                        'ad_user_data': 'granted',
+                        'ad_personalization': 'granted'
+                      });
+                    }
                   }
                 `,
               }}
