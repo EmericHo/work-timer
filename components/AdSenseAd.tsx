@@ -36,7 +36,6 @@ export default function AdSenseAd({ slot, format, style }: AdSenseAdProps) {
     // Utiliser un ref pour éviter les initialisations multiples
     if (isProduction && clientId && typeof window !== "undefined" && !isInitialized.current) {
       try {
-        // @ts-expect-error - adsbygoogle is loaded by external script
         (window.adsbygoogle = window.adsbygoogle || []).push({});
         isInitialized.current = true;
       } catch (error) {
