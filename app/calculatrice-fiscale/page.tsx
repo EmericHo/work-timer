@@ -3,8 +3,8 @@ import Link from "next/link";
 import TaxCalculator from "@/components/TaxCalculator";
 
 export const metadata: Metadata = {
-  title: "Calculatrice Fiscale 2025-2026 - Calcul Impôt sur le Revenu et Salaire Net",
-  description: "Calculatrice fiscale gratuite pour calculer votre impôt sur le revenu 2025-2026, conversion salaire brut-net, et simulation fiscale avec quotient familial. Calculs précis basés sur les barèmes officiels français.",
+  title: "Calculatrice Fiscale France Luxembourg 2025-2026 - Comparaison FR/LUX",
+  description: "Calculatrice fiscale gratuite France et Luxembourg 2025-2026. Calculez et comparez votre impôt, salaire net après impôt FR vs LUX. Barèmes officiels, classe fiscale Luxembourg, quotient familial France.",
   keywords: [
     "calculatrice fiscale",
     "calcul impôt",
@@ -23,13 +23,26 @@ export const metadata: Metadata = {
     "calcul net après impôt",
     "abattement 10%",
     "frais professionnels",
+    "fiscalité Luxembourg",
+    "impôt Luxembourg",
+    "classe fiscale Luxembourg",
+    "classe 1 Luxembourg",
+    "classe 2 Luxembourg",
+    "frontalier Luxembourg",
+    "travail Luxembourg",
+    "salaire Luxembourg",
+    "comparaison France Luxembourg",
+    "FR vs LUX",
+    "transfrontalier",
+    "Belval",
+    "frontalier français",
   ],
   alternates: {
     canonical: "/calculatrice-fiscale",
   },
   openGraph: {
-    title: "Calculatrice Fiscale 2025-2026 - Calcul Impôt sur le Revenu",
-    description: "Calculez gratuitement votre impôt sur le revenu, votre salaire net après impôt et simulez votre fiscalité. Barèmes officiels 2025-2026.",
+    title: "Calculatrice Fiscale France Luxembourg 2025-2026 - Comparaison FR/LUX",
+    description: "Calculez et comparez gratuitement votre impôt France vs Luxembourg. Salaire net après impôt, barèmes officiels 2025-2026, classes fiscales Luxembourg.",
     type: "website",
   },
 };
@@ -46,10 +59,10 @@ export default function TaxCalculatorPage() {
             ← Retour à l&apos;accueil
           </Link>
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-4">
-            Calculatrice Fiscale 2025-2026
+            Calculatrice Fiscale France 🇫🇷 Luxembourg 🇱🇺 2025-2026
           </h1>
           <p className="text-center text-gray-600 dark:text-gray-400 text-base sm:text-lg max-w-3xl mx-auto">
-            Calculez votre impôt sur le revenu, convertissez votre salaire brut en net, et simulez votre fiscalité avec les barèmes officiels français 2025-2026
+            Calculez et comparez votre impôt sur le revenu France vs Luxembourg, convertissez votre salaire brut en net, et simulez votre fiscalité avec les barèmes officiels 2025-2026
           </p>
         </header>
 
@@ -66,6 +79,183 @@ export default function TaxCalculatorPage() {
           <section className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-4 sm:p-6 md:p-8">
             <article className="prose prose-sm sm:prose-base lg:prose-lg dark:prose-invert max-w-none">
               <h2 className="text-2xl sm:text-3xl font-bold mb-4">
+                🇫🇷🇱🇺 France vs Luxembourg : Quelle différence pour votre fiscalité ?
+              </h2>
+
+              <p className="text-gray-700 dark:text-gray-300 mb-4">
+                Vous êtes frontalier ou envisagez de travailler au Luxembourg ? La fiscalité luxembourgeoise
+                présente des différences significatives avec la France, particulièrement en termes de cotisations
+                sociales et de système d&apos;imposition. Notre calculatrice vous permet de comparer facilement
+                votre situation fiscale dans les deux pays.
+              </p>
+
+              <h3 className="text-xl sm:text-2xl font-bold mb-3 mt-6">
+                Comparaison rapide France 🇫🇷 vs Luxembourg 🇱🇺
+              </h3>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg border border-blue-300 dark:border-blue-700">
+                  <h4 className="font-bold text-blue-600 dark:text-blue-400 mb-3">🇫🇷 FRANCE</h4>
+                  <ul className="space-y-2 text-sm sm:text-base">
+                    <li>• <strong>Cotisations :</strong> 23% du brut</li>
+                    <li>• <strong>Abattement :</strong> 10% automatique (max 7 600€)</li>
+                    <li>• <strong>Barème :</strong> 5 tranches (0% à 45%)</li>
+                    <li>• <strong>Quotient familial :</strong> Parts selon situation</li>
+                    <li>• <strong>Avantage :</strong> Quotient familial avantageux avec enfants</li>
+                  </ul>
+                </div>
+
+                <div className="bg-green-50 dark:bg-green-900/20 p-4 rounded-lg border border-green-300 dark:border-green-700">
+                  <h4 className="font-bold text-green-600 dark:text-green-400 mb-3">🇱🇺 LUXEMBOURG</h4>
+                  <ul className="space-y-2 text-sm sm:text-base">
+                    <li>• <strong>Cotisations :</strong> 15.75% du brut</li>
+                    <li>• <strong>Abattement :</strong> Pas d&apos;abattement 10%</li>
+                    <li>• <strong>Barème :</strong> 16 tranches (0% à 40%)</li>
+                    <li>• <strong>Classes fiscales :</strong> Classe 1 ou 2</li>
+                    <li>• <strong>Avantage :</strong> Cotisations plus faibles, classe 2 très avantageuse</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div className="bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-400 dark:border-yellow-600 p-4 rounded-lg mb-6">
+                <p className="font-semibold mb-2">💡 Conseil pour les frontaliers :</p>
+                <p className="text-sm sm:text-base">
+                  Le Luxembourg est souvent plus avantageux fiscalement, surtout pour les célibataires ou couples
+                  sans enfants grâce aux cotisations plus faibles (15.75% vs 23%). La France peut devenir
+                  intéressante avec plusieurs enfants grâce au quotient familial. Utilisez notre comparateur pour
+                  voir quelle option est la meilleure pour votre situation !
+                </p>
+              </div>
+
+              <h3 className="text-xl sm:text-2xl font-bold mb-3 mt-6">
+                Le système fiscal luxembourgeois expliqué
+              </h3>
+
+              <p className="text-gray-700 dark:text-gray-300 mb-4">
+                Le Luxembourg utilise un système de <strong>classes fiscales</strong> plutôt que le quotient
+                familial français. Ce système permet d&apos;ajuster l&apos;impôt selon votre situation personnelle :
+              </p>
+
+              <div className="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg mb-4">
+                <h4 className="font-semibold mb-3">Les classes fiscales au Luxembourg :</h4>
+                <div className="space-y-3">
+                  <div>
+                    <p className="font-semibold">Classe 1 (Célibataire) :</p>
+                    <p className="text-sm sm:text-base text-gray-700 dark:text-gray-300">
+                      Pour les personnes seules, divorcées, veuves. Seuil d&apos;exonération : 12 438€/an. Cotisations : 15.75%
+                    </p>
+                  </div>
+                  <div>
+                    <p className="font-semibold">Classe 2 (Marié/e) :</p>
+                    <p className="text-sm sm:text-base text-gray-700 dark:text-gray-300">
+                      Pour les couples mariés ou en partenariat. Seuil d&apos;exonération doublé : 24 876€/an. 
+                      Beaucoup plus avantageux que la classe 1 !
+                    </p>
+                  </div>
+                  <div>
+                    <p className="font-semibold">Classe 1a :</p>
+                    <p className="text-sm sm:text-base text-gray-700 dark:text-gray-300">
+                      Pour les parents isolés avec enfants à charge (avantages fiscaux supplémentaires)
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <h3 className="text-xl sm:text-2xl font-bold mb-3 mt-6">
+                Les 16 tranches du barème luxembourgeois (Classe 1)
+              </h3>
+
+              <div className="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg mb-4 overflow-x-auto">
+                <table className="w-full text-xs sm:text-sm">
+                  <thead>
+                    <tr className="border-b border-gray-300 dark:border-gray-600">
+                      <th className="text-left py-2 pr-4">Tranche de revenus</th>
+                      <th className="text-left py-2">Taux d&apos;imposition</th>
+                    </tr>
+                  </thead>
+                  <tbody className="text-xs sm:text-sm">
+                    <tr className="border-b border-gray-200 dark:border-gray-600">
+                      <td className="py-1 pr-4">0 - 12 438 €</td>
+                      <td className="py-1">0%</td>
+                    </tr>
+                    <tr className="border-b border-gray-200 dark:border-gray-600">
+                      <td className="py-1 pr-4">12 438 - 14 508 €</td>
+                      <td className="py-1">8%</td>
+                    </tr>
+                    <tr className="border-b border-gray-200 dark:border-gray-600">
+                      <td className="py-1 pr-4">14 508 - 16 578 €</td>
+                      <td className="py-1">9%</td>
+                    </tr>
+                    <tr className="border-b border-gray-200 dark:border-gray-600">
+                      <td className="py-1 pr-4">16 578 - 18 648 €</td>
+                      <td className="py-1">10%</td>
+                    </tr>
+                    <tr className="border-b border-gray-200 dark:border-gray-600">
+                      <td className="py-1 pr-4">18 648 - 20 718 €</td>
+                      <td className="py-1">11%</td>
+                    </tr>
+                    <tr className="border-b border-gray-200 dark:border-gray-600">
+                      <td className="py-1 pr-4">20 718 - 22 788 €</td>
+                      <td className="py-1">12%</td>
+                    </tr>
+                    <tr className="border-b border-gray-200 dark:border-gray-600">
+                      <td className="py-1 pr-4">22 788 - 24 858 €</td>
+                      <td className="py-1">14%</td>
+                    </tr>
+                    <tr className="border-b border-gray-200 dark:border-gray-600">
+                      <td className="py-1 pr-4">24 858 - 26 928 €</td>
+                      <td className="py-1">16%</td>
+                    </tr>
+                    <tr className="border-b border-gray-200 dark:border-gray-600">
+                      <td className="py-1 pr-4">26 928 - 28 998 €</td>
+                      <td className="py-1">18%</td>
+                    </tr>
+                    <tr className="border-b border-gray-200 dark:border-gray-600">
+                      <td className="py-1 pr-4">28 998 - 31 068 €</td>
+                      <td className="py-1">20%</td>
+                    </tr>
+                    <tr className="border-b border-gray-200 dark:border-gray-600">
+                      <td className="py-1 pr-4">31 068 - 33 138 €</td>
+                      <td className="py-1">22%</td>
+                    </tr>
+                    <tr className="border-b border-gray-200 dark:border-gray-600">
+                      <td className="py-1 pr-4">33 138 - 35 208 €</td>
+                      <td className="py-1">24%</td>
+                    </tr>
+                    <tr className="border-b border-gray-200 dark:border-gray-600">
+                      <td className="py-1 pr-4">35 208 - 37 278 €</td>
+                      <td className="py-1">26%</td>
+                    </tr>
+                    <tr className="border-b border-gray-200 dark:border-gray-600">
+                      <td className="py-1 pr-4">37 278 - 39 348 €</td>
+                      <td className="py-1">28%</td>
+                    </tr>
+                    <tr className="border-b border-gray-200 dark:border-gray-600">
+                      <td className="py-1 pr-4">39 348 - 41 418 €</td>
+                      <td className="py-1">30%</td>
+                    </tr>
+                    <tr className="border-b border-gray-200 dark:border-gray-600">
+                      <td className="py-1 pr-4">41 418 - 200 004 €</td>
+                      <td className="py-1">39%</td>
+                    </tr>
+                    <tr>
+                      <td className="py-1 pr-4">Au-delà de 200 004 €</td>
+                      <td className="py-1">40%</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div className="bg-green-50 dark:bg-green-900/20 border border-green-300 dark:border-green-700 p-4 rounded-lg mb-6">
+                <p className="font-semibold mb-2">✅ Exemple concret Luxembourg :</p>
+                <p className="text-sm sm:text-base">
+                  Avec un salaire de 50 000€ brut en classe 1 au Luxembourg : cotisations de 7 875€ (15.75%), 
+                  puis application du barème progressif sur 42 125€ imposables. Le net final est généralement 
+                  supérieur à la France grâce aux cotisations plus faibles.
+                </p>
+              </div>
+
+              <h2 className="text-2xl sm:text-3xl font-bold mb-4 mt-8">
                 Comprendre le calcul de l&apos;impôt sur le revenu en France
               </h2>
 
@@ -429,67 +619,210 @@ export default function TaxCalculatorPage() {
                     </p>
                   </div>
                 </details>
+
+                <details className="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg">
+                  <summary className="font-semibold cursor-pointer text-base sm:text-lg">
+                    🇱🇺 Travailler au Luxembourg : est-ce vraiment plus avantageux ?
+                  </summary>
+                  <div className="mt-3 text-sm sm:text-base text-gray-700 dark:text-gray-300">
+                    <p>
+                      Le Luxembourg est généralement plus avantageux fiscalement pour la plupart des profils,
+                      notamment grâce aux <strong>cotisations sociales plus faibles</strong> (15.75% contre 23% en
+                      France). Pour un célibataire ou un couple sans enfant, le gain peut aller de 5% à 15% selon
+                      le salaire.
+                    </p>
+                    <p className="mt-2">
+                      Cependant, la France peut devenir compétitive pour les familles avec plusieurs enfants grâce
+                      au quotient familial. Utilisez notre comparateur pour voir votre situation précise !
+                    </p>
+                  </div>
+                </details>
+
+                <details className="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg">
+                  <summary className="font-semibold cursor-pointer text-base sm:text-lg">
+                    🇱🇺 Quelle classe fiscale choisir au Luxembourg ?
+                  </summary>
+                  <div className="mt-3 text-sm sm:text-base text-gray-700 dark:text-gray-300">
+                    <p>
+                      La <strong>classe fiscale</strong> au Luxembourg dépend de votre situation familiale :
+                    </p>
+                    <ul className="list-disc list-inside mt-2 space-y-1">
+                      <li><strong>Classe 1</strong> : Célibataire, divorcé(e), veuf(ve)</li>
+                      <li><strong>Classe 2</strong> : Marié(e) ou en partenariat (beaucoup plus avantageux !)</li>
+                      <li><strong>Classe 1a</strong> : Parent isolé avec enfants</li>
+                    </ul>
+                    <p className="mt-2">
+                      La classe 2 double pratiquement le seuil d&apos;exonération et applique des taux plus
+                      avantageux. Si vous êtes marié(e), cette classe peut vous faire économiser plusieurs milliers
+                      d&apos;euros par an !
+                    </p>
+                  </div>
+                </details>
+
+                <details className="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg">
+                  <summary className="font-semibold cursor-pointer text-base sm:text-lg">
+                    🇱🇺 Frontalier : où dois-je payer mes impôts ?
+                  </summary>
+                  <div className="mt-3 text-sm sm:text-base text-gray-700 dark:text-gray-300">
+                    <p>
+                      En tant que <strong>frontalier français travaillant au Luxembourg</strong>, vous payez vos
+                      impôts au Luxembourg sur vos revenus luxembourgeois. Vous devez tout de même déclarer ces
+                      revenus en France, mais ils ne sont pas imposés une seconde fois grâce à la convention fiscale
+                      FR-LUX qui évite la double imposition.
+                    </p>
+                    <p className="mt-2">
+                      Attention : si vous avez d&apos;autres revenus en France (foncier, placements, etc.), ceux-ci
+                      seront imposés en France normalement.
+                    </p>
+                  </div>
+                </details>
+
+                <details className="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg">
+                  <summary className="font-semibold cursor-pointer text-base sm:text-lg">
+                    🇱🇺 Comment optimiser ma fiscalité en tant que frontalier ?
+                  </summary>
+                  <div className="mt-3 text-sm sm:text-base text-gray-700 dark:text-gray-300">
+                    <p>Plusieurs leviers pour optimiser votre situation de frontalier :</p>
+                    <ul className="list-disc list-inside mt-2 space-y-1">
+                      <li>Si marié(e), pensez à demander la <strong>classe 2</strong> au Luxembourg</li>
+                      <li>Déduisez vos frais de déplacement domicile-travail</li>
+                      <li>Cotisez à un PER (Plan Épargne Retraite) luxembourgeois si disponible</li>
+                      <li>Vérifiez les avantages sociaux de votre employeur (tickets restaurant, véhicule de
+                      fonction)</li>
+                      <li>Consultez un conseiller fiscal transfrontalier pour les situations complexes</li>
+                    </ul>
+                  </div>
+                </details>
+
+                <details className="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg">
+                  <summary className="font-semibold cursor-pointer text-base sm:text-lg">
+                    🇱🇺 Y a-t-il un abattement de 10% au Luxembourg comme en France ?
+                  </summary>
+                  <div className="mt-3 text-sm sm:text-base text-gray-700 dark:text-gray-300">
+                    <p>
+                      <strong>Non</strong>, le Luxembourg n&apos;applique pas d&apos;abattement forfaitaire de 10%
+                      pour frais professionnels comme en France. L&apos;impôt est calculé directement sur votre net
+                      social (salaire après cotisations).
+                    </p>
+                    <p className="mt-2">
+                      Cependant, vous pouvez déduire certains frais réels justifiés (transport, formation
+                      professionnelle, etc.) lors de votre déclaration fiscale annuelle. Ces déductions se font a
+                      posteriori, contrairement à l&apos;abattement automatique français.
+                    </p>
+                  </div>
+                </details>
               </div>
 
               <div className="bg-red-50 dark:bg-red-900/20 border-2 border-red-400 dark:border-red-600 p-4 sm:p-6 rounded-lg mt-8">
                 <h4 className="font-bold text-lg mb-3">⚠️ Avertissement Important</h4>
                 <p className="text-sm sm:text-base text-gray-700 dark:text-gray-300 mb-2">
                   Cette calculatrice fiscale fournit des <strong>estimations indicatives</strong> basées sur les barèmes
-                  officiels 2025-2026. Les calculs sont simplifiés et ne prennent pas en compte toutes les spécificités
+                  officiels 2025-2026 pour la France et le Luxembourg. Les calculs sont simplifiés et ne prennent pas en compte toutes les spécificités
                   de votre situation personnelle (crédits d&apos;impôt, réductions fiscales spécifiques, revenus
-                  exceptionnels, etc.).
+                  exceptionnels, conventions fiscales transfrontalières, etc.).
                 </p>
                 <p className="text-sm sm:text-base text-gray-700 dark:text-gray-300">
-                  Pour une déclaration officielle et un calcul précis de votre impôt, utilisez votre espace personnel sur{" "}
-                  <a
+                  Pour une déclaration officielle et un calcul précis de votre impôt : <br/>
+                  🇫🇷 France : <a
                     href="https://www.impots.gouv.fr"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-blue-600 dark:text-blue-400 font-semibold underline"
                   >
                     impots.gouv.fr
-                  </a>{" "}
-                  ou consultez un expert-comptable ou conseiller fiscal.
+                  </a> | 🇱🇺 Luxembourg : <a
+                    href="https://guichet.public.lu"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-600 dark:text-blue-400 font-semibold underline"
+                  >
+                    guichet.lu
+                  </a>
+                  <br/>
+                  Pour les situations transfrontalières complexes, consultez un expert-comptable ou conseiller fiscal spécialisé.
                 </p>
               </div>
 
               <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-300 dark:border-blue-700 p-4 sm:p-6 rounded-lg mt-6">
                 <h4 className="font-bold text-lg mb-3">📚 Ressources officielles</h4>
-                <ul className="space-y-2 text-sm sm:text-base">
-                  <li>
-                    <a
-                      href="https://www.impots.gouv.fr"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-blue-600 dark:text-blue-400 hover:underline"
-                    >
-                      Service Public des Impôts (impots.gouv.fr)
-                    </a>{" "}
-                    - Pour votre déclaration officielle et votre espace personnel
-                  </li>
-                  <li>
-                    <a
-                      href="https://www.service-public.fr/particuliers/vosdroits/F1419"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-blue-600 dark:text-blue-400 hover:underline"
-                    >
-                      Service-Public.fr - Impôt sur le revenu
-                    </a>{" "}
-                    - Informations détaillées sur l&apos;impôt sur le revenu
-                  </li>
-                  <li>
-                    <a
-                      href="https://www.economie.gouv.fr/particuliers/tranches-imposition-impot-revenu"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-blue-600 dark:text-blue-400 hover:underline"
-                    >
-                      Ministère de l&apos;Économie
-                    </a>{" "}
-                    - Barèmes et tranches d&apos;imposition officiels
-                  </li>
-                </ul>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div>
+                    <p className="font-semibold mb-2 text-blue-600 dark:text-blue-400">🇫🇷 France</p>
+                    <ul className="space-y-2 text-sm sm:text-base">
+                      <li>
+                        <a
+                          href="https://www.impots.gouv.fr"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-blue-600 dark:text-blue-400 hover:underline"
+                        >
+                          Service Public des Impôts
+                        </a>{" "}
+                        - Déclaration officielle et espace personnel
+                      </li>
+                      <li>
+                        <a
+                          href="https://www.service-public.fr/particuliers/vosdroits/F1419"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-blue-600 dark:text-blue-400 hover:underline"
+                        >
+                          Service-Public.fr
+                        </a>{" "}
+                        - Informations détaillées sur l&apos;impôt
+                      </li>
+                      <li>
+                        <a
+                          href="https://www.economie.gouv.fr/particuliers/tranches-imposition-impot-revenu"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-blue-600 dark:text-blue-400 hover:underline"
+                        >
+                          Ministère de l&apos;Économie
+                        </a>{" "}
+                        - Barèmes officiels
+                      </li>
+                    </ul>
+                  </div>
+                  <div>
+                    <p className="font-semibold mb-2 text-green-600 dark:text-green-400">🇱🇺 Luxembourg</p>
+                    <ul className="space-y-2 text-sm sm:text-base">
+                      <li>
+                        <a
+                          href="https://guichet.public.lu/fr/citoyens/impots-taxes/declaration-fiscale.html"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-blue-600 dark:text-blue-400 hover:underline"
+                        >
+                          Guichet.lu
+                        </a>{" "}
+                        - Portail officiel de l&apos;État luxembourgeois
+                      </li>
+                      <li>
+                        <a
+                          href="https://impotsdirects.public.lu"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-blue-600 dark:text-blue-400 hover:underline"
+                        >
+                          Administration des Contributions
+                        </a>{" "}
+                        - Service des impôts Luxembourg
+                      </li>
+                      <li>
+                        <a
+                          href="https://www.csl.lu"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-blue-600 dark:text-blue-400 hover:underline"
+                        >
+                          CSL (Chambre des Salariés)
+                        </a>{" "}
+                        - Conseils pour salariés
+                      </li>
+                    </ul>
+                  </div>
+                </div>
               </div>
             </article>
           </section>
