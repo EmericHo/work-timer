@@ -97,7 +97,7 @@ export default function TaxCalculatorPage() {
                 <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg border border-blue-300 dark:border-blue-700">
                   <h4 className="font-bold text-blue-600 dark:text-blue-400 mb-3">🇫🇷 FRANCE</h4>
                   <ul className="space-y-2 text-sm sm:text-base">
-                    <li>• <strong>Cotisations :</strong> ~23% du brut</li>
+                    <li>• <strong>Cotisations :</strong> 23% du brut</li>
                     <li>• <strong>Abattement :</strong> 10% automatique (max 7 600€)</li>
                     <li>• <strong>Barème :</strong> 5 tranches (0% à 45%)</li>
                     <li>• <strong>Quotient familial :</strong> Parts selon situation</li>
@@ -108,7 +108,7 @@ export default function TaxCalculatorPage() {
                 <div className="bg-green-50 dark:bg-green-900/20 p-4 rounded-lg border border-green-300 dark:border-green-700">
                   <h4 className="font-bold text-green-600 dark:text-green-400 mb-3">🇱🇺 LUXEMBOURG</h4>
                   <ul className="space-y-2 text-sm sm:text-base">
-                    <li>• <strong>Cotisations :</strong> ~15.75% du brut</li>
+                    <li>• <strong>Cotisations :</strong> 15.75% du brut</li>
                     <li>• <strong>Abattement :</strong> Pas d&apos;abattement 10%</li>
                     <li>• <strong>Barème :</strong> 16 tranches (0% à 40%)</li>
                     <li>• <strong>Classes fiscales :</strong> Classe 1 ou 2</li>

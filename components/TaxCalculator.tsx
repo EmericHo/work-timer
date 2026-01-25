@@ -31,6 +31,13 @@ interface CalculationResult {
   bracketDetails: Array<{ tranche: string; amount: number; rate: number; tax: number }>;
 }
 
+/**
+ * Comparison result between France and Luxembourg tax calculations
+ * @property france - Tax calculation result for France
+ * @property luxembourg - Tax calculation result for Luxembourg
+ * @property difference - Net annual difference (Luxembourg - France) in euros
+ * @property differencePercent - Percentage difference relative to France's net final
+ */
 interface ComparisonResult {
   france: CalculationResult;
   luxembourg: CalculationResult;
@@ -92,6 +99,7 @@ const SOCIAL_CONTRIBUTION_RATE_FRANCE = 0.23;
 const SOCIAL_CONTRIBUTION_RATE_LUXEMBOURG = 0.1575; // 15.75%
 const PROFESSIONAL_DEDUCTION_RATE = 0.10;
 const PROFESSIONAL_DEDUCTION_MAX = 7600;
+const FRANCE_MIN_TAX_THRESHOLD = 8; // Tax amounts below 8€ are waived in France
 
 const FAMILY_QUOTIENT: FamilyQuotient = {
   single: 1,
@@ -155,7 +163,7 @@ export default function TaxCalculator() {
     totalTax *= familyParts;
 
     // If tax is less than 8€, it's 0 (France only)
-    if (brackets === TAX_BRACKETS_FRANCE_2025 && totalTax < 8) totalTax = 0;
+    if (brackets === TAX_BRACKETS_FRANCE_2025 && totalTax < FRANCE_MIN_TAX_THRESHOLD) totalTax = 0;
 
     return { total: totalTax, details };
   };
@@ -217,7 +225,8 @@ export default function TaxCalculator() {
   };
 
   const calculateNetToGross = (netMonthly: number): number => {
-    // Approximate calculation
+    // Approximate calculation - uses France rate as default
+    // Note: For more accurate Luxembourg net-to-gross, use Luxembourg-specific estimation
     const netAnnual = netMonthly * 12;
     // Net social is approximately net annual + IRPP estimate
     // For simplification, we assume an average IRPP rate based on income level
@@ -229,8 +238,9 @@ export default function TaxCalculator() {
     else estimatedIRPPRate = 0.20;
 
     const netSocial = netAnnual / (1 - estimatedIRPPRate);
-    // Use France rate as default for net-to-gross estimation
-    const grossAnnual = netSocial / (1 - SOCIAL_CONTRIBUTION_RATE_FRANCE);
+    // Use appropriate social contribution rate based on country
+    const socialRate = country === "luxembourg" ? SOCIAL_CONTRIBUTION_RATE_LUXEMBOURG : SOCIAL_CONTRIBUTION_RATE_FRANCE;
+    const grossAnnual = netSocial / (1 - socialRate);
     
     return grossAnnual;
   };
