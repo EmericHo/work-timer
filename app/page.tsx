@@ -21,7 +21,7 @@ export default function Home() {
           Outil simple et efficace pour gérer votre temps de travail et augmenter votre concentration.
         </p>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 w-full max-w-5xl text-left my-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 w-full max-w-5xl text-left my-4">
           <div className="p-4 bg-white dark:bg-gray-800 rounded-lg shadow">
             <h2 className="text-xl font-semibold mb-2">⏱️ Timer Précis</h2>
             <p className="text-gray-600 dark:text-gray-400">
@@ -41,9 +41,15 @@ export default function Home() {
             </p>
           </div>
           <div className="p-4 bg-white dark:bg-gray-800 rounded-lg shadow">
-            <h2 className="text-xl font-semibold mb-2">📊 Calculateur</h2>
+            <h2 className="text-xl font-semibold mb-2">📊 Calculateur Temps</h2>
             <p className="text-gray-600 dark:text-gray-400">
               Calculateur de temps de travail pour planifier et suivre vos sessions productives
+            </p>
+          </div>
+          <div className="p-4 bg-white dark:bg-gray-800 rounded-lg shadow">
+            <h2 className="text-xl font-semibold mb-2">🧮 Calculatrice Fiscale</h2>
+            <p className="text-gray-600 dark:text-gray-400">
+              Calculez votre impôt sur le revenu, salaire net après impôt et simulez votre fiscalité 2025-2026
             </p>
           </div>
         </div>
@@ -54,6 +60,12 @@ export default function Home() {
             className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-blue-600 text-white gap-2 hover:bg-blue-700 text-base sm:text-lg h-12 sm:h-14 px-6 sm:px-8 focus-visible:outline-2 focus-visible:outline-blue-500"
           >
             Commencer le Timer Gratuit
+          </Link>
+          <Link
+            href="/calculatrice-fiscale"
+            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-green-600 text-white gap-2 hover:bg-green-700 text-base sm:text-lg h-12 sm:h-14 px-6 sm:px-8 focus-visible:outline-2 focus-visible:outline-green-500"
+          >
+            Calculatrice Fiscale 2025-2026
           </Link>
           <Link
             href="/guide"

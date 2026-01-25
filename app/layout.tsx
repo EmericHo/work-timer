@@ -247,7 +247,8 @@ export default function RootLayout({
                 "Notifications de bureau",
                 "Sauvegarde automatique de l'état",
                 "Interface responsive",
-                "Calculateur de temps de travail"
+                "Calculateur de temps de travail",
+                "Calculatrice fiscale 2025-2026 pour impôt sur le revenu"
               ],
               "screenshot": "/og-image.png",
               "inLanguage": "fr-FR",
