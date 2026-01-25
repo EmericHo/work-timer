@@ -47,9 +47,9 @@ const FAMILY_QUOTIENT: FamilyQuotient = {
   single: 1,
   married: 2,
   child1: 0.5,
-  child2: 1,
-  child3: 2,
-  child4: 2.5,
+  child2: 0.5,
+  child3: 1,
+  child4: 1,
 };
 
 export default function TaxCalculator() {
@@ -67,8 +67,7 @@ export default function TaxCalculator() {
     
     if (childCount >= 1) parts += FAMILY_QUOTIENT.child1;
     if (childCount >= 2) parts += FAMILY_QUOTIENT.child2;
-    if (childCount >= 3) parts += FAMILY_QUOTIENT.child3;
-    if (childCount >= 4) parts += FAMILY_QUOTIENT.child4;
+    if (childCount >= 3) parts += FAMILY_QUOTIENT.child3 * (childCount - 2);
     
     return parts;
   };
