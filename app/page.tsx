@@ -224,6 +224,97 @@ export default function Home() {
             </p>
           </div>
         </section>
+
+        <section className="mt-8 text-left max-w-2xl">
+          <h2 className="text-2xl font-bold mb-4">Outils complémentaires pour professionnels</h2>
+          <div className="space-y-4 text-gray-700 dark:text-gray-300">
+            <p>
+              Notre suite d&apos;outils va au-delà du simple timer. Nous proposons également une <Link href="/calculatrice-fiscale" className="text-blue-600 dark:text-blue-400 hover:underline font-semibold">calculatrice fiscale</Link> qui permet 
+              aux travailleurs frontaliers et professionnels de comparer leur situation fiscale entre la France et le Luxembourg. 
+              Cet outil aide à :
+            </p>
+            <ul className="list-disc pl-6 space-y-2">
+              <li>Calculer votre salaire net après impôts avec précision</li>
+              <li>Comparer les systèmes fiscaux français et luxembourgeois</li>
+              <li>Déterminer votre taux horaire réel pour mieux valoriser votre temps</li>
+              <li>Planifier vos objectifs financiers en fonction de votre temps de travail</li>
+            </ul>
+            <p>
+              En combinant la gestion du temps avec une compréhension claire de votre situation fiscale, vous pouvez 
+              prendre des décisions plus éclairées sur votre carrière et optimiser à la fois votre productivité et 
+              votre rémunération nette.
+            </p>
+          </div>
+        </section>
+
+        <section className="mt-8 text-left max-w-2xl">
+          <h2 className="text-2xl font-bold mb-4">La science derrière la gestion du temps</h2>
+          <div className="space-y-4 text-gray-700 dark:text-gray-300">
+            <p>
+              Des études en neurosciences ont démontré que notre cerveau fonctionne de manière optimale lorsque nous 
+              alternons entre périodes de concentration intense et moments de repos. Le cortex préfrontal, responsable 
+              de la concentration et de la prise de décision, consomme une quantité importante d&apos;énergie mentale. 
+              Sans pauses régulières, cette ressource s&apos;épuise, entraînant une baisse de performance, des erreurs 
+              accrues et une fatigue cognitive.
+            </p>
+            <p>
+              La technique Pomodoro, intégrée dans notre timer, s&apos;appuie sur ces découvertes scientifiques. 
+              En limitant les sessions de travail à 25 minutes, vous maintenez votre cerveau dans sa zone de 
+              performance optimale. Les pauses de 5 minutes permettent la récupération neurologique nécessaire, 
+              l&apos;oxygénation du cerveau et la consolidation des informations apprises. Cette alternance 
+              prévient l&apos;épuisement mental et maintient un niveau élevé de productivité tout au long de la journée.
+            </p>
+            <p>
+              De plus, des recherches en psychologie cognitive ont montré que le simple fait de mesurer son temps 
+              améliore la conscience de la durée des tâches. Cette prise de conscience aide à mieux planifier 
+              ses journées et à réduire la procrastination. Notre timer vous aide à développer cette compétence 
+              essentielle de gestion du temps.
+            </p>
+          </div>
+        </section>
+
+        <section className="mt-8 text-left max-w-2xl">
+          <h2 className="text-2xl font-bold mb-4">Questions fréquentes</h2>
+          <div className="space-y-4">
+            <div className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow">
+              <h3 className="font-semibold mb-2 text-gray-900 dark:text-gray-100">Le timer fonctionne-t-il sans connexion Internet ?</h3>
+              <p className="text-gray-700 dark:text-gray-300 text-sm">
+                Une fois la page chargée, le timer fonctionne entièrement dans votre navigateur. Vous pouvez donc 
+                l&apos;utiliser même si votre connexion Internet est interrompue. Vos données sont sauvegardées 
+                localement et ne nécessitent pas de serveur.
+              </p>
+            </div>
+            <div className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow">
+              <h3 className="font-semibold mb-2 text-gray-900 dark:text-gray-100">Puis-je personnaliser la durée des sessions Pomodoro ?</h3>
+              <p className="text-gray-700 dark:text-gray-300 text-sm">
+                Actuellement, notre timer Pomodoro utilise les durées standard de 25 minutes de travail et 5 minutes 
+                de pause. Cependant, vous pouvez utiliser le mode compte à rebours personnalisable pour créer vos 
+                propres intervalles si vous préférez des durées différentes.
+              </p>
+            </div>
+            <div className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow">
+              <h3 className="font-semibold mb-2 text-gray-900 dark:text-gray-100">Mes données sont-elles privées et sécurisées ?</h3>
+              <p className="text-gray-700 dark:text-gray-300 text-sm">
+                Oui, absolument. Aucune donnée de timer n&apos;est envoyée à nos serveurs. Tout est stocké localement 
+                dans votre navigateur via localStorage. Vous gardez le contrôle total de vos informations de 
+                productivité.
+              </p>
+            </div>
+            <div className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow">
+              <h3 className="font-semibold mb-2 text-gray-900 dark:text-gray-100">Le timer est-il vraiment gratuit ?</h3>
+              <p className="text-gray-700 dark:text-gray-300 text-sm">
+                Oui, 100% gratuit et sans inscription. Notre application est financée par des publicités discrètes 
+                de Google AdSense, ce qui nous permet de maintenir le service gratuit pour tous. Il n&apos;y a pas de 
+                version premium ni de fonctionnalités cachées.
+              </p>
+            </div>
+          </div>
+          <p className="mt-4 text-center">
+            <Link href="/faq" className="text-blue-600 dark:text-blue-400 hover:underline font-semibold">
+              Voir toutes les questions fréquentes →
+            </Link>
+          </p>
+        </section>
       </main>
     </div>
   );

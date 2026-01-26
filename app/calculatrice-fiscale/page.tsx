@@ -826,6 +826,92 @@ export default function TaxCalculatorPage() {
               </div>
             </article>
           </section>
+
+          {/* Connection to Work Timer - Add value and context */}
+          <section className="bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 rounded-lg shadow-lg p-4 sm:p-6 md:p-8 border border-blue-200 dark:border-blue-700">
+            <article className="prose prose-sm sm:prose-base lg:prose-lg dark:prose-invert max-w-none">
+              <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-center">
+                ⏱️ Optimisez votre temps ET votre fiscalité
+              </h2>
+              
+              <p className="text-gray-700 dark:text-gray-300 mb-4 text-center">
+                Comprendre votre fiscalité est essentiel, mais optimiser votre temps de travail l&apos;est tout autant ! 
+                Découvrez nos outils de productivité pour maximiser votre efficacité professionnelle.
+              </p>
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6 mt-6">
+                <div className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow">
+                  <div className="text-3xl mb-2 text-center">⏱️</div>
+                  <h3 className="text-lg font-semibold mb-2 text-center">Timer Focus</h3>
+                  <p className="text-sm text-gray-600 dark:text-gray-400 text-center mb-3">
+                    Suivez précisément votre temps de travail avec notre chronomètre professionnel
+                  </p>
+                  <Link
+                    href="/timer"
+                    className="block text-center text-blue-600 dark:text-blue-400 hover:underline text-sm font-semibold"
+                  >
+                    Utiliser le timer →
+                  </Link>
+                </div>
+
+                <div className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow">
+                  <div className="text-3xl mb-2 text-center">🍅</div>
+                  <h3 className="text-lg font-semibold mb-2 text-center">Technique Pomodoro</h3>
+                  <p className="text-sm text-gray-600 dark:text-gray-400 text-center mb-3">
+                    Augmentez votre productivité avec des sessions de 25 min de focus intensif
+                  </p>
+                  <Link
+                    href="/guide"
+                    className="block text-center text-blue-600 dark:text-blue-400 hover:underline text-sm font-semibold"
+                  >
+                    Découvrir la méthode →
+                  </Link>
+                </div>
+
+                <div className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow">
+                  <div className="text-3xl mb-2 text-center">📊</div>
+                  <h3 className="text-lg font-semibold mb-2 text-center">Calcul de Temps</h3>
+                  <p className="text-sm text-gray-600 dark:text-gray-400 text-center mb-3">
+                    Planifiez vos journées et calculez vos heures de travail efficacement
+                  </p>
+                  <Link
+                    href="/timer"
+                    className="block text-center text-blue-600 dark:text-blue-400 hover:underline text-sm font-semibold"
+                  >
+                    Calculer mon temps →
+                  </Link>
+                </div>
+              </div>
+
+              <div className="bg-blue-100 dark:bg-blue-900/30 border-l-4 border-blue-600 p-4 rounded mb-4">
+                <h3 className="text-lg font-semibold mb-2">💡 Pourquoi lier fiscalité et gestion du temps ?</h3>
+                <p className="text-sm sm:text-base text-gray-700 dark:text-gray-300">
+                  En tant que professionnel, freelance ou frontalier, votre temps est votre ressource la plus précieuse. 
+                  Notre calculatrice fiscale vous aide à comprendre ce que vous gagnez réellement, tandis que nos outils 
+                  de gestion du temps vous aident à optimiser chaque heure travaillée. Ensemble, ils vous permettent de :
+                </p>
+                <ul className="mt-3 space-y-2 text-sm sm:text-base text-gray-700 dark:text-gray-300">
+                  <li>• <strong>Calculer votre taux horaire net réel</strong> après impôts et cotisations</li>
+                  <li>• <strong>Suivre précisément votre temps</strong> pour facturer correctement vos clients</li>
+                  <li>• <strong>Optimiser votre productivité</strong> pour augmenter vos revenus</li>
+                  <li>• <strong>Comparer France vs Luxembourg</strong> pour les travailleurs frontaliers</li>
+                  <li>• <strong>Planifier vos projets</strong> en fonction de votre revenu cible</li>
+                </ul>
+              </div>
+
+              <div className="text-center mt-6">
+                <p className="text-gray-600 dark:text-gray-400 mb-4">
+                  Utilisez nos outils gratuits pour maximiser votre efficacité professionnelle
+                </p>
+                <Link
+                  href="/"
+                  className="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors font-semibold"
+                >
+                  Découvrir tous nos outils →
+                </Link>
+              </div>
+            </article>
+          </section>
         </main>
       </div>
     </div>
