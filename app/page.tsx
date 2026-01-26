@@ -229,9 +229,15 @@ export default function Home() {
           <h2 className="text-2xl font-bold mb-4">Outils complémentaires pour professionnels</h2>
           <div className="space-y-4 text-gray-700 dark:text-gray-300">
             <p>
-              Notre suite d&apos;outils va au-delà du simple timer. Nous proposons également une <Link href="/calculatrice-fiscale" className="text-blue-600 dark:text-blue-400 hover:underline font-semibold">calculatrice fiscale</Link> qui permet 
-              aux travailleurs frontaliers et professionnels de comparer leur situation fiscale entre la France et le Luxembourg. 
-              Cet outil aide à :
+              Notre suite d&apos;outils va au-delà du simple timer. Nous proposons également une{" "}
+              <Link 
+                href="/calculatrice-fiscale" 
+                className="text-blue-600 dark:text-blue-400 hover:underline font-semibold"
+              >
+                calculatrice fiscale
+              </Link>{" "}
+              qui permet aux travailleurs frontaliers et professionnels de comparer leur situation fiscale 
+              entre la France et le Luxembourg. Cet outil aide à :
             </p>
             <ul className="list-disc pl-6 space-y-2">
               <li>Calculer votre salaire net après impôts avec précision</li>
@@ -251,24 +257,22 @@ export default function Home() {
           <h2 className="text-2xl font-bold mb-4">La science derrière la gestion du temps</h2>
           <div className="space-y-4 text-gray-700 dark:text-gray-300">
             <p>
-              Des études en neurosciences ont démontré que notre cerveau fonctionne de manière optimale lorsque nous 
-              alternons entre périodes de concentration intense et moments de repos. Le cortex préfrontal, responsable 
-              de la concentration et de la prise de décision, consomme une quantité importante d&apos;énergie mentale. 
-              Sans pauses régulières, cette ressource s&apos;épuise, entraînant une baisse de performance, des erreurs 
-              accrues et une fatigue cognitive.
+              Des recherches en neurosciences suggèrent que notre cerveau fonctionne de manière plus efficace 
+              lorsque nous alternons entre périodes de concentration intense et moments de repos. Le cortex préfrontal, 
+              impliqué dans la concentration et la prise de décision, nécessite de l&apos;énergie cognitive. 
+              Des pauses régulières peuvent aider à maintenir les performances mentales et réduire la fatigue cognitive.
             </p>
             <p>
-              La technique Pomodoro, intégrée dans notre timer, s&apos;appuie sur ces découvertes scientifiques. 
-              En limitant les sessions de travail à 25 minutes, vous maintenez votre cerveau dans sa zone de 
-              performance optimale. Les pauses de 5 minutes permettent la récupération neurologique nécessaire, 
-              l&apos;oxygénation du cerveau et la consolidation des informations apprises. Cette alternance 
-              prévient l&apos;épuisement mental et maintient un niveau élevé de productivité tout au long de la journée.
+              La technique Pomodoro, intégrée dans notre timer, s&apos;inspire de ces principes. 
+              En structurant le travail en sessions limitées de 25 minutes, cette méthode aide de nombreuses 
+              personnes à maintenir leur concentration. Les pauses de 5 minutes offrent un temps de récupération 
+              qui peut contribuer à préserver l&apos;efficacité mentale tout au long de la journée.
             </p>
             <p>
-              De plus, des recherches en psychologie cognitive ont montré que le simple fait de mesurer son temps 
-              améliore la conscience de la durée des tâches. Cette prise de conscience aide à mieux planifier 
-              ses journées et à réduire la procrastination. Notre timer vous aide à développer cette compétence 
-              essentielle de gestion du temps.
+              De plus, des études en psychologie cognitive ont montré que le fait de mesurer et suivre son temps 
+              peut améliorer la conscience de la durée des tâches. Cette prise de conscience aide à mieux planifier 
+              ses journées et à mieux gérer son temps. Notre timer vous accompagne dans le développement de ces 
+              compétences de gestion du temps.
             </p>
           </div>
         </section>
