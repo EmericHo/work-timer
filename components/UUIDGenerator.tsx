@@ -20,9 +20,10 @@ export default function UUIDGenerator() {
     // Note: This is not a fully compliant RFC 4122 UUID v1
     // For production use, consider using a proper UUID library like 'uuid'
     const now = Date.now();
-    const timeHex = now.toString(16).padStart(12, "0");
-    const random = Math.random().toString(16).substring(2, 14);
-    return `${timeHex.substring(0, 8)}-${timeHex.substring(8, 12)}-1${random.substring(0, 3)}-${random.substring(3, 7)}-${random.substring(7, 19)}`;
+    const timeHex = now.toString(16).padStart(16, "0");
+    const random1 = Math.random().toString(16).substring(2, 6);
+    const random2 = Math.random().toString(16).substring(2, 14);
+    return `${timeHex.substring(0, 8)}-${timeHex.substring(8, 12)}-1${random1.substring(0, 3)}-${random2.substring(0, 4)}-${random2.substring(4, 16)}`;
   };
 
   const generateUUIDs = useCallback(() => {
