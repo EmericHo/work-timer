@@ -281,7 +281,7 @@ export default function QRCodeGeneratorPage() {
                   Les QR codes expirent-ils ?
                 </h3>
                 <p className="text-sm text-gray-700 dark:text-gray-300">
-                  Non, les QR codes statiques (comme ceux générés par notre outil) ne expirent jamais. Tant que 
+                  Non, les QR codes statiques (comme ceux générés par notre outil) n&apos;expirent jamais. Tant que 
                   le contenu encodé (URL, texte, etc.) reste valide, le QR code fonctionnera indéfiniment. 
                   Cependant, si vous changez l&apos;URL de destination, vous devrez générer un nouveau QR code.
                 </p>
@@ -418,7 +418,7 @@ export default function QRCodeGeneratorPage() {
               <li className="flex items-start gap-2">
                 <span className="text-blue-600 font-bold">✓</span>
                 <span>
-                  <strong>QR codes permanents</strong> - Vos QR codes ne expirent jamais
+                  <strong>QR codes permanents</strong> - Vos QR codes n&apos;expirent jamais
                 </span>
               </li>
               <li className="flex items-start gap-2">

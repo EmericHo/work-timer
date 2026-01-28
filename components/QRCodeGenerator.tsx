@@ -44,7 +44,7 @@ export default function QRCodeGenerator() {
       const dataUrl = canvas.toDataURL();
       setQrCodeUrl(dataUrl);
     } catch (error) {
-      console.error("Erreur lors de la génération du QR code:", error);
+      console.error("Error generating QR code:", error);
       alert("Erreur lors de la génération du QR code. Veuillez réessayer.");
     }
   }, [text, size, errorCorrectionLevel, foregroundColor, backgroundColor]);
@@ -92,7 +92,7 @@ export default function QRCodeGenerator() {
       link.click();
       URL.revokeObjectURL(url);
     } catch (error) {
-      console.error("Erreur lors du téléchargement SVG:", error);
+      console.error("Error downloading SVG:", error);
       alert("Erreur lors du téléchargement. Veuillez réessayer.");
     }
   }, [text, size, errorCorrectionLevel, foregroundColor, backgroundColor]);
@@ -167,12 +167,14 @@ export default function QRCodeGenerator() {
               value={foregroundColor}
               onChange={(e) => setForegroundColor(e.target.value)}
               className="h-10 w-16 border border-gray-300 dark:border-gray-600 rounded cursor-pointer"
+              aria-label="Sélecteur de couleur principale"
             />
             <input
               type="text"
               value={foregroundColor}
               onChange={(e) => setForegroundColor(e.target.value)}
               className="flex-1 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 font-mono text-sm"
+              aria-label="Code hexadécimal couleur principale"
             />
           </div>
         </div>
@@ -187,12 +189,14 @@ export default function QRCodeGenerator() {
               value={backgroundColor}
               onChange={(e) => setBackgroundColor(e.target.value)}
               className="h-10 w-16 border border-gray-300 dark:border-gray-600 rounded cursor-pointer"
+              aria-label="Sélecteur de couleur de fond"
             />
             <input
               type="text"
               value={backgroundColor}
               onChange={(e) => setBackgroundColor(e.target.value)}
               className="flex-1 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 font-mono text-sm"
+              aria-label="Code hexadécimal couleur de fond"
             />
           </div>
         </div>
@@ -205,12 +209,14 @@ export default function QRCodeGenerator() {
         🎨 Réinitialiser les couleurs
       </button>
 
+      {/* Hidden canvas for generation */}
+      <canvas ref={canvasRef} style={{ display: "none" }} />
+
       {/* Preview Section */}
       {text.trim() && qrCodeUrl && (
         <div className="space-y-4">
           <h3 className="font-semibold text-lg">Aperçu du QR Code</h3>
           <div className="flex justify-center p-6 bg-gray-50 dark:bg-gray-900 rounded-lg border border-gray-300 dark:border-gray-600">
-            <canvas ref={canvasRef} className="max-w-full h-auto" style={{ display: "none" }} />
             <Image 
               src={qrCodeUrl} 
               alt="QR Code généré" 
@@ -239,9 +245,6 @@ export default function QRCodeGenerator() {
           </div>
         </div>
       )}
-
-      {/* Hidden canvas for generation */}
-      {!qrCodeUrl && <canvas ref={canvasRef} style={{ display: "none" }} />}
 
       {/* Info Section */}
       <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4">
