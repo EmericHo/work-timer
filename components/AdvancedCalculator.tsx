@@ -25,8 +25,22 @@ export default function AdvancedCalculator() {
 
   const handleEquals = useCallback(() => {
     try {
-      // eslint-disable-next-line no-eval
-      const result = eval(display.replace(/×/g, "*").replace(/÷/g, "/"));
+      // Secure calculation using Function constructor with limited scope
+      // Only allow basic math operations
+      const sanitized = display
+        .replace(/×/g, "*")
+        .replace(/÷/g, "/")
+        .replace(/[^0-9+\-*/().\s]/g, ""); // Remove any non-math characters
+      
+      // Use Function constructor with limited scope (safer than eval)
+      const calculate = new Function('return (' + sanitized + ')');
+      const result = calculate();
+      
+      if (!isFinite(result)) {
+        setDisplay("Erreur");
+        return;
+      }
+      
       setHistory((prev) => [`${display} = ${result}`, ...prev].slice(0, 10));
       setDisplay(String(result));
     } catch (error) {
@@ -125,7 +139,7 @@ export default function AdvancedCalculator() {
             {btn}
           </button>
         ))}
-        {["1/x", "π", "e", "("]. map((btn) => (
+        {["1/x", "π", "e", "("].map((btn) => (
           <button
             key={btn}
             onClick={() => btn === "π" || btn === "e" ? handleScientific(btn) : handleNumberClick(btn)}

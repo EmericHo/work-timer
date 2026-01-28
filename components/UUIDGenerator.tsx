@@ -16,7 +16,9 @@ export default function UUIDGenerator() {
   };
 
   const generateUUIDv1 = (): string => {
-    // Simplified UUID v1 (timestamp-based)
+    // Simplified UUID v1 implementation for demonstration purposes
+    // Note: This is not a fully compliant RFC 4122 UUID v1
+    // For production use, consider using a proper UUID library like 'uuid'
     const now = Date.now();
     const timeHex = now.toString(16).padStart(12, "0");
     const random = Math.random().toString(16).substring(2, 14);
@@ -32,13 +34,25 @@ export default function UUIDGenerator() {
   }, [count, version]);
 
   const copyToClipboard = useCallback((text: string) => {
-    navigator.clipboard.writeText(text);
-    alert("UUID copié dans le presse-papiers!");
+    navigator.clipboard.writeText(text).then(
+      () => {
+        alert("UUID copié dans le presse-papiers!");
+      },
+      () => {
+        alert("Erreur lors de la copie. Veuillez réessayer.");
+      }
+    );
   }, []);
 
   const copyAllToClipboard = useCallback(() => {
-    navigator.clipboard.writeText(uuids.join("\n"));
-    alert("Tous les UUIDs copiés dans le presse-papiers!");
+    navigator.clipboard.writeText(uuids.join("\n")).then(
+      () => {
+        alert("Tous les UUIDs copiés dans le presse-papiers!");
+      },
+      () => {
+        alert("Erreur lors de la copie. Veuillez réessayer.");
+      }
+    );
   }, [uuids]);
 
   return (

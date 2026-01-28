@@ -7,20 +7,36 @@ export default function MarkdownEditor() {
   const [previewMode, setPreviewMode] = useState<"split" | "preview" | "edit">("split");
 
   const renderMarkdown = useCallback((text: string): string => {
-    let html = text;
+    // Escape HTML to prevent XSS
+    const escapeHtml = (unsafe: string): string => {
+      return unsafe
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+    };
+
+    let html = escapeHtml(text);
     
     // Headers
     html = html.replace(/^### (.*$)/gim, '<h3 class="text-xl font-bold my-3">$1</h3>');
     html = html.replace(/^## (.*$)/gim, '<h2 class="text-2xl font-bold my-4">$1</h2>');
     html = html.replace(/^# (.*$)/gim, '<h1 class="text-3xl font-bold my-4">$1</h1>');
     
-    // Bold and Italic
+    // Bold and Italic (after HTML escaping, these are safe)
     html = html.replace(/\*\*\*(.+?)\*\*\*/g, '<strong><em>$1</em></strong>');
     html = html.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
     html = html.replace(/\*(.+?)\*/g, '<em>$1</em>');
     
-    // Links
-    html = html.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" class="text-blue-600 hover:underline" target="_blank" rel="noopener">$1</a>');
+    // Links - sanitize URLs
+    html = html.replace(/\[([^\]]+)\]\(([^)]+)\)/g, (match, text, url) => {
+      // Only allow http, https, and relative URLs
+      if (url.match(/^(https?:\/\/|\/)/)) {
+        return `<a href="${url}" class="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">${text}</a>`;
+      }
+      return text; // Invalid URL, just return the text
+    });
     
     // Code blocks
     html = html.replace(/```([\s\S]*?)```/g, '<pre class="bg-gray-900 text-gray-100 p-4 rounded my-3 overflow-x-auto"><code>$1</code></pre>');
@@ -29,7 +45,7 @@ export default function MarkdownEditor() {
     html = html.replace(/`([^`]+)`/g, '<code class="bg-gray-200 dark:bg-gray-700 px-2 py-1 rounded text-sm">$1</code>');
     
     // Blockquotes
-    html = html.replace(/^> (.+)$/gim, '<blockquote class="border-l-4 border-gray-300 pl-4 italic my-3">$1</blockquote>');
+    html = html.replace(/^&gt; (.+)$/gim, '<blockquote class="border-l-4 border-gray-300 pl-4 italic my-3">$1</blockquote>');
     
     // Lists
     html = html.replace(/^\d+\.\s(.+)$/gim, '<li class="ml-6 list-decimal">$1</li>');
