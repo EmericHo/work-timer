@@ -203,7 +203,7 @@ export default function JSONFormatterPage() {
             <div className="space-y-3 text-gray-700 dark:text-gray-300">
               <div className="bg-gray-50 dark:bg-gray-900 p-3 rounded">
                 <p className="font-semibold text-red-600 dark:text-red-400">
-                  ❌ Unexpected token } in JSON
+                  ❌ Unexpected token {`}`} in JSON
                 </p>
                 <p className="text-sm mt-1">
                   Solution : Virgule en trop après le dernier élément d&apos;un objet ou d&apos;un tableau
@@ -211,10 +211,10 @@ export default function JSONFormatterPage() {
               </div>
               <div className="bg-gray-50 dark:bg-gray-900 p-3 rounded">
                 <p className="font-semibold text-red-600 dark:text-red-400">
-                  ❌ Unexpected token ' in JSON
+                  ❌ Unexpected token &apos; in JSON
                 </p>
                 <p className="text-sm mt-1">
-                  Solution : Utilisez des guillemets doubles " au lieu de guillemets simples &apos;
+                  Solution : Utilisez des guillemets doubles &quot; au lieu de guillemets simples &apos;
                 </p>
               </div>
               <div className="bg-gray-50 dark:bg-gray-900 p-3 rounded">

@@ -125,6 +125,7 @@ export default function ImageCompressor() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="border border-gray-300 dark:border-gray-600 rounded-lg p-4">
               <h3 className="font-semibold mb-2">Image originale</h3>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src={previewUrl} alt="Original" className="w-full rounded mb-2" />
               <p className="text-sm text-gray-600 dark:text-gray-400">
                 Taille: {formatSize(originalSize)}
@@ -134,6 +135,7 @@ export default function ImageCompressor() {
             {compressedUrl && (
               <div className="border border-gray-300 dark:border-gray-600 rounded-lg p-4">
                 <h3 className="font-semibold mb-2">Image compressée</h3>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img src={compressedUrl} alt="Compressed" className="w-full rounded mb-2" />
                 <p className="text-sm text-gray-600 dark:text-gray-400">
                   Taille: {formatSize(compressedSize)}

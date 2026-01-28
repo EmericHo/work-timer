@@ -138,8 +138,8 @@ export default function JSONFormatter() {
         </h4>
         <ul className="text-sm text-blue-800 dark:text-blue-200 space-y-1">
           <li>• Collez votre JSON dans le champ d&apos;entrée</li>
-          <li>• Cliquez sur "Formatter" pour indenter et rendre lisible</li>
-          <li>• Cliquez sur "Minifier" pour compresser en une ligne</li>
+          <li>• Cliquez sur &quot;Formatter&quot; pour indenter et rendre lisible</li>
+          <li>• Cliquez sur &quot;Minifier&quot; pour compresser en une ligne</li>
           <li>• L&apos;outil valide automatiquement la syntaxe JSON</li>
         </ul>
       </div>
