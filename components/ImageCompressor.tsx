@@ -1,6 +1,8 @@
 "use client";
 
 import { useState, useCallback } from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCompressAlt } from '@fortawesome/free-solid-svg-icons';
 
 export default function ImageCompressor() {
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
@@ -119,7 +121,7 @@ export default function ImageCompressor() {
             disabled={isCompressing}
             className="w-full px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 disabled:bg-gray-400 disabled:cursor-not-allowed transition-colors font-semibold"
           >
-            {isCompressing ? "Compression en cours..." : "🗜️ Compresser l'image"}
+            {isCompressing ? "Compression en cours..." : <><FontAwesomeIcon icon={faCompressAlt} className="inline" /> Compresser l&apos;image</>}
           </button>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import TimeZoneConverter from "@/components/TimeZoneConverter";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBriefcase, faCheck, faGamepad, faGlobe, faPhone, faPlane } from '@fortawesome/free-solid-svg-icons';
 
 export default function TimeZoneConverterPage() {
   return (
@@ -89,7 +91,7 @@ export default function TimeZoneConverterPage() {
             <h2 className="text-2xl font-bold mb-4">Cas d&apos;usage du convertisseur de fuseau horaire</h2>
             <div className="space-y-4 text-gray-700 dark:text-gray-300">
               <div>
-                <h3 className="text-xl font-semibold mb-2">💼 Réunions internationales</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faBriefcase} className="inline" /> Réunions internationales</h3>
                 <p>
                   Planifiez des visioconférences avec des collègues, clients ou partenaires situés dans 
                   différents pays. Trouvez un créneau qui convient à tous en comparant plusieurs fuseaux 
@@ -97,7 +99,7 @@ export default function TimeZoneConverterPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">✈️ Voyages et déplacements</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faPlane} className="inline" /> Voyages et déplacements</h3>
                 <p>
                   Préparez vos voyages internationaux en calculant l&apos;heure d&apos;arrivée locale, planifiez 
                   vos transferts, réservations et rendez-vous. Gérez le décalage horaire (jet lag) en 
@@ -105,7 +107,7 @@ export default function TimeZoneConverterPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🌐 Travail à distance</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faGlobe} className="inline" /> Travail à distance</h3>
                 <p>
                   Les équipes distribuées utilisent cet outil quotidiennement pour coordonner leurs horaires 
                   de travail, stand-ups, revues de code et sessions de pair programming. Respectez les 
@@ -113,7 +115,7 @@ export default function TimeZoneConverterPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">📞 Appels et communications</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faPhone} className="inline" /> Appels et communications</h3>
                 <p>
                   Avant d&apos;appeler famille, amis ou contacts professionnels à l&apos;étranger, vérifiez qu&apos;il 
                   s&apos;agit d&apos;une heure convenable. Évitez les appels intempestifs en pleine nuit ou très tôt 
@@ -137,7 +139,7 @@ export default function TimeZoneConverterPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🎮 Gaming et e-sports</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faGamepad} className="inline" /> Gaming et e-sports</h3>
                 <p>
                   Coordonnez des sessions de jeu en ligne avec des amis situés dans différents fuseaux 
                   horaires. Suivez les tournois e-sports internationaux et raids dans les MMO nécessitant 
@@ -182,7 +184,7 @@ export default function TimeZoneConverterPage() {
             <h2 className="text-2xl font-bold mb-4">Conseils pour gérer les fuseaux horaires</h2>
             <div className="space-y-3 text-gray-700 dark:text-gray-300">
               <div>
-                <h3 className="font-semibold mb-1">✅ Utilisez toujours UTC pour référence</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faCheck} className="inline" /> Utilisez toujours UTC pour référence</h3>
                 <p className="text-sm">
                   UTC (Temps Universel Coordonné) est le standard international pour synchroniser les horloges. 
                   Indiquez toujours le fuseau horaire ou l&apos;offset UTC lors de la communication d&apos;horaires 
@@ -190,7 +192,7 @@ export default function TimeZoneConverterPage() {
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">✅ Attention au changement d&apos;heure</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faCheck} className="inline" /> Attention au changement d&apos;heure</h3>
                 <p className="text-sm">
                   Les changements d&apos;heure d&apos;été ne se produisent pas aux mêmes dates dans tous les pays. 
                   L&apos;Europe change généralement fin mars et fin octobre, tandis que l&apos;Amérique du Nord change 
@@ -198,7 +200,7 @@ export default function TimeZoneConverterPage() {
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">✅ Planifiez des créneaux raisonnables</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faCheck} className="inline" /> Planifiez des créneaux raisonnables</h3>
                 <p className="text-sm">
                   Pour les réunions internationales, visez les heures de chevauchement où tout le monde est 
                   éveillé et en heures de travail. Généralement 8h-18h pour chaque participant. Alternez les 
@@ -206,7 +208,7 @@ export default function TimeZoneConverterPage() {
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">✅ Utilisez des outils de calendrier</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faCheck} className="inline" /> Utilisez des outils de calendrier</h3>
                 <p className="text-sm">
                   Configurez votre calendrier (Google Calendar, Outlook) pour afficher plusieurs fuseaux 
                   horaires. Cela évite les erreurs lors de la planification et vous rappelle les décalages 
@@ -214,14 +216,14 @@ export default function TimeZoneConverterPage() {
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">✅ Confirmez toujours l&apos;heure locale</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faCheck} className="inline" /> Confirmez toujours l&apos;heure locale</h3>
                 <p className="text-sm">
                   Lors de la planification, précisez toujours &quot;10:00 ton heure locale&quot; ou &quot;15:00 Paris time&quot; 
                   pour éviter toute confusion. Une confirmation explicite évite les malentendus coûteux.
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">✅ Considérez le contexte culturel</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faCheck} className="inline" /> Considérez le contexte culturel</h3>
                 <p className="text-sm">
                   Certains pays ont des week-ends différents (vendredi-samedi dans certains pays du Moyen-Orient). 
                   Renseignez-vous sur les jours fériés locaux pour éviter de programmer des réunions aux 

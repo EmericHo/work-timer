@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import SCPISimulator from "@/components/SCPISimulator";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBriefcase, faBuilding, faBullseye, faChartBar, faChartLine, faExclamationTriangle, faGlobe, faHome, faLightbulb, faMoneyBill, faSync, faUniversity } from '@fortawesome/free-solid-svg-icons';
 
 export default function SCPISimulatorPage() {
   return (
@@ -59,7 +61,7 @@ export default function SCPISimulatorPage() {
             <h2 className="text-2xl font-bold mb-4">Comment fonctionne une SCPI ?</h2>
             <div className="space-y-4 text-gray-700 dark:text-gray-300">
               <div>
-                <h3 className="text-xl font-semibold mb-2">💰 Souscription de parts</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faMoneyBill} className="inline" /> Souscription de parts</h3>
                 <p>
                   Vous investissez en achetant des parts de SCPI, dont le prix varie généralement 
                   entre 200€ et 1 000€ la part selon les SCPI. Certaines permettent un investissement 
@@ -68,7 +70,7 @@ export default function SCPISimulatorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🏢 Constitution du patrimoine</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faBuilding} className="inline" /> Constitution du patrimoine</h3>
                 <p>
                   La société de gestion utilise les capitaux collectés pour acquérir des biens 
                   immobiliers professionnels (bureaux, commerces, entrepôts, hôtels, résidences 
@@ -77,7 +79,7 @@ export default function SCPISimulatorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">📈 Génération de revenus</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faChartLine} className="inline" /> Génération de revenus</h3>
                 <p>
                   Les biens acquis sont loués à des entreprises ou particuliers. Les loyers perçus, 
                   après déduction des charges de gestion (8 à 12% en moyenne), des travaux et de 
@@ -86,7 +88,7 @@ export default function SCPISimulatorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🔄 Valorisation des parts</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faSync} className="inline" /> Valorisation des parts</h3>
                 <p>
                   La valeur des parts peut évoluer à la hausse ou à la baisse en fonction de la 
                   valeur du patrimoine immobilier détenu par la SCPI. Cette valorisation est 
@@ -101,7 +103,7 @@ export default function SCPISimulatorPage() {
             <div className="space-y-4">
               <div className="border-l-4 border-blue-500 pl-4">
                 <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-gray-100">
-                  🎯 SCPI de rendement
+                  <FontAwesomeIcon icon={faBullseye} className="inline" /> SCPI de rendement
                 </h3>
                 <p className="text-gray-700 dark:text-gray-300 mb-2">
                   L&apos;objectif principal est de générer des revenus réguliers. Ces SCPI investissent 
@@ -116,7 +118,7 @@ export default function SCPISimulatorPage() {
 
               <div className="border-l-4 border-green-500 pl-4">
                 <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-gray-100">
-                  📊 SCPI de plus-value (ou de valorisation)
+                  <FontAwesomeIcon icon={faChartBar} className="inline" /> SCPI de plus-value (ou de valorisation)
                 </h3>
                 <p className="text-gray-700 dark:text-gray-300 mb-2">
                   Ces SCPI privilégient la valorisation du capital à long terme en acquérant des 
@@ -131,7 +133,7 @@ export default function SCPISimulatorPage() {
 
               <div className="border-l-4 border-purple-500 pl-4">
                 <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-gray-100">
-                  💼 SCPI fiscales
+                  <FontAwesomeIcon icon={faBriefcase} className="inline" /> SCPI fiscales
                 </h3>
                 <p className="text-gray-700 dark:text-gray-300 mb-2">
                   Conçues pour bénéficier d&apos;avantages fiscaux (Pinel, Malraux, Déficit foncier, 
@@ -146,7 +148,7 @@ export default function SCPISimulatorPage() {
 
               <div className="border-l-4 border-yellow-500 pl-4">
                 <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-gray-100">
-                  🌍 SCPI européennes et internationales
+                  <FontAwesomeIcon icon={faGlobe} className="inline" /> SCPI européennes et internationales
                 </h3>
                 <p className="text-gray-700 dark:text-gray-300 mb-2">
                   Ces SCPI investissent dans des biens immobiliers situés en Europe ou dans le monde. 
@@ -271,7 +273,7 @@ export default function SCPISimulatorPage() {
             <h2 className="text-2xl font-bold mb-4">Comment choisir une bonne SCPI ?</h2>
             <div className="space-y-4 text-gray-700 dark:text-gray-300">
               <div>
-                <h3 className="text-lg font-semibold mb-2">📊 1. Analyser les performances historiques</h3>
+                <h3 className="text-lg font-semibold mb-2"><FontAwesomeIcon icon={faChartBar} className="inline" /> 1. Analyser les performances historiques</h3>
                 <p>
                   Examinez le taux de distribution sur dividende (TDD) des 5 à 10 dernières années. 
                   Un TDD stable entre 4% et 6% est un bon indicateur. Méfiez-vous des rendements 
@@ -279,7 +281,7 @@ export default function SCPISimulatorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-lg font-semibold mb-2">🏢 2. Vérifier la qualité du patrimoine</h3>
+                <h3 className="text-lg font-semibold mb-2"><FontAwesomeIcon icon={faBuilding} className="inline" /> 2. Vérifier la qualité du patrimoine</h3>
                 <p>
                   Regardez la composition du patrimoine : types de biens (bureaux, commerces, santé, 
                   logistique), localisation géographique, qualité des locataires. Une bonne diversification 
@@ -294,7 +296,7 @@ export default function SCPISimulatorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-lg font-semibold mb-2">💼 4. Étudier la société de gestion</h3>
+                <h3 className="text-lg font-semibold mb-2"><FontAwesomeIcon icon={faBriefcase} className="inline" /> 4. Étudier la société de gestion</h3>
                 <p>
                   Privilégiez les sociétés de gestion reconnues avec une expertise prouvée, une solidité 
                   financière et une bonne réputation sur le marché. Consultez leurs rapports annuels 
@@ -302,7 +304,7 @@ export default function SCPISimulatorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-lg font-semibold mb-2">💰 5. Comparer les frais</h3>
+                <h3 className="text-lg font-semibold mb-2"><FontAwesomeIcon icon={faMoneyBill} className="inline" /> 5. Comparer les frais</h3>
                 <p>
                   Comparez les frais de souscription (8-12%), les frais de gestion (généralement 10-12% 
                   des loyers HT) et les éventuels frais de cession. Des frais élevés impactent la 
@@ -310,7 +312,7 @@ export default function SCPISimulatorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-lg font-semibold mb-2">📈 6. Consulter la capitalisation</h3>
+                <h3 className="text-lg font-semibold mb-2"><FontAwesomeIcon icon={faChartLine} className="inline" /> 6. Consulter la capitalisation</h3>
                 <p>
                   Les SCPI de taille importante (capitalisation supérieure à 500 millions €) offrent 
                   généralement une meilleure liquidité et une plus grande capacité d&apos;investissement.
@@ -323,7 +325,7 @@ export default function SCPISimulatorPage() {
             <h2 className="text-2xl font-bold mb-4">Fiscalité des SCPI en France</h2>
             <div className="space-y-4 text-gray-700 dark:text-gray-300">
               <div>
-                <h3 className="text-xl font-semibold mb-2">🏠 Revenus fonciers</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faHome} className="inline" /> Revenus fonciers</h3>
                 <p className="mb-2">
                   Les dividendes perçus des SCPI de rendement sont imposés dans la catégorie des 
                   revenus fonciers. Vous avez le choix entre deux régimes :
@@ -343,7 +345,7 @@ export default function SCPISimulatorPage() {
                 </ul>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">💰 Taux marginal d&apos;imposition (TMI)</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faMoneyBill} className="inline" /> Taux marginal d&apos;imposition (TMI)</h3>
                 <p>
                   Selon votre tranche d&apos;imposition (0%, 11%, 30%, 41% ou 45%) + 17,2% de 
                   prélèvements sociaux, votre taux global d&apos;imposition sur les revenus de SCPI 
@@ -352,7 +354,7 @@ export default function SCPISimulatorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">📊 Plus-values à la revente</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faChartBar} className="inline" /> Plus-values à la revente</h3>
                 <p>
                   La plus-value réalisée lors de la cession des parts est imposée au taux de 19% 
                   (impôt sur le revenu) + 17,2% (prélèvements sociaux), soit 36,2% au total. 
@@ -364,7 +366,7 @@ export default function SCPISimulatorPage() {
                 </ul>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🏦 SCPI en assurance-vie</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faUniversity} className="inline" /> SCPI en assurance-vie</h3>
                 <p>
                   Détenir des SCPI via une assurance-vie ou un contrat de capitalisation permet de 
                   bénéficier de la fiscalité avantageuse de l&apos;assurance-vie : pas d&apos;imposition 
@@ -373,7 +375,7 @@ export default function SCPISimulatorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">💼 IFI (Impôt sur la Fortune Immobilière)</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faBriefcase} className="inline" /> IFI (Impôt sur la Fortune Immobilière)</h3>
                 <p>
                   Les parts de SCPI sont prises en compte dans le calcul de l&apos;IFI si votre 
                   patrimoine immobilier net taxable dépasse 1,3 million d&apos;euros. La valeur 
@@ -470,42 +472,42 @@ export default function SCPISimulatorPage() {
             <h2 className="text-2xl font-bold mb-4">Conseils pour investir en SCPI</h2>
             <ul className="space-y-3 text-gray-700 dark:text-gray-300">
               <li className="flex items-start gap-3">
-                <span className="text-blue-600 text-xl">💡</span>
+                <span className="text-blue-600 text-xl"><FontAwesomeIcon icon={faLightbulb} className="inline" /></span>
                 <div>
                   <strong>Diversifiez :</strong> N&apos;investissez pas tout votre capital dans une 
                   seule SCPI. Répartissez sur 2 à 4 SCPI différentes pour limiter les risques.
                 </div>
               </li>
               <li className="flex items-start gap-3">
-                <span className="text-blue-600 text-xl">💡</span>
+                <span className="text-blue-600 text-xl"><FontAwesomeIcon icon={faLightbulb} className="inline" /></span>
                 <div>
                   <strong>Privilégiez le long terme :</strong> Les SCPI sont des placements de long 
                   terme (8-15 ans minimum) pour amortir les frais et profiter de la valorisation.
                 </div>
               </li>
               <li className="flex items-start gap-3">
-                <span className="text-blue-600 text-xl">💡</span>
+                <span className="text-blue-600 text-xl"><FontAwesomeIcon icon={faLightbulb} className="inline" /></span>
                 <div>
                   <strong>Analysez la performance :</strong> Ne vous fiez pas uniquement au rendement 
                   annoncé. Étudiez l&apos;historique, le taux d&apos;occupation, la qualité du patrimoine.
                 </div>
               </li>
               <li className="flex items-start gap-3">
-                <span className="text-blue-600 text-xl">💡</span>
+                <span className="text-blue-600 text-xl"><FontAwesomeIcon icon={faLightbulb} className="inline" /></span>
                 <div>
                   <strong>Comparez les frais :</strong> Les frais de souscription et de gestion 
                   varient d&apos;une SCPI à l&apos;autre et impactent directement votre rentabilité nette.
                 </div>
               </li>
               <li className="flex items-start gap-3">
-                <span className="text-blue-600 text-xl">💡</span>
+                <span className="text-blue-600 text-xl"><FontAwesomeIcon icon={faLightbulb} className="inline" /></span>
                 <div>
                   <strong>Optimisez la fiscalité :</strong> Envisagez le régime réel si vous investissez 
                   à crédit, ou l&apos;assurance-vie pour une fiscalité plus douce.
                 </div>
               </li>
               <li className="flex items-start gap-3">
-                <span className="text-blue-600 text-xl">💡</span>
+                <span className="text-blue-600 text-xl"><FontAwesomeIcon icon={faLightbulb} className="inline" /></span>
                 <div>
                   <strong>Consultez un conseiller :</strong> Un conseiller en gestion de patrimoine 
                   peut vous aider à choisir les SCPI adaptées à votre profil et objectifs.
@@ -516,7 +518,7 @@ export default function SCPISimulatorPage() {
 
           <div className="bg-yellow-50 dark:bg-yellow-900/20 border-l-4 border-yellow-500 p-6">
             <h3 className="text-xl font-bold mb-3 text-yellow-900 dark:text-yellow-200">
-              ⚠️ Avertissement important
+              <FontAwesomeIcon icon={faExclamationTriangle} className="inline" /> Avertissement important
             </h3>
             <p className="text-yellow-800 dark:text-yellow-200 text-sm mb-3">
               Les informations présentées sur cette page sont fournies à titre informatif uniquement 

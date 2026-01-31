@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import BarcodeGenerator from "@/components/BarcodeGenerator";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBook, faBox, faCheck, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 
 export default function BarcodeGeneratorPage() {
   return (
@@ -105,7 +107,7 @@ export default function BarcodeGeneratorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">📦 Code 128</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faBox} className="inline" /> Code 128</h3>
                 <p>
                   Format compact et polyvalent, capable d&apos;encoder tout le jeu ASCII (lettres, chiffres, 
                   symboles). Très utilisé en logistique, transport, expédition et gestion d&apos;inventaire. 
@@ -121,7 +123,7 @@ export default function BarcodeGeneratorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">📚 ISBN / ISSN</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faBook} className="inline" /> ISBN / ISSN</h3>
                 <p>
                   Codes spécifiques pour livres (ISBN) et publications périodiques (ISSN). Basés sur EAN-13 
                   avec un préfixe spécial (978/979 pour ISBN). Essentiels pour l&apos;édition et la distribution 
@@ -143,7 +145,7 @@ export default function BarcodeGeneratorPage() {
             <h2 className="text-2xl font-bold mb-4">Cas d&apos;usage des codes-barres</h2>
             <div className="space-y-4 text-gray-700 dark:text-gray-300">
               <div>
-                <h3 className="text-xl font-semibold mb-2">🛍️ Commerce et vente au détail</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faShoppingCart} className="inline" /> Commerce et vente au détail</h3>
                 <p>
                   Gestion des caisses enregistreuses, suivi des stocks, inventaires automatisés. Le scan 
                   en caisse accélère les transactions et réduit les erreurs de saisie. Permet le suivi des 
@@ -151,7 +153,7 @@ export default function BarcodeGeneratorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">📦 Logistique et transport</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faBox} className="inline" /> Logistique et transport</h3>
                 <p>
                   Traçabilité des colis, gestion d&apos;entrepôt, suivi des expéditions. Chaque article scanné 
                   est enregistré en temps réel, permettant de suivre son parcours de l&apos;expéditeur au 
@@ -167,7 +169,7 @@ export default function BarcodeGeneratorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">📚 Bibliothèques et archives</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faBook} className="inline" /> Bibliothèques et archives</h3>
                 <p>
                   Catalogage des livres, gestion des prêts et retours, inventaires. Le code-barres sur chaque 
                   ouvrage permet un système de prêt automatisé rapide et fiable. Suivi de l&apos;emplacement et 
@@ -197,7 +199,7 @@ export default function BarcodeGeneratorPage() {
             <h2 className="text-2xl font-bold mb-4">Bonnes pratiques pour les codes-barres</h2>
             <div className="space-y-3 text-gray-700 dark:text-gray-300">
               <div>
-                <h3 className="font-semibold mb-1">✅ Choisissez la bonne taille</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faCheck} className="inline" /> Choisissez la bonne taille</h3>
                 <p className="text-sm">
                   Pour l&apos;impression, respectez les tailles minimales : EAN-13 minimum 31.35mm de large, 
                   UPC-A 29.83mm. Une taille trop petite rendra le code illisible. Pour des surfaces réduites, 
@@ -205,7 +207,7 @@ export default function BarcodeGeneratorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">✅ Assurez un contraste suffisant</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faCheck} className="inline" /> Assurez un contraste suffisant</h3>
                 <p className="text-sm">
                   Codes noirs sur fond blanc offrent le meilleur contraste. Évitez les couleurs claires 
                   (jaune, orange) pour les barres. Le rouge est invisible pour certains scanners laser. 
@@ -213,7 +215,7 @@ export default function BarcodeGeneratorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">✅ Prévoyez une zone de silence</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faCheck} className="inline" /> Prévoyez une zone de silence</h3>
                 <p className="text-sm">
                   Laissez au moins 3-5mm d&apos;espace vierge de chaque côté du code-barres (zone de silence ou 
                   quiet zone). Cette marge est essentielle pour que le scanner détecte correctement le début 
@@ -221,7 +223,7 @@ export default function BarcodeGeneratorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">✅ Utilisez une qualité d&apos;impression élevée</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faCheck} className="inline" /> Utilisez une qualité d&apos;impression élevée</h3>
                 <p className="text-sm">
                   Minimum 300 DPI pour l&apos;impression. Les impressions de mauvaise qualité causent des barres 
                   floues ou bavées, rendant le code illisible. Préférez les imprimantes thermiques pour les 
@@ -229,7 +231,7 @@ export default function BarcodeGeneratorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">✅ Positionnez stratégiquement</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faCheck} className="inline" /> Positionnez stratégiquement</h3>
                 <p className="text-sm">
                   Placez le code-barres sur une surface plane, évitez les plis, courbes ou zones réfléchissantes. 
                   Sur un emballage cylindrique, orientez les barres parallèlement à l&apos;axe du cylindre pour 
@@ -237,7 +239,7 @@ export default function BarcodeGeneratorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">✅ Testez avant production</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faCheck} className="inline" /> Testez avant production</h3>
                 <p className="text-sm">
                   Imprimez un échantillon et testez-le avec plusieurs types de scanners (laser, CCD, mobile). 
                   Vérifiez la lisibilité sous différents angles et éclairages. Un test préventif évite des 
@@ -245,7 +247,7 @@ export default function BarcodeGeneratorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">✅ Respectez les standards</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faCheck} className="inline" /> Respectez les standards</h3>
                 <p className="text-sm">
                   Pour vendre en grande distribution, vos codes EAN/UPC doivent être enregistrés auprès de 
                   GS1 (organisme mondial de standardisation). N&apos;inventez pas vos propres numéros, ils 

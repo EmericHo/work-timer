@@ -1,6 +1,8 @@
 "use client";
 
 import { useState } from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLightbulb } from '@fortawesome/free-solid-svg-icons';
 
 type Style = "Modern" | "Classic" | "Tech" | "Creative" | "Short";
 
@@ -165,7 +167,7 @@ export default function BusinessNameGenerator() {
       )}
 
       <div className="mt-6 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
-        <h3 className="font-semibold text-blue-900 dark:text-blue-300 mb-2">💡 Tips</h3>
+        <h3 className="font-semibold text-blue-900 dark:text-blue-300 mb-2"><FontAwesomeIcon icon={faLightbulb} className="inline" /> Tips</h3>
         <ul className="text-sm text-blue-800 dark:text-blue-300 list-disc list-inside space-y-1">
           <li>Check domain availability before finalizing</li>
           <li>Ensure the name is easy to spell and pronounce</li>

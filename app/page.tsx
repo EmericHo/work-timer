@@ -1,5 +1,7 @@
 import Link from "next/link";
 import { Metadata } from "next";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBalanceScale, faBook, faBox, faBriefcase, faBuilding, faBullseye, faCalculator, faChartBar, faChartLine, faCoins, faCompressAlt, faDice, faDollarSign, faFile, faFileAlt, faFilm, faFlask, faGlobe, faHome, faImage, faKey, faLaptop, faLightbulb, faLink, faLock, faMobileAlt, faMoneyBill, faPalette, faPlane, faRepeat, faRuler, faSearch, faSignal, faStopwatch, faTag, faTimes, faUniversity, faUser, faVolumeUp } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata: Metadata = {
   title: "Outils Gratuits en Ligne - Timer, Calculatrices, Générateurs et Plus",
@@ -26,10 +28,10 @@ export default function Home() {
 
         {/* Outils de Productivité & Texte */}
         <section>
-          <h2 className="text-3xl font-bold mb-6 text-center">🎯 Outils de Productivité & Texte</h2>
+          <h2 className="text-3xl font-bold mb-6 text-center"><FontAwesomeIcon icon={faBullseye} className="inline" /> Outils de Productivité & Texte</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-4">
             <Link href="/timer" className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-all border-2 border-transparent hover:border-blue-500">
-              <h3 className="text-2xl font-semibold mb-3">⏱️ Timer & Pomodoro</h3>
+              <h3 className="text-2xl font-semibold mb-3"><FontAwesomeIcon icon={faStopwatch} className="inline" /> Timer & Pomodoro</h3>
               <p className="text-gray-600 dark:text-gray-400 mb-3">
                 Chronomètre précis et technique Pomodoro pour maximiser votre concentration
               </p>
@@ -37,7 +39,7 @@ export default function Home() {
             </Link>
 
             <Link href="/compteur-mots" className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-all border-2 border-transparent hover:border-green-500">
-              <h3 className="text-2xl font-semibold mb-3">📝 Compteur de Mots</h3>
+              <h3 className="text-2xl font-semibold mb-3"><FontAwesomeIcon icon={faFileAlt} className="inline" /> Compteur de Mots</h3>
               <p className="text-gray-600 dark:text-gray-400 mb-3">
                 Comptez mots, caractères, phrases et temps de lecture en temps réel
               </p>
@@ -45,7 +47,7 @@ export default function Home() {
             </Link>
 
             <Link href="/generateur-lorem-ipsum" className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-all border-2 border-transparent hover:border-purple-500">
-              <h3 className="text-2xl font-semibold mb-3">📄 Lorem Ipsum</h3>
+              <h3 className="text-2xl font-semibold mb-3"><FontAwesomeIcon icon={faFile} className="inline" /> Lorem Ipsum</h3>
               <p className="text-gray-600 dark:text-gray-400 mb-3">
                 Générez du texte de remplissage pour vos maquettes et designs
               </p>
@@ -53,7 +55,7 @@ export default function Home() {
             </Link>
 
             <Link href="/generateur-slug" className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-all border-2 border-transparent hover:border-indigo-500">
-              <h3 className="text-2xl font-semibold mb-3">🔗 Générateur de Slug</h3>
+              <h3 className="text-2xl font-semibold mb-3"><FontAwesomeIcon icon={faLink} className="inline" /> Générateur de Slug</h3>
               <p className="text-gray-600 dark:text-gray-400 mb-3">
                 Créez des URLs SEO-friendly à partir de n&apos;importe quel texte
               </p>
@@ -61,7 +63,7 @@ export default function Home() {
             </Link>
 
             <Link href="/repeteur-texte" className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-all border-2 border-transparent hover:border-pink-500">
-              <h3 className="text-2xl font-semibold mb-3">🔁 Répéteur de Texte</h3>
+              <h3 className="text-2xl font-semibold mb-3"><FontAwesomeIcon icon={faRepeat} className="inline" /> Répéteur de Texte</h3>
               <p className="text-gray-600 dark:text-gray-400 mb-3">
                 Répétez du texte plusieurs fois avec séparateur personnalisable
               </p>
@@ -69,7 +71,7 @@ export default function Home() {
             </Link>
 
             <Link href="/convertisseur-morse" className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-all border-2 border-transparent hover:border-teal-500">
-              <h3 className="text-2xl font-semibold mb-3">📡 Code Morse</h3>
+              <h3 className="text-2xl font-semibold mb-3"><FontAwesomeIcon icon={faSignal} className="inline" /> Code Morse</h3>
               <p className="text-gray-600 dark:text-gray-400 mb-3">
                 Convertissez texte en morse et vice-versa avec lecture audio
               </p>
@@ -77,7 +79,7 @@ export default function Home() {
             </Link>
 
             <Link href="/comparateur-texte" className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-all border-2 border-transparent hover:border-orange-500">
-              <h3 className="text-2xl font-semibold mb-3">🔍 Comparateur de Texte</h3>
+              <h3 className="text-2xl font-semibold mb-3"><FontAwesomeIcon icon={faSearch} className="inline" /> Comparateur de Texte</h3>
               <p className="text-gray-600 dark:text-gray-400 mb-3">
                 Comparez deux textes et visualisez les différences ligne par ligne
               </p>
@@ -85,7 +87,7 @@ export default function Home() {
             </Link>
 
             <Link href="/convertisseur-unites" className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-all border-2 border-transparent hover:border-cyan-500">
-              <h3 className="text-2xl font-semibold mb-3">⚖️ Convertisseur d&apos;Unités</h3>
+              <h3 className="text-2xl font-semibold mb-3"><FontAwesomeIcon icon={faBalanceScale} className="inline" /> Convertisseur d&apos;Unités</h3>
               <p className="text-gray-600 dark:text-gray-400 mb-3">
                 Convertissez longueurs, poids, températures et volumes facilement
               </p>
@@ -93,7 +95,7 @@ export default function Home() {
             </Link>
 
             <Link href="/csv-to-json" className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-all border-2 border-transparent hover:border-emerald-500">
-              <h3 className="text-2xl font-semibold mb-3">📊 CSV vers JSON</h3>
+              <h3 className="text-2xl font-semibold mb-3"><FontAwesomeIcon icon={faChartBar} className="inline" /> CSV vers JSON</h3>
               <p className="text-gray-600 dark:text-gray-400 mb-3">
                 Convertissez vos fichiers CSV en JSON instantanément
               </p>
@@ -104,7 +106,7 @@ export default function Home() {
 
         {/* Outils pour Développeurs & Sécurité */}
         <section>
-          <h2 className="text-3xl font-bold mb-6 text-center">💻 Outils pour Développeurs & Sécurité</h2>
+          <h2 className="text-3xl font-bold mb-6 text-center"><FontAwesomeIcon icon={faLaptop} className="inline" /> Outils pour Développeurs & Sécurité</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-4">
             <Link href="/json-formatter" className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-all border-2 border-transparent hover:border-blue-500">
               <h3 className="text-2xl font-semibold mb-3">📋 JSON Formatter</h3>
@@ -115,7 +117,7 @@ export default function Home() {
             </Link>
             
             <Link href="/minificateur-css-js" className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-all border-2 border-transparent hover:border-orange-500">
-              <h3 className="text-2xl font-semibold mb-3">🗜️ Minificateur CSS/JS</h3>
+              <h3 className="text-2xl font-semibold mb-3"><FontAwesomeIcon icon={faCompressAlt} className="inline" /> Minificateur CSS/JS</h3>
               <p className="text-gray-600 dark:text-gray-400 mb-3">
                 Compressez vos fichiers CSS et JavaScript pour optimiser les performances
               </p>
@@ -123,7 +125,7 @@ export default function Home() {
             </Link>
             
             <Link href="/editeur-markdown" className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-all border-2 border-transparent hover:border-indigo-500">
-              <h3 className="text-2xl font-semibold mb-3">📝 Éditeur Markdown</h3>
+              <h3 className="text-2xl font-semibold mb-3"><FontAwesomeIcon icon={faFileAlt} className="inline" /> Éditeur Markdown</h3>
               <p className="text-gray-600 dark:text-gray-400 mb-3">
                 Éditeur Markdown en ligne avec aperçu en temps réel et export
               </p>
@@ -131,7 +133,7 @@ export default function Home() {
             </Link>
 
             <Link href="/encodeur-base64" className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-all border-2 border-transparent hover:border-green-500">
-              <h3 className="text-2xl font-semibold mb-3">🔐 Encodeur Base64</h3>
+              <h3 className="text-2xl font-semibold mb-3"><FontAwesomeIcon icon={faKey} className="inline" /> Encodeur Base64</h3>
               <p className="text-gray-600 dark:text-gray-400 mb-3">
                 Encodez et décodez vos données en Base64 pour emails et APIs
               </p>
@@ -139,7 +141,7 @@ export default function Home() {
             </Link>
 
             <Link href="/generateur-hash" className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-all border-2 border-transparent hover:border-red-500">
-              <h3 className="text-2xl font-semibold mb-3">🔒 Générateur de Hash</h3>
+              <h3 className="text-2xl font-semibold mb-3"><FontAwesomeIcon icon={faLock} className="inline" /> Générateur de Hash</h3>
               <p className="text-gray-600 dark:text-gray-400 mb-3">
                 Générez des hash MD5, SHA-1, SHA-256, SHA-512 pour vos données
               </p>
@@ -147,7 +149,7 @@ export default function Home() {
             </Link>
 
             <Link href="/testeur-regex" className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-all border-2 border-transparent hover:border-purple-500">
-              <h3 className="text-2xl font-semibold mb-3">🎯 Testeur Regex</h3>
+              <h3 className="text-2xl font-semibold mb-3"><FontAwesomeIcon icon={faBullseye} className="inline" /> Testeur Regex</h3>
               <p className="text-gray-600 dark:text-gray-400 mb-3">
                 Testez vos expressions régulières avec mise en surbrillance en direct
               </p>
@@ -155,7 +157,7 @@ export default function Home() {
             </Link>
 
             <Link href="/encodeur-url" className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-all border-2 border-transparent hover:border-yellow-500">
-              <h3 className="text-2xl font-semibold mb-3">🌐 Encodeur URL</h3>
+              <h3 className="text-2xl font-semibold mb-3"><FontAwesomeIcon icon={faGlobe} className="inline" /> Encodeur URL</h3>
               <p className="text-gray-600 dark:text-gray-400 mb-3">
                 Encodez et décodez les URLs pour vos liens et APIs web
               </p>
@@ -171,7 +173,7 @@ export default function Home() {
             </Link>
 
             <Link href="/generateur-meta-seo" className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-all border-2 border-transparent hover:border-pink-500">
-              <h3 className="text-2xl font-semibold mb-3">🏷️ Meta Tags SEO</h3>
+              <h3 className="text-2xl font-semibold mb-3"><FontAwesomeIcon icon={faTag} className="inline" /> Meta Tags SEO</h3>
               <p className="text-gray-600 dark:text-gray-400 mb-3">
                 Générez des meta tags optimisés pour le référencement de votre site
               </p>
@@ -187,7 +189,7 @@ export default function Home() {
             </Link>
 
             <Link href="/minificateur-html" className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-all border-2 border-transparent hover:border-blue-500">
-              <h3 className="text-2xl font-semibold mb-3">📦 Minificateur HTML</h3>
+              <h3 className="text-2xl font-semibold mb-3"><FontAwesomeIcon icon={faBox} className="inline" /> Minificateur HTML</h3>
               <p className="text-gray-600 dark:text-gray-400 mb-3">
                 Compressez votre code HTML pour améliorer les performances web
               </p>
@@ -198,10 +200,10 @@ export default function Home() {
 
         {/* Outils Design & Créatifs */}
         <section>
-          <h2 className="text-3xl font-bold mb-6 text-center">🎨 Outils Design & Créatifs</h2>
+          <h2 className="text-3xl font-bold mb-6 text-center"><FontAwesomeIcon icon={faPalette} className="inline" /> Outils Design & Créatifs</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-4">
             <Link href="/convertisseur-couleur" className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-all border-2 border-transparent hover:border-red-500">
-              <h3 className="text-2xl font-semibold mb-3">🎨 Convertisseur Couleur</h3>
+              <h3 className="text-2xl font-semibold mb-3"><FontAwesomeIcon icon={faPalette} className="inline" /> Convertisseur Couleur</h3>
               <p className="text-gray-600 dark:text-gray-400 mb-3">
                 Convertissez entre HEX, RGB et HSL avec prévisualisation en direct
               </p>
@@ -209,7 +211,7 @@ export default function Home() {
             </Link>
 
             <Link href="/generateur-palette-couleurs" className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-all border-2 border-transparent hover:border-purple-500">
-              <h3 className="text-2xl font-semibold mb-3">🌈 Palette de Couleurs</h3>
+              <h3 className="text-2xl font-semibold mb-3"><FontAwesomeIcon icon={faPalette} className="inline" /> Palette de Couleurs</h3>
               <p className="text-gray-600 dark:text-gray-400 mb-3">
                 Générez des palettes harmonieuses, export CSS et Tailwind
               </p>
@@ -233,7 +235,7 @@ export default function Home() {
             </Link>
 
             <Link href="/generateur-banniere-linkedin" className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-all border-2 border-transparent hover:border-blue-500">
-              <h3 className="text-2xl font-semibold mb-3">💼 Bannière LinkedIn</h3>
+              <h3 className="text-2xl font-semibold mb-3"><FontAwesomeIcon icon={faBriefcase} className="inline" /> Bannière LinkedIn</h3>
               <p className="text-gray-600 dark:text-gray-400 mb-3">
                 Créez des bannières professionnelles pour votre profil LinkedIn
               </p>
@@ -243,7 +245,7 @@ export default function Home() {
         </section>
         {/* Outils Générateurs & Aléatoires */}
         <section>
-          <h2 className="text-3xl font-bold mb-6 text-center">🎲 Générateurs & Aléatoires</h2>
+          <h2 className="text-3xl font-bold mb-6 text-center"><FontAwesomeIcon icon={faDice} className="inline" /> Générateurs & Aléatoires</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-4">
             <Link href="/generateur-mot-de-passe" className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-all border-2 border-transparent hover:border-red-500">
               <h3 className="text-2xl font-semibold mb-3">🔑 Mot de Passe</h3>
@@ -254,7 +256,7 @@ export default function Home() {
             </Link>
 
             <Link href="/generateur-nombre-aleatoire" className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-all border-2 border-transparent hover:border-green-500">
-              <h3 className="text-2xl font-semibold mb-3">🎲 Nombre Aléatoire</h3>
+              <h3 className="text-2xl font-semibold mb-3"><FontAwesomeIcon icon={faDice} className="inline" /> Nombre Aléatoire</h3>
               <p className="text-gray-600 dark:text-gray-400 mb-3">
                 Générez des nombres aléatoires avec plage personnalisable
               </p>
@@ -262,7 +264,7 @@ export default function Home() {
             </Link>
 
             <Link href="/lanceur-des" className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-all border-2 border-transparent hover:border-purple-500">
-              <h3 className="text-2xl font-semibold mb-3">🎲 Lanceur de Dés</h3>
+              <h3 className="text-2xl font-semibold mb-3"><FontAwesomeIcon icon={faDice} className="inline" /> Lanceur de Dés</h3>
               <p className="text-gray-600 dark:text-gray-400 mb-3">
                 Lancez des dés D&D (d4, d6, d8, d10, d12, d20, d100)
               </p>
@@ -270,7 +272,7 @@ export default function Home() {
             </Link>
 
             <Link href="/pile-ou-face" className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-all border-2 border-transparent hover:border-blue-500">
-              <h3 className="text-2xl font-semibold mb-3">🪙 Pile ou Face</h3>
+              <h3 className="text-2xl font-semibold mb-3"><FontAwesomeIcon icon={faCoins} className="inline" /> Pile ou Face</h3>
               <p className="text-gray-600 dark:text-gray-400 mb-3">
                 Tirez à pile ou face avec animation et historique
               </p>
@@ -278,7 +280,7 @@ export default function Home() {
             </Link>
 
             <Link href="/generateur-nom-aleatoire" className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-all border-2 border-transparent hover:border-yellow-500">
-              <h3 className="text-2xl font-semibold mb-3">👤 Noms Aléatoires</h3>
+              <h3 className="text-2xl font-semibold mb-3"><FontAwesomeIcon icon={faUser} className="inline" /> Noms Aléatoires</h3>
               <p className="text-gray-600 dark:text-gray-400 mb-3">
                 Générez des prénoms, noms complets ou pseudos aléatoires
               </p>
@@ -286,7 +288,7 @@ export default function Home() {
             </Link>
 
             <Link href="/generateur-nom-entreprise" className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-all border-2 border-transparent hover:border-orange-500">
-              <h3 className="text-2xl font-semibold mb-3">🏢 Nom d&apos;Entreprise</h3>
+              <h3 className="text-2xl font-semibold mb-3"><FontAwesomeIcon icon={faBuilding} className="inline" /> Nom d&apos;Entreprise</h3>
               <p className="text-gray-600 dark:text-gray-400 mb-3">
                 Trouvez le nom parfait pour votre startup ou entreprise
               </p>
@@ -310,7 +312,7 @@ export default function Home() {
             </Link>
             
             <Link href="/generateur-iban" className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-all border-2 border-transparent hover:border-emerald-500">
-              <h3 className="text-2xl font-semibold mb-3">🏦 Générateur IBAN</h3>
+              <h3 className="text-2xl font-semibold mb-3"><FontAwesomeIcon icon={faUniversity} className="inline" /> Générateur IBAN</h3>
               <p className="text-gray-600 dark:text-gray-400 mb-3">
                 Générez des numéros IBAN de test pour 8 pays européens
               </p>
@@ -318,7 +320,7 @@ export default function Home() {
             </Link>
             
             <Link href="/generateur-qr-code" className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-all border-2 border-transparent hover:border-purple-500">
-              <h3 className="text-2xl font-semibold mb-3">📱 Générateur QR Code</h3>
+              <h3 className="text-2xl font-semibold mb-3"><FontAwesomeIcon icon={faMobileAlt} className="inline" /> Générateur QR Code</h3>
               <p className="text-gray-600 dark:text-gray-400 mb-3">
                 Créez des QR codes personnalisés avec couleurs et export PNG/SVG
               </p>
@@ -334,7 +336,7 @@ export default function Home() {
             </Link>
             
             <Link href="/compresseur-image" className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-all border-2 border-transparent hover:border-teal-500">
-              <h3 className="text-2xl font-semibold mb-3">🖼️ Compresseur d&apos;Images</h3>
+              <h3 className="text-2xl font-semibold mb-3"><FontAwesomeIcon icon={faImage} className="inline" /> Compresseur d&apos;Images</h3>
               <p className="text-gray-600 dark:text-gray-400 mb-3">
                 Réduisez la taille de vos images JPG, PNG et WebP sans perte visible
               </p>
@@ -345,10 +347,10 @@ export default function Home() {
 
         {/* Outils Financiers & Calculatrices */}
         <section>
-          <h2 className="text-3xl font-bold mb-6 text-center">💰 Outils Financiers & Calculatrices</h2>
+          <h2 className="text-3xl font-bold mb-6 text-center"><FontAwesomeIcon icon={faMoneyBill} className="inline" /> Outils Financiers & Calculatrices</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-4">
             <Link href="/calculatrice-fiscale" className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-all border-2 border-transparent hover:border-green-500">
-              <h3 className="text-2xl font-semibold mb-3">🧮 Calculatrice Fiscale</h3>
+              <h3 className="text-2xl font-semibold mb-3"><FontAwesomeIcon icon={faCalculator} className="inline" /> Calculatrice Fiscale</h3>
               <p className="text-gray-600 dark:text-gray-400 mb-3">
                 Calculez votre impôt sur le revenu 2025-2026
               </p>
@@ -372,7 +374,7 @@ export default function Home() {
             </Link>
 
             <Link href="/calculateur-roi" className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-all border-2 border-transparent hover:border-yellow-500">
-              <h3 className="text-2xl font-semibold mb-3">📈 Calculateur ROI</h3>
+              <h3 className="text-2xl font-semibold mb-3"><FontAwesomeIcon icon={faChartLine} className="inline" /> Calculateur ROI</h3>
               <p className="text-gray-600 dark:text-gray-400 mb-3">
                 Calculez votre retour sur investissement facilement
               </p>
@@ -388,7 +390,7 @@ export default function Home() {
             </Link>
 
             <Link href="/calculateur-credit-immobilier" className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-all border-2 border-transparent hover:border-orange-500">
-              <h3 className="text-2xl font-semibold mb-3">🏠 Crédit Immobilier</h3>
+              <h3 className="text-2xl font-semibold mb-3"><FontAwesomeIcon icon={faHome} className="inline" /> Crédit Immobilier</h3>
               <p className="text-gray-600 dark:text-gray-400 mb-3">
                 Calculez vos mensualités de prêt immobilier détaillées
               </p>
@@ -396,7 +398,7 @@ export default function Home() {
             </Link>
 
             <Link href="/calculateur-pourboire" className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-all border-2 border-transparent hover:border-pink-500">
-              <h3 className="text-2xl font-semibold mb-3">💵 Calculateur Pourboire</h3>
+              <h3 className="text-2xl font-semibold mb-3"><FontAwesomeIcon icon={faDollarSign} className="inline" /> Calculateur Pourboire</h3>
               <p className="text-gray-600 dark:text-gray-400 mb-3">
                 Calculez pourboires et division de l&apos;addition facilement
               </p>
@@ -404,7 +406,7 @@ export default function Home() {
             </Link>
 
             <Link href="/simulateur-scpi" className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-all border-2 border-transparent hover:border-teal-500">
-              <h3 className="text-2xl font-semibold mb-3">🏢 Simulateur SCPI</h3>
+              <h3 className="text-2xl font-semibold mb-3"><FontAwesomeIcon icon={faBuilding} className="inline" /> Simulateur SCPI</h3>
               <p className="text-gray-600 dark:text-gray-400 mb-3">
                 Simulez vos investissements immobiliers en SCPI avec rendements
               </p>
@@ -420,7 +422,7 @@ export default function Home() {
             </Link>
 
             <Link href="/planificateur-budget" className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-all border-2 border-transparent hover:border-cyan-500">
-              <h3 className="text-2xl font-semibold mb-3">📊 Budget Planner</h3>
+              <h3 className="text-2xl font-semibold mb-3"><FontAwesomeIcon icon={faChartBar} className="inline" /> Budget Planner</h3>
               <p className="text-gray-600 dark:text-gray-400 mb-3">
                 Gérez votre budget personnel avec la règle 50/30/20
               </p>
@@ -439,10 +441,10 @@ export default function Home() {
 
         {/* Outils Média & Utilitaires */}
         <section>
-          <h2 className="text-3xl font-bold mb-6 text-center">🎬 Outils Média & Divers</h2>
+          <h2 className="text-3xl font-bold mb-6 text-center"><FontAwesomeIcon icon={faFilm} className="inline" /> Outils Média & Divers</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-4">
             <Link href="/redimensionneur-image" className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-all border-2 border-transparent hover:border-purple-500">
-              <h3 className="text-2xl font-semibold mb-3">📐 Redimensionneur Image</h3>
+              <h3 className="text-2xl font-semibold mb-3"><FontAwesomeIcon icon={faRuler} className="inline" /> Redimensionneur Image</h3>
               <p className="text-gray-600 dark:text-gray-400 mb-3">
                 Redimensionnez vos images avec prévisualisation en direct
               </p>
@@ -450,7 +452,7 @@ export default function Home() {
             </Link>
 
             <Link href="/generateur-code-barres" className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-all border-2 border-transparent hover:border-indigo-500">
-              <h3 className="text-2xl font-semibold mb-3">📊 Code-Barres</h3>
+              <h3 className="text-2xl font-semibold mb-3"><FontAwesomeIcon icon={faChartBar} className="inline" /> Code-Barres</h3>
               <p className="text-gray-600 dark:text-gray-400 mb-3">
                 Générez codes-barres Code128, EAN13, UPC et Code39
               </p>
@@ -458,7 +460,7 @@ export default function Home() {
             </Link>
 
             <Link href="/calculateur-duree-video" className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-all border-2 border-transparent hover:border-teal-500">
-              <h3 className="text-2xl font-semibold mb-3">⏱️ Durée Vidéo</h3>
+              <h3 className="text-2xl font-semibold mb-3"><FontAwesomeIcon icon={faStopwatch} className="inline" /> Durée Vidéo</h3>
               <p className="text-gray-600 dark:text-gray-400 mb-3">
                 Calculez la durée totale de plusieurs vidéos facilement
               </p>
@@ -466,7 +468,7 @@ export default function Home() {
             </Link>
 
             <Link href="/convertisseur-fuseau-horaire" className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-all border-2 border-transparent hover:border-blue-500">
-              <h3 className="text-2xl font-semibold mb-3">🌍 Fuseau Horaire</h3>
+              <h3 className="text-2xl font-semibold mb-3"><FontAwesomeIcon icon={faGlobe} className="inline" /> Fuseau Horaire</h3>
               <p className="text-gray-600 dark:text-gray-400 mb-3">
                 Convertissez heures entre différents fuseaux horaires
               </p>
@@ -474,7 +476,7 @@ export default function Home() {
             </Link>
 
             <Link href="/text-to-speech" className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-all border-2 border-transparent hover:border-pink-500">
-              <h3 className="text-2xl font-semibold mb-3">🔊 Text to Speech</h3>
+              <h3 className="text-2xl font-semibold mb-3"><FontAwesomeIcon icon={faVolumeUp} className="inline" /> Text to Speech</h3>
               <p className="text-gray-600 dark:text-gray-400 mb-3">
                 Convertissez texte en audio avec voix synthétique
               </p>
@@ -482,7 +484,7 @@ export default function Home() {
             </Link>
 
             <Link href="/destination-voyage-aleatoire" className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-all border-2 border-transparent hover:border-sky-500">
-              <h3 className="text-2xl font-semibold mb-3">✈️ Destination Aléatoire</h3>
+              <h3 className="text-2xl font-semibold mb-3"><FontAwesomeIcon icon={faPlane} className="inline" /> Destination Aléatoire</h3>
               <p className="text-gray-600 dark:text-gray-400 mb-3">
                 Découvrez votre prochaine destination de voyage au hasard
               </p>
@@ -493,10 +495,10 @@ export default function Home() {
 
         {/* Outils Éducatifs */}
         <section>
-          <h2 className="text-3xl font-bold mb-6 text-center">📚 Outils Éducatifs</h2>
+          <h2 className="text-3xl font-bold mb-6 text-center"><FontAwesomeIcon icon={faBook} className="inline" /> Outils Éducatifs</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-4">
             <Link href="/table-multiplication" className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-all border-2 border-transparent hover:border-green-500">
-              <h3 className="text-2xl font-semibold mb-3">✖️ Tables de Multiplication</h3>
+              <h3 className="text-2xl font-semibold mb-3"><FontAwesomeIcon icon={faTimes} className="inline" /> Tables de Multiplication</h3>
               <p className="text-gray-600 dark:text-gray-400 mb-3">
                 Apprenez et révisez les tables de multiplication interactives
               </p>
@@ -504,7 +506,7 @@ export default function Home() {
             </Link>
 
             <Link href="/calculateur-formules" className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-all border-2 border-transparent hover:border-purple-500">
-              <h3 className="text-2xl font-semibold mb-3">🧪 Calculateur Formules</h3>
+              <h3 className="text-2xl font-semibold mb-3"><FontAwesomeIcon icon={faFlask} className="inline" /> Calculateur Formules</h3>
               <p className="text-gray-600 dark:text-gray-400 mb-3">
                 Calculez formules mathématiques avec variables personnalisables
               </p>
@@ -541,7 +543,7 @@ export default function Home() {
             </div>
 
             <div className="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-md">
-              <h3 className="text-xl font-bold mb-4">🎯 Notre Mission</h3>
+              <h3 className="text-xl font-bold mb-4"><FontAwesomeIcon icon={faBullseye} className="inline" /> Notre Mission</h3>
               <p className="leading-relaxed">
                 Nous croyons que les outils professionnels de qualité devraient être accessibles à tous, 
                 gratuitement. C&apos;est pourquoi nous développons et maintenons cette suite d&apos;outils 
@@ -551,7 +553,7 @@ export default function Home() {
             </div>
 
             <div className="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-md">
-              <h3 className="text-xl font-bold mb-4">🔒 Confidentialité & Sécurité</h3>
+              <h3 className="text-xl font-bold mb-4"><FontAwesomeIcon icon={faLock} className="inline" /> Confidentialité & Sécurité</h3>
               <ul className="space-y-2">
                 <li className="flex items-start gap-2">
                   <span className="text-green-600 font-bold mt-1">✓</span>
@@ -573,7 +575,7 @@ export default function Home() {
             </div>
 
             <div className="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-md">
-              <h3 className="text-xl font-bold mb-4">💡 Pourquoi Choisir Nos Outils ?</h3>
+              <h3 className="text-xl font-bold mb-4"><FontAwesomeIcon icon={faLightbulb} className="inline" /> Pourquoi Choisir Nos Outils ?</h3>
               <ul className="space-y-2">
                 <li className="flex items-start gap-2">
                   <span className="text-blue-600 font-bold mt-1">→</span>

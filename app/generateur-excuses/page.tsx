@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import ExcuseGenerator from "@/components/ExcuseGenerator";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBriefcase, faCheck, faClock, faHome, faMobileAlt, faPen, faTheaterMasks } from '@fortawesome/free-solid-svg-icons';
 
 export default function ExcuseGeneratorPage() {
   return (
@@ -89,7 +91,7 @@ export default function ExcuseGeneratorPage() {
             <h2 className="text-2xl font-bold mb-4">Catégories d&apos;excuses disponibles</h2>
             <div className="space-y-4 text-gray-700 dark:text-gray-300">
               <div>
-                <h3 className="text-xl font-semibold mb-2">💼 Travail et bureau</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faBriefcase} className="inline" /> Travail et bureau</h3>
                 <p>
                   Des excuses professionnelles (et souvent hilarantes) pour expliquer un retard, une 
                   absence, un rapport non rendu ou une réunion manquée. De l&apos;ordinateur qui a pris feu 
@@ -105,7 +107,7 @@ export default function ExcuseGeneratorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">⏰ Retards en tous genres</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faClock} className="inline" /> Retards en tous genres</h3>
                 <p>
                   Spécialement conçues pour justifier un retard, qu&apos;il soit professionnel, amical ou 
                   romantique. Des excuses allant du réveil qui n&apos;a pas sonné aux embouteillages causés 
@@ -113,7 +115,7 @@ export default function ExcuseGeneratorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🏠 Famille et amis</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faHome} className="inline" /> Famille et amis</h3>
                 <p>
                   Pour ces situations sociales délicates : dîner de famille oublié, anniversaire manqué, 
                   promesse non tenue. Des excuses légères et humoristiques pour dédramatiser avec vos 
@@ -129,7 +131,7 @@ export default function ExcuseGeneratorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🎭 Excuses absurdes</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faTheaterMasks} className="inline" /> Excuses absurdes</h3>
                 <p>
                   Les plus créatives et improbables ! Aliens, voyages dans le temps, complots gouvernementaux, 
                   invasions de zombies... Pour ceux qui aiment l&apos;humour décalé et les justifications 
@@ -151,7 +153,7 @@ export default function ExcuseGeneratorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">✍️ Inspiration créative</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faPen} className="inline" /> Inspiration créative</h3>
                 <p>
                   Écrivains et créatifs peuvent utiliser ces excuses comme points de départ pour des histoires, 
                   scénarios ou dialogues. Une excuse absurde peut devenir le début d&apos;une nouvelle fantastique 
@@ -167,7 +169,7 @@ export default function ExcuseGeneratorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">📱 Contenu réseaux sociaux</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faMobileAlt} className="inline" /> Contenu réseaux sociaux</h3>
                 <p>
                   Créez du contenu humoristique pour vos réseaux sociaux. Les excuses absurdes font d&apos;excellents 
                   posts, stories Instagram ou tweets. Partagez votre préférée et demandez à vos followers 
@@ -175,7 +177,7 @@ export default function ExcuseGeneratorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🎭 Jeux et challenges</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faTheaterMasks} className="inline" /> Jeux et challenges</h3>
                 <p>
                   Intégrez le générateur dans des jeux entre amis : qui peut garder son sérieux en lisant 
                   l&apos;excuse ? Qui peut improviser une histoire complète autour de l&apos;excuse générée ? Possibilités 
@@ -197,7 +199,7 @@ export default function ExcuseGeneratorPage() {
             <h2 className="text-2xl font-bold mb-4">L&apos;art de la bonne excuse (vraie)</h2>
             <div className="space-y-3 text-gray-700 dark:text-gray-300">
               <div>
-                <h3 className="font-semibold mb-1">✅ L&apos;honnêteté reste la meilleure politique</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faCheck} className="inline" /> L&apos;honnêteté reste la meilleure politique</h3>
                 <p className="text-sm">
                   Dans les vraies situations professionnelles ou personnelles importantes, soyez toujours 
                   honnête. Une explication sincère, même simple, est toujours préférable à une excuse 
@@ -205,7 +207,7 @@ export default function ExcuseGeneratorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">✅ Assumez vos responsabilités</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faCheck} className="inline" /> Assumez vos responsabilités</h3>
                 <p className="text-sm">
                   Plutôt que chercher des excuses, reconnaissez vos erreurs et présentez des solutions. 
                   &quot;J&apos;ai fait une erreur, voici comment je compte la corriger&quot; est plus respecté qu&apos;une 
@@ -213,7 +215,7 @@ export default function ExcuseGeneratorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">✅ Soyez bref et direct</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faCheck} className="inline" /> Soyez bref et direct</h3>
                 <p className="text-sm">
                   Une excuse efficace est courte et va droit au but. Trop de détails sonnent comme une 
                   tentative de justification excessive. &quot;Je suis désolé, j&apos;ai eu un imprévu&quot; suffit 
@@ -221,7 +223,7 @@ export default function ExcuseGeneratorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">✅ Proposez des solutions</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faCheck} className="inline" /> Proposez des solutions</h3>
                 <p className="text-sm">
                   Accompagnez votre explication d&apos;une proposition pour rattraper ou éviter la répétition. 
                   &quot;Je suis en retard aujourd&apos;hui, je resterai 30 minutes de plus ce soir&quot; montre votre 
@@ -229,7 +231,7 @@ export default function ExcuseGeneratorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">✅ Anticipez et prévenez</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faCheck} className="inline" /> Anticipez et prévenez</h3>
                 <p className="text-sm">
                   Si vous savez à l&apos;avance que vous serez en retard ou absent, prévenez le plus tôt possible. 
                   La communication proactive est toujours appréciée et montre du respect pour le temps des 
@@ -237,7 +239,7 @@ export default function ExcuseGeneratorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">✅ L&apos;humour avec discernement</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faCheck} className="inline" /> L&apos;humour avec discernement</h3>
                 <p className="text-sm">
                   L&apos;humour peut détendre une situation, mais évaluez d&apos;abord le contexte et votre 
                   interlocuteur. Une excuse humoristique peut fonctionner entre amis ou collègues proches, 

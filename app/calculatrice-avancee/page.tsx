@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import AdvancedCalculator from "@/components/AdvancedCalculator";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBolt, faBriefcase, faChartBar, faChartLine, faDesktop, faDice, faFileAlt, faFlask, faGlobe, faHardHat, faHashtag, faMoneyBill, faRuler, faRulerHorizontal } from '@fortawesome/free-solid-svg-icons';
 
 export default function AdvancedCalculatorPage() {
   return (
@@ -97,7 +99,7 @@ export default function AdvancedCalculatorPage() {
             <h2 className="text-2xl font-bold mb-4">Fonctions de la calculatrice scientifique</h2>
             <div className="space-y-4 text-gray-700 dark:text-gray-300">
               <div>
-                <h3 className="text-xl font-semibold mb-2">🔢 Opérations arithmétiques de base</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faHashtag} className="inline" /> Opérations arithmétiques de base</h3>
                 <p>
                   Addition (+), soustraction (-), multiplication (× ou *), division (÷ ou /), et modulo (%). 
                   Ces opérations fondamentales sont la base de tous les calculs. La calculatrice gère également 
@@ -106,7 +108,7 @@ export default function AdvancedCalculatorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">📐 Fonctions trigonométriques</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faRuler} className="inline" /> Fonctions trigonométriques</h3>
                 <p>
                   Sinus (sin), cosinus (cos), tangente (tan) et leurs inverses (arcsin, arccos, arctan). Ces 
                   fonctions sont essentielles en géométrie, physique et ingénierie. La calculatrice permet de 
@@ -115,7 +117,7 @@ export default function AdvancedCalculatorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">📊 Logarithmes et exponentielles</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faChartBar} className="inline" /> Logarithmes et exponentielles</h3>
                 <p>
                   Logarithme naturel (ln), logarithme base 10 (log), exponentielle (exp ou e^x), et puissance 
                   (x^y). Ces fonctions sont cruciales en sciences naturelles, économie et statistiques. Le 
@@ -132,7 +134,7 @@ export default function AdvancedCalculatorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🎲 Fonctions spéciales</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faDice} className="inline" /> Fonctions spéciales</h3>
                 <p>
                   Factorielle (n!), valeur absolue (|x|), constantes mathématiques (π, e), et fonctions de 
                   parenthésage pour contrôler l&apos;ordre des opérations. La factorielle est particulièrement 
@@ -157,7 +159,7 @@ export default function AdvancedCalculatorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🏗️ Ingénierie et architecture</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faHardHat} className="inline" /> Ingénierie et architecture</h3>
                 <p>
                   Les ingénieurs de toutes disciplines utilisent quotidiennement des calculatrices scientifiques 
                   pour des calculs de structures, d&apos;électricité, de mécanique des fluides et de thermodynamique. 
@@ -176,7 +178,7 @@ export default function AdvancedCalculatorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">💼 Finance et économie</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faBriefcase} className="inline" /> Finance et économie</h3>
                 <p>
                   Les professionnels de la finance utilisent des calculatrices scientifiques pour les calculs 
                   d&apos;intérêts composés, de taux de croissance, d&apos;amortissements et d&apos;analyses statistiques. 
@@ -185,7 +187,7 @@ export default function AdvancedCalculatorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">📈 Statistiques et analyse de données</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faChartLine} className="inline" /> Statistiques et analyse de données</h3>
                 <p>
                   Bien que des logiciels spécialisés existent, les calculatrices scientifiques restent utiles 
                   pour des calculs statistiques rapides : moyennes, écarts-types, permutations, combinaisons. 
@@ -200,7 +202,7 @@ export default function AdvancedCalculatorPage() {
             <h2 className="text-2xl font-bold mb-4">Avantages de notre calculatrice en ligne</h2>
             <div className="space-y-4 text-gray-700 dark:text-gray-300">
               <div>
-                <h3 className="text-xl font-semibold mb-2">💰 Gratuit et sans limites</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faMoneyBill} className="inline" /> Gratuit et sans limites</h3>
                 <p>
                   Contrairement aux calculatrices physiques qui peuvent coûter entre 20 et 150 euros, notre 
                   calculatrice en ligne est entièrement gratuite. Pas d&apos;abonnement, pas de frais cachés, pas 
@@ -209,7 +211,7 @@ export default function AdvancedCalculatorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🌐 Accessible partout</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faGlobe} className="inline" /> Accessible partout</h3>
                 <p>
                   Oubliée votre calculatrice à la maison ? Pas de problème. Notre calculatrice en ligne est 
                   accessible depuis n&apos;importe quel appareil avec un navigateur internet : ordinateur, tablette, 
@@ -218,7 +220,7 @@ export default function AdvancedCalculatorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">📝 Historique des calculs</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faFileAlt} className="inline" /> Historique des calculs</h3>
                 <p>
                   Un avantage majeur par rapport aux calculatrices physiques : l&apos;historique complet de vos 
                   calculs est conservé pendant votre session. Vous pouvez revenir en arrière, vérifier vos 
@@ -227,7 +229,7 @@ export default function AdvancedCalculatorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">⚡ Mise à jour constante</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faBolt} className="inline" /> Mise à jour constante</h3>
                 <p>
                   Les calculatrices physiques deviennent obsolètes et ne reçoivent jamais de mises à jour. 
                   Notre calculatrice en ligne est continuellement améliorée avec de nouvelles fonctionnalités, 
@@ -236,7 +238,7 @@ export default function AdvancedCalculatorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🖥️ Interface moderne</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faDesktop} className="inline" /> Interface moderne</h3>
                 <p>
                   Interface claire et intuitive, optimisée pour les écrans tactiles et les claviers. Support 
                   du mode sombre pour travailler confortablement en toutes conditions. Affichage responsive 
@@ -298,7 +300,7 @@ export default function AdvancedCalculatorPage() {
             <h2 className="text-2xl font-bold mb-4">Exemples de calculs scientifiques courants</h2>
             <div className="space-y-4 text-gray-700 dark:text-gray-300">
               <div>
-                <h3 className="text-xl font-semibold mb-2">📏 Calcul de distances et angles</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faRulerHorizontal} className="inline" /> Calcul de distances et angles</h3>
                 <p className="mb-2">
                   En géométrie et trigonométrie, calculer la longueur d&apos;un côté d&apos;un triangle rectangle :
                 </p>
@@ -307,7 +309,7 @@ export default function AdvancedCalculatorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🧪 Calculs chimiques</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faFlask} className="inline" /> Calculs chimiques</h3>
                 <p className="mb-2">
                   Calcul du pH d&apos;une solution à partir de la concentration en ions H+ :
                 </p>
@@ -316,7 +318,7 @@ export default function AdvancedCalculatorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">⚡ Calculs électriques</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faBolt} className="inline" /> Calculs électriques</h3>
                 <p className="mb-2">
                   Calcul de la puissance électrique avec la loi d&apos;Ohm :
                 </p>
@@ -325,7 +327,7 @@ export default function AdvancedCalculatorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">💰 Intérêts composés</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faMoneyBill} className="inline" /> Intérêts composés</h3>
                 <p className="mb-2">
                   Calcul du montant final avec intérêts composés :
                 </p>
@@ -334,7 +336,7 @@ export default function AdvancedCalculatorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🌍 Calculs de croissance</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faGlobe} className="inline" /> Calculs de croissance</h3>
                 <p className="mb-2">
                   Calcul du temps de doublement avec une croissance exponentielle :
                 </p>

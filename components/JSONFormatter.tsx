@@ -1,6 +1,8 @@
 "use client";
 
 import { useState, useCallback } from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCompressAlt, faLightbulb, faStar, faTimes, faTrash } from '@fortawesome/free-solid-svg-icons';
 
 export default function JSONFormatter() {
   const [input, setInput] = useState<string>("");
@@ -87,28 +89,28 @@ export default function JSONFormatter() {
           onClick={formatJSON}
           className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold"
         >
-          ✨ Formatter
+          <FontAwesomeIcon icon={faStar} className="inline" /> Formatter
         </button>
         
         <button
           onClick={minifyJSON}
           className="px-6 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors font-semibold"
         >
-          🗜️ Minifier
+          <FontAwesomeIcon icon={faCompressAlt} className="inline" /> Minifier
         </button>
 
         <button
           onClick={clearAll}
           className="px-6 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors font-semibold"
         >
-          🗑️ Effacer
+          <FontAwesomeIcon icon={faTrash} className="inline" /> Effacer
         </button>
       </div>
 
       {error && (
         <div className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg p-4">
           <p className="text-red-800 dark:text-red-200 text-sm">
-            ❌ {error}
+            <FontAwesomeIcon icon={faTimes} className="inline" /> {error}
           </p>
         </div>
       )}
@@ -134,7 +136,7 @@ export default function JSONFormatter() {
 
       <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4">
         <h4 className="font-semibold mb-2 text-blue-900 dark:text-blue-100">
-          💡 Conseils d&apos;utilisation
+          <FontAwesomeIcon icon={faLightbulb} className="inline" /> Conseils d&apos;utilisation
         </h4>
         <ul className="text-sm text-blue-800 dark:text-blue-200 space-y-1">
           <li>• Collez votre JSON dans le champ d&apos;entrée</li>

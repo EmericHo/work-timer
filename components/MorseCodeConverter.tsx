@@ -1,6 +1,8 @@
 "use client";
 
 import { useState, useRef } from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLightbulb, faVolumeUp } from '@fortawesome/free-solid-svg-icons';
 
 const MORSE_CODE: { [key: string]: string } = {
   A: ".-", B: "-...", C: "-.-.", D: "-..", E: ".", F: "..-.",
@@ -153,7 +155,7 @@ export default function MorseCodeConverter() {
             className="px-4 py-2 bg-green-500 hover:bg-green-600 text-white font-semibold rounded-md transition-colors"
             title="Play Morse Code"
           >
-            🔊 Play
+            <FontAwesomeIcon icon={faVolumeUp} className="inline" /> Play
           </button>
         )}
       </div>
@@ -198,7 +200,7 @@ export default function MorseCodeConverter() {
       </div>
 
       <div className="mt-6 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
-        <h3 className="font-semibold text-blue-900 dark:text-blue-300 mb-2">💡 Tips</h3>
+        <h3 className="font-semibold text-blue-900 dark:text-blue-300 mb-2"><FontAwesomeIcon icon={faLightbulb} className="inline" /> Tips</h3>
         <ul className="text-sm text-blue-800 dark:text-blue-300 list-disc list-inside space-y-1">
           <li>Dot (.) represents a short signal</li>
           <li>Dash (-) represents a long signal</li>

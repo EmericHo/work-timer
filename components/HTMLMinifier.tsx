@@ -1,6 +1,8 @@
 "use client";
 
 import { useState } from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCog, faCompressAlt, faExclamationTriangle, faTrash } from '@fortawesome/free-solid-svg-icons';
 
 export default function HTMLMinifier() {
   const [input, setInput] = useState<string>("");
@@ -66,14 +68,14 @@ export default function HTMLMinifier() {
           onClick={minifyHTML}
           className="flex-1 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
         >
-          🗜️ Minifier le HTML
+          <FontAwesomeIcon icon={faCompressAlt} className="inline" /> Minifier le HTML
         </button>
         {output && (
           <button
             onClick={clear}
             className="bg-gray-600 hover:bg-gray-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
           >
-            🗑️
+            <FontAwesomeIcon icon={faTrash} className="inline" />
           </button>
         )}
       </div>
@@ -124,13 +126,13 @@ export default function HTMLMinifier() {
       )}
 
       <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4">
-        <h3 className="font-semibold text-blue-900 dark:text-blue-100 mb-2">⚙️ Optimisations</h3>
+        <h3 className="font-semibold text-blue-900 dark:text-blue-100 mb-2"><FontAwesomeIcon icon={faCog} className="inline" /> Optimisations</h3>
         <ul className="text-sm text-blue-800 dark:text-blue-200 space-y-1">
           <li>• Suppression des commentaires HTML</li>
           <li>• Suppression des espaces inutiles entre les balises</li>
           <li>• Réduction des espaces multiples en un seul</li>
           <li>• Optimisation des espaces autour des attributs</li>
-          <li>• ⚠️ Ne minifie pas le CSS/JS inline (utilisez les outils dédiés)</li>
+          <li>• <FontAwesomeIcon icon={faExclamationTriangle} className="inline" /> Ne minifie pas le CSS/JS inline (utilisez les outils dédiés)</li>
         </ul>
       </div>
     </div>

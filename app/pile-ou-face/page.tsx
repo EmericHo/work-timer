@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import CoinFlip from "@/components/CoinFlip";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBalanceScale, faBolt, faBullseye, faChartBar, faChartLine, faCity, faDice, faFilm, faMoneyBill, faSync } from '@fortawesome/free-solid-svg-icons';
 
 export default function CoinFlipPage() {
   return (
@@ -57,7 +59,7 @@ export default function CoinFlipPage() {
             <h2 className="text-2xl font-bold mb-4">Quand utiliser le pile ou face ?</h2>
             <div className="space-y-4 text-gray-700 dark:text-gray-300">
               <div>
-                <h3 className="text-xl font-semibold mb-2">⚖️ Décisions difficiles</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faBalanceScale} className="inline" /> Décisions difficiles</h3>
                 <p>
                   Face à deux options équivalentes, le pile ou face brise l&apos;indécision. Paradoxalement, le 
                   moment où la pièce est en l&apos;air, vous savez souvent quel résultat vous espérez secrètement, 
@@ -74,7 +76,7 @@ export default function CoinFlipPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🎲 Jeux et divertissement</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faDice} className="inline" /> Jeux et divertissement</h3>
                 <p>
                   De nombreux jeux de société et jeux de cartes utilisent le pile ou face pour résoudre des 
                   égalités, déterminer le premier joueur ou ajouter un élément de hasard. C&apos;est plus rapide 
@@ -90,7 +92,7 @@ export default function CoinFlipPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🎯 Bris d&apos;égalité</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faBullseye} className="inline" /> Bris d&apos;égalité</h3>
                 <p>
                   Dans les situations où deux options sont vraiment équivalentes et qu&apos;une décision doit être 
                   prise rapidement, le hasard est souvent la meilleure solution. Économisez votre énergie mentale 
@@ -104,7 +106,7 @@ export default function CoinFlipPage() {
             <h2 className="text-2xl font-bold mb-4">La probabilité du pile ou face</h2>
             <div className="space-y-4 text-gray-700 dark:text-gray-300">
               <div>
-                <h3 className="text-xl font-semibold mb-2">📊 50/50 parfait</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faChartBar} className="inline" /> 50/50 parfait</h3>
                 <p className="mb-2">
                   Chaque lancer a exactement 50% de chances de donner pile et 50% de chances de donner face. 
                   C&apos;est la distribution de probabilité la plus simple : deux résultats équiprobables.
@@ -114,7 +116,7 @@ export default function CoinFlipPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🔄 Indépendance des lancers</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faSync} className="inline" /> Indépendance des lancers</h3>
                 <p className="mb-2">
                   Chaque lancer est indépendant du précédent. Si vous obtenez 5 piles d&apos;affilée, la probabilité 
                   d&apos;obtenir pile au 6ème lancer est toujours 50%. La pièce n&apos;a pas de mémoire ! C&apos;est 
@@ -126,7 +128,7 @@ export default function CoinFlipPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">📈 Loi des grands nombres</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faChartLine} className="inline" /> Loi des grands nombres</h3>
                 <p>
                   Sur un grand nombre de lancers, les proportions de pile et face convergent vers 50/50. Sur 10 
                   lancers, vous pourriez obtenir 7 piles et 3 faces. Mais sur 10 000 lancers, vous serez très 
@@ -156,7 +158,7 @@ export default function CoinFlipPage() {
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">⚡ Économie cognitive</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faBolt} className="inline" /> Économie cognitive</h3>
                 <p className="text-sm">
                   Face à des choix peu importants, trop réfléchir est contre-productif. Le pile ou face vous libère 
                   de la &quot;paralysie de décision&quot; et vous permet de consacrer votre énergie mentale aux 
@@ -165,7 +167,7 @@ export default function CoinFlipPage() {
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">🎯 Acceptation du hasard</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faBullseye} className="inline" /> Acceptation du hasard</h3>
                 <p className="text-sm">
                   Utiliser le hasard pour décider peut réduire l&apos;anxiété et les regrets. Vous n&apos;avez pas 
                   fait le &quot;mauvais&quot; choix - c&apos;était juste le hasard. Cela peut être libérateur, 
@@ -173,7 +175,7 @@ export default function CoinFlipPage() {
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">⚖️ Perception d&apos;équité</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faBalanceScale} className="inline" /> Perception d&apos;équité</h3>
                 <p className="text-sm">
                   Même si la personne &quot;perd&quot; au pile ou face, elle est plus susceptible d&apos;accepter 
                   le résultat comme juste parce que le processus était équitable. C&apos;est pourquoi c&apos;est 
@@ -194,14 +196,14 @@ export default function CoinFlipPage() {
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">🎬 Cinéma</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faFilm} className="inline" /> Cinéma</h3>
                 <p>
                   Dans &quot;No Country for Old Men&quot;, le personnage d&apos;Anton Chigurh utilise constamment 
                   le pile ou face pour décider du sort de ses victimes, illustrant le thème du hasard et du destin.
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">🏙️ Décisions importantes</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faCity} className="inline" /> Décisions importantes</h3>
                 <p>
                   Selon la légende, les fondateurs de Portland, Oregon (USA) ont lancé une pièce pour nommer la 
                   ville. S&apos;ils avaient eu face au lieu de pile, la ville se serait appelée Boston, Oregon.
@@ -215,7 +217,7 @@ export default function CoinFlipPage() {
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">💰 Probabilité de tomber sur la tranche</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faMoneyBill} className="inline" /> Probabilité de tomber sur la tranche</h3>
                 <p>
                   Pour une pièce standard (Euro, Dollar), la probabilité qu&apos;elle tombe et reste sur la tranche 
                   est estimée à environ 1 sur 6 000. C&apos;est si rare que c&apos;est négligé dans tous les calculs 

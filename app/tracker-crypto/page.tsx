@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import CryptoPortfolioTracker from "@/components/CryptoPortfolioTracker";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBook, faBullseye, faChartBar, faChartLine, faCoins, faExclamationTriangle, faFileAlt, faGift, faGlobe, faHashtag, faKey, faLaptop, faLightbulb, faLock, faMobileAlt, faMoneyBill, faRocket, faSearch, faShieldAlt, faSync, faUniversity, faVideo } from '@fortawesome/free-solid-svg-icons';
 
 export default function CryptoTrackerPage() {
   return (
@@ -15,7 +17,7 @@ export default function CryptoTrackerPage() {
             ← Retour à l&apos;accueil
           </Link>
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-4">
-            🪙 Tracker de Portfolio Crypto Gratuit
+            <FontAwesomeIcon icon={faCoins} className="inline" /> Tracker de Portfolio Crypto Gratuit
           </h1>
           <p className="text-center text-gray-600 dark:text-gray-400 text-base sm:text-lg max-w-3xl mx-auto">
             Suivez vos investissements en cryptomonnaies facilement. Gérez Bitcoin, Ethereum et 15+ cryptos populaires avec calcul automatique de vos profits et pertes.
@@ -26,7 +28,7 @@ export default function CryptoTrackerPage() {
           {/* Crypto Tracker Component */}
           <section className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-4 sm:p-6 md:p-8">
             <h2 className="text-2xl sm:text-3xl font-bold mb-6 text-center">
-              📊 Mon Portfolio Crypto
+              <FontAwesomeIcon icon={faChartBar} className="inline" /> Mon Portfolio Crypto
             </h2>
             <CryptoPortfolioTracker />
           </section>
@@ -34,7 +36,7 @@ export default function CryptoTrackerPage() {
           {/* Investment Disclaimer */}
           <section className="bg-red-50 dark:bg-red-900/20 border-2 border-red-300 dark:border-red-700 rounded-lg p-4 sm:p-6">
             <h3 className="text-xl font-bold text-red-600 dark:text-red-400 mb-3">
-              ⚠️ Avertissement Important sur les Risques
+              <FontAwesomeIcon icon={faExclamationTriangle} className="inline" /> Avertissement Important sur les Risques
             </h3>
             <div className="text-gray-700 dark:text-gray-300 space-y-2 text-sm">
               <p>
@@ -55,7 +57,7 @@ export default function CryptoTrackerPage() {
           <section className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-4 sm:p-6 md:p-8">
             <article className="prose prose-sm sm:prose-base lg:prose-lg dark:prose-invert max-w-none">
               <h2 className="text-2xl sm:text-3xl font-bold mb-4">
-                🪙 Qu&apos;est-ce qu&apos;un tracker de portfolio crypto ?
+                <FontAwesomeIcon icon={faCoins} className="inline" /> Qu&apos;est-ce qu&apos;un tracker de portfolio crypto ?
               </h2>
 
               <p className="text-gray-700 dark:text-gray-300 mb-4">
@@ -67,7 +69,7 @@ export default function CryptoTrackerPage() {
               </p>
 
               <h3 className="text-xl sm:text-2xl font-bold mb-3 mt-8">
-                💡 Pourquoi tracker son portfolio crypto ?
+                <FontAwesomeIcon icon={faLightbulb} className="inline" /> Pourquoi tracker son portfolio crypto ?
               </h3>
 
               <div className="bg-blue-50 dark:bg-blue-900/20 p-6 rounded-lg border border-blue-300 dark:border-blue-700 mb-6">
@@ -85,13 +87,13 @@ export default function CryptoTrackerPage() {
               </div>
 
               <h3 className="text-xl sm:text-2xl font-bold mb-3 mt-8">
-                📈 Comment gérer efficacement son portfolio crypto ?
+                <FontAwesomeIcon icon={faChartLine} className="inline" /> Comment gérer efficacement son portfolio crypto ?
               </h3>
 
               <div className="space-y-4 mb-6">
                 <div className="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg">
                   <h4 className="font-bold text-gray-900 dark:text-gray-100 mb-2">
-                    1️⃣ Diversifiez vos investissements
+                    <FontAwesomeIcon icon={faHashtag} className="inline" /> Diversifiez vos investissements
                   </h4>
                   <p className="text-gray-700 dark:text-gray-300 text-sm">
                     Ne mettez pas tous vos œufs dans le même panier. Répartissez vos investissements entre différentes cryptomonnaies (Bitcoin, Ethereum, altcoins) pour limiter les risques. Une règle courante : 40-50% Bitcoin, 25-30% Ethereum, 20-35% altcoins prometteurs.
@@ -100,7 +102,7 @@ export default function CryptoTrackerPage() {
 
                 <div className="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg">
                   <h4 className="font-bold text-gray-900 dark:text-gray-100 mb-2">
-                    2️⃣ Investissez régulièrement (DCA)
+                    <FontAwesomeIcon icon={faHashtag} className="inline" /> Investissez régulièrement (DCA)
                   </h4>
                   <p className="text-gray-700 dark:text-gray-300 text-sm">
                     La stratégie DCA (Dollar Cost Averaging) consiste à investir un montant fixe à intervalles réguliers, indépendamment du prix. Cela lisse le prix d&apos;achat moyen et réduit l&apos;impact de la volatilité. Exemple : 100€ par semaine ou 400€ par mois.
@@ -109,7 +111,7 @@ export default function CryptoTrackerPage() {
 
                 <div className="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg">
                   <h4 className="font-bold text-gray-900 dark:text-gray-100 mb-2">
-                    3️⃣ Définissez des objectifs clairs
+                    <FontAwesomeIcon icon={faHashtag} className="inline" /> Définissez des objectifs clairs
                   </h4>
                   <p className="text-gray-700 dark:text-gray-300 text-sm">
                     Avant d&apos;investir, définissez vos objectifs : horizon de placement (court/moyen/long terme), objectif de rendement, seuil de perte acceptable. Fixez des niveaux de prise de profit (take profit) et de stop loss pour automatiser vos décisions.
@@ -118,7 +120,7 @@ export default function CryptoTrackerPage() {
 
                 <div className="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg">
                   <h4 className="font-bold text-gray-900 dark:text-gray-100 mb-2">
-                    4️⃣ Ne cédez pas à la panique
+                    <FontAwesomeIcon icon={faHashtag} className="inline" /> Ne cédez pas à la panique
                   </h4>
                   <p className="text-gray-700 dark:text-gray-300 text-sm">
                     Le marché crypto est extrêmement volatil. Des variations de +/- 20% en une journée sont normales. Évitez de vendre en panique lors des baisses (FOMO inverse) ou d&apos;acheter impulsivement lors des hausses (FOMO). Tenez-vous à votre stratégie initiale.
@@ -127,7 +129,7 @@ export default function CryptoTrackerPage() {
 
                 <div className="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg">
                   <h4 className="font-bold text-gray-900 dark:text-gray-100 mb-2">
-                    5️⃣ Sécurisez vos cryptos
+                    <FontAwesomeIcon icon={faHashtag} className="inline" /> Sécurisez vos cryptos
                   </h4>
                   <p className="text-gray-700 dark:text-gray-300 text-sm">
                     Pour les montants importants, utilisez un hardware wallet (Ledger, Trezor). Activez l&apos;authentification à deux facteurs (2FA) sur tous vos comptes. Ne partagez jamais vos clés privées ou phrases de récupération. Méfiez-vous des arnaques et du phishing.
@@ -136,7 +138,7 @@ export default function CryptoTrackerPage() {
               </div>
 
               <h3 className="text-xl sm:text-2xl font-bold mb-3 mt-8">
-                🔍 Les cryptomonnaies populaires expliquées
+                <FontAwesomeIcon icon={faSearch} className="inline" /> Les cryptomonnaies populaires expliquées
               </h3>
 
               <div className="space-y-4 mb-6">
@@ -196,38 +198,38 @@ export default function CryptoTrackerPage() {
               </div>
 
               <h3 className="text-xl sm:text-2xl font-bold mb-3 mt-8">
-                📊 Stratégies d&apos;investissement crypto
+                <FontAwesomeIcon icon={faChartBar} className="inline" /> Stratégies d&apos;investissement crypto
               </h3>
 
               <div className="bg-green-50 dark:bg-green-900/20 p-6 rounded-lg border border-green-300 dark:border-green-700 mb-6">
                 <h4 className="text-lg font-bold text-green-600 dark:text-green-400 mb-3">
-                  🎯 Les principales approches d&apos;investissement
+                  <FontAwesomeIcon icon={faBullseye} className="inline" /> Les principales approches d&apos;investissement
                 </h4>
                 
                 <div className="space-y-4 text-gray-700 dark:text-gray-300">
                   <div>
-                    <h5 className="font-bold mb-2">📈 HODL (Hold On for Dear Life)</h5>
+                    <h5 className="font-bold mb-2"><FontAwesomeIcon icon={faChartLine} className="inline" /> HODL (Hold On for Dear Life)</h5>
                     <p className="text-sm">
                       Stratégie d&apos;investissement à long terme consistant à acheter et conserver ses cryptos pendant plusieurs années, indépendamment des fluctuations du marché. Adaptée aux investisseurs patients qui croient au potentiel à long terme de la blockchain. Avantage : fiscalité avantageuse en France après 2 ans de détention.
                     </p>
                   </div>
 
                   <div>
-                    <h5 className="font-bold mb-2">💰 DCA (Dollar Cost Averaging)</h5>
+                    <h5 className="font-bold mb-2"><FontAwesomeIcon icon={faMoneyBill} className="inline" /> DCA (Dollar Cost Averaging)</h5>
                     <p className="text-sm">
                       Investissement d&apos;un montant fixe à intervalles réguliers (hebdomadaire, mensuel). Cette méthode réduit l&apos;impact de la volatilité en lissant le prix d&apos;achat moyen. Idéale pour les débutants qui veulent investir progressivement sans stresser sur le timing d&apos;entrée parfait.
                     </p>
                   </div>
 
                   <div>
-                    <h5 className="font-bold mb-2">🎯 Trading actif</h5>
+                    <h5 className="font-bold mb-2"><FontAwesomeIcon icon={faBullseye} className="inline" /> Trading actif</h5>
                     <p className="text-sm">
                       Achat et vente fréquents pour profiter des variations de prix à court terme. Nécessite une expertise technique (analyse chartiste, indicateurs), du temps et une gestion stricte du risque. Très risqué pour les débutants. Implique une fiscalité lourde en France (flat tax 30% sur chaque plus-value).
                     </p>
                   </div>
 
                   <div>
-                    <h5 className="font-bold mb-2">🔄 Rééquilibrage de portfolio</h5>
+                    <h5 className="font-bold mb-2"><FontAwesomeIcon icon={faSync} className="inline" /> Rééquilibrage de portfolio</h5>
                     <p className="text-sm">
                       Ajustement périodique de la répartition de votre portfolio pour maintenir vos allocations cibles. Exemple : si Bitcoin passe de 50% à 70% de votre portfolio grâce à sa hausse, vous en vendez une partie pour racheter d&apos;autres cryptos et revenir à 50%. Force à vendre haut et acheter bas.
                     </p>
@@ -243,13 +245,13 @@ export default function CryptoTrackerPage() {
               </div>
 
               <h3 className="text-xl sm:text-2xl font-bold mb-3 mt-8">
-                🛡️ Gestion du risque en crypto
+                <FontAwesomeIcon icon={faShieldAlt} className="inline" /> Gestion du risque en crypto
               </h3>
 
               <div className="space-y-4 mb-6">
                 <div className="bg-yellow-50 dark:bg-yellow-900/20 p-4 rounded-lg border border-yellow-300 dark:border-yellow-700">
                   <h4 className="font-bold text-yellow-800 dark:text-yellow-300 mb-2">
-                    ⚠️ Règle d&apos;or : N&apos;investissez que ce que vous pouvez perdre
+                    <FontAwesomeIcon icon={faExclamationTriangle} className="inline" /> Règle d&apos;or : N&apos;investissez que ce que vous pouvez perdre
                   </h4>
                   <p className="text-gray-700 dark:text-gray-300 text-sm">
                     Les cryptomonnaies sont des actifs hautement spéculatifs. Leur valeur peut chuter drastiquement ou même atteindre zéro. N&apos;investissez jamais votre épargne de précaution, l&apos;argent du loyer ou des dettes. Limitez votre exposition crypto à 5-10% maximum de votre patrimoine total.
@@ -279,7 +281,7 @@ export default function CryptoTrackerPage() {
                 
                 <div className="space-y-4 text-gray-700 dark:text-gray-300">
                   <div>
-                    <h5 className="font-bold mb-2">🏦 Flat tax de 30% sur les plus-values</h5>
+                    <h5 className="font-bold mb-2"><FontAwesomeIcon icon={faUniversity} className="inline" /> Flat tax de 30% sur les plus-values</h5>
                     <p className="text-sm mb-2">
                       Les gains réalisés lors de la conversion de cryptomonnaies en euros (ou autre monnaie fiat) sont imposés au taux forfaitaire de 30% (PFU - Prélèvement Forfaitaire Unique) :
                     </p>
@@ -290,21 +292,21 @@ export default function CryptoTrackerPage() {
                   </div>
 
                   <div>
-                    <h5 className="font-bold mb-2">🔄 Échanges crypto-crypto non imposables</h5>
+                    <h5 className="font-bold mb-2"><FontAwesomeIcon icon={faSync} className="inline" /> Échanges crypto-crypto non imposables</h5>
                     <p className="text-sm">
                       Les échanges entre cryptomonnaies (BTC vers ETH par exemple) ne sont PAS imposables tant que vous ne convertissez pas en euros. Seule la conversion finale en monnaie fiat déclenche l&apos;imposition. La plus-value est calculée sur la globalité de votre portefeuille.
                     </p>
                   </div>
 
                   <div>
-                    <h5 className="font-bold mb-2">💰 Calcul de la plus-value globale</h5>
+                    <h5 className="font-bold mb-2"><FontAwesomeIcon icon={faMoneyBill} className="inline" /> Calcul de la plus-value globale</h5>
                     <p className="text-sm">
                       La plus-value imposable = (Prix de cession - Prix d&apos;acquisition) × (Montant du retrait / Valeur globale du portefeuille). Cette méthode au prorata tient compte de l&apos;ensemble de vos avoirs crypto, pas transaction par transaction.
                     </p>
                   </div>
 
                   <div>
-                    <h5 className="font-bold mb-2">📝 Obligations déclaratives</h5>
+                    <h5 className="font-bold mb-2"><FontAwesomeIcon icon={faFileAlt} className="inline" /> Obligations déclaratives</h5>
                     <p className="text-sm mb-2">
                       Vous devez déclarer :
                     </p>
@@ -316,7 +318,7 @@ export default function CryptoTrackerPage() {
                   </div>
 
                   <div>
-                    <h5 className="font-bold mb-2">🎁 Exonération pour petites cessions</h5>
+                    <h5 className="font-bold mb-2"><FontAwesomeIcon icon={faGift} className="inline" /> Exonération pour petites cessions</h5>
                     <p className="text-sm">
                       Si vos cessions annuelles totales sont inférieures à 305€, vous êtes exonéré d&apos;impôt sur les plus-values crypto. Au-delà, la totalité de la plus-value est imposable.
                     </p>
@@ -324,31 +326,31 @@ export default function CryptoTrackerPage() {
 
                   <div className="bg-white dark:bg-gray-800 p-4 rounded-lg mt-4">
                     <p className="text-sm italic">
-                      ⚠️ <strong>Important :</strong> Cette information est donnée à titre indicatif. La fiscalité crypto évolue régulièrement. Consultez un expert-comptable ou fiscaliste spécialisé pour votre situation personnelle. Conservez tous vos justificatifs de transactions.
+                      <FontAwesomeIcon icon={faExclamationTriangle} className="inline" /> <strong>Important :</strong> Cette information est donnée à titre indicatif. La fiscalité crypto évolue régulièrement. Consultez un expert-comptable ou fiscaliste spécialisé pour votre situation personnelle. Conservez tous vos justificatifs de transactions.
                     </p>
                   </div>
                 </div>
               </div>
 
               <h3 className="text-xl sm:text-2xl font-bold mb-3 mt-8">
-                🔒 Conseils de sécurité pour les investisseurs crypto
+                <FontAwesomeIcon icon={faLock} className="inline" /> Conseils de sécurité pour les investisseurs crypto
               </h3>
 
               <div className="bg-red-50 dark:bg-red-900/20 p-6 rounded-lg border border-red-300 dark:border-red-700 mb-6">
                 <h4 className="text-lg font-bold text-red-600 dark:text-red-400 mb-3">
-                  🛡️ Protégez vos actifs numériques
+                  <FontAwesomeIcon icon={faShieldAlt} className="inline" /> Protégez vos actifs numériques
                 </h4>
                 
                 <div className="space-y-3 text-gray-700 dark:text-gray-300">
                   <div>
-                    <h5 className="font-bold mb-1">🔐 Utilisez un hardware wallet pour les montants importants</h5>
+                    <h5 className="font-bold mb-1"><FontAwesomeIcon icon={faKey} className="inline" /> Utilisez un hardware wallet pour les montants importants</h5>
                     <p className="text-sm">
                       Ledger Nano X/S ou Trezor Model One/T sont des portefeuilles physiques qui stockent vos clés privées hors ligne. Investissement de 60-250€ indispensable si vous détenez plus de 1000€ en crypto. &quot;Not your keys, not your coins&quot;.
                     </p>
                   </div>
 
                   <div>
-                    <h5 className="font-bold mb-1">📱 Activez l&apos;authentification à deux facteurs (2FA)</h5>
+                    <h5 className="font-bold mb-1"><FontAwesomeIcon icon={faMobileAlt} className="inline" /> Activez l&apos;authentification à deux facteurs (2FA)</h5>
                     <p className="text-sm">
                       Utilisez Google Authenticator, Authy ou une clé de sécurité physique (YubiKey) sur tous vos comptes. N&apos;utilisez JAMAIS la 2FA par SMS (vulnérable au SIM swapping). Sauvegardez vos codes de récupération.
                     </p>
@@ -369,14 +371,14 @@ export default function CryptoTrackerPage() {
                   </div>
 
                   <div>
-                    <h5 className="font-bold mb-1">🌐 Utilisez des plateformes réputées et régulées</h5>
+                    <h5 className="font-bold mb-1"><FontAwesomeIcon icon={faGlobe} className="inline" /> Utilisez des plateformes réputées et régulées</h5>
                     <p className="text-sm">
                       Privilégiez les exchanges établis : Binance, Coinbase, Kraken, Crypto.com. Vérifiez qu&apos;ils sont enregistrés auprès de l&apos;AMF en France. Évitez les plateformes obscures promettant des rendements garantis.
                     </p>
                   </div>
 
                   <div>
-                    <h5 className="font-bold mb-1">💻 Sécurisez votre environnement informatique</h5>
+                    <h5 className="font-bold mb-1"><FontAwesomeIcon icon={faLaptop} className="inline" /> Sécurisez votre environnement informatique</h5>
                     <p className="text-sm">
                       Antivirus à jour, système d&apos;exploitation mis à jour, évitez les réseaux WiFi publics pour accéder à vos comptes crypto. Utilisez un ordinateur dédié pour les transactions importantes si possible.
                     </p>
@@ -475,20 +477,20 @@ export default function CryptoTrackerPage() {
 
               <div className="bg-blue-50 dark:bg-blue-900/20 p-6 rounded-lg border border-blue-300 dark:border-blue-700">
                 <ul className="space-y-2 text-gray-700 dark:text-gray-300">
-                  <li><strong>📊 Sites de cours :</strong> CoinMarketCap, CoinGecko, TradingView</li>
+                  <li><strong><FontAwesomeIcon icon={faChartBar} className="inline" /> Sites de cours :</strong> CoinMarketCap, CoinGecko, TradingView</li>
                   <li><strong>📰 Actualités crypto :</strong> CoinDesk, Cointelegraph, The Block, Journal du Coin (français)</li>
-                  <li><strong>🎥 Chaînes YouTube :</strong> Hasheur (français), Coin Bureau (anglais), Benjamin Cowen</li>
-                  <li><strong>📚 Livres :</strong> &quot;Bitcoin Standard&quot; (Saifedean Ammous), &quot;The Infinite Machine&quot; (Camila Russo)</li>
+                  <li><strong><FontAwesomeIcon icon={faVideo} className="inline" /> Chaînes YouTube :</strong> Hasheur (français), Coin Bureau (anglais), Benjamin Cowen</li>
+                  <li><strong><FontAwesomeIcon icon={faBook} className="inline" /> Livres :</strong> &quot;Bitcoin Standard&quot; (Saifedean Ammous), &quot;The Infinite Machine&quot; (Camila Russo)</li>
                   <li><strong>🎓 Formations :</strong> Coursera Blockchain, Binance Academy, Coinbase Learn</li>
                   <li><strong>💬 Communautés :</strong> Reddit r/CryptoCurrency, r/Bitcoin, forums BitcoinTalk</li>
-                  <li><strong>📱 Outils :</strong> Delta, Blockfolio pour le tracking, Etherscan pour explorer Ethereum</li>
+                  <li><strong><FontAwesomeIcon icon={faMobileAlt} className="inline" /> Outils :</strong> Delta, Blockfolio pour le tracking, Etherscan pour explorer Ethereum</li>
                   <li><strong>🇫🇷 Régulation :</strong> Site de l&apos;AMF (Autorité des Marchés Financiers)</li>
                 </ul>
               </div>
 
               <div className="bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 p-6 rounded-lg border border-blue-300 dark:border-blue-700 mt-8">
                 <h4 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-3">
-                  🚀 Commencez votre voyage crypto en toute sécurité
+                  <FontAwesomeIcon icon={faRocket} className="inline" /> Commencez votre voyage crypto en toute sécurité
                 </h4>
                 <p className="text-gray-700 dark:text-gray-300 mb-4">
                   L&apos;investissement dans les cryptomonnaies peut être passionnant et potentiellement lucratif, mais il nécessite de la prudence, de la patience et une formation continue. Utilisez notre tracker gratuit pour suivre vos positions, mais n&apos;oubliez jamais :

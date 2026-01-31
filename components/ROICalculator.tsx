@@ -1,6 +1,8 @@
 "use client";
 
 import { useState } from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChartBar, faChartLine, faLightbulb } from '@fortawesome/free-solid-svg-icons';
 
 export default function ROICalculator() {
   const [initialInvestment, setInitialInvestment] = useState<string>("");
@@ -144,7 +146,7 @@ export default function ROICalculator() {
 
           <div className="bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg p-4">
             <h4 className="font-semibold mb-3 text-gray-900 dark:text-gray-100">
-              📊 Formule ROI
+              <FontAwesomeIcon icon={faChartBar} className="inline" /> Formule ROI
             </h4>
             <div className="text-sm space-y-2">
               <p className="font-mono bg-white dark:bg-gray-700 p-3 rounded border border-gray-300 dark:border-gray-600">
@@ -161,7 +163,7 @@ export default function ROICalculator() {
 
           <div className="bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg p-4">
             <h4 className="font-semibold mb-3 text-gray-900 dark:text-gray-100">
-              📈 Détails de l&apos;investissement
+              <FontAwesomeIcon icon={faChartLine} className="inline" /> Détails de l&apos;investissement
             </h4>
             <div className="space-y-2 text-sm">
               <div className="flex justify-between">
@@ -195,7 +197,7 @@ export default function ROICalculator() {
 
       <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4">
         <h4 className="font-semibold mb-2 text-blue-900 dark:text-blue-100">
-          💡 Interprétation du ROI
+          <FontAwesomeIcon icon={faLightbulb} className="inline" /> Interprétation du ROI
         </h4>
         <ul className="text-sm text-blue-800 dark:text-blue-200 space-y-1">
           <li><strong>ROI positif:</strong> L&apos;investissement a généré des profits</li>

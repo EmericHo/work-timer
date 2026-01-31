@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import CSSGradientGenerator from "@/components/CSSGradientGenerator";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBolt, faBullseye, faGlobe, faImage, faPalette, faRepeat, faRuler, faStar, faSync } from '@fortawesome/free-solid-svg-icons';
 
 export default function CSSGradientGeneratorPage() {
   return (
@@ -59,7 +61,7 @@ export default function CSSGradientGeneratorPage() {
             <h2 className="text-2xl font-bold mb-4">Types de gradients CSS</h2>
             <div className="space-y-4 text-gray-700 dark:text-gray-300">
               <div>
-                <h3 className="text-xl font-semibold mb-2">📐 Linear Gradient (Dégradé linéaire)</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faRuler} className="inline" /> Linear Gradient (Dégradé linéaire)</h3>
                 <p className="mb-2">
                   Transition en ligne droite entre les couleurs, selon un angle ou une direction :
                 </p>
@@ -83,7 +85,7 @@ export default function CSSGradientGeneratorPage() {
                 </ul>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🔄 Conic Gradient (Dégradé conique)</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faSync} className="inline" /> Conic Gradient (Dégradé conique)</h3>
                 <p className="mb-2">
                   Transition en rotation autour d&apos;un point central (comme une tarte) :
                 </p>
@@ -95,7 +97,7 @@ export default function CSSGradientGeneratorPage() {
                 </ul>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🔁 Repeating Gradients</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faRepeat} className="inline" /> Repeating Gradients</h3>
                 <p className="mb-2">
                   Versions répétitives des gradients pour créer des motifs :
                 </p>
@@ -112,7 +114,7 @@ export default function CSSGradientGeneratorPage() {
             <h2 className="text-2xl font-bold mb-4">Color stops et contrôle avancé</h2>
             <div className="space-y-4 text-gray-700 dark:text-gray-300">
               <div>
-                <h3 className="text-xl font-semibold mb-2">🎯 Arrêts de couleur (Color Stops)</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faBullseye} className="inline" /> Arrêts de couleur (Color Stops)</h3>
                 <p className="mb-2">
                   Définissez précisément où chaque couleur commence et se termine :
                 </p>
@@ -124,7 +126,7 @@ export default function CSSGradientGeneratorPage() {
                 </ul>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🌈 Gradients multi-couleurs</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faPalette} className="inline" /> Gradients multi-couleurs</h3>
                 <p className="mb-2">
                   Combinez plus de deux couleurs pour des effets riches :
                 </p>
@@ -160,7 +162,7 @@ export default function CSSGradientGeneratorPage() {
             <h2 className="text-2xl font-bold mb-4">Cas d&apos;usage pratiques des gradients</h2>
             <div className="space-y-3 text-gray-700 dark:text-gray-300">
               <div>
-                <h3 className="font-semibold mb-1">🖼️ Overlay sur images pour lisibilité</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faImage} className="inline" /> Overlay sur images pour lisibilité</h3>
                 <p className="text-sm mb-2">
                   Appliquez un gradient semi-transparent au-dessus d&apos;images pour garantir la lisibilité du texte :
                 </p>
@@ -174,7 +176,7 @@ export default function CSSGradientGeneratorPage() {
                 </pre>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">🎨 Boutons modernes et CTA accrocheurs</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faPalette} className="inline" /> Boutons modernes et CTA accrocheurs</h3>
                 <p className="text-sm mb-2">
                   Les boutons avec gradients attirent plus l&apos;attention que les couleurs solides :
                 </p>
@@ -190,7 +192,7 @@ export default function CSSGradientGeneratorPage() {
                 </pre>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">✨ Texte avec gradient (Gradient Text)</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faStar} className="inline" /> Texte avec gradient (Gradient Text)</h3>
                 <p className="text-sm mb-2">
                   Créez des titres colorés avec des dégradés :
                 </p>
@@ -227,7 +229,7 @@ export default function CSSGradientGeneratorPage() {
             <h2 className="text-2xl font-bold mb-4">Performance et bonnes pratiques</h2>
             <div className="space-y-3 text-gray-700 dark:text-gray-300">
               <div>
-                <h3 className="font-semibold mb-1">⚡ Performance des gradients</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faBolt} className="inline" /> Performance des gradients</h3>
                 <p className="text-sm">
                   Les gradients CSS sont très performants car générés par le GPU. Cependant, des gradients 
                   complexes avec de nombreux color stops ou des animations peuvent impacter les performances 
@@ -236,7 +238,7 @@ export default function CSSGradientGeneratorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">🎯 Compatibilité navigateurs</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faBullseye} className="inline" /> Compatibilité navigateurs</h3>
                 <p className="text-sm">
                   Les gradients linéaires et radiaux sont supportés par tous les navigateurs modernes (y compris 
                   IE10+). Pour un support étendu, fournissez une couleur de fallback : 
@@ -245,7 +247,7 @@ export default function CSSGradientGeneratorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">🌐 Outils de génération et inspiration</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faGlobe} className="inline" /> Outils de génération et inspiration</h3>
                 <p className="text-sm">
                   Outre notre outil, explorez CSS Gradient (cssgradient.io), uiGradients pour des presets populaires, 
                   Gradient Hunt pour découvrir des palettes communautaires, et WebGradients pour des collections 

@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import ROICalculator from "@/components/ROICalculator";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBriefcase, faBuilding, faBullseye, faChartBar, faExclamationTriangle, faMobileAlt } from '@fortawesome/free-solid-svg-icons';
 
 export default function ROICalculatorPage() {
   return (
@@ -59,7 +61,7 @@ export default function ROICalculatorPage() {
             <h2 className="text-2xl font-bold mb-4">Types de ROI et domaines d&apos;application</h2>
             <div className="space-y-4 text-gray-700 dark:text-gray-300">
               <div>
-                <h3 className="text-xl font-semibold mb-2">📱 ROI Marketing Digital</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faMobileAlt} className="inline" /> ROI Marketing Digital</h3>
                 <p className="mb-2">
                   Le marketing digital permet un suivi précis du ROI grâce aux outils d&apos;analyse. Mesurez 
                   l&apos;efficacité de vos campagnes :
@@ -72,7 +74,7 @@ export default function ROICalculatorPage() {
                 </ul>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🏢 ROI Immobilier</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faBuilding} className="inline" /> ROI Immobilier</h3>
                 <p className="mb-2">
                   Dans l&apos;immobilier, le ROI prend en compte les loyers perçus, la plus-value potentielle 
                   et les coûts annexes :
@@ -85,7 +87,7 @@ export default function ROICalculatorPage() {
                 </ul>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">💼 ROI Formation et Développement</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faBriefcase} className="inline" /> ROI Formation et Développement</h3>
                 <p className="mb-2">
                   Les investissements dans le capital humain ont souvent un ROI difficile à quantifier mais crucial :
                 </p>
@@ -103,7 +105,7 @@ export default function ROICalculatorPage() {
             <h2 className="text-2xl font-bold mb-4">Analyse d&apos;investissement et prise de décision</h2>
             <div className="space-y-4 text-gray-700 dark:text-gray-300">
               <div>
-                <h3 className="text-xl font-semibold mb-2">📊 Interpréter le ROI</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faChartBar} className="inline" /> Interpréter le ROI</h3>
                 <ul className="list-disc pl-6 space-y-2">
                   <li><strong>ROI positif (&#62;0%)</strong> : L&apos;investissement génère un profit</li>
                   <li><strong>ROI négatif (&#60;0%)</strong> : L&apos;investissement génère une perte</li>
@@ -113,7 +115,7 @@ export default function ROICalculatorPage() {
                 </ul>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">⚠️ Limites du ROI</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faExclamationTriangle} className="inline" /> Limites du ROI</h3>
                 <p className="mb-2">
                   Bien qu&apos;utile, le ROI présente certaines limites à considérer :
                 </p>
@@ -125,7 +127,7 @@ export default function ROICalculatorPage() {
                 </ul>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🎯 Métriques complémentaires</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faBullseye} className="inline" /> Métriques complémentaires</h3>
                 <p className="mb-2">
                   Pour une analyse complète, combinez le ROI avec d&apos;autres indicateurs :
                 </p>

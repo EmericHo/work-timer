@@ -1,5 +1,7 @@
 import { Metadata } from "next";
 import Link from "next/link";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCheck, faClock, faEnvelope, faHandPointUp, faStopwatch, faTimes } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata: Metadata = {
   title: "FAQ - Questions Fréquentes sur Timer Focus",
@@ -439,7 +441,7 @@ export default function FAQPage() {
                   </p>
                   <div className="space-y-3 mb-2">
                     <div className="bg-blue-50 dark:bg-blue-900/20 p-3 rounded border-l-4 border-blue-600">
-                      <p className="font-semibold mb-1">⏱️ Timer Standard (Chronomètre)</p>
+                      <p className="font-semibold mb-1"><FontAwesomeIcon icon={faStopwatch} className="inline" /> Timer Standard (Chronomètre)</p>
                       <p className="text-sm mb-2">
                         <strong>Fonction :</strong> Mesure le temps qui s&apos;écoule (compte vers le haut : 00:00:00, 
                         00:00:01, etc.)
@@ -472,7 +474,7 @@ export default function FAQPage() {
                     </div>
 
                     <div className="bg-green-50 dark:bg-green-900/20 p-3 rounded border-l-4 border-green-600">
-                      <p className="font-semibold mb-1">⏰ Compte à Rebours</p>
+                      <p className="font-semibold mb-1"><FontAwesomeIcon icon={faClock} className="inline" /> Compte à Rebours</p>
                       <p className="text-sm mb-2">
                         <strong>Fonction :</strong> Compte à rebours personnalisable (ex: 30:00 → 00:00)
                       </p>
@@ -553,7 +555,7 @@ export default function FAQPage() {
                     <li>Vos préférences d&apos;affichage</li>
                   </ul>
                   <p className="mb-2 text-sm italic">
-                    ☝️ Ces données ne quittent JAMAIS votre appareil. Nous n&apos;y avons aucun accès.
+                    <FontAwesomeIcon icon={faHandPointUp} className="inline" /> Ces données ne quittent JAMAIS votre appareil. Nous n&apos;y avons aucun accès.
                   </p>
                   <p className="mb-2">
                     <strong>Données analytiques ANONYMES (via Google Analytics) :</strong>
@@ -565,16 +567,16 @@ export default function FAQPage() {
                     <li>Pays (mais pas votre ville ou adresse exacte)</li>
                   </ul>
                   <p className="mb-2 text-sm italic">
-                    ☝️ Ces données sont totalement anonymes - nous ne pouvons pas vous identifier personnellement.
+                    <FontAwesomeIcon icon={faHandPointUp} className="inline" /> Ces données sont totalement anonymes - nous ne pouvons pas vous identifier personnellement.
                   </p>
                   <p className="mb-2">
                     <strong>Ce que nous NE collectons PAS :</strong>
                   </p>
                   <ul className="list-disc pl-6">
-                    <li>❌ Votre nom, email ou informations personnelles</li>
-                    <li>❌ Vos temps de travail ou tâches spécifiques</li>
-                    <li>❌ Vos habitudes de productivité détaillées</li>
-                    <li>❌ Votre adresse IP précise</li>
+                    <li><FontAwesomeIcon icon={faTimes} className="inline" /> Votre nom, email ou informations personnelles</li>
+                    <li><FontAwesomeIcon icon={faTimes} className="inline" /> Vos temps de travail ou tâches spécifiques</li>
+                    <li><FontAwesomeIcon icon={faTimes} className="inline" /> Vos habitudes de productivité détaillées</li>
+                    <li><FontAwesomeIcon icon={faTimes} className="inline" /> Votre adresse IP précise</li>
                   </ul>
                   <p className="mt-2">
                     Pour tous les détails, consultez notre <Link href="/politique-confidentialite" className="text-blue-600 dark:text-blue-400 hover:underline">politique de confidentialité complète</Link>.
@@ -801,19 +803,19 @@ export default function FAQPage() {
                     <strong>Navigateurs officiellement supportés :</strong>
                   </p>
                   <ul className="list-disc pl-6 mb-2">
-                    <li>✅ Google Chrome (version 90+)</li>
-                    <li>✅ Mozilla Firefox (version 88+)</li>
-                    <li>✅ Microsoft Edge (version 90+)</li>
-                    <li>✅ Safari (version 14+)</li>
-                    <li>✅ Opera (version 76+)</li>
-                    <li>✅ Brave</li>
+                    <li><FontAwesomeIcon icon={faCheck} className="inline" /> Google Chrome (version 90+)</li>
+                    <li><FontAwesomeIcon icon={faCheck} className="inline" /> Mozilla Firefox (version 88+)</li>
+                    <li><FontAwesomeIcon icon={faCheck} className="inline" /> Microsoft Edge (version 90+)</li>
+                    <li><FontAwesomeIcon icon={faCheck} className="inline" /> Safari (version 14+)</li>
+                    <li><FontAwesomeIcon icon={faCheck} className="inline" /> Opera (version 76+)</li>
+                    <li><FontAwesomeIcon icon={faCheck} className="inline" /> Brave</li>
                   </ul>
                   <p className="mb-2">
                     <strong>Navigateurs non supportés :</strong>
                   </p>
                   <ul className="list-disc pl-6 mb-2">
-                    <li>❌ Internet Explorer (obsolète, remplacé par Edge)</li>
-                    <li>❌ Versions très anciennes de tout navigateur</li>
+                    <li><FontAwesomeIcon icon={faTimes} className="inline" /> Internet Explorer (obsolète, remplacé par Edge)</li>
+                    <li><FontAwesomeIcon icon={faTimes} className="inline" /> Versions très anciennes de tout navigateur</li>
                   </ul>
                   <p>
                     <strong>Conseil :</strong> Pour une expérience optimale, maintenez toujours votre navigateur 
@@ -878,7 +880,7 @@ export default function FAQPage() {
                     Pas de problème ! Nous sommes là pour vous aider.
                   </p>
                   <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 p-4 rounded-lg">
-                    <p className="font-semibold mb-2">📧 Contactez-nous</p>
+                    <p className="font-semibold mb-2"><FontAwesomeIcon icon={faEnvelope} className="inline" /> Contactez-nous</p>
                     <p className="mb-2">
                       <Link href="/contact" className="text-blue-600 dark:text-blue-400 hover:underline text-lg">
                         Visitez notre page de contact

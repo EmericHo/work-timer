@@ -1,6 +1,8 @@
 "use client";
 
 import { useState } from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faDice, faHashtag, faLightbulb, faSortUp, faSquare, faStar, faTrash } from '@fortawesome/free-solid-svg-icons';
 
 type DiceType = "d4" | "d6" | "d8" | "d10" | "d12" | "d20" | "d100";
 
@@ -46,17 +48,17 @@ export default function DiceRoller() {
     setRollHistory([]);
   };
 
-  const getDiceEmoji = (dice: DiceType) => {
-    const emojiMap: Record<DiceType, string> = {
-      d4: "🔺",
-      d6: "🎲",
-      d8: "🔷",
-      d10: "🔟",
-      d12: "🌟",
-      d20: "⭐",
-      d100: "💯",
+  const getDiceIcon = (dice: DiceType) => {
+    const iconMap: Record<DiceType, any> = {
+      d4: faSortUp,
+      d6: faDice,
+      d8: faSquare,
+      d10: faHashtag,
+      d12: faStar,
+      d20: faStar,
+      d100: faHashtag,
     };
-    return emojiMap[dice];
+    return <FontAwesomeIcon icon={iconMap[dice]} className="inline" />;
   };
 
   return (
@@ -76,7 +78,7 @@ export default function DiceRoller() {
                 }`}
                 title={dice}
               >
-                <div className="text-2xl">{getDiceEmoji(dice)}</div>
+                <div className="text-2xl">{getDiceIcon(dice)}</div>
                 <div className="text-xs mt-1">{dice.toUpperCase()}</div>
               </button>
             ))}
@@ -114,7 +116,7 @@ export default function DiceRoller() {
         onClick={rollDice}
         className="w-full px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold text-lg"
       >
-        🎲 Lancer {quantity > 1 ? `${quantity} ` : ""}
+        <FontAwesomeIcon icon={faDice} className="inline" /> Lancer {quantity > 1 ? `${quantity} ` : ""}
         {selectedDice.toUpperCase()}
         {modifier !== 0 && ` ${modifier > 0 ? "+" : ""}${modifier}`}
       </button>
@@ -129,7 +131,7 @@ export default function DiceRoller() {
               onClick={clearHistory}
               className="px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors text-sm"
             >
-              🗑️ Effacer
+              <FontAwesomeIcon icon={faTrash} className="inline" /> Effacer
             </button>
           </div>
 
@@ -142,7 +144,7 @@ export default function DiceRoller() {
                 <div className="flex items-start justify-between">
                   <div className="flex-1">
                     <div className="flex items-center gap-2 mb-2">
-                      <span className="text-2xl">{getDiceEmoji(roll.dice)}</span>
+                      <span className="text-2xl">{getDiceIcon(roll.dice)}</span>
                       <span className="font-bold">
                         {roll.quantity > 1 ? `${roll.quantity}×` : ""}
                         {roll.dice.toUpperCase()}
@@ -173,7 +175,7 @@ export default function DiceRoller() {
 
       <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4">
         <h4 className="font-semibold mb-2 text-blue-900 dark:text-blue-100">
-          💡 Guide des dés
+          <FontAwesomeIcon icon={faLightbulb} className="inline" /> Guide des dés
         </h4>
         <ul className="text-sm text-blue-800 dark:text-blue-200 space-y-1">
           <li><strong>D4:</strong> Dé à 4 faces (tétraèdre) - Dégâts légers</li>

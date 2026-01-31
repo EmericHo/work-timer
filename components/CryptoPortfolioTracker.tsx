@@ -1,6 +1,8 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChartBar, faChartLine, faEdit, faExclamationTriangle, faMoneyBill, faPlus, faTrash } from '@fortawesome/free-solid-svg-icons';
 
 interface CryptoHolding {
   id: string;
@@ -204,12 +206,12 @@ export default function CryptoPortfolioTracker() {
       {/* Form */}
       <div className="bg-gray-50 dark:bg-gray-700 p-4 sm:p-6 rounded-lg">
         <h3 className="text-xl font-bold mb-4 text-gray-900 dark:text-gray-100">
-          {editingId ? "✏️ Modifier une position" : "➕ Ajouter une position crypto"}
+          {editingId ? <><FontAwesomeIcon icon={faEdit} className="inline" /> Modifier une position</> : <><FontAwesomeIcon icon={faPlus} className="inline" /> Ajouter une position crypto</>}
         </h3>
         
         <div className="bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-300 dark:border-yellow-700 p-3 rounded-lg mb-4">
           <p className="text-sm text-yellow-800 dark:text-yellow-300">
-            ⚠️ <strong>Note importante :</strong> Les prix doivent être saisis manuellement. Mettez à jour les prix actuels régulièrement pour un suivi précis de votre portfolio.
+            <FontAwesomeIcon icon={faExclamationTriangle} className="inline" /> <strong>Note importante :</strong> Les prix doivent être saisis manuellement. Mettez à jour les prix actuels régulièrement pour un suivi précis de votre portfolio.
           </p>
         </div>
 
@@ -298,7 +300,7 @@ export default function CryptoPortfolioTracker() {
               onClick={addHolding}
               className="px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors"
             >
-              ➕ Ajouter au portfolio
+              <FontAwesomeIcon icon={faPlus} className="inline" /> Ajouter au portfolio
             </button>
           )}
         </div>
@@ -308,14 +310,14 @@ export default function CryptoPortfolioTracker() {
       {holdings.length > 0 && (
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
           <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg border border-blue-300 dark:border-blue-700">
-            <div className="text-sm text-gray-600 dark:text-gray-400 mb-1">💰 Total investi</div>
+            <div className="text-sm text-gray-600 dark:text-gray-400 mb-1"><FontAwesomeIcon icon={faMoneyBill} className="inline" /> Total investi</div>
             <div className="text-2xl font-bold text-gray-900 dark:text-white">
               {totalInvested.toFixed(2)} €
             </div>
           </div>
 
           <div className="bg-purple-50 dark:bg-purple-900/20 p-4 rounded-lg border border-purple-300 dark:border-purple-700">
-            <div className="text-sm text-gray-600 dark:text-gray-400 mb-1">📊 Valeur actuelle</div>
+            <div className="text-sm text-gray-600 dark:text-gray-400 mb-1"><FontAwesomeIcon icon={faChartBar} className="inline" /> Valeur actuelle</div>
             <div className="text-2xl font-bold text-gray-900 dark:text-white">
               {currentValue.toFixed(2)} €
             </div>
@@ -327,7 +329,7 @@ export default function CryptoPortfolioTracker() {
               : "bg-red-50 dark:bg-red-900/20 border-red-300 dark:border-red-700"
           }`}>
             <div className="text-sm text-gray-600 dark:text-gray-400 mb-1">
-              {totalProfitLoss >= 0 ? "📈 Profit total" : "📉 Perte totale"}
+              {totalProfitLoss >= 0 ? <><FontAwesomeIcon icon={faChartLine} className="inline" /> Profit total</> : <><FontAwesomeIcon icon={faChartLine} className="inline" /> Perte totale</>}
             </div>
             <div className={`text-2xl font-bold ${
               totalProfitLoss >= 0 ? "text-green-600 dark:text-green-400" : "text-red-600 dark:text-red-400"
@@ -397,13 +399,13 @@ export default function CryptoPortfolioTracker() {
                             onClick={() => startEdit(holding)}
                             className="px-3 py-1 bg-blue-500 hover:bg-blue-600 text-white text-xs rounded transition-colors"
                           >
-                            ✏️ Modifier
+                            <FontAwesomeIcon icon={faEdit} className="inline" /> Modifier
                           </button>
                           <button
                             onClick={() => deleteHolding(holding.id)}
                             className="px-3 py-1 bg-red-500 hover:bg-red-600 text-white text-xs rounded transition-colors"
                           >
-                            🗑️ Supprimer
+                            <FontAwesomeIcon icon={faTrash} className="inline" /> Supprimer
                           </button>
                         </div>
                       </td>
@@ -425,14 +427,14 @@ export default function CryptoPortfolioTracker() {
               onClick={clearAll}
               className="px-6 py-2 bg-red-600 hover:bg-red-700 text-white rounded-lg font-medium transition-colors"
             >
-              🗑️ Tout effacer
+              <FontAwesomeIcon icon={faTrash} className="inline" /> Tout effacer
             </button>
           </div>
         </>
       ) : (
         <div className="text-center py-12 bg-gray-50 dark:bg-gray-700 rounded-lg">
           <p className="text-gray-500 dark:text-gray-400 text-lg">
-            📊 Aucune position crypto dans votre portfolio
+            <FontAwesomeIcon icon={faChartBar} className="inline" /> Aucune position crypto dans votre portfolio
           </p>
           <p className="text-gray-400 dark:text-gray-500 text-sm mt-2">
             Ajoutez votre première cryptomonnaie pour commencer le suivi

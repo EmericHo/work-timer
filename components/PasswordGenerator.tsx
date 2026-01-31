@@ -1,6 +1,8 @@
 "use client";
 
 import { useState, useCallback } from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLightbulb } from '@fortawesome/free-solid-svg-icons';
 
 export default function PasswordGenerator() {
   const [password, setPassword] = useState<string>("");
@@ -177,7 +179,7 @@ export default function PasswordGenerator() {
 
       <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4">
         <h3 className="font-semibold text-blue-900 dark:text-blue-100 mb-2">
-          💡 Conseils de sécurité
+          <FontAwesomeIcon icon={faLightbulb} className="inline" /> Conseils de sécurité
         </h3>
         <ul className="text-sm text-blue-800 dark:text-blue-200 space-y-1">
           <li>• Utilisez au moins 12 caractères pour une sécurité optimale</li>

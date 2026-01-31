@@ -1,6 +1,8 @@
 "use client";
 
 import { useState, useCallback } from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCog, faCompressAlt, faExclamationTriangle, faFileAlt, faTrash } from '@fortawesome/free-solid-svg-icons';
 
 export default function CSSJSMinifier() {
   const [inputCSS, setInputCSS] = useState<string>("");
@@ -70,7 +72,7 @@ export default function CSSJSMinifier() {
               : "text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100"
           }`}
         >
-          📝 CSS
+          <FontAwesomeIcon icon={faFileAlt} className="inline" /> CSS
         </button>
         <button
           onClick={() => setActiveTab("js")}
@@ -80,7 +82,7 @@ export default function CSSJSMinifier() {
               : "text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100"
           }`}
         >
-          ⚙️ JavaScript
+          <FontAwesomeIcon icon={faCog} className="inline" /> JavaScript
         </button>
       </div>
 
@@ -102,13 +104,13 @@ export default function CSSJSMinifier() {
               onClick={minifyCSS}
               className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold"
             >
-              🗜️ Minifier CSS
+              <FontAwesomeIcon icon={faCompressAlt} className="inline" /> Minifier CSS
             </button>
             <button
               onClick={clearCSS}
               className="px-6 py-3 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors font-semibold"
             >
-              🗑️ Effacer
+              <FontAwesomeIcon icon={faTrash} className="inline" /> Effacer
             </button>
           </div>
 
@@ -154,13 +156,13 @@ export default function CSSJSMinifier() {
               onClick={minifyJS}
               className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold"
             >
-              🗜️ Minifier JavaScript
+              <FontAwesomeIcon icon={faCompressAlt} className="inline" /> Minifier JavaScript
             </button>
             <button
               onClick={clearJS}
               className="px-6 py-3 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors font-semibold"
             >
-              🗑️ Effacer
+              <FontAwesomeIcon icon={faTrash} className="inline" /> Effacer
             </button>
           </div>
 
@@ -190,7 +192,7 @@ export default function CSSJSMinifier() {
 
       <div className="bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded-lg p-4">
         <h4 className="font-semibold mb-2 text-yellow-900 dark:text-yellow-100">
-          ⚠️ Note importante
+          <FontAwesomeIcon icon={faExclamationTriangle} className="inline" /> Note importante
         </h4>
         <p className="text-sm text-yellow-800 dark:text-yellow-200">
           Cet outil effectue une minification basique. Pour la production, utilisez des outils professionnels 

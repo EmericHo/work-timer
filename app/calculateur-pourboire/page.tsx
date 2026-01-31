@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import TipCalculator from "@/components/TipCalculator";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChartBar, faClock, faMoneyBill, faStar, faUtensils } from '@fortawesome/free-solid-svg-icons';
 
 export default function TipCalculatorPage() {
   return (
@@ -56,7 +58,7 @@ export default function TipCalculatorPage() {
             <h2 className="text-2xl font-bold mb-4">Guide des pourcentages de pourboire</h2>
             <div className="space-y-4 text-gray-700 dark:text-gray-300">
               <div>
-                <h3 className="text-xl font-semibold mb-2">🍽️ Restaurants avec service à table</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faUtensils} className="inline" /> Restaurants avec service à table</h3>
                 <p className="mb-2">
                   <strong>France :</strong> Le service est généralement inclus (15% légalement), mais un pourboire 
                   supplémentaire de 5-10% est apprécié pour un excellent service.
@@ -161,7 +163,7 @@ export default function TipCalculatorPage() {
             <h2 className="text-2xl font-bold mb-4">Facteurs influençant le pourboire</h2>
             <div className="space-y-3 text-gray-700 dark:text-gray-300">
               <div>
-                <h3 className="font-semibold mb-1">⭐ Qualité du service</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faStar} className="inline" /> Qualité du service</h3>
                 <p className="text-sm">
                   C&apos;est le facteur principal. Service attentif, rapide, souriant = pourboire généreux. 
                   Service désagréable, lent ou négligent = pourboire réduit. Mais distinguez le mauvais service 
@@ -169,7 +171,7 @@ export default function TipCalculatorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">🍽️ Type d&apos;établissement</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faUtensils} className="inline" /> Type d&apos;établissement</h3>
                 <p className="text-sm">
                   Restaurant gastronomique = pourboire plus élevé. Fast-food ou self-service = pourboire minimal 
                   ou inexistant. Le niveau de service attendu et fourni varie selon le type d&apos;établissement.
@@ -184,7 +186,7 @@ export default function TipCalculatorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">⏰ Circonstances particulières</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faClock} className="inline" /> Circonstances particulières</h3>
                 <p className="text-sm">
                   Service le jour férié = plus généreux. Mauvaises conditions météo pour la livraison = plus généreux. 
                   Demandes spéciales ou modifications complexes = plus généreux. Le serveur a résolu un problème = 
@@ -192,7 +194,7 @@ export default function TipCalculatorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">💰 Prix vs effort</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faMoneyBill} className="inline" /> Prix vs effort</h3>
                 <p className="text-sm">
                   Dans un restaurant très cher, 20% peut sembler disproportionné si le service était standard. 
                   Inversement, dans un diner bon marché avec un service exceptionnel, dépassez les 20%. Pensez 
@@ -214,7 +216,7 @@ export default function TipCalculatorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">📊 Proportionnelle aux commandes</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faChartBar} className="inline" /> Proportionnelle aux commandes</h3>
                 <p className="text-sm">
                   Plus juste quand certains ont commandé beaucoup plus que d&apos;autres. Calculez le pourcentage 
                   de chacun sur le total avant pourboire, puis appliquez ce pourcentage au total avec pourboire. 

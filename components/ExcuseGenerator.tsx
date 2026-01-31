@@ -1,6 +1,8 @@
 "use client";
 
 import { useState } from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faExclamationTriangle } from '@fortawesome/free-solid-svg-icons';
 
 type Category = "Work" | "School" | "Social" | "General";
 
@@ -156,7 +158,7 @@ export default function ExcuseGenerator() {
       )}
 
       <div className="mt-6 p-4 bg-yellow-50 dark:bg-yellow-900/20 rounded-lg border border-yellow-200 dark:border-yellow-800">
-        <h3 className="font-semibold text-yellow-900 dark:text-yellow-300 mb-2">⚠️ Disclaimer</h3>
+        <h3 className="font-semibold text-yellow-900 dark:text-yellow-300 mb-2"><FontAwesomeIcon icon={faExclamationTriangle} className="inline" /> Disclaimer</h3>
         <p className="text-sm text-yellow-800 dark:text-yellow-300">
           <strong>Pour divertissement uniquement!</strong> This tool is meant for fun and humor. 
           We encourage honesty and transparency in all your interactions. Use responsibly! 😊

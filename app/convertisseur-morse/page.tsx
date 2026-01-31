@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import MorseCodeConverter from "@/components/MorseCodeConverter";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCheck, faGamepad, faKey, faPlane } from '@fortawesome/free-solid-svg-icons';
 
 export default function MorseCodeConverterPage() {
   return (
@@ -218,7 +220,7 @@ export default function MorseCodeConverterPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">✈️ Aviation et marine</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faPlane} className="inline" /> Aviation et marine</h3>
                 <p>
                   Les balises de navigation (VOR, NDB) transmettent leur identification en code Morse. 
                   Les signaux de détresse historiques comme SOS (· · · – – – · · ·) et Mayday utilisent 
@@ -250,7 +252,7 @@ export default function MorseCodeConverterPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🎮 Jeux et énigmes</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faGamepad} className="inline" /> Jeux et énigmes</h3>
                 <p>
                   Le Morse apparaît dans les jeux vidéo, escape games, chasses au trésor et énigmes. 
                   C&apos;est un élément classique des puzzles de cryptographie et des défis intellectuels, 
@@ -258,7 +260,7 @@ export default function MorseCodeConverterPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🔐 Cryptographie amateur</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faKey} className="inline" /> Cryptographie amateur</h3>
                 <p>
                   Bien que non sécurisé cryptographiquement, le Morse ajoute un niveau d&apos;obscurité aux 
                   messages. Combiné à d&apos;autres techniques de chiffrement, il peut servir dans des projets 
@@ -306,7 +308,7 @@ export default function MorseCodeConverterPage() {
             <h2 className="text-2xl font-bold mb-4">Conseils pour apprendre le code Morse</h2>
             <div className="space-y-3 text-gray-700 dark:text-gray-300">
               <div>
-                <h3 className="font-semibold mb-1">✅ Apprenez par le son, pas visuellement</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faCheck} className="inline" /> Apprenez par le son, pas visuellement</h3>
                 <p className="text-sm">
                   Les experts recommandent d&apos;apprendre le Morse en écoutant le rythme sonore plutôt qu&apos;en 
                   comptant points et tirets. Chaque lettre a sa propre &quot;mélodie&quot;. Utilisez notre lecture 
@@ -314,7 +316,7 @@ export default function MorseCodeConverterPage() {
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">✅ Commencez par les lettres courantes</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faCheck} className="inline" /> Commencez par les lettres courantes</h3>
                 <p className="text-sm">
                   Maîtrisez d&apos;abord E (·), T (–), puis les lettres fréquentes comme A, I, N, S, R. 
                   Progressez graduellement vers les lettres plus complexes. La fréquence d&apos;usage facilite 
@@ -322,7 +324,7 @@ export default function MorseCodeConverterPage() {
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">✅ Pratiquez régulièrement</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faCheck} className="inline" /> Pratiquez régulièrement</h3>
                 <p className="text-sm">
                   10-15 minutes de pratique quotidienne sont plus efficaces que de longues sessions 
                   occasionnelles. La régularité développe la reconnaissance automatique et la fluidité. 
@@ -330,7 +332,7 @@ export default function MorseCodeConverterPage() {
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">✅ Utilisez des mnémotechniques</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faCheck} className="inline" /> Utilisez des mnémotechniques</h3>
                 <p className="text-sm">
                   Créez des phrases mémorables. Par exemple : C (– · – ·) = &quot;Co-ca Co-la&quot;, 
                   Q (– – · –) = &quot;God Save the Queen&quot;. Les associations sonores aident énormément 
@@ -338,7 +340,7 @@ export default function MorseCodeConverterPage() {
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">✅ Augmentez progressivement la vitesse</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faCheck} className="inline" /> Augmentez progressivement la vitesse</h3>
                 <p className="text-sm">
                   Commencez lentement (5-10 mots par minute) mais avec un bon espacement entre caractères. 
                   Une fois à l&apos;aise, augmentez progressivement. Les opérateurs professionnels atteignent 
@@ -346,7 +348,7 @@ export default function MorseCodeConverterPage() {
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">✅ Transmettez et recevez</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faCheck} className="inline" /> Transmettez et recevez</h3>
                 <p className="text-sm">
                   Pratiquez les deux directions : décodage (réception) et encodage (transmission). Tapez 
                   votre propre Morse avec un manipulateur ou même en tapant sur une table. L&apos;envoi développe 

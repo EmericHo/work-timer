@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import CurrencyConverter from "@/components/CurrencyConverter";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChartBar, faKey, faPlane } from '@fortawesome/free-solid-svg-icons';
 
 export default function CurrencyConverterPage() {
   return (
@@ -73,7 +75,7 @@ export default function CurrencyConverterPage() {
                 </ul>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">📊 Devises majeures et exotiques</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faChartBar} className="inline" /> Devises majeures et exotiques</h3>
                 <p className="mb-2">
                   Les devises sont classées en catégories selon leur liquidité et leur volume d&apos;échange :
                 </p>
@@ -91,7 +93,7 @@ export default function CurrencyConverterPage() {
             <h2 className="text-2xl font-bold mb-4">Conseils pour voyager avec des devises étrangères</h2>
             <div className="space-y-4 text-gray-700 dark:text-gray-300">
               <div>
-                <h3 className="text-xl font-semibold mb-2">✈️ Avant le départ</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faPlane} className="inline" /> Avant le départ</h3>
                 <ul className="list-disc pl-6 space-y-1">
                   <li>Surveillez les taux de change plusieurs semaines avant votre voyage</li>
                   <li>Évitez les bureaux de change dans les aéroports (taux généralement défavorables)</li>
@@ -111,7 +113,7 @@ export default function CurrencyConverterPage() {
                 </ul>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🔐 Sécurité financière</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faKey} className="inline" /> Sécurité financière</h3>
                 <ul className="list-disc pl-6 space-y-1">
                   <li>Répartissez votre argent dans plusieurs endroits (portefeuille, sac, coffre d&apos;hôtel)</li>
                   <li>Utilisez une ceinture ou pochette cachée pour les grosses sommes</li>

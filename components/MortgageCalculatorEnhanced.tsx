@@ -1,6 +1,8 @@
 "use client";
 
 import { useState } from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChartBar, faChartLine, faLightbulb, faMoneyBill } from '@fortawesome/free-solid-svg-icons';
 
 export default function MortgageCalculatorEnhanced() {
   const [loanAmount, setLoanAmount] = useState<string>("");
@@ -230,7 +232,7 @@ export default function MortgageCalculatorEnhanced() {
 
           <div className="bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg p-4">
             <h4 className="font-semibold mb-3 text-gray-900 dark:text-gray-100">
-              📊 Récapitulatif du prêt
+              <FontAwesomeIcon icon={faChartBar} className="inline" /> Récapitulatif du prêt
             </h4>
             <div className="space-y-2 text-sm">
               <div className="flex justify-between">
@@ -262,7 +264,7 @@ export default function MortgageCalculatorEnhanced() {
 
           <div className="bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg p-4">
             <h4 className="font-semibold mb-3 text-gray-900 dark:text-gray-100">
-              💰 Coûts totaux
+              <FontAwesomeIcon icon={faMoneyBill} className="inline" /> Coûts totaux
             </h4>
             <div className="space-y-2 text-sm">
               <div className="flex justify-between">
@@ -292,7 +294,7 @@ export default function MortgageCalculatorEnhanced() {
 
           <div className="bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg p-4">
             <h4 className="font-semibold mb-3 text-gray-900 dark:text-gray-100">
-              📈 Amortissement
+              <FontAwesomeIcon icon={faChartLine} className="inline" /> Amortissement
             </h4>
             <div className="space-y-2 text-sm">
               <div className="flex justify-between">
@@ -328,7 +330,7 @@ export default function MortgageCalculatorEnhanced() {
 
       <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4">
         <h4 className="font-semibold mb-2 text-blue-900 dark:text-blue-100">
-          💡 Conseils pour votre prêt immobilier
+          <FontAwesomeIcon icon={faLightbulb} className="inline" /> Conseils pour votre prêt immobilier
         </h4>
         <ul className="text-sm text-blue-800 dark:text-blue-200 space-y-1">
           <li>Un apport personnel de 10-20% est généralement recommandé</li>

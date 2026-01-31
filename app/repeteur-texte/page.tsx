@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import TextRepeater from "@/components/TextRepeater";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBook, faBullseye, faChartBar, faDatabase, faFileAlt, faGamepad, faHashtag, faLaptop, faPalette, faPen } from '@fortawesome/free-solid-svg-icons';
 
 export default function TextRepeaterPage() {
   return (
@@ -61,7 +63,7 @@ export default function TextRepeaterPage() {
             <h2 className="text-2xl font-bold mb-4">Cas d&apos;usage en développement web</h2>
             <div className="space-y-4 text-gray-700 dark:text-gray-300">
               <div>
-                <h3 className="text-xl font-semibold mb-2">💻 Tests d&apos;interfaces utilisateur</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faLaptop} className="inline" /> Tests d&apos;interfaces utilisateur</h3>
                 <p className="mb-2">
                   Testez comment vos designs réagissent à différentes quantités de contenu :
                 </p>
@@ -73,7 +75,7 @@ export default function TextRepeaterPage() {
                 </ul>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🗄️ Génération de données de test</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faDatabase} className="inline" /> Génération de données de test</h3>
                 <p className="mb-2">
                   Créez rapidement des jeux de données pour vos tests unitaires ou d&apos;intégration :
                 </p>
@@ -85,7 +87,7 @@ export default function TextRepeaterPage() {
                 </ul>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🎨 Création de motifs HTML/CSS</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faPalette} className="inline" /> Création de motifs HTML/CSS</h3>
                 <p className="mb-2">
                   Générez du code répétitif rapidement :
                 </p>
@@ -97,7 +99,7 @@ export default function TextRepeaterPage() {
                 </ul>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">📝 Placeholder et contenu factice</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faFileAlt} className="inline" /> Placeholder et contenu factice</h3>
                 <p className="mb-2">
                   Créez du contenu temporaire plus varié que le lorem ipsum :
                 </p>
@@ -115,7 +117,7 @@ export default function TextRepeaterPage() {
             <h2 className="text-2xl font-bold mb-4">Applications créatives et éducatives</h2>
             <div className="space-y-4 text-gray-700 dark:text-gray-300">
               <div>
-                <h3 className="text-xl font-semibold mb-2">✍️ Écriture et typographie</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faPen} className="inline" /> Écriture et typographie</h3>
                 <p className="mb-2">
                   Utilisations créatives pour les auteurs et designers :
                 </p>
@@ -127,7 +129,7 @@ export default function TextRepeaterPage() {
                 </ul>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">📚 Éducation et apprentissage</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faBook} className="inline" /> Éducation et apprentissage</h3>
                 <p className="mb-2">
                   Applications pédagogiques du répéteur de texte :
                 </p>
@@ -139,7 +141,7 @@ export default function TextRepeaterPage() {
                 </ul>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🎮 Gaming et Discord</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faGamepad} className="inline" /> Gaming et Discord</h3>
                 <p className="mb-2">
                   Usages populaires dans les communautés en ligne :
                 </p>
@@ -151,7 +153,7 @@ export default function TextRepeaterPage() {
                 </ul>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">📊 Tableurs et traitement de données</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faChartBar} className="inline" /> Tableurs et traitement de données</h3>
                 <p className="mb-2">
                   Gagnez du temps dans vos manipulations de données :
                 </p>
@@ -169,7 +171,7 @@ export default function TextRepeaterPage() {
             <h2 className="text-2xl font-bold mb-4">Astuces et techniques avancées</h2>
             <div className="space-y-3 text-gray-700 dark:text-gray-300">
               <div>
-                <h3 className="font-semibold mb-1">🔢 Créer des séquences numérotées</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faHashtag} className="inline" /> Créer des séquences numérotées</h3>
                 <p className="text-sm">
                   Pour créer &quot;Item 1, Item 2, Item 3...&quot;, répétez votre texte puis utilisez un éditeur 
                   de texte avec recherche/remplacement par expressions régulières, ou un script. Certains outils 
@@ -186,7 +188,7 @@ export default function TextRepeaterPage() {
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">🎯 Optimiser les performances</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faBullseye} className="inline" /> Optimiser les performances</h3>
                 <p className="text-sm">
                   Pour des répétitions très importantes (plus de 100 000), utilisez un séparateur vide ou un espace 
                   plutôt que des retours à la ligne (plus légers en mémoire). Téléchargez le résultat plutôt que 

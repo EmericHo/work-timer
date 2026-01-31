@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import RegexTester from "@/components/RegexTester";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBullseye, faCalendar, faEnvelope, faFile, faFileAlt, faGlobe, faHashtag, faLink, faMobileAlt, faPalette, faSearch } from '@fortawesome/free-solid-svg-icons';
 
 export default function RegexTesterPage() {
   return (
@@ -56,7 +58,7 @@ export default function RegexTesterPage() {
             <h2 className="text-2xl font-bold mb-4">Syntaxe de base des regex</h2>
             <div className="space-y-4 text-gray-700 dark:text-gray-300">
               <div>
-                <h3 className="text-xl font-semibold mb-2">📝 Caractères littéraux</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faFileAlt} className="inline" /> Caractères littéraux</h3>
                 <p className="mb-2">
                   Les caractères normaux correspondent à eux-mêmes. Par exemple, <code className="bg-gray-100 dark:bg-gray-700 px-2 py-1 rounded">cat</code> 
                   trouve &quot;cat&quot; dans le texte. Les caractères spéciaux (. * + ? [ ] {'{}'} ( ) ^ $ | \) doivent 
@@ -64,7 +66,7 @@ export default function RegexTesterPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🎯 Classes de caractères</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faBullseye} className="inline" /> Classes de caractères</h3>
                 <ul className="list-disc pl-6 space-y-1 text-sm">
                   <li><code className="bg-gray-100 dark:bg-gray-700 px-2 py-1 rounded">[abc]</code> - Correspond à a, b ou c</li>
                   <li><code className="bg-gray-100 dark:bg-gray-700 px-2 py-1 rounded">[a-z]</code> - Correspond à toute lettre minuscule</li>
@@ -76,7 +78,7 @@ export default function RegexTesterPage() {
                 </ul>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🔢 Quantificateurs</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faHashtag} className="inline" /> Quantificateurs</h3>
                 <ul className="list-disc pl-6 space-y-1 text-sm">
                   <li><code className="bg-gray-100 dark:bg-gray-700 px-2 py-1 rounded">*</code> - Zéro ou plus d&apos;occurrences</li>
                   <li><code className="bg-gray-100 dark:bg-gray-700 px-2 py-1 rounded">+</code> - Une ou plus d&apos;occurrences</li>
@@ -102,7 +104,7 @@ export default function RegexTesterPage() {
             <h2 className="text-2xl font-bold mb-4">Les flags regex expliqués</h2>
             <div className="space-y-3 text-gray-700 dark:text-gray-300">
               <div>
-                <h3 className="font-semibold mb-1">🌐 g (global)</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faGlobe} className="inline" /> g (global)</h3>
                 <p className="text-sm">
                   Trouve toutes les correspondances dans le texte, pas seulement la première. Sans ce flag, la 
                   recherche s&apos;arrête après la première correspondance trouvée.
@@ -117,21 +119,21 @@ export default function RegexTesterPage() {
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">📄 m (multiline)</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faFile} className="inline" /> m (multiline)</h3>
                 <p className="text-sm">
                   Modifie le comportement de ^ et $ pour qu&apos;ils correspondent au début/fin de chaque ligne plutôt 
                   qu&apos;au début/fin de toute la chaîne. Utile pour traiter du texte multi-lignes.
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">🔍 s (dotAll)</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faSearch} className="inline" /> s (dotAll)</h3>
                 <p className="text-sm">
                   Permet au point . de correspondre aussi aux sauts de ligne. Par défaut, le point correspond à 
                   tout sauf aux retours à la ligne (\n).
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">🌍 u (unicode)</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faGlobe} className="inline" /> u (unicode)</h3>
                 <p className="text-sm">
                   Active le mode Unicode, permettant de travailler correctement avec les caractères Unicode, 
                   emojis et caractères spéciaux. Recommandé pour un traitement moderne du texte.
@@ -144,31 +146,31 @@ export default function RegexTesterPage() {
             <h2 className="text-2xl font-bold mb-4">Patterns regex courants</h2>
             <div className="space-y-3 text-gray-700 dark:text-gray-300">
               <div className="text-sm">
-                <p className="font-semibold">📧 Email :</p>
+                <p className="font-semibold"><FontAwesomeIcon icon={faEnvelope} className="inline" /> Email :</p>
                 <code className="bg-gray-100 dark:bg-gray-700 px-2 py-1 rounded block mt-1">
                   [a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{'{2,}'}
                 </code>
               </div>
               <div className="text-sm">
-                <p className="font-semibold">🔗 URL :</p>
+                <p className="font-semibold"><FontAwesomeIcon icon={faLink} className="inline" /> URL :</p>
                 <code className="bg-gray-100 dark:bg-gray-700 px-2 py-1 rounded block mt-1">
                   https?://[^\s]+
                 </code>
               </div>
               <div className="text-sm">
-                <p className="font-semibold">📱 Téléphone français :</p>
+                <p className="font-semibold"><FontAwesomeIcon icon={faMobileAlt} className="inline" /> Téléphone français :</p>
                 <code className="bg-gray-100 dark:bg-gray-700 px-2 py-1 rounded block mt-1">
                   0[1-9]([0-9]{'{2}'}{'}'}){'{4}'}
                 </code>
               </div>
               <div className="text-sm">
-                <p className="font-semibold">🎨 Couleur HEX :</p>
+                <p className="font-semibold"><FontAwesomeIcon icon={faPalette} className="inline" /> Couleur HEX :</p>
                 <code className="bg-gray-100 dark:bg-gray-700 px-2 py-1 rounded block mt-1">
                   #[0-9A-Fa-f]{'{6}'}
                 </code>
               </div>
               <div className="text-sm">
-                <p className="font-semibold">📅 Date (JJ/MM/AAAA) :</p>
+                <p className="font-semibold"><FontAwesomeIcon icon={faCalendar} className="inline" /> Date (JJ/MM/AAAA) :</p>
                 <code className="bg-gray-100 dark:bg-gray-700 px-2 py-1 rounded block mt-1">
                   \d{'{2}'}/\d{'{2}'}/\d{'{4}'}
                 </code>

@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import JWTDecoder from "@/components/JWTDecoder";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBox, faCheck, faExclamationTriangle, faKey, faLightbulb, faShieldAlt, faSquare, faSync } from '@fortawesome/free-solid-svg-icons';
 
 export default function JWTDecoderPage() {
   return (
@@ -60,7 +62,7 @@ export default function JWTDecoderPage() {
             <h2 className="text-2xl font-bold mb-4">Structure d&apos;un JWT</h2>
             <div className="space-y-4 text-gray-700 dark:text-gray-300">
               <div>
-                <h3 className="text-xl font-semibold mb-2">🔷 Header (En-tête)</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faSquare} className="inline" /> Header (En-tête)</h3>
                 <p className="mb-2">
                   Le header identifie l&apos;algorithme utilisé pour générer la signature :
                 </p>
@@ -77,7 +79,7 @@ export default function JWTDecoderPage() {
                 </ul>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">📦 Payload (Charge utile)</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faBox} className="inline" /> Payload (Charge utile)</h3>
                 <p className="mb-2">
                   Le payload contient les claims (déclarations) - les données transmises :
                 </p>
@@ -95,11 +97,11 @@ export default function JWTDecoderPage() {
                   <li><strong>Claims réservés</strong> : iss (émetteur), sub (sujet), aud (audience), exp (expiration), nbf (not before), iat (issued at), jti (JWT ID)</li>
                   <li><strong>Claims publics</strong> : définis dans le registre IANA ou comme URIs pour éviter collisions</li>
                   <li><strong>Claims privés</strong> : personnalisés, définis entre les parties qui utilisent le JWT</li>
-                  <li>⚠️ Le payload est seulement encodé, PAS chiffré - ne stockez jamais de secrets ici !</li>
+                  <li><FontAwesomeIcon icon={faExclamationTriangle} className="inline" /> Le payload est seulement encodé, PAS chiffré - ne stockez jamais de secrets ici !</li>
                 </ul>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🔐 Signature</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faKey} className="inline" /> Signature</h3>
                 <p className="mb-2">
                   La signature garantit l&apos;intégrité et l&apos;authenticité du token :
                 </p>
@@ -123,7 +125,7 @@ export default function JWTDecoderPage() {
             <h2 className="text-2xl font-bold mb-4">JWT et authentification</h2>
             <div className="space-y-4 text-gray-700 dark:text-gray-300">
               <div>
-                <h3 className="text-xl font-semibold mb-2">🔄 Flux d&apos;authentification JWT</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faSync} className="inline" /> Flux d&apos;authentification JWT</h3>
                 <div className="bg-gray-100 dark:bg-gray-700 p-4 rounded space-y-2 text-sm">
                   <p><strong>1. Connexion</strong></p>
                   <p className="pl-4">L&apos;utilisateur envoie ses identifiants (email/password) au serveur d&apos;authentification.</p>
@@ -143,7 +145,7 @@ export default function JWTDecoderPage() {
                 </div>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">✅ Avantages des JWT</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faCheck} className="inline" /> Avantages des JWT</h3>
                 <ul className="list-disc pl-6 space-y-1">
                   <li><strong>Stateless</strong> : Le serveur n&apos;a pas besoin de stocker les sessions - tout est dans le token</li>
                   <li><strong>Scalabilité</strong> : Parfait pour les architectures microservices et distribuées</li>
@@ -153,7 +155,7 @@ export default function JWTDecoderPage() {
                 </ul>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">⚠️ Limitations et considérations</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faExclamationTriangle} className="inline" /> Limitations et considérations</h3>
                 <ul className="list-disc pl-6 space-y-1">
                   <li><strong>Révocation difficile</strong> : Impossible d&apos;invalider un JWT avant son expiration sans infrastructure additionnelle</li>
                   <li><strong>Taille</strong> : Plus volumineux qu&apos;un simple ID de session (payload peut être large)</li>
@@ -168,7 +170,7 @@ export default function JWTDecoderPage() {
             <h2 className="text-2xl font-bold mb-4">Sécurité et bonnes pratiques</h2>
             <div className="space-y-4 text-gray-700 dark:text-gray-300">
               <div>
-                <h3 className="text-xl font-semibold mb-2">🛡️ Sécuriser vos JWT</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faShieldAlt} className="inline" /> Sécuriser vos JWT</h3>
                 <div className="space-y-2 text-sm">
                   <div>
                     <p className="font-semibold">1. Utilisez HTTPS exclusivement</p>
@@ -202,14 +204,14 @@ export default function JWTDecoderPage() {
                     <li>Envoyé automatiquement avec chaque requête au domaine</li>
                   </ul>
                   
-                  <p><strong>📦 localStorage / sessionStorage</strong></p>
+                  <p><strong><FontAwesomeIcon icon={faBox} className="inline" /> localStorage / sessionStorage</strong></p>
                   <ul className="list-disc pl-6 mb-2">
                     <li>Accessible au JavaScript (vulnérable aux XSS)</li>
                     <li>Pratique pour les SPA mais moins sécurisé</li>
                     <li>sessionStorage se nettoie à la fermeture de l&apos;onglet</li>
                   </ul>
                   
-                  <p><strong>💡 Mémoire JavaScript (Plus sécurisé pour les SPA sensibles)</strong></p>
+                  <p><strong><FontAwesomeIcon icon={faLightbulb} className="inline" /> Mémoire JavaScript (Plus sécurisé pour les SPA sensibles)</strong></p>
                   <ul className="list-disc pl-6">
                     <li>Token perdu au refresh de page (nécessite refresh token)</li>
                     <li>Immune aux XSS persistantes et au vol via localStorage</li>

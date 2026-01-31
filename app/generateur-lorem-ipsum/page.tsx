@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import LoremIpsumGenerator from "@/components/LoremIpsumGenerator";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBolt, faBook, faChartBar, faFileAlt, faFlask, faImage, faLaptop, faPalette, faPen, faRulerHorizontal, faSync, faTheaterMasks } from '@fortawesome/free-solid-svg-icons';
 
 export default function LoremIpsumGeneratorPage() {
   return (
@@ -56,7 +58,7 @@ export default function LoremIpsumGeneratorPage() {
             <h2 className="text-2xl font-bold mb-4">Pourquoi utiliser Lorem Ipsum ?</h2>
             <div className="space-y-4 text-gray-700 dark:text-gray-300">
               <div>
-                <h3 className="text-xl font-semibold mb-2">🎨 Focus sur le design</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faPalette} className="inline" /> Focus sur le design</h3>
                 <p>
                   Lorem Ipsum permet aux designers et clients de se concentrer sur l&apos;apparence visuelle, la 
                   mise en page et la typographie sans être distraits par le contenu réel. Les gens ont tendance 
@@ -64,7 +66,7 @@ export default function LoremIpsumGeneratorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">📏 Distribution réaliste des lettres</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faRulerHorizontal} className="inline" /> Distribution réaliste des lettres</h3>
                 <p>
                   Contrairement à répéter &quot;Texte texte texte&quot; ou utiliser du texte aléatoire, Lorem Ipsum 
                   a une distribution de lettres et de mots similaire au français ou à l&apos;anglais. Cela donne 
@@ -72,7 +74,7 @@ export default function LoremIpsumGeneratorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🔄 Standard de l&apos;industrie</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faSync} className="inline" /> Standard de l&apos;industrie</h3>
                 <p>
                   Lorem Ipsum est universellement reconnu comme texte de remplissage. Designers, développeurs et 
                   clients savent immédiatement qu&apos;il s&apos;agit d&apos;un placeholder temporaire et non du 
@@ -80,7 +82,7 @@ export default function LoremIpsumGeneratorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">⚡ Gain de temps</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faBolt} className="inline" /> Gain de temps</h3>
                 <p>
                   Plutôt que d&apos;inventer ou de copier du texte réel, générez instantanément la quantité exacte 
                   de texte nécessaire. C&apos;est particulièrement utile quand vous avez besoin de remplir plusieurs 
@@ -94,7 +96,7 @@ export default function LoremIpsumGeneratorPage() {
             <h2 className="text-2xl font-bold mb-4">Cas d&apos;usage du Lorem Ipsum</h2>
             <div className="space-y-4 text-gray-700 dark:text-gray-300">
               <div>
-                <h3 className="text-xl font-semibold mb-2">🖼️ Maquettes et wireframes</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faImage} className="inline" /> Maquettes et wireframes</h3>
                 <p>
                   Remplissez vos maquettes Figma, Adobe XD, Sketch ou autres outils de design avec du Lorem Ipsum 
                   pour montrer comment le contenu réel s&apos;intégrera. Cela aide les clients à visualiser la 
@@ -102,7 +104,7 @@ export default function LoremIpsumGeneratorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">💻 Développement web</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faLaptop} className="inline" /> Développement web</h3>
                 <p>
                   Pendant le développement, utilisez Lorem Ipsum pour tester la mise en page, les styles CSS et 
                   le responsive design avant que le contenu réel soit disponible. Cela permet de continuer le 
@@ -110,7 +112,7 @@ export default function LoremIpsumGeneratorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">📝 Templates et thèmes</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faFileAlt} className="inline" /> Templates et thèmes</h3>
                 <p>
                   Les créateurs de templates WordPress, Bootstrap ou autres frameworks utilisent Lorem Ipsum dans 
                   leurs démos pour montrer comment le design gère différentes longueurs de texte et structures 
@@ -118,7 +120,7 @@ export default function LoremIpsumGeneratorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">📊 Présentations clients</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faChartBar} className="inline" /> Présentations clients</h3>
                 <p>
                   Présentez des concepts de design aux clients avec Lorem Ipsum pour qu&apos;ils se concentrent 
                   sur l&apos;esthétique, la navigation et l&apos;expérience utilisateur plutôt que sur le contenu 
@@ -126,7 +128,7 @@ export default function LoremIpsumGeneratorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🧪 Tests typographiques</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faFlask} className="inline" /> Tests typographiques</h3>
                 <p>
                   Testez différentes polices, tailles, espacements et hiérarchies de texte avec Lorem Ipsum. 
                   Comparez comment différents choix typographiques affectent la lisibilité et l&apos;apparence 
@@ -169,7 +171,7 @@ export default function LoremIpsumGeneratorPage() {
             <h2 className="text-2xl font-bold mb-4">Alternatives au Lorem Ipsum</h2>
             <div className="space-y-3 text-gray-700 dark:text-gray-300">
               <div>
-                <h3 className="font-semibold mb-1">📚 Contenu de marque</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faBook} className="inline" /> Contenu de marque</h3>
                 <p className="text-sm">
                   Certains préfèrent utiliser du contenu réaliste lié à leur domaine plutôt que du Lorem Ipsum. 
                   Par exemple, un site de cuisine pourrait utiliser des recettes, même temporaires, pour mieux 
@@ -177,7 +179,7 @@ export default function LoremIpsumGeneratorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">🎭 Lorem Ipsum thématiques</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faTheaterMasks} className="inline" /> Lorem Ipsum thématiques</h3>
                 <p className="text-sm">
                   Il existe des variantes amusantes comme Bacon Ipsum (thème viande), Hipster Ipsum (termes hipster), 
                   ou encore Cupcake Ipsum (pâtisseries). Ces alternatives peuvent ajouter une touche d&apos;humour 
@@ -185,7 +187,7 @@ export default function LoremIpsumGeneratorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">✍️ Contenu réel provisoire</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faPen} className="inline" /> Contenu réel provisoire</h3>
                 <p className="text-sm">
                   Certaines équipes préfèrent utiliser du contenu réel dès le début, même s&apos;il est incomplet. 
                   Cela aide à mieux évaluer si la longueur et le ton du contenu fonctionnent avec le design.

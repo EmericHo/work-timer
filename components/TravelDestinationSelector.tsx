@@ -1,6 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import React, { useState } from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCaretDown, faCaretRight, faDice, faLandmark, faLightbulb, faMapMarkedAlt, faMountain, faUmbrellaBeach } from '@fortawesome/free-solid-svg-icons';
 
 interface Destination {
   country: string;
@@ -87,13 +89,13 @@ const destinations: Destination[] = [
   { country: "Nouvelle-Calédonie", capital: "Nouméa", continent: "Océanie", flag: "🇳🇨", fact: "Lagon classé au patrimoine mondial de l'UNESCO" },
 ];
 
-const continentColors: Record<string, { bg: string; text: string; emoji: string }> = {
+const continentColors: Record<string, { bg: string; text: string; emoji: React.ReactNode }> = {
   "Europe": { bg: "bg-blue-100 dark:bg-blue-900/30", text: "text-blue-800 dark:text-blue-300", emoji: "🏰" },
   "Asie": { bg: "bg-red-100 dark:bg-red-900/30", text: "text-red-800 dark:text-red-300", emoji: "🏯" },
   "Amérique du Nord": { bg: "bg-green-100 dark:bg-green-900/30", text: "text-green-800 dark:text-green-300", emoji: "🗽" },
-  "Amérique du Sud": { bg: "bg-yellow-100 dark:bg-yellow-900/30", text: "text-yellow-800 dark:text-yellow-300", emoji: "🏔️" },
+  "Amérique du Sud": { bg: "bg-yellow-100 dark:bg-yellow-900/30", text: "text-yellow-800 dark:text-yellow-300", emoji: <FontAwesomeIcon icon={faMountain} className="inline" /> },
   "Afrique": { bg: "bg-orange-100 dark:bg-orange-900/30", text: "text-orange-800 dark:text-orange-300", emoji: "🦁" },
-  "Océanie": { bg: "bg-teal-100 dark:bg-teal-900/30", text: "text-teal-800 dark:text-teal-300", emoji: "🏝️" },
+  "Océanie": { bg: "bg-teal-100 dark:bg-teal-900/30", text: "text-teal-800 dark:text-teal-300", emoji: <FontAwesomeIcon icon={faUmbrellaBeach} className="inline" /> },
 };
 
 export default function TravelDestinationSelector() {
@@ -168,7 +170,7 @@ export default function TravelDestinationSelector() {
           onClick={selectRandomDestination}
           className="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold text-lg rounded-lg shadow-lg transform transition hover:scale-105"
         >
-          🎲 Sélectionner une Destination Aléatoire
+          <FontAwesomeIcon icon={faDice} className="inline" /> Sélectionner une Destination Aléatoire
         </button>
         <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">
           {destinations.length - excludedCountries.size} destinations disponibles
@@ -185,7 +187,7 @@ export default function TravelDestinationSelector() {
             </h2>
             <div className="flex items-center justify-center gap-4 mb-4">
               <div className="flex items-center gap-2">
-                <span className="text-2xl">🏛️</span>
+                <span className="text-2xl"><FontAwesomeIcon icon={faLandmark} className="inline" /></span>
                 <span className="text-lg text-gray-700 dark:text-gray-300">
                   {selectedDestination.capital}
                 </span>
@@ -198,7 +200,7 @@ export default function TravelDestinationSelector() {
               </div>
             </div>
             <p className="text-gray-700 dark:text-gray-300 text-base leading-relaxed max-w-2xl mx-auto">
-              💡 {selectedDestination.fact}
+              <FontAwesomeIcon icon={faLightbulb} className="inline" /> {selectedDestination.fact}
             </p>
           </div>
         </div>
@@ -213,7 +215,7 @@ export default function TravelDestinationSelector() {
           <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100">
             🚫 Gérer les exclusions ({excludedCountries.size} pays exclus)
           </h3>
-          <span className="text-2xl">{showExclusionList ? "▼" : "▶"}</span>
+          <span className="text-2xl">{showExclusionList ? <FontAwesomeIcon icon={faCaretDown} className="inline" /> : <FontAwesomeIcon icon={faCaretRight} className="inline" />}</span>
         </button>
 
         {showExclusionList && (
@@ -282,7 +284,7 @@ export default function TravelDestinationSelector() {
       {/* Continents Overview */}
       <div className="bg-white dark:bg-gray-800 rounded-lg shadow p-6">
         <h3 className="text-xl font-bold mb-4 text-gray-900 dark:text-gray-100">
-          🗺️ Destinations par continent
+          <FontAwesomeIcon icon={faMapMarkedAlt} className="inline" /> Destinations par continent
         </h3>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
           {Object.entries(groupedDestinations).map(([continent, dests]) => {

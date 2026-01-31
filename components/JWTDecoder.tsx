@@ -1,6 +1,8 @@
 "use client";
 
 import { useState } from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBox, faExclamationTriangle, faKey, faLightbulb, faTimes, faTrash, faUnlock } from '@fortawesome/free-solid-svg-icons';
 
 export default function JWTDecoder() {
   const [token, setToken] = useState<string>("");
@@ -68,7 +70,7 @@ export default function JWTDecoder() {
     <div className="space-y-6">
       <div className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg p-4">
         <h4 className="font-semibold mb-2 text-red-900 dark:text-red-100 flex items-center gap-2">
-          ⚠️ Avertissement de sécurité
+          <FontAwesomeIcon icon={faExclamationTriangle} className="inline" /> Avertissement de sécurité
         </h4>
         <p className="text-sm text-red-800 dark:text-red-200">
           <strong>Ne pas décoder de tokens sensibles sur internet!</strong> Ce décodeur fonctionne entièrement dans votre navigateur (aucune donnée n&apos;est envoyée sur internet), mais par précaution, n&apos;utilisez que des tokens de test ou de développement.
@@ -97,20 +99,20 @@ export default function JWTDecoder() {
           disabled={!token.trim()}
           className="flex-1 px-6 py-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold text-lg disabled:opacity-50 disabled:cursor-not-allowed"
         >
-          🔓 Décoder le token
+          <FontAwesomeIcon icon={faUnlock} className="inline" /> Décoder le token
         </button>
         <button
           onClick={handleClear}
           className="px-6 py-4 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors font-semibold"
         >
-          🗑️
+          <FontAwesomeIcon icon={faTrash} className="inline" />
         </button>
       </div>
 
       {error && (
         <div className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg p-4">
           <h4 className="font-semibold mb-2 text-red-900 dark:text-red-100">
-            ❌ Erreur
+            <FontAwesomeIcon icon={faTimes} className="inline" /> Erreur
           </h4>
           <p className="text-sm text-red-800 dark:text-red-200">{error}</p>
         </div>
@@ -143,7 +145,7 @@ export default function JWTDecoder() {
           <div className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg p-4">
             <div className="flex items-center justify-between mb-3">
               <h4 className="font-semibold text-green-900 dark:text-green-100">
-                📦 Payload (Données)
+                <FontAwesomeIcon icon={faBox} className="inline" /> Payload (Données)
               </h4>
               <button
                 onClick={() => copyToClipboard(payload, "Payload")}
@@ -165,7 +167,7 @@ export default function JWTDecoder() {
           <div className="bg-purple-50 dark:bg-purple-900/20 border border-purple-200 dark:border-purple-800 rounded-lg p-4">
             <div className="flex items-center justify-between mb-3">
               <h4 className="font-semibold text-purple-900 dark:text-purple-100">
-                🔐 Signature
+                <FontAwesomeIcon icon={faKey} className="inline" /> Signature
               </h4>
               <button
                 onClick={() => copyToClipboard(signature, "Signature")}
@@ -188,7 +190,7 @@ export default function JWTDecoder() {
 
       <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4">
         <h4 className="font-semibold mb-2 text-blue-900 dark:text-blue-100">
-          💡 Qu&apos;est-ce qu&apos;un JWT ?
+          <FontAwesomeIcon icon={faLightbulb} className="inline" /> Qu&apos;est-ce qu&apos;un JWT ?
         </h4>
         <p className="text-sm text-blue-800 dark:text-blue-200 mb-3">
           Un JWT (JSON Web Token) est un standard ouvert (RFC 7519) pour transmettre des informations de manière sécurisée entre deux parties sous forme d&apos;objet JSON.
@@ -223,7 +225,7 @@ export default function JWTDecoder() {
 
       <div className="bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded-lg p-4">
         <h4 className="font-semibold mb-2 text-yellow-900 dark:text-yellow-100">
-          ⚠️ Important à savoir
+          <FontAwesomeIcon icon={faExclamationTriangle} className="inline" /> Important à savoir
         </h4>
         <ul className="text-sm text-yellow-800 dark:text-yellow-200 space-y-1">
           <li>Un JWT est <strong>encodé</strong>, pas <strong>chiffré</strong> - les données sont lisibles</li>

@@ -1,6 +1,8 @@
 "use client";
 
 import { useState } from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChartBar, faChartLine, faLightbulb } from '@fortawesome/free-solid-svg-icons';
 
 export default function CompoundInterestCalculator() {
   const [principal, setPrincipal] = useState<string>("");
@@ -160,7 +162,7 @@ export default function CompoundInterestCalculator() {
 
           <div className="bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg p-4">
             <h4 className="font-semibold mb-3 text-gray-900 dark:text-gray-100">
-              📊 Formule des intérêts composés
+              <FontAwesomeIcon icon={faChartBar} className="inline" /> Formule des intérêts composés
             </h4>
             <div className="text-sm space-y-2">
               <p className="font-mono bg-white dark:bg-gray-700 p-3 rounded border border-gray-300 dark:border-gray-600 text-xs">
@@ -191,7 +193,7 @@ export default function CompoundInterestCalculator() {
 
           <div className="bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg p-4">
             <h4 className="font-semibold mb-3 text-gray-900 dark:text-gray-100">
-              📈 Croissance par année
+              <FontAwesomeIcon icon={faChartLine} className="inline" /> Croissance par année
             </h4>
             <div className="space-y-2 text-sm max-h-64 overflow-y-auto">
               <div className="grid grid-cols-3 gap-2 font-semibold pb-2 border-b border-gray-300 dark:border-gray-600 sticky top-0 bg-gray-50 dark:bg-gray-800">
@@ -249,7 +251,7 @@ export default function CompoundInterestCalculator() {
 
       <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4">
         <h4 className="font-semibold mb-2 text-blue-900 dark:text-blue-100">
-          💡 Les intérêts composés
+          <FontAwesomeIcon icon={faLightbulb} className="inline" /> Les intérêts composés
         </h4>
         <ul className="text-sm text-blue-800 dark:text-blue-200 space-y-1">
           <li>Les intérêts composés sont les intérêts calculés sur le capital initial et les intérêts accumulés</li>

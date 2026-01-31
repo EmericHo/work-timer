@@ -1,6 +1,8 @@
 "use client";
 
 import { useState } from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLightbulb } from '@fortawesome/free-solid-svg-icons';
 
 interface TimeZone {
   name: string;
@@ -229,7 +231,7 @@ export default function TimeZoneConverter() {
       )}
 
       <div className="mt-6 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
-        <h3 className="font-semibold text-blue-900 dark:text-blue-300 mb-2">💡 Use Cases</h3>
+        <h3 className="font-semibold text-blue-900 dark:text-blue-300 mb-2"><FontAwesomeIcon icon={faLightbulb} className="inline" /> Use Cases</h3>
         <ul className="text-sm text-blue-800 dark:text-blue-300 list-disc list-inside space-y-1">
           <li>Schedule international meetings and calls</li>
           <li>Coordinate with remote team members</li>

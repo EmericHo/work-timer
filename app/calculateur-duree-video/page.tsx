@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import VideoDurationCalculator from "@/components/VideoDurationCalculator";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBriefcase, faChartBar, faCheck, faFilm, faLaptop, faMicrophone, faMobileAlt } from '@fortawesome/free-solid-svg-icons';
 
 export default function VideoDurationCalculatorPage() {
   return (
@@ -88,7 +90,7 @@ export default function VideoDurationCalculatorPage() {
             <h2 className="text-2xl font-bold mb-4">Cas d&apos;usage du calculateur de durée vidéo</h2>
             <div className="space-y-4 text-gray-700 dark:text-gray-300">
               <div>
-                <h3 className="text-xl font-semibold mb-2">🎬 Montage vidéo et production</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faFilm} className="inline" /> Montage vidéo et production</h3>
                 <p>
                   Les monteurs vidéo et vidéastes utilisent ce calculateur pour planifier la durée finale 
                   de leurs projets. Calculez rapidement la durée totale de vos rushes, organisez vos 
@@ -112,7 +114,7 @@ export default function VideoDurationCalculatorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🎤 Podcasts et contenus audio</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faMicrophone} className="inline" /> Podcasts et contenus audio</h3>
                 <p>
                   Bien que conçu pour la vidéo, cet outil fonctionne parfaitement pour les podcasts, 
                   interviews audio et contenus sonores. Calculez la durée totale de vos épisodes pour 
@@ -120,7 +122,7 @@ export default function VideoDurationCalculatorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">📊 Présentation et conférences</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faChartBar} className="inline" /> Présentation et conférences</h3>
                 <p>
                   Les conférenciers et présentateurs peuvent planifier leurs interventions en calculant 
                   la durée de chaque segment vidéo. Assurez-vous de respecter les créneaux horaires 
@@ -128,7 +130,7 @@ export default function VideoDurationCalculatorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🎞️ Cinéma et télévision</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faFilm} className="inline" /> Cinéma et télévision</h3>
                 <p>
                   Pour les professionnels du cinéma et de la télévision, calculez la durée totale des 
                   scènes, des épisodes ou des programmes. Respectez les formats standards (26 min, 52 min) 
@@ -136,7 +138,7 @@ export default function VideoDurationCalculatorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">💼 Archivage et documentation</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faBriefcase} className="inline" /> Archivage et documentation</h3>
                 <p>
                   Les archivistes et documentalistes peuvent estimer le temps nécessaire pour visionner 
                   ou numériser des collections vidéo. Planifiez vos projets de digitalisation avec 
@@ -150,14 +152,14 @@ export default function VideoDurationCalculatorPage() {
             <h2 className="text-2xl font-bold mb-4">Conseils et bonnes pratiques</h2>
             <div className="space-y-3 text-gray-700 dark:text-gray-300">
               <div>
-                <h3 className="font-semibold mb-1">✅ Ajoutez des titres descriptifs</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faCheck} className="inline" /> Ajoutez des titres descriptifs</h3>
                 <p className="text-sm">
                   Donnez un nom à chaque vidéo pour faciliter l&apos;identification. Utilisez des titres courts 
                   mais descriptifs comme &quot;Intro&quot;, &quot;Chapitre 1&quot;, &quot;Conclusion&quot; pour mieux vous organiser.
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">✅ Prévoyez une marge de sécurité</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faCheck} className="inline" /> Prévoyez une marge de sécurité</h3>
                 <p className="text-sm">
                   Pour les projets de montage, ajoutez 10-15% de temps supplémentaire pour les transitions, 
                   les génériques et les éléments graphiques. Le montage final est souvent légèrement plus 
@@ -165,7 +167,7 @@ export default function VideoDurationCalculatorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">✅ Organisez par sections</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faCheck} className="inline" /> Organisez par sections</h3>
                 <p className="text-sm">
                   Pour les projets complexes, regroupez vos vidéos par sections ou chapitres. Calculez 
                   d&apos;abord la durée de chaque section séparément, puis additionnez le tout pour obtenir 
@@ -173,28 +175,28 @@ export default function VideoDurationCalculatorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">✅ Vérifiez vos durées</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faCheck} className="inline" /> Vérifiez vos durées</h3>
                 <p className="text-sm">
                   Assurez-vous d&apos;entrer les bonnes valeurs dans les bons champs (heures, minutes, secondes). 
                   Une erreur commune est de mettre 90 minutes au lieu de 1h30, ce qui fausserait le calcul.
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">✅ Sauvegardez vos listes</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faCheck} className="inline" /> Sauvegardez vos listes</h3>
                 <p className="text-sm">
                   Pour les projets récurrents, notez vos listes de vidéos avec leurs durées. Vous pourrez 
                   les réutiliser ou les ajuster facilement pour de futurs projets similaires.
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">✅ Considérez le format de destination</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faCheck} className="inline" /> Considérez le format de destination</h3>
                 <p className="text-sm">
                   YouTube favorise les vidéos de 7-15 minutes pour l&apos;engagement. Les IGTV préfèrent moins 
                   de 10 minutes. TikTok accepte jusqu&apos;à 10 minutes. Adaptez votre durée totale au format cible.
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">✅ Pensez à l&apos;attention du spectateur</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faCheck} className="inline" /> Pensez à l&apos;attention du spectateur</h3>
                 <p className="text-sm">
                   Le taux de rétention diminue avec la durée. Pour les contenus éducatifs, segmentez les 
                   longues sessions en modules de 5-10 minutes. Pour le divertissement, visez l&apos;engagement 
@@ -215,14 +217,14 @@ export default function VideoDurationCalculatorPage() {
                 </p>
               </div>
               <div className="border-l-4 border-blue-500 pl-4">
-                <h3 className="font-semibold">🎬 Long métrage cinéma</h3>
+                <h3 className="font-semibold"><FontAwesomeIcon icon={faFilm} className="inline" /> Long métrage cinéma</h3>
                 <p className="text-sm">
                   90-120 minutes pour un film standard. Les blockbusters peuvent atteindre 150-180 minutes. 
                   Les courts-métrages font moins de 40 minutes.
                 </p>
               </div>
               <div className="border-l-4 border-yellow-500 pl-4">
-                <h3 className="font-semibold">💻 Contenu web optimal</h3>
+                <h3 className="font-semibold"><FontAwesomeIcon icon={faLaptop} className="inline" /> Contenu web optimal</h3>
                 <p className="text-sm">
                   2-5 minutes pour les réseaux sociaux, 7-15 minutes pour YouTube (meilleure monétisation), 
                   20-45 minutes pour les webinaires et formations courtes.
@@ -236,7 +238,7 @@ export default function VideoDurationCalculatorPage() {
                 </p>
               </div>
               <div className="border-l-4 border-purple-500 pl-4">
-                <h3 className="font-semibold">📱 Vidéos courtes (Shorts, Reels, TikTok)</h3>
+                <h3 className="font-semibold"><FontAwesomeIcon icon={faMobileAlt} className="inline" /> Vidéos courtes (Shorts, Reels, TikTok)</h3>
                 <p className="text-sm">
                   15-60 secondes pour un impact maximum. Ces formats privilégient le contenu percutant 
                   et rapide à consommer.

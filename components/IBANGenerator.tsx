@@ -1,6 +1,8 @@
 "use client";
 
 import { useState, useCallback } from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faExclamationTriangle, faLightbulb, faUniversity } from '@fortawesome/free-solid-svg-icons';
 
 interface CountryConfig {
   code: string;
@@ -113,7 +115,7 @@ export default function IBANGenerator() {
         onClick={generateIBANs}
         className="w-full px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold"
       >
-        🏦 Générer IBAN{count > 1 ? "s" : ""}
+        <FontAwesomeIcon icon={faUniversity} className="inline" /> Générer IBAN{count > 1 ? "s" : ""}
       </button>
 
       {generatedIBANs.length > 0 && (
@@ -154,7 +156,7 @@ export default function IBANGenerator() {
 
       <div className="bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded-lg p-4">
         <h4 className="font-semibold mb-2 text-yellow-900 dark:text-yellow-100">
-          ⚠️ Important - Usage des IBANs générés
+          <FontAwesomeIcon icon={faExclamationTriangle} className="inline" /> Important - Usage des IBANs générés
         </h4>
         <ul className="text-sm text-yellow-800 dark:text-yellow-200 space-y-1">
           <li>• Ces IBANs sont générés aléatoirement et ne correspondent à aucun compte réel</li>
@@ -166,7 +168,7 @@ export default function IBANGenerator() {
 
       <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4">
         <h4 className="font-semibold mb-2 text-blue-900 dark:text-blue-100">
-          💡 À propos des IBANs
+          <FontAwesomeIcon icon={faLightbulb} className="inline" /> À propos des IBANs
         </h4>
         <ul className="text-sm text-blue-800 dark:text-blue-200 space-y-1">
           <li>• IBAN = International Bank Account Number (Numéro de compte bancaire international)</li>

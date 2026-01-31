@@ -1,5 +1,7 @@
 import Link from "next/link";
 import { Metadata } from "next";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBalanceScale, faBullseye, faChartBar, faFileAlt, faLightbulb, faMobileAlt, faMusic, faRocket, faTimes } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata: Metadata = {
   title: "Guide Complet de Productivité - Timer Focus",
@@ -146,7 +148,7 @@ export default function GuidePage() {
                 
                 <div className="space-y-4">
                   <div className="bg-gray-100 dark:bg-gray-700 p-4 rounded-lg">
-                    <h4 className="font-semibold mb-2 text-gray-900 dark:text-gray-100">🚀 Pomodoro Sprint (15/3)</h4>
+                    <h4 className="font-semibold mb-2 text-gray-900 dark:text-gray-100"><FontAwesomeIcon icon={faRocket} className="inline" /> Pomodoro Sprint (15/3)</h4>
                     <p className="text-sm text-gray-700 dark:text-gray-300">
                       <strong>Quand l&apos;utiliser :</strong> Pour des tâches simples et répétitives, ou quand vous 
                       débutez avec la méthode et que 25 minutes vous semblent trop longues.
@@ -156,7 +158,7 @@ export default function GuidePage() {
                   </div>
 
                   <div className="bg-gray-100 dark:bg-gray-700 p-4 rounded-lg">
-                    <h4 className="font-semibold mb-2 text-gray-900 dark:text-gray-100">🎯 Pomodoro Classique (25/5)</h4>
+                    <h4 className="font-semibold mb-2 text-gray-900 dark:text-gray-100"><FontAwesomeIcon icon={faBullseye} className="inline" /> Pomodoro Classique (25/5)</h4>
                     <p className="text-sm text-gray-700 dark:text-gray-300">
                       <strong>Quand l&apos;utiliser :</strong> Pour la majorité des tâches professionnelles. C&apos;est 
                       le format standard et le plus équilibré pour la plupart des gens.
@@ -251,7 +253,7 @@ export default function GuidePage() {
                 <div className="space-y-4">
                   <div>
                     <h4 className="font-semibold mb-2 flex items-center gap-2">
-                      <span>💡</span> Éclairage optimal
+                      <span><FontAwesomeIcon icon={faLightbulb} className="inline" /></span> Éclairage optimal
                     </h4>
                     <p className="text-gray-700 dark:text-gray-300">
                       Privilégiez la lumière naturelle autant que possible. Si ce n&apos;est pas possible, utilisez 
@@ -290,7 +292,7 @@ export default function GuidePage() {
 
                   <div>
                     <h4 className="font-semibold mb-2 flex items-center gap-2">
-                      <span>📱</span> Zone sans distraction numérique
+                      <span><FontAwesomeIcon icon={faMobileAlt} className="inline" /></span> Zone sans distraction numérique
                     </h4>
                     <p className="text-gray-700 dark:text-gray-300">
                       Avant de démarrer un Pomodoro, préparez votre espace numérique :
@@ -466,7 +468,7 @@ export default function GuidePage() {
               <div className="space-y-6">
                 <div className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 p-4 rounded-lg">
                   <h3 className="text-lg font-semibold mb-2 text-red-900 dark:text-red-100">
-                    ❌ Sauter les pauses
+                    <FontAwesomeIcon icon={faTimes} className="inline" /> Sauter les pauses
                   </h3>
                   <p className="text-gray-700 dark:text-gray-300 mb-2">
                     <strong>Erreur :</strong> Se dire &quot;Je suis dans ma lancée, je vais enchaîner un autre 
@@ -481,7 +483,7 @@ export default function GuidePage() {
 
                 <div className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 p-4 rounded-lg">
                   <h3 className="text-lg font-semibold mb-2 text-red-900 dark:text-red-100">
-                    ❌ Vérifier ses emails/notifications pendant un Pomodoro
+                    <FontAwesomeIcon icon={faTimes} className="inline" /> Vérifier ses emails/notifications pendant un Pomodoro
                   </h3>
                   <p className="text-gray-700 dark:text-gray-300 mb-2">
                     <strong>Erreur :</strong> &quot;Je vais juste jeter un coup d&apos;œil rapide à ce message&quot;.
@@ -496,7 +498,7 @@ export default function GuidePage() {
 
                 <div className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 p-4 rounded-lg">
                   <h3 className="text-lg font-semibold mb-2 text-red-900 dark:text-red-100">
-                    ❌ Planifier trop de Pomodoros dans une journée
+                    <FontAwesomeIcon icon={faTimes} className="inline" /> Planifier trop de Pomodoros dans une journée
                   </h3>
                   <p className="text-gray-700 dark:text-gray-300 mb-2">
                     <strong>Erreur :</strong> Planifier 16 Pomodoros (8 heures) de travail intense en une journée.
@@ -510,7 +512,7 @@ export default function GuidePage() {
 
                 <div className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 p-4 rounded-lg">
                   <h3 className="text-lg font-semibold mb-2 text-red-900 dark:text-red-100">
-                    ❌ Ne pas adapter la méthode à son contexte
+                    <FontAwesomeIcon icon={faTimes} className="inline" /> Ne pas adapter la méthode à son contexte
                   </h3>
                   <p className="text-gray-700 dark:text-gray-300 mb-2">
                     <strong>Erreur :</strong> Essayer d&apos;appliquer rigidement des Pomodoros de 25 minutes 
@@ -525,7 +527,7 @@ export default function GuidePage() {
 
                 <div className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 p-4 rounded-lg">
                   <h3 className="text-lg font-semibold mb-2 text-red-900 dark:text-red-100">
-                    ❌ Utiliser les pauses pour scroller sur les réseaux sociaux
+                    <FontAwesomeIcon icon={faTimes} className="inline" /> Utiliser les pauses pour scroller sur les réseaux sociaux
                   </h3>
                   <p className="text-gray-700 dark:text-gray-300 mb-2">
                     <strong>Erreur :</strong> Passer sa pause de 5 minutes sur Instagram, Twitter ou TikTok.
@@ -553,7 +555,7 @@ export default function GuidePage() {
 
                 <div className="bg-blue-50 dark:bg-blue-900/20 p-6 rounded-lg mb-4">
                   <h4 className="font-semibold mb-3 text-blue-900 dark:text-blue-100">
-                    📊 Template de Journal Quotidien
+                    <FontAwesomeIcon icon={faChartBar} className="inline" /> Template de Journal Quotidien
                   </h4>
                   <div className="space-y-4 text-sm">
                     <div>
@@ -615,7 +617,7 @@ export default function GuidePage() {
                   </div>
 
                   <div>
-                    <h4 className="font-semibold mb-2">⚖️ Équilibrés (énergie stable toute la journée)</h4>
+                    <h4 className="font-semibold mb-2"><FontAwesomeIcon icon={faBalanceScale} className="inline" /> Équilibrés (énergie stable toute la journée)</h4>
                     <p className="text-gray-700 dark:text-gray-300">
                       <strong>Stratégie :</strong> Vous avez la flexibilité de planifier vos tâches importantes 
                       à tout moment. Profitez-en pour optimiser votre emploi du temps selon vos contraintes 
@@ -641,7 +643,7 @@ export default function GuidePage() {
                 <h3 className="text-xl sm:text-2xl font-semibold mb-3">Applications et extensions recommandées</h3>
                 <div className="space-y-4">
                   <div>
-                    <h4 className="font-semibold mb-2">📝 Gestion de tâches</h4>
+                    <h4 className="font-semibold mb-2"><FontAwesomeIcon icon={faFileAlt} className="inline" /> Gestion de tâches</h4>
                     <ul className="list-disc pl-6 text-gray-700 dark:text-gray-300">
                       <li><strong>Todoist :</strong> Simple et efficace pour organiser vos tâches par projet</li>
                       <li><strong>TickTick :</strong> Excellent pour combiner tâches et Pomodoro intégré</li>
@@ -660,7 +662,7 @@ export default function GuidePage() {
                   </div>
 
                   <div>
-                    <h4 className="font-semibold mb-2">🎵 Sons et ambiances</h4>
+                    <h4 className="font-semibold mb-2"><FontAwesomeIcon icon={faMusic} className="inline" /> Sons et ambiances</h4>
                     <ul className="list-disc pl-6 text-gray-700 dark:text-gray-300">
                       <li><strong>Brain.fm :</strong> Musique scientifiquement optimisée pour la concentration</li>
                       <li><strong>Noisli :</strong> Générateur de bruits blancs et sons de nature personnalisables</li>

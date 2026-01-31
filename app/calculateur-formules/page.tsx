@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import FormulaCalculator from "@/components/FormulaCalculator";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faAtom, faBox, faChartBar, faCheck, faCog, faFlask, faHardHat, faHashtag, faMoneyBill, faRuler } from '@fortawesome/free-solid-svg-icons';
 
 export default function FormulaCalculatorPage() {
   return (
@@ -88,7 +90,7 @@ export default function FormulaCalculatorPage() {
             <h2 className="text-2xl font-bold mb-4">Catégories de formules disponibles</h2>
             <div className="space-y-4 text-gray-700 dark:text-gray-300">
               <div>
-                <h3 className="text-xl font-semibold mb-2">📐 Géométrie plane</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faRuler} className="inline" /> Géométrie plane</h3>
                 <p className="mb-2">
                   Calculez les aires, périmètres et propriétés des figures 2D : carré, rectangle, triangle, 
                   cercle, trapèze, parallélogramme, losange, polygones réguliers. Idéal pour les devoirs de 
@@ -99,7 +101,7 @@ export default function FormulaCalculatorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">📦 Géométrie dans l&apos;espace</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faBox} className="inline" /> Géométrie dans l&apos;espace</h3>
                 <p className="mb-2">
                   Calculez les volumes, surfaces et propriétés des solides 3D : cube, parallélépipède, cylindre, 
                   cône, sphère, pyramide, prisme. Essentiel pour l&apos;architecture, l&apos;ingénierie et la construction.
@@ -109,7 +111,7 @@ export default function FormulaCalculatorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🔢 Algèbre et équations</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faHashtag} className="inline" /> Algèbre et équations</h3>
                 <p className="mb-2">
                   Résolvez les équations du premier et second degré, calculez les racines carrées et cubiques, 
                   les puissances, les logarithmes, et appliquez le théorème de Pythagore. Parfait pour les 
@@ -120,7 +122,7 @@ export default function FormulaCalculatorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">⚛️ Physique</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faAtom} className="inline" /> Physique</h3>
                 <p className="mb-2">
                   Calculez la vitesse, l&apos;accélération, la force (F = ma), l&apos;énergie cinétique, l&apos;énergie 
                   potentielle, la pression, le travail, la puissance et bien d&apos;autres grandeurs physiques. 
@@ -131,7 +133,7 @@ export default function FormulaCalculatorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🧪 Chimie</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faFlask} className="inline" /> Chimie</h3>
                 <p className="mb-2">
                   Effectuez des calculs de concentration molaire, de masse molaire, de conversions entre moles 
                   et grammes, calculez le pH, les dilutions et les équilibres chimiques. Utile pour les 
@@ -142,7 +144,7 @@ export default function FormulaCalculatorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">💰 Finance</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faMoneyBill} className="inline" /> Finance</h3>
                 <p className="mb-2">
                   Calculez les intérêts simples et composés, les mensualités de prêt, les rendements 
                   d&apos;investissement, les pourcentages d&apos;augmentation ou de réduction, et les taux de croissance. 
@@ -175,7 +177,7 @@ export default function FormulaCalculatorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🏗️ Construction et architecture</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faHardHat} className="inline" /> Construction et architecture</h3>
                 <p>
                   Calculez rapidement les surfaces de plancher, les volumes de béton nécessaires, les quantités 
                   de matériaux, les dimensions d&apos;éléments structurels. Essentiel pour l&apos;estimation des coûts 
@@ -183,7 +185,7 @@ export default function FormulaCalculatorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">⚙️ Ingénierie</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faCog} className="inline" /> Ingénierie</h3>
                 <p>
                   Les ingénieurs utilisent ces formules pour les calculs de résistance des matériaux, les 
                   dimensionnements de pièces mécaniques, les calculs de forces et de pressions. Validation 
@@ -199,7 +201,7 @@ export default function FormulaCalculatorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">📊 Gestion et finance</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faChartBar} className="inline" /> Gestion et finance</h3>
                 <p>
                   Effectuez des calculs financiers rapides : intérêts de prêt, rendement d&apos;investissement, 
                   calculs de pourcentages pour remises et marges commerciales. Prenez des décisions éclairées 
@@ -213,7 +215,7 @@ export default function FormulaCalculatorPage() {
             <h2 className="text-2xl font-bold mb-4">Conseils pour utiliser efficacement les formules</h2>
             <div className="space-y-3 text-gray-700 dark:text-gray-300">
               <div>
-                <h3 className="font-semibold mb-1">✅ Vérifiez les unités</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faCheck} className="inline" /> Vérifiez les unités</h3>
                 <p className="text-sm">
                   Assurez-vous d&apos;utiliser les bonnes unités (mètres, centimètres, litres, etc.). La plupart 
                   des formules requièrent des unités cohérentes. Convertissez si nécessaire avant d&apos;entrer 
@@ -221,7 +223,7 @@ export default function FormulaCalculatorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">✅ Comprenez la formule</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faCheck} className="inline" /> Comprenez la formule</h3>
                 <p className="text-sm">
                   Ne vous contentez pas d&apos;entrer des chiffres. Lisez l&apos;explication de la formule pour 
                   comprendre ce que vous calculez. Cela vous aidera à détecter les erreurs et à mieux 
@@ -229,7 +231,7 @@ export default function FormulaCalculatorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">✅ Testez avec des valeurs simples</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faCheck} className="inline" /> Testez avec des valeurs simples</h3>
                 <p className="text-sm">
                   Pour vous familiariser avec une formule, commencez par des valeurs simples dont vous 
                   connaissez le résultat (par exemple, l&apos;aire d&apos;un carré de côté 10 = 100). Cela vous 
@@ -237,7 +239,7 @@ export default function FormulaCalculatorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">✅ Gardez trace de vos calculs</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faCheck} className="inline" /> Gardez trace de vos calculs</h3>
                 <p className="text-sm">
                   Notez les résultats importants dans un document séparé. L&apos;outil ne sauvegarde pas 
                   l&apos;historique, donc prenez des notes pour vos projets complexes nécessitant plusieurs 
@@ -245,7 +247,7 @@ export default function FormulaCalculatorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">✅ Arrondissez judicieusement</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faCheck} className="inline" /> Arrondissez judicieusement</h3>
                 <p className="text-sm">
                   Pour les calculs intermédiaires, gardez plusieurs décimales. N&apos;arrondissez qu&apos;au résultat 
                   final pour éviter l&apos;accumulation d&apos;erreurs. En construction, arrondissez toujours au-dessus 
@@ -253,14 +255,14 @@ export default function FormulaCalculatorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">✅ Vérifiez la cohérence du résultat</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faCheck} className="inline" /> Vérifiez la cohérence du résultat</h3>
                 <p className="text-sm">
                   Un résultat aberrant indique souvent une erreur de saisie. Si vous calculez l&apos;aire d&apos;une 
                   pièce et obtenez 10 000 m², vérifiez vos valeurs. Le bon sens est votre meilleur allié.
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">✅ Utilisez π avec précision</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faCheck} className="inline" /> Utilisez π avec précision</h3>
                 <p className="text-sm">
                   Notre calculateur utilise π avec une grande précision (3.14159...). Ne remplacez pas par 
                   3.14 pour les calculs importants, car cela peut créer des écarts significatifs sur de 

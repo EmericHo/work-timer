@@ -1,6 +1,8 @@
 import { Metadata } from "next";
 import Link from "next/link";
 import TaxCalculator from "@/components/TaxCalculator";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBook, faCalculator, faChartBar, faCheck, faExclamationTriangle, faLightbulb, faStopwatch } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata: Metadata = {
   title: "Calculatrice Fiscale France Luxembourg 2025-2026 - Comparaison FR/LUX",
@@ -70,7 +72,7 @@ export default function TaxCalculatorPage() {
           {/* Calculator Component */}
           <section className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-4 sm:p-6 md:p-8">
             <h2 className="text-2xl sm:text-3xl font-bold mb-6 text-center">
-              🧮 Calculateur Fiscal Gratuit
+              <FontAwesomeIcon icon={faCalculator} className="inline" /> Calculateur Fiscal Gratuit
             </h2>
             <TaxCalculator />
           </section>
@@ -118,7 +120,7 @@ export default function TaxCalculatorPage() {
               </div>
 
               <div className="bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-400 dark:border-yellow-600 p-4 rounded-lg mb-6">
-                <p className="font-semibold mb-2">💡 Conseil pour les frontaliers :</p>
+                <p className="font-semibold mb-2"><FontAwesomeIcon icon={faLightbulb} className="inline" /> Conseil pour les frontaliers :</p>
                 <p className="text-sm sm:text-base">
                   Le Luxembourg est souvent plus avantageux fiscalement, surtout pour les célibataires ou couples
                   sans enfants grâce aux cotisations plus faibles (15.75% vs 23%). La France peut devenir
@@ -247,7 +249,7 @@ export default function TaxCalculatorPage() {
               </div>
 
               <div className="bg-green-50 dark:bg-green-900/20 border border-green-300 dark:border-green-700 p-4 rounded-lg mb-6">
-                <p className="font-semibold mb-2">✅ Exemple concret Luxembourg :</p>
+                <p className="font-semibold mb-2"><FontAwesomeIcon icon={faCheck} className="inline" /> Exemple concret Luxembourg :</p>
                 <p className="text-sm sm:text-base">
                   Avec un salaire de 50 000€ brut en classe 1 au Luxembourg : cotisations de 7 875€ (15.75%), 
                   puis application du barème progressif sur 42 125€ imposables. Le net final est généralement 
@@ -308,7 +310,7 @@ export default function TaxCalculatorPage() {
               </div>
 
               <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-300 dark:border-blue-700 p-4 rounded-lg mb-6">
-                <p className="font-semibold mb-2">💡 Exemple concret :</p>
+                <p className="font-semibold mb-2"><FontAwesomeIcon icon={faLightbulb} className="inline" /> Exemple concret :</p>
                 <p className="text-sm sm:text-base">
                   Pour un revenu imposable de 40 000 €, vous ne payez pas 30% sur la totalité. Vous payez 0% sur les
                   premiers 11 497 €, 11% sur la tranche de 11 497 € à 29 315 €, et 30% uniquement sur la partie
@@ -370,7 +372,7 @@ export default function TaxCalculatorPage() {
               </div>
 
               <div className="bg-green-50 dark:bg-green-900/20 border border-green-300 dark:border-green-700 p-4 rounded-lg mb-6">
-                <p className="font-semibold mb-2">✅ Exemple :</p>
+                <p className="font-semibold mb-2"><FontAwesomeIcon icon={faCheck} className="inline" /> Exemple :</p>
                 <p className="text-sm sm:text-base">
                   Un couple marié avec 2 enfants dispose de 3 parts fiscales (2 + 0,5 + 0,5). Avec un revenu imposable
                   de 60 000 €, le quotient familial est de 60 000 / 3 = 20 000 €. Le barème s&apos;applique sur 20 000 €,
@@ -427,7 +429,7 @@ export default function TaxCalculatorPage() {
               </p>
 
               <div className="bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-300 dark:border-yellow-700 p-4 rounded-lg mb-6">
-                <p className="font-semibold mb-2">⚠️ Important :</p>
+                <p className="font-semibold mb-2"><FontAwesomeIcon icon={faExclamationTriangle} className="inline" /> Important :</p>
                 <p className="text-sm sm:text-base">
                   Les frais réels peuvent inclure : frais de transport domicile-travail, frais de repas, frais de
                   formation, achat de vêtements spécifiques, frais de déménagement pour raison professionnelle, etc. Pour
@@ -714,7 +716,7 @@ export default function TaxCalculatorPage() {
               </div>
 
               <div className="bg-red-50 dark:bg-red-900/20 border-2 border-red-400 dark:border-red-600 p-4 sm:p-6 rounded-lg mt-8">
-                <h4 className="font-bold text-lg mb-3">⚠️ Avertissement Important</h4>
+                <h4 className="font-bold text-lg mb-3"><FontAwesomeIcon icon={faExclamationTriangle} className="inline" /> Avertissement Important</h4>
                 <p className="text-sm sm:text-base text-gray-700 dark:text-gray-300 mb-2">
                   Cette calculatrice fiscale fournit des <strong>estimations indicatives</strong> basées sur les barèmes
                   officiels 2025-2026 pour la France et le Luxembourg. Les calculs sont simplifiés et ne prennent pas en compte toutes les spécificités
@@ -744,7 +746,7 @@ export default function TaxCalculatorPage() {
               </div>
 
               <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-300 dark:border-blue-700 p-4 sm:p-6 rounded-lg mt-6">
-                <h4 className="font-bold text-lg mb-3">📚 Ressources officielles</h4>
+                <h4 className="font-bold text-lg mb-3"><FontAwesomeIcon icon={faBook} className="inline" /> Ressources officielles</h4>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
                     <p className="font-semibold mb-2 text-blue-600 dark:text-blue-400">🇫🇷 France</p>
@@ -831,7 +833,7 @@ export default function TaxCalculatorPage() {
           <section className="bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 rounded-lg shadow-lg p-4 sm:p-6 md:p-8 border border-blue-200 dark:border-blue-700">
             <article className="prose prose-sm sm:prose-base lg:prose-lg dark:prose-invert max-w-none">
               <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-center">
-                ⏱️ Optimisez votre temps ET votre fiscalité
+                <FontAwesomeIcon icon={faStopwatch} className="inline" /> Optimisez votre temps ET votre fiscalité
               </h2>
               
               <p className="text-gray-700 dark:text-gray-300 mb-4 text-center">
@@ -841,7 +843,7 @@ export default function TaxCalculatorPage() {
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6 mt-6">
                 <div className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow">
-                  <div className="text-3xl mb-2 text-center">⏱️</div>
+                  <div className="text-3xl mb-2 text-center"><FontAwesomeIcon icon={faStopwatch} className="inline" /></div>
                   <h3 className="text-lg font-semibold mb-2 text-center">Timer Focus</h3>
                   <p className="text-sm text-gray-600 dark:text-gray-400 text-center mb-3">
                     Suivez précisément votre temps de travail avec notre chronomètre professionnel
@@ -869,7 +871,7 @@ export default function TaxCalculatorPage() {
                 </div>
 
                 <div className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow">
-                  <div className="text-3xl mb-2 text-center">📊</div>
+                  <div className="text-3xl mb-2 text-center"><FontAwesomeIcon icon={faChartBar} className="inline" /></div>
                   <h3 className="text-lg font-semibold mb-2 text-center">Calcul de Temps</h3>
                   <p className="text-sm text-gray-600 dark:text-gray-400 text-center mb-3">
                     Planifiez vos journées et calculez vos heures de travail efficacement
@@ -884,7 +886,7 @@ export default function TaxCalculatorPage() {
               </div>
 
               <div className="bg-blue-100 dark:bg-blue-900/30 border-l-4 border-blue-600 p-4 rounded mb-4">
-                <h3 className="text-lg font-semibold mb-2">💡 Pourquoi lier fiscalité et gestion du temps ?</h3>
+                <h3 className="text-lg font-semibold mb-2"><FontAwesomeIcon icon={faLightbulb} className="inline" /> Pourquoi lier fiscalité et gestion du temps ?</h3>
                 <p className="text-sm sm:text-base text-gray-700 dark:text-gray-300">
                   En tant que professionnel, freelance ou frontalier, votre temps est votre ressource la plus précieuse. 
                   Notre calculatrice fiscale vous aide à comprendre ce que vous gagnez réellement, tandis que nos outils 

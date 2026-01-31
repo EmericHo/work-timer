@@ -1,6 +1,8 @@
 "use client";
 
 import { useState } from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFileAlt, faLightbulb } from '@fortawesome/free-solid-svg-icons';
 
 interface Rule {
   id: number;
@@ -242,7 +244,7 @@ export default function RobotsGenerator() {
       )}
 
       <div className="mb-6 p-4 bg-purple-50 dark:bg-purple-900/20 rounded-lg">
-        <h3 className="font-semibold text-purple-900 dark:text-purple-300 mb-3">📝 Examples</h3>
+        <h3 className="font-semibold text-purple-900 dark:text-purple-300 mb-3"><FontAwesomeIcon icon={faFileAlt} className="inline" /> Examples</h3>
         <div className="flex flex-wrap gap-2">
           <button
             onClick={() => loadExample("allow-all")}
@@ -266,7 +268,7 @@ export default function RobotsGenerator() {
       </div>
 
       <div className="mt-6 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
-        <h3 className="font-semibold text-blue-900 dark:text-blue-300 mb-2">💡 Tips</h3>
+        <h3 className="font-semibold text-blue-900 dark:text-blue-300 mb-2"><FontAwesomeIcon icon={faLightbulb} className="inline" /> Tips</h3>
         <ul className="text-sm text-blue-800 dark:text-blue-300 list-disc list-inside space-y-1">
           <li>Place robots.txt in your website&apos;s root directory</li>
           <li>Use &quot;/&quot; to block entire site, &quot;/folder/&quot; to block specific folders</li>

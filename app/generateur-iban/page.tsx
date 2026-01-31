@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import IBANGenerator from "@/components/IBANGenerator";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChartBar, faExclamationTriangle, faFileAlt, faFlask, faGlobe, faLaptop, faLightbulb, faLock, faSearch, faShieldAlt, faUniversity } from '@fortawesome/free-solid-svg-icons';
 
 export default function IBANGeneratorPage() {
   return (
@@ -90,7 +92,7 @@ export default function IBANGeneratorPage() {
             </ol>
             <div className="mt-4 p-4 bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded">
               <p className="text-sm text-yellow-800 dark:text-yellow-200 font-semibold">
-                ⚠️ Avertissement : Les IBAN générés sont uniquement pour des tests et ne doivent jamais être 
+                <FontAwesomeIcon icon={faExclamationTriangle} className="inline" /> Avertissement : Les IBAN générés sont uniquement pour des tests et ne doivent jamais être 
                 utilisés pour de vraies transactions bancaires. L&apos;utilisation frauduleuse d&apos;IBAN fictifs 
                 pour des transactions réelles est illégale.
               </p>
@@ -118,7 +120,7 @@ export default function IBANGeneratorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🏦 BBAN (Basic Bank Account Number)</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faUniversity} className="inline" /> BBAN (Basic Bank Account Number)</h3>
                 <p>
                   Le reste de l&apos;IBAN constitue le BBAN, dont la structure varie selon les pays. Il comprend 
                   généralement :
@@ -131,7 +133,7 @@ export default function IBANGeneratorPage() {
                 </ul>
               </div>
               <div className="mt-4">
-                <h3 className="text-xl font-semibold mb-2">📝 Exemple d&apos;IBAN français</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faFileAlt} className="inline" /> Exemple d&apos;IBAN français</h3>
                 <div className="bg-gray-100 dark:bg-gray-700 p-4 rounded">
                   <p className="font-mono text-lg mb-2">FR76 3000 6000 0112 3456 7890 189</p>
                   <ul className="text-sm space-y-1">
@@ -210,7 +212,7 @@ export default function IBANGeneratorPage() {
             </ol>
             <div className="mt-4 p-4 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded">
               <p className="text-sm text-blue-800 dark:text-blue-200">
-                💡 <strong>Astuce :</strong> Cette validation détecte la plupart des erreurs de saisie, mais 
+                <FontAwesomeIcon icon={faLightbulb} className="inline" /> <strong>Astuce :</strong> Cette validation détecte la plupart des erreurs de saisie, mais 
                 ne garantit pas que l&apos;IBAN correspond à un compte bancaire réellement existant. Pour vérifier 
                 l&apos;existence d&apos;un compte, vous devez contacter la banque.
               </p>
@@ -221,7 +223,7 @@ export default function IBANGeneratorPage() {
             <h2 className="text-2xl font-bold mb-4">Cas d&apos;usage des IBAN de test</h2>
             <div className="space-y-4 text-gray-700 dark:text-gray-300">
               <div>
-                <h3 className="text-xl font-semibold mb-2">💻 Développement d&apos;applications</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faLaptop} className="inline" /> Développement d&apos;applications</h3>
                 <p>
                   Les développeurs créant des applications bancaires, des plateformes de paiement ou des 
                   systèmes de gestion financière ont besoin d&apos;IBAN de test pour développer et déboguer leurs 
@@ -230,7 +232,7 @@ export default function IBANGeneratorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🧪 Tests automatisés</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faFlask} className="inline" /> Tests automatisés</h3>
                 <p>
                   Dans les suites de tests automatisés (tests unitaires, tests d&apos;intégration), des IBAN de 
                   test valides sont nécessaires pour vérifier que le code gère correctement les différents 
@@ -239,7 +241,7 @@ export default function IBANGeneratorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">📊 Démonstrations et présentations</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faChartBar} className="inline" /> Démonstrations et présentations</h3>
                 <p>
                   Lors de démonstrations de logiciels bancaires ou de présentations de systèmes de paiement, 
                   il est préférable d&apos;utiliser des IBAN factices plutôt que de vrais numéros de compte. 
@@ -255,7 +257,7 @@ export default function IBANGeneratorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🔍 Tests de validation</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faSearch} className="inline" /> Tests de validation</h3>
                 <p>
                   Tester des formulaires web ou des API qui acceptent des IBAN nécessite des numéros valides 
                   selon l&apos;algorithme de contrôle. Notre générateur produit des IBAN qui passeront les 
@@ -270,7 +272,7 @@ export default function IBANGeneratorPage() {
             <h2 className="text-2xl font-bold mb-4">Différences entre IBAN, BIC et SWIFT</h2>
             <div className="space-y-4 text-gray-700 dark:text-gray-300">
               <div>
-                <h3 className="text-xl font-semibold mb-2">🏦 IBAN (International Bank Account Number)</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faUniversity} className="inline" /> IBAN (International Bank Account Number)</h3>
                 <p>
                   L&apos;IBAN identifie de manière unique un compte bancaire spécifique. Il contient le code pays, 
                   la clé de contrôle et les informations du compte (banque, agence, numéro de compte). 
@@ -279,7 +281,7 @@ export default function IBANGeneratorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🌐 BIC/SWIFT (Bank Identifier Code)</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faGlobe} className="inline" /> BIC/SWIFT (Bank Identifier Code)</h3>
                 <p>
                   Le BIC (aussi appelé code SWIFT) identifie la banque elle-même, pas un compte spécifique. 
                   Il se compose de 8 ou 11 caractères : code banque (4 caractères), code pays (2 lettres), 
@@ -303,7 +305,7 @@ export default function IBANGeneratorPage() {
             <h2 className="text-2xl font-bold mb-4">Sécurité et confidentialité des IBAN</h2>
             <div className="space-y-4 text-gray-700 dark:text-gray-300">
               <div>
-                <h3 className="text-xl font-semibold mb-2">🔒 Protection des IBAN réels</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faLock} className="inline" /> Protection des IBAN réels</h3>
                 <p>
                   Un IBAN réel doit être traité comme une information sensible. Bien qu&apos;il ne soit pas aussi 
                   critique qu&apos;un numéro de carte bancaire (car les paiements nécessitent généralement une 
@@ -312,7 +314,7 @@ export default function IBANGeneratorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">⚠️ Risques liés aux IBAN</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faExclamationTriangle} className="inline" /> Risques liés aux IBAN</h3>
                 <p>
                   Avec votre IBAN, quelqu&apos;un pourrait potentiellement initier un prélèvement SEPA non 
                   autorisé. Cependant, la réglementation européenne vous protège : vous avez 8 semaines pour 
@@ -321,7 +323,7 @@ export default function IBANGeneratorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🛡️ Bonnes pratiques</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faShieldAlt} className="inline" /> Bonnes pratiques</h3>
                 <ul className="list-disc pl-6 space-y-1 mt-2">
                   <li>Ne partagez votre IBAN qu&apos;avec des entités de confiance</li>
                   <li>Vérifiez régulièrement vos relevés bancaires</li>

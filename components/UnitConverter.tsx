@@ -1,6 +1,8 @@
 "use client";
 
 import { useState } from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBalanceScale, faLightbulb, faRulerHorizontal, faSync, faTemperatureHigh } from '@fortawesome/free-solid-svg-icons';
 
 type UnitCategory = "length" | "weight" | "temperature" | "volume";
 
@@ -125,11 +127,11 @@ export default function UnitConverter() {
               }`}
             >
               {cat === "length"
-                ? "📏 Longueur"
+                ? <><FontAwesomeIcon icon={faRulerHorizontal} className="inline" /> Longueur</>
                 : cat === "weight"
-                ? "⚖️ Poids"
+                ? <><FontAwesomeIcon icon={faBalanceScale} className="inline" /> Poids</>
                 : cat === "temperature"
-                ? "🌡️ Température"
+                ? <><FontAwesomeIcon icon={faTemperatureHigh} className="inline" /> Température</>
                 : "🥤 Volume"}
             </button>
           ))}
@@ -185,7 +187,7 @@ export default function UnitConverter() {
           className="mt-7 px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors"
           title="Inverser les unités"
         >
-          🔄
+          <FontAwesomeIcon icon={faSync} className="inline" />
         </button>
       </div>
 
@@ -193,7 +195,7 @@ export default function UnitConverter() {
         onClick={handleConvert}
         className="w-full px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold"
       >
-        🔄 Convertir
+        <FontAwesomeIcon icon={faSync} className="inline" /> Convertir
       </button>
 
       {result && (
@@ -220,12 +222,12 @@ export default function UnitConverter() {
 
       <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4">
         <h4 className="font-semibold mb-2 text-blue-900 dark:text-blue-100">
-          💡 Conseils d&apos;utilisation
+          <FontAwesomeIcon icon={faLightbulb} className="inline" /> Conseils d&apos;utilisation
         </h4>
         <ul className="text-sm text-blue-800 dark:text-blue-200 space-y-1">
           <li>Sélectionnez la catégorie d&apos;unité que vous souhaitez convertir</li>
           <li>Choisissez les unités source et cible</li>
-          <li>Utilisez le bouton 🔄 pour inverser rapidement les unités</li>
+          <li>Utilisez le bouton <FontAwesomeIcon icon={faSync} className="inline" /> pour inverser rapidement les unités</li>
           <li>Appuyez sur Entrée ou cliquez sur Convertir pour obtenir le résultat</li>
         </ul>
       </div>

@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import LinkedInBannerGenerator from "@/components/LinkedInBannerGenerator";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBolt, faBriefcase, faBuilding, faBullseye, faChartBar, faChartLine, faEdit, faLaptop, faLightbulb, faMobileAlt, faPalette, faRuler, faSync } from '@fortawesome/free-solid-svg-icons';
 
 export default function LinkedInBannerGeneratorPage() {
   return (
@@ -56,7 +58,7 @@ export default function LinkedInBannerGeneratorPage() {
             <h2 className="text-2xl font-bold mb-4">Dimensions et spécifications techniques de la bannière LinkedIn</h2>
             <div className="space-y-4 text-gray-700 dark:text-gray-300">
               <div className="bg-blue-50 dark:bg-blue-900/20 border-l-4 border-blue-500 p-4">
-                <h3 className="font-semibold text-lg mb-2">📐 Dimensions officielles</h3>
+                <h3 className="font-semibold text-lg mb-2"><FontAwesomeIcon icon={faRuler} className="inline" /> Dimensions officielles</h3>
                 <ul className="space-y-2 text-sm">
                   <li><strong>Taille recommandée:</strong> 1584 × 396 pixels (rapport 4:1)</li>
                   <li><strong>Taille minimale:</strong> 1584 × 396 pixels (même dimension)</li>
@@ -67,7 +69,7 @@ export default function LinkedInBannerGeneratorPage() {
               </div>
               
               <div>
-                <h3 className="font-semibold text-lg mb-2">🎯 Zone de sécurité</h3>
+                <h3 className="font-semibold text-lg mb-2"><FontAwesomeIcon icon={faBullseye} className="inline" /> Zone de sécurité</h3>
                 <p className="text-sm mb-2">
                   Sur mobile, votre photo de profil et certaines informations peuvent masquer une partie de 
                   la bannière. Pour garantir que les éléments importants restent visibles sur tous les appareils:
@@ -80,7 +82,7 @@ export default function LinkedInBannerGeneratorPage() {
               </div>
 
               <div>
-                <h3 className="font-semibold text-lg mb-2">⚡ Optimisation des performances</h3>
+                <h3 className="font-semibold text-lg mb-2"><FontAwesomeIcon icon={faBolt} className="inline" /> Optimisation des performances</h3>
                 <ul className="space-y-1 text-sm list-disc list-inside ml-4">
                   <li>Privilégiez le format PNG pour les designs avec texte net</li>
                   <li>Utilisez JPG pour les photos ou images avec dégradés complexes</li>
@@ -158,12 +160,12 @@ export default function LinkedInBannerGeneratorPage() {
             <h2 className="text-2xl font-bold mb-4">Comment télécharger votre bannière sur LinkedIn ?</h2>
             <div className="space-y-4 text-gray-700 dark:text-gray-300">
               <div>
-                <h3 className="font-semibold text-lg mb-2">📱 Sur ordinateur (Desktop)</h3>
+                <h3 className="font-semibold text-lg mb-2"><FontAwesomeIcon icon={faMobileAlt} className="inline" /> Sur ordinateur (Desktop)</h3>
                 <ol className="space-y-2 text-sm list-decimal list-inside ml-4">
                   <li>Connectez-vous à votre compte LinkedIn</li>
                   <li>Cliquez sur &quot;Moi&quot; dans la barre de navigation supérieure</li>
                   <li>Sélectionnez &quot;Voir le profil&quot;</li>
-                  <li>Cliquez sur l&apos;icône crayon (✏️) en haut à droite de l&apos;image d&apos;arrière-plan actuelle</li>
+                  <li>Cliquez sur l&apos;icône crayon (<FontAwesomeIcon icon={faEdit} className="inline" />) en haut à droite de l&apos;image d&apos;arrière-plan actuelle</li>
                   <li>Sélectionnez &quot;Modifier l&apos;image d&apos;arrière-plan&quot; ou &quot;Ajouter une photo de couverture&quot;</li>
                   <li>Cliquez sur &quot;Télécharger une photo&quot; et sélectionnez votre nouvelle bannière</li>
                   <li>Ajustez la position si nécessaire (glisser-déposer)</li>
@@ -172,7 +174,7 @@ export default function LinkedInBannerGeneratorPage() {
               </div>
 
               <div>
-                <h3 className="font-semibold text-lg mb-2">📱 Sur mobile (iOS/Android)</h3>
+                <h3 className="font-semibold text-lg mb-2"><FontAwesomeIcon icon={faMobileAlt} className="inline" /> Sur mobile (iOS/Android)</h3>
                 <ol className="space-y-2 text-sm list-decimal list-inside ml-4">
                   <li>Ouvrez l&apos;application LinkedIn</li>
                   <li>Appuyez sur votre photo de profil en haut à gauche</li>
@@ -185,7 +187,7 @@ export default function LinkedInBannerGeneratorPage() {
               </div>
 
               <div className="bg-yellow-50 dark:bg-yellow-900/20 border-l-4 border-yellow-500 p-4 mt-4">
-                <h3 className="font-semibold mb-2">💡 Astuce professionnelle</h3>
+                <h3 className="font-semibold mb-2"><FontAwesomeIcon icon={faLightbulb} className="inline" /> Astuce professionnelle</h3>
                 <p className="text-sm">
                   Après avoir téléchargé votre nouvelle bannière, attendez quelques minutes puis vérifiez votre 
                   profil en mode navigation privée pour voir exactement comment il apparaît aux autres utilisateurs. 
@@ -300,7 +302,7 @@ export default function LinkedInBannerGeneratorPage() {
             <h2 className="text-2xl font-bold mb-4">Exemples de bannières LinkedIn efficaces par secteur</h2>
             <div className="space-y-4 text-gray-700 dark:text-gray-300">
               <div>
-                <h3 className="text-xl font-semibold mb-2">💼 Consulting & Stratégie</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faBriefcase} className="inline" /> Consulting & Stratégie</h3>
                 <p className="text-sm mb-2">
                   <strong>Style:</strong> Minimaliste, couleurs sobres (bleu marine, gris anthracite, blanc)
                 </p>
@@ -315,7 +317,7 @@ export default function LinkedInBannerGeneratorPage() {
               </div>
 
               <div>
-                <h3 className="text-xl font-semibold mb-2">🎨 Créatifs & Design</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faPalette} className="inline" /> Créatifs & Design</h3>
                 <p className="text-sm mb-2">
                   <strong>Style:</strong> Coloré, audacieux, typographie créative
                 </p>
@@ -330,7 +332,7 @@ export default function LinkedInBannerGeneratorPage() {
               </div>
 
               <div>
-                <h3 className="text-xl font-semibold mb-2">💻 Tech & Développement</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faLaptop} className="inline" /> Tech & Développement</h3>
                 <p className="text-sm mb-2">
                   <strong>Style:</strong> Moderne, tech, parfois avec éléments de code ou icônes techniques
                 </p>
@@ -345,7 +347,7 @@ export default function LinkedInBannerGeneratorPage() {
               </div>
 
               <div>
-                <h3 className="text-xl font-semibold mb-2">📊 Marketing & Communication</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faChartBar} className="inline" /> Marketing & Communication</h3>
                 <p className="text-sm mb-2">
                   <strong>Style:</strong> Dynamique, tendance, utilisation stratégique des couleurs
                 </p>
@@ -360,7 +362,7 @@ export default function LinkedInBannerGeneratorPage() {
               </div>
 
               <div>
-                <h3 className="text-xl font-semibold mb-2">🏢 Corporate & Finance</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faBuilding} className="inline" /> Corporate & Finance</h3>
                 <p className="text-sm mb-2">
                   <strong>Style:</strong> Professionnel, classique, couleurs corporate (bleu, vert, gris)
                 </p>
@@ -416,7 +418,7 @@ export default function LinkedInBannerGeneratorPage() {
               </p>
 
               <div>
-                <h3 className="font-semibold text-lg mb-2">🎯 Définir votre proposition de valeur unique</h3>
+                <h3 className="font-semibold text-lg mb-2"><FontAwesomeIcon icon={faBullseye} className="inline" /> Définir votre proposition de valeur unique</h3>
                 <p className="text-sm mb-2">
                   Avant de créer votre bannière, posez-vous ces questions:
                 </p>
@@ -429,7 +431,7 @@ export default function LinkedInBannerGeneratorPage() {
               </div>
 
               <div>
-                <h3 className="font-semibold text-lg mb-2">🔄 Cohérence visuelle multiplateforme</h3>
+                <h3 className="font-semibold text-lg mb-2"><FontAwesomeIcon icon={faSync} className="inline" /> Cohérence visuelle multiplateforme</h3>
                 <p className="text-sm">
                   Pour un personal branding efficace, maintenez une cohérence visuelle entre:
                 </p>
@@ -444,7 +446,7 @@ export default function LinkedInBannerGeneratorPage() {
               </div>
 
               <div>
-                <h3 className="font-semibold text-lg mb-2">📈 Mesurer l&apos;impact de votre bannière</h3>
+                <h3 className="font-semibold text-lg mb-2"><FontAwesomeIcon icon={faChartLine} className="inline" /> Mesurer l&apos;impact de votre bannière</h3>
                 <p className="text-sm mb-2">
                   Après avoir changé votre bannière, surveillez ces indicateurs sur 30 jours:
                 </p>
@@ -472,7 +474,7 @@ export default function LinkedInBannerGeneratorPage() {
               </div>
 
               <div className="bg-green-50 dark:bg-green-900/20 border-l-4 border-green-500 p-4 mt-4">
-                <h3 className="font-semibold mb-2">💡 Astuce d&apos;expert en Personal Branding</h3>
+                <h3 className="font-semibold mb-2"><FontAwesomeIcon icon={faLightbulb} className="inline" /> Astuce d&apos;expert en Personal Branding</h3>
                 <p className="text-sm">
                   Les profils LinkedIn les plus performants mettent à jour leur bannière 3-4 fois par an, 
                   en fonction des événements professionnels: promotion, lancement de projet, prise de parole 

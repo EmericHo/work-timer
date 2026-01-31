@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import RandomNameGenerator from "@/components/RandomNameGenerator";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChartBar, faCheck, faGamepad, faLaptop, faPalette, faPen, faTheaterMasks } from '@fortawesome/free-solid-svg-icons';
 
 export default function RandomNameGeneratorPage() {
   return (
@@ -88,7 +90,7 @@ export default function RandomNameGeneratorPage() {
             <h2 className="text-2xl font-bold mb-4">Cas d&apos;usage du générateur de noms</h2>
             <div className="space-y-4 text-gray-700 dark:text-gray-300">
               <div>
-                <h3 className="text-xl font-semibold mb-2">✍️ Écriture et création littéraire</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faPen} className="inline" /> Écriture et création littéraire</h3>
                 <p>
                   Les auteurs, scénaristes et romanciers utilisent ce générateur pour nommer rapidement leurs 
                   personnages. Finies les heures passées à chercher le nom parfait ! Générez des dizaines de 
@@ -96,7 +98,7 @@ export default function RandomNameGeneratorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🎮 Jeux vidéo et jeux de rôle</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faGamepad} className="inline" /> Jeux vidéo et jeux de rôle</h3>
                 <p>
                   Gamers et maîtres de jeu créent rapidement des PNJ (personnages non-joueurs), des avatars ou 
                   des personnages de campagne. Parfait pour les RPG, MMO, et jeux de rôle sur table (D&D, 
@@ -104,7 +106,7 @@ export default function RandomNameGeneratorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">💻 Tests et développement logiciel</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faLaptop} className="inline" /> Tests et développement logiciel</h3>
                 <p>
                   Les développeurs et testeurs ont besoin de données réalistes pour leurs tests. Générez 
                   rapidement des noms pour peupler des bases de données de test, créer des comptes utilisateurs 
@@ -112,7 +114,7 @@ export default function RandomNameGeneratorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🎭 Théâtre et cinéma</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faTheaterMasks} className="inline" /> Théâtre et cinéma</h3>
                 <p>
                   Scénaristes, dramaturges et réalisateurs nomment leurs personnages selon le contexte culturel 
                   et l&apos;époque de leur histoire. Un nom approprié renforce l&apos;authenticité et l&apos;immersion des 
@@ -120,7 +122,7 @@ export default function RandomNameGeneratorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🎨 Projets créatifs</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faPalette} className="inline" /> Projets créatifs</h3>
                 <p>
                   Artistes, designers et créateurs de contenu utilisent des noms fictifs pour leurs concepts, 
                   personnages illustrés, bandes dessinées, animations, et projets multimédia. Inspiration 
@@ -128,7 +130,7 @@ export default function RandomNameGeneratorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🎭 Alias et pseudonymes</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faTheaterMasks} className="inline" /> Alias et pseudonymes</h3>
                 <p>
                   Besoin d&apos;un pseudonyme pour les réseaux sociaux, un nom de plume pour publier, ou un alias 
                   artistique ? Le générateur propose des combinaisons originales que vous pouvez personnaliser 
@@ -136,7 +138,7 @@ export default function RandomNameGeneratorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">📊 Démonstrations et présentations</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faChartBar} className="inline" /> Démonstrations et présentations</h3>
                 <p>
                   Pour les présentations commerciales, tutoriels ou formations, utilisez des noms fictifs 
                   réalistes plutôt que &quot;Jean Dupont&quot; ou &quot;Test User&quot;. Cela rend vos démonstrations plus 
@@ -201,7 +203,7 @@ export default function RandomNameGeneratorPage() {
             <h2 className="text-2xl font-bold mb-4">Conseils pour choisir des noms</h2>
             <div className="space-y-3 text-gray-700 dark:text-gray-300">
               <div>
-                <h3 className="font-semibold mb-1">✅ Adaptez l&apos;origine au contexte</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faCheck} className="inline" /> Adaptez l&apos;origine au contexte</h3>
                 <p className="text-sm">
                   Choisissez l&apos;origine culturelle en fonction de votre histoire. Un roman se déroulant à Paris 
                   nécessite des noms français, un jeu médiéval-fantastique peut utiliser des noms anglais 
@@ -209,7 +211,7 @@ export default function RandomNameGeneratorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">✅ Variez les noms dans une même œuvre</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faCheck} className="inline" /> Variez les noms dans une même œuvre</h3>
                 <p className="text-sm">
                   Évitez que tous vos personnages aient des noms commençant par la même lettre ou ayant des 
                   sonorités similaires. La diversité facilite la mémorisation pour les lecteurs/joueurs et 
@@ -217,7 +219,7 @@ export default function RandomNameGeneratorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">✅ Testez la prononciation</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faCheck} className="inline" /> Testez la prononciation</h3>
                 <p className="text-sm">
                   Prononcez le nom à voix haute. Est-il facile à dire ? À retenir ? Les noms trop complexes 
                   ou imprononçables peuvent rebuter. Privilégiez des noms qui coulent naturellement, surtout 
@@ -225,7 +227,7 @@ export default function RandomNameGeneratorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">✅ Vérifiez les significations involontaires</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faCheck} className="inline" /> Vérifiez les significations involontaires</h3>
                 <p className="text-sm">
                   Avant de valider un nom, faites une recherche rapide. Certaines combinaisons peuvent avoir 
                   des significations drôles, offensantes ou inappropriées dans d&apos;autres langues. Mieux vaut 
@@ -233,7 +235,7 @@ export default function RandomNameGeneratorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">✅ Personnalisez les résultats</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faCheck} className="inline" /> Personnalisez les résultats</h3>
                 <p className="text-sm">
                   Le générateur est un point de départ. N&apos;hésitez pas à modifier légèrement un nom généré 
                   (changer une lettre, combiner deux résultats) pour créer quelque chose de vraiment unique 
@@ -241,7 +243,7 @@ export default function RandomNameGeneratorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">✅ Gardez une liste</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faCheck} className="inline" /> Gardez une liste</h3>
                 <p className="text-sm">
                   Notez les noms générés que vous aimez dans un document. Vous construirez progressivement 
                   une banque de noms pour vos futurs projets. Organisez-les par type de personnage, culture, 

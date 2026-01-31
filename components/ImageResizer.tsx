@@ -1,6 +1,8 @@
 "use client";
 
 import { useState, useRef, ChangeEvent } from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faInfoCircle } from '@fortawesome/free-solid-svg-icons';
 
 interface ImageDimensions {
   width: number;
@@ -227,7 +229,7 @@ export default function ImageResizer() {
       )}
 
       <div className="mt-6 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
-        <h3 className="font-semibold text-blue-900 dark:text-blue-300 mb-2">ℹ️ Info</h3>
+        <h3 className="font-semibold text-blue-900 dark:text-blue-300 mb-2"><FontAwesomeIcon icon={faInfoCircle} className="inline" /> Info</h3>
         <p className="text-sm text-blue-800 dark:text-blue-300">
           All processing is done in your browser using the Canvas API. Your images are never uploaded to any server.
         </p>

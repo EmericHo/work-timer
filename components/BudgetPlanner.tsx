@@ -1,6 +1,8 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBullseye, faChartBar, faChartLine, faHome, faMoneyBill, faTrash } from '@fortawesome/free-solid-svg-icons';
 
 interface BudgetItem {
   id: string;
@@ -167,7 +169,7 @@ export default function BudgetPlanner() {
   const renderCategory = (
     category: keyof BudgetData,
     title: string,
-    icon: string,
+    icon: React.ReactNode,
     color: string
   ) => (
     <div className={`bg-white dark:bg-gray-800 rounded-lg shadow p-4 border-l-4 ${color}`}>
@@ -250,22 +252,22 @@ export default function BudgetPlanner() {
           onClick={clearAllData}
           className="px-4 py-2 bg-red-600 hover:bg-red-700 text-white rounded-md transition-colors"
         >
-          🗑️ Effacer tout
+          <FontAwesomeIcon icon={faTrash} className="inline" /> Effacer tout
         </button>
       </div>
 
       {/* Budget Categories */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {renderCategory("incomes", "Revenus", "💰", "border-green-500")}
-        {renderCategory("fixedExpenses", "Dépenses Fixes", "🏠", "border-red-500")}
+        {renderCategory("incomes", "Revenus", <FontAwesomeIcon icon={faMoneyBill} className="inline" />, "border-green-500")}
+        {renderCategory("fixedExpenses", "Dépenses Fixes", <FontAwesomeIcon icon={faHome} className="inline" />, "border-red-500")}
         {renderCategory("variableExpenses", "Dépenses Variables", "🛒", "border-orange-500")}
-        {renderCategory("savingsGoals", "Objectifs d'Épargne", "🎯", "border-blue-500")}
+        {renderCategory("savingsGoals", "Objectifs d'Épargne", <FontAwesomeIcon icon={faBullseye} className="inline" />, "border-blue-500")}
       </div>
 
       {/* Summary Section */}
       <div className="bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-900 rounded-lg shadow-lg p-6">
         <h3 className="text-2xl font-bold mb-6 text-center text-gray-900 dark:text-gray-100">
-          📊 Résumé Financier
+          <FontAwesomeIcon icon={faChartBar} className="inline" /> Résumé Financier
         </h3>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-6">
@@ -362,7 +364,7 @@ export default function BudgetPlanner() {
         {totalIncome > 0 && (
           <div className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow">
             <h4 className="font-semibold mb-4 text-gray-900 dark:text-gray-100">
-              📈 Recommandations selon la règle 50/30/20
+              <FontAwesomeIcon icon={faChartLine} className="inline" /> Recommandations selon la règle 50/30/20
             </h4>
             <div className="space-y-3 text-sm">
               <div>

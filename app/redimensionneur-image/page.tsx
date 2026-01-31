@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import ImageResizer from "@/components/ImageResizer";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBriefcase, faBullseye, faChartLine, faCheck, faEnvelope, faExclamationTriangle, faFileAlt, faFilm, faGlobe, faImage, faLightbulb, faMobileAlt, faPalette, faRocket, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 
 export default function ImageResizerPage() {
   return (
@@ -100,7 +102,7 @@ export default function ImageResizerPage() {
             <h2 className="text-2xl font-bold mb-4">Cas d&apos;usage du redimensionnement d&apos;images</h2>
             <div className="space-y-4 text-gray-700 dark:text-gray-300">
               <div>
-                <h3 className="text-xl font-semibold mb-2">🌐 Optimisation web et SEO</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faGlobe} className="inline" /> Optimisation web et SEO</h3>
                 <p>
                   Les images trop grandes sont la cause n°1 de sites web lents. Google pénalise les sites lents 
                   dans son classement. En redimensionnant vos images aux dimensions réellement affichées (par 
@@ -109,7 +111,7 @@ export default function ImageResizerPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">📱 Réseaux sociaux</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faMobileAlt} className="inline" /> Réseaux sociaux</h3>
                 <p>
                   Chaque plateforme sociale a ses dimensions optimales : Instagram (1080x1080 pour carré, 
                   1080x1350 pour portrait), Facebook (1200x630 pour partages), Twitter (1200x675), LinkedIn 
@@ -118,7 +120,7 @@ export default function ImageResizerPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">📧 Emails et newsletters</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faEnvelope} className="inline" /> Emails et newsletters</h3>
                 <p>
                   Les clients email limitent souvent la taille des images. Des images trop grandes peuvent faire 
                   atterrir votre email dans les spams ou ne pas s&apos;afficher correctement. Redimensionnez à 
@@ -126,7 +128,7 @@ export default function ImageResizerPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🛍️ E-commerce</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faShoppingCart} className="inline" /> E-commerce</h3>
                 <p>
                   Les boutiques en ligne nécessitent différentes tailles d&apos;images : miniatures (200x200), images 
                   produits moyennes (800x800), zoom haute résolution (1500x1500). Optimiser chaque taille améliore 
@@ -134,7 +136,7 @@ export default function ImageResizerPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">💼 Documents professionnels</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faBriefcase} className="inline" /> Documents professionnels</h3>
                 <p>
                   Intégrer des images haute résolution dans des présentations PowerPoint, des PDFs ou des documents 
                   Word peut créer des fichiers de plusieurs centaines de Mo impossibles à envoyer par email. 
@@ -159,7 +161,7 @@ export default function ImageResizerPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">📱 Applications mobiles</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faMobileAlt} className="inline" /> Applications mobiles</h3>
                 <p>
                   Les apps mobiles doivent être légères. Des images trop grandes augmentent la taille de l&apos;APK/IPA, 
                   le temps de téléchargement depuis le store, et la consommation de mémoire. Utilisez des images 
@@ -173,13 +175,13 @@ export default function ImageResizerPage() {
             <h2 className="text-2xl font-bold mb-4">Dimensions recommandées par usage</h2>
             <div className="space-y-4 text-gray-700 dark:text-gray-300">
               <div className="border-l-4 border-blue-500 pl-4">
-                <h3 className="font-semibold text-lg mb-1">🌐 Bannières de site web</h3>
+                <h3 className="font-semibold text-lg mb-1"><FontAwesomeIcon icon={faGlobe} className="inline" /> Bannières de site web</h3>
                 <p className="text-sm">
                   Full width : 1920x600 à 1920x1080 px • Header : 1200x400 px • Slider : 1200x600 px
                 </p>
               </div>
               <div className="border-l-4 border-green-500 pl-4">
-                <h3 className="font-semibold text-lg mb-1">📝 Images de blog</h3>
+                <h3 className="font-semibold text-lg mb-1"><FontAwesomeIcon icon={faFileAlt} className="inline" /> Images de blog</h3>
                 <p className="text-sm">
                   Featured image : 1200x630 px • In-article : 800x600 px • Thumbnail : 400x300 px
                 </p>
@@ -203,7 +205,7 @@ export default function ImageResizerPage() {
                 </p>
               </div>
               <div className="border-l-4 border-yellow-500 pl-4">
-                <h3 className="font-semibold text-lg mb-1">💼 LinkedIn</h3>
+                <h3 className="font-semibold text-lg mb-1"><FontAwesomeIcon icon={faBriefcase} className="inline" /> LinkedIn</h3>
                 <p className="text-sm">
                   Post : 1200x627 px • Couverture personnelle : 1584x396 px • Couverture entreprise : 1128x191 px
                 </p>
@@ -227,7 +229,7 @@ export default function ImageResizerPage() {
             <h2 className="text-2xl font-bold mb-4">Comprendre les formats d&apos;image</h2>
             <div className="space-y-4 text-gray-700 dark:text-gray-300">
               <div>
-                <h3 className="text-xl font-semibold mb-2">🖼️ JPEG / JPG</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faImage} className="inline" /> JPEG / JPG</h3>
                 <p className="mb-2">
                   <strong>Meilleur pour :</strong> Photos, images avec beaucoup de couleurs et dégradés
                 </p>
@@ -238,7 +240,7 @@ export default function ImageResizerPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🎨 PNG</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faPalette} className="inline" /> PNG</h3>
                 <p className="mb-2">
                   <strong>Meilleur pour :</strong> Logos, icônes, graphiques avec transparence
                 </p>
@@ -249,7 +251,7 @@ export default function ImageResizerPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🚀 WebP</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faRocket} className="inline" /> WebP</h3>
                 <p className="mb-2">
                   <strong>Meilleur pour :</strong> Usage web moderne, tous types d&apos;images
                 </p>
@@ -260,7 +262,7 @@ export default function ImageResizerPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🎬 GIF</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faFilm} className="inline" /> GIF</h3>
                 <p className="mb-2">
                   <strong>Meilleur pour :</strong> Animations simples, images très basiques
                 </p>
@@ -271,7 +273,7 @@ export default function ImageResizerPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🎯 Quel format choisir ?</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faBullseye} className="inline" /> Quel format choisir ?</h3>
                 <ul className="list-disc list-inside space-y-2 text-sm ml-4">
                   <li><strong>Photos réalistes</strong> → JPEG (80-85% qualité) ou WebP</li>
                   <li><strong>Logos/icônes avec transparence</strong> → PNG ou WebP</li>
@@ -288,14 +290,14 @@ export default function ImageResizerPage() {
             <h2 className="text-2xl font-bold mb-4">Bonnes pratiques de redimensionnement</h2>
             <div className="space-y-3 text-gray-700 dark:text-gray-300">
               <div>
-                <h3 className="font-semibold mb-1">✅ Conservez les proportions (aspect ratio)</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faCheck} className="inline" /> Conservez les proportions (aspect ratio)</h3>
                 <p className="text-sm">
                   Sauf besoin spécifique, gardez toujours le ratio largeur/hauteur original pour éviter la 
                   déformation. Une photo 4:3 redimensionnée en 16:9 semblera étirée et peu professionnelle.
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">✅ Ne jamais agrandir une image</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faCheck} className="inline" /> Ne jamais agrandir une image</h3>
                 <p className="text-sm">
                   Agrandir une petite image la rend floue et pixelisée. Vous ne pouvez pas créer de détails qui 
                   n&apos;existent pas. Toujours partir d&apos;une image haute résolution et réduire. Si vous devez 
@@ -303,7 +305,7 @@ export default function ImageResizerPage() {
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">✅ Gardez l&apos;original en haute résolution</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faCheck} className="inline" /> Gardez l&apos;original en haute résolution</h3>
                 <p className="text-sm">
                   Conservez toujours une copie de l&apos;image originale non modifiée. Travaillez sur des copies pour 
                   le redimensionnement. Vous pourriez avoir besoin de l&apos;original pour d&apos;autres formats ou 
@@ -311,7 +313,7 @@ export default function ImageResizerPage() {
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">✅ Optimisez pour le contexte d&apos;utilisation</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faCheck} className="inline" /> Optimisez pour le contexte d&apos;utilisation</h3>
                 <p className="text-sm">
                   Une image de fond de site peut être à 70% de qualité, personne ne remarquera. Une photo de 
                   produit e-commerce devrait être à 85-90%. Les portraits professionnels méritent 90-95%. 
@@ -319,7 +321,7 @@ export default function ImageResizerPage() {
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">✅ Utilisez un bon algorithme de redimensionnement</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faCheck} className="inline" /> Utilisez un bon algorithme de redimensionnement</h3>
                 <p className="text-sm">
                   Les algorithmes bicubique et Lanczos produisent les meilleurs résultats lors de la réduction. 
                   Évitez le &quot;nearest neighbor&quot; qui crée des images pixelisées. Notre outil utilise 
@@ -327,14 +329,14 @@ export default function ImageResizerPage() {
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">✅ Testez sur différents appareils</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faCheck} className="inline" /> Testez sur différents appareils</h3>
                 <p className="text-sm">
                   Vérifiez le rendu de vos images redimensionnées sur desktop, tablette et mobile. Ce qui semble 
                   parfait sur un grand écran peut être trop détaillé (ou pas assez) sur un smartphone.
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">✅ Ajoutez du responsive design</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faCheck} className="inline" /> Ajoutez du responsive design</h3>
                 <p className="text-sm">
                   Utilisez les attributs srcset et sizes en HTML pour servir différentes tailles d&apos;images selon 
                   l&apos;appareil. Créez 3-4 versions de chaque image (mobile, tablette, desktop, retina) pour une 
@@ -342,14 +344,14 @@ export default function ImageResizerPage() {
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">✅ Nommez vos fichiers de manière descriptive</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faCheck} className="inline" /> Nommez vos fichiers de manière descriptive</h3>
                 <p className="text-sm">
                   Utilisez des noms comme &quot;produit-chaussure-rouge-800x600.jpg&quot; plutôt que &quot;IMG_2024.jpg&quot;. 
                   Cela aide le SEO et facilite l&apos;organisation de votre bibliothèque média.
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">⚠️ Attention au sur-compression</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faExclamationTriangle} className="inline" /> Attention au sur-compression</h3>
                 <p className="text-sm">
                   Une qualité JPEG inférieure à 60% commence à montrer des artefacts visibles (blocs, halos). 
                   Trouvez le sweet spot entre taille de fichier et qualité visuelle. Généralement 75-85% est optimal.
@@ -362,7 +364,7 @@ export default function ImageResizerPage() {
             <h2 className="text-2xl font-bold mb-4">Impact sur les performances web</h2>
             <div className="space-y-4 text-gray-700 dark:text-gray-300">
               <div>
-                <h3 className="text-xl font-semibold mb-2">📈 Les chiffres qui comptent</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faChartLine} className="inline" /> Les chiffres qui comptent</h3>
                 <ul className="list-disc list-inside space-y-2 text-sm ml-4">
                   <li>Les images représentent en moyenne <strong>50-60% du poids total</strong> d&apos;une page web</li>
                   <li>Une réduction de 1 seconde du temps de chargement peut améliorer les conversions de <strong>7%</strong></li>
@@ -373,7 +375,7 @@ export default function ImageResizerPage() {
                 </ul>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🎯 Core Web Vitals de Google</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faBullseye} className="inline" /> Core Web Vitals de Google</h3>
                 <p className="mb-2">
                   Google utilise trois métriques clés pour évaluer l&apos;expérience utilisateur (devenues facteur 
                   de classement en 2021) :
@@ -389,7 +391,7 @@ export default function ImageResizerPage() {
                 </ul>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">💡 Exemple concret</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faLightbulb} className="inline" /> Exemple concret</h3>
                 <div className="bg-gray-100 dark:bg-gray-900 p-4 rounded text-sm">
                   <p className="mb-2"><strong>Scénario :</strong> Blog avec 10 images par article</p>
                   <ul className="list-disc list-inside space-y-1 ml-4">

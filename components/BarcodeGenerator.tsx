@@ -1,6 +1,8 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faExclamationTriangle } from '@fortawesome/free-solid-svg-icons';
 
 type BarcodeFormat = "Code128" | "EAN13" | "UPC" | "Code39";
 
@@ -171,7 +173,7 @@ export default function BarcodeGenerator() {
       )}
 
       <div className="mt-6 p-4 bg-yellow-50 dark:bg-yellow-900/20 rounded-lg">
-        <h3 className="font-semibold text-yellow-900 dark:text-yellow-300 mb-2">⚠️ Validation Notes</h3>
+        <h3 className="font-semibold text-yellow-900 dark:text-yellow-300 mb-2"><FontAwesomeIcon icon={faExclamationTriangle} className="inline" /> Validation Notes</h3>
         <ul className="text-sm text-yellow-800 dark:text-yellow-300 list-disc list-inside space-y-1">
           <li>EAN13 requires exactly 13 digits</li>
           <li>UPC requires exactly 12 digits</li>

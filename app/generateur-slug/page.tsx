@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import SlugGenerator from "@/components/SlugGenerator";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBook, faChartBar, faEye, faFileAlt, faGlobe, faLink, faScissors, faSearch, faShoppingCart, faTimes } from '@fortawesome/free-solid-svg-icons';
 
 export default function SlugGeneratorPage() {
   return (
@@ -55,7 +57,7 @@ export default function SlugGeneratorPage() {
             <h2 className="text-2xl font-bold mb-4">Importance des slugs pour le SEO</h2>
             <div className="space-y-4 text-gray-700 dark:text-gray-300">
               <div>
-                <h3 className="text-xl font-semibold mb-2">🔍 Compréhension par les moteurs de recherche</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faSearch} className="inline" /> Compréhension par les moteurs de recherche</h3>
                 <p>
                   Les moteurs de recherche comme Google utilisent les slugs pour comprendre le contenu de la page. 
                   Un slug descriptif comme &quot;guide-seo-debutants&quot; indique clairement le sujet, aidant Google 
@@ -63,7 +65,7 @@ export default function SlugGeneratorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">👁️ Meilleure expérience utilisateur</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faEye} className="inline" /> Meilleure expérience utilisateur</h3>
                 <p>
                   Les URLs lisibles inspirent confiance. Les utilisateurs sont plus susceptibles de cliquer sur 
                   <code className="bg-gray-100 dark:bg-gray-700 px-2 py-1 rounded mx-1">/recettes-vegetariennes</code> 
@@ -72,7 +74,7 @@ export default function SlugGeneratorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🔗 Partage et mémorisation</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faLink} className="inline" /> Partage et mémorisation</h3>
                 <p>
                   Les URLs avec des slugs descriptifs sont plus faciles à partager sur les réseaux sociaux, par email 
                   ou verbalement. Les utilisateurs peuvent même mémoriser et retaper une URL simple comme 
@@ -80,7 +82,7 @@ export default function SlugGeneratorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">📊 Mots-clés dans l&apos;URL</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faChartBar} className="inline" /> Mots-clés dans l&apos;URL</h3>
                 <p>
                   Inclure des mots-clés pertinents dans le slug est un signal SEO positif. Si votre page parle de 
                   &quot;marketing digital&quot;, avoir ce terme dans l&apos;URL renforce la pertinence de la page 
@@ -94,7 +96,7 @@ export default function SlugGeneratorPage() {
             <h2 className="text-2xl font-bold mb-4">Meilleures pratiques pour créer des slugs</h2>
             <div className="space-y-4 text-gray-700 dark:text-gray-300">
               <div>
-                <h3 className="text-xl font-semibold mb-2">✂️ Restez concis</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faScissors} className="inline" /> Restez concis</h3>
                 <p>
                   Les slugs courts sont préférables. Visez 3-5 mots maximum. Au lieu de 
                   &quot;comment-faire-pour-creer-un-excellent-slug-optimise-seo&quot;, préférez 
@@ -118,7 +120,7 @@ export default function SlugGeneratorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">📝 Tout en minuscules</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faFileAlt} className="inline" /> Tout en minuscules</h3>
                 <p>
                   Les URLs sont sensibles à la casse sur certains serveurs. Pour éviter les problèmes de duplication 
                   et garantir la cohérence, utilisez toujours des minuscules. Notre générateur convertit 
@@ -126,7 +128,7 @@ export default function SlugGeneratorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🌍 Gérez les caractères spéciaux</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faGlobe} className="inline" /> Gérez les caractères spéciaux</h3>
                 <p>
                   Remplacez les accents (é→e, à→a) et supprimez les caractères spéciaux (&amp;, %, @, etc.). 
                   Les caractères non-ASCII peuvent causer des problèmes d&apos;encodage. Notre outil gère 
@@ -148,7 +150,7 @@ export default function SlugGeneratorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🛍️ Pages produits e-commerce</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faShoppingCart} className="inline" /> Pages produits e-commerce</h3>
                 <p>
                   Créez des URLs descriptives pour vos produits. Au lieu de &quot;/produit/12345&quot;, utilisez 
                   &quot;/chaussures-running-nike-air-max&quot;. Cela améliore le SEO et aide les clients à 
@@ -156,7 +158,7 @@ export default function SlugGeneratorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">📚 Documentation et tutoriels</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faBook} className="inline" /> Documentation et tutoriels</h3>
                 <p>
                   Organisez votre documentation avec des slugs clairs : &quot;/docs/installation-windows&quot;, 
                   &quot;/tutoriel/creer-premier-projet&quot;. Les utilisateurs peuvent naviguer et retrouver 
@@ -178,28 +180,28 @@ export default function SlugGeneratorPage() {
             <h2 className="text-2xl font-bold mb-4">Erreurs courantes à éviter</h2>
             <div className="space-y-3 text-gray-700 dark:text-gray-300">
               <div>
-                <h3 className="font-semibold mb-1">❌ Slugs trop longs</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faTimes} className="inline" /> Slugs trop longs</h3>
                 <p className="text-sm">
                   Un slug de 15 mots n&apos;est pas lisible et dilue la pertinence SEO. Limitez-vous à 3-5 mots 
                   clés qui décrivent précisément le contenu.
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">❌ Caractères spéciaux non-ASCII</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faTimes} className="inline" /> Caractères spéciaux non-ASCII</h3>
                 <p className="text-sm">
                   Évitez les émojis, symboles ou caractères accentués dans les slugs. Ils peuvent être mal encodés 
                   et créer des URLs cassées ou illisibles (%C3%A9 au lieu de é).
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">❌ Changer les slugs existants</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faTimes} className="inline" /> Changer les slugs existants</h3>
                 <p className="text-sm">
                   Modifier le slug d&apos;une page publiée casse l&apos;URL et perd le référencement acquis. Si 
                   vous devez changer un slug, mettez en place une redirection 301 depuis l&apos;ancienne URL.
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">❌ Dates dans les slugs</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faTimes} className="inline" /> Dates dans les slugs</h3>
                 <p className="text-sm">
                   Évitez d&apos;inclure l&apos;année ou la date dans le slug (sauf pour du contenu temporel). 
                   &quot;/guide-seo-2024&quot; semblera obsolète l&apos;année prochaine. Préférez &quot;/guide-seo&quot; 

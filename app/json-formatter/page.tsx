@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import JSONFormatter from "@/components/JSONFormatter";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChartBar, faCheck, faCog, faCompressAlt, faGlobe, faSearch, faTimes } from '@fortawesome/free-solid-svg-icons';
 
 export default function JSONFormatterPage() {
   return (
@@ -62,7 +64,7 @@ export default function JSONFormatterPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">✅ Valider la syntaxe</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faCheck} className="inline" /> Valider la syntaxe</h3>
                 <p>
                   L&apos;outil vérifie automatiquement que votre JSON est valide selon les spécifications. 
                   Il détecte les virgules manquantes, les accolades non fermées, les guillemets incorrects et 
@@ -70,7 +72,7 @@ export default function JSONFormatterPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🗜️ Minifier pour la production</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faCompressAlt} className="inline" /> Minifier pour la production</h3>
                 <p>
                   La minification supprime tous les espaces et sauts de ligne inutiles, réduisant la taille du 
                   fichier pour optimiser les performances réseau. Idéal avant de déployer vos configurations en 
@@ -78,7 +80,7 @@ export default function JSONFormatterPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🔍 Déboguer rapidement</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faSearch} className="inline" /> Déboguer rapidement</h3>
                 <p>
                   En formatant le JSON, vous pouvez rapidement identifier les structures de données, comprendre 
                   la hiérarchie des objets imbriqués et localiser les problèmes dans vos données.
@@ -91,7 +93,7 @@ export default function JSONFormatterPage() {
             <h2 className="text-2xl font-bold mb-4">Cas d&apos;usage courants</h2>
             <div className="space-y-4 text-gray-700 dark:text-gray-300">
               <div>
-                <h3 className="text-xl font-semibold mb-2">🌐 Développement d&apos;API</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faGlobe} className="inline" /> Développement d&apos;API</h3>
                 <p>
                   Lors du développement et du test d&apos;APIs REST, vous devez souvent inspecter et valider 
                   les réponses JSON. Notre outil permet de formatter rapidement les réponses pour les analyser 
@@ -99,7 +101,7 @@ export default function JSONFormatterPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">⚙️ Fichiers de configuration</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faCog} className="inline" /> Fichiers de configuration</h3>
                 <p>
                   De nombreuses applications modernes utilisent JSON pour la configuration (package.json, 
                   tsconfig.json, etc.). Formatter ces fichiers améliore leur maintenabilité et facilite les 
@@ -107,7 +109,7 @@ export default function JSONFormatterPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">📊 Manipulation de données</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faChartBar} className="inline" /> Manipulation de données</h3>
                 <p>
                   Lorsque vous travaillez avec des bases de données NoSQL comme MongoDB ou lors de l&apos;export 
                   de données, le JSON est omniprésent. Formatter ces données facilite leur analyse et leur 
@@ -203,7 +205,7 @@ export default function JSONFormatterPage() {
             <div className="space-y-3 text-gray-700 dark:text-gray-300">
               <div className="bg-gray-50 dark:bg-gray-900 p-3 rounded">
                 <p className="font-semibold text-red-600 dark:text-red-400">
-                  ❌ Unexpected token {`}`} in JSON
+                  <FontAwesomeIcon icon={faTimes} className="inline" /> Unexpected token {`}`} in JSON
                 </p>
                 <p className="text-sm mt-1">
                   Solution : Virgule en trop après le dernier élément d&apos;un objet ou d&apos;un tableau
@@ -211,7 +213,7 @@ export default function JSONFormatterPage() {
               </div>
               <div className="bg-gray-50 dark:bg-gray-900 p-3 rounded">
                 <p className="font-semibold text-red-600 dark:text-red-400">
-                  ❌ Unexpected token &apos; in JSON
+                  <FontAwesomeIcon icon={faTimes} className="inline" /> Unexpected token &apos; in JSON
                 </p>
                 <p className="text-sm mt-1">
                   Solution : Utilisez des guillemets doubles &quot; au lieu de guillemets simples &apos;
@@ -219,7 +221,7 @@ export default function JSONFormatterPage() {
               </div>
               <div className="bg-gray-50 dark:bg-gray-900 p-3 rounded">
                 <p className="font-semibold text-red-600 dark:text-red-400">
-                  ❌ Unexpected end of JSON input
+                  <FontAwesomeIcon icon={faTimes} className="inline" /> Unexpected end of JSON input
                 </p>
                 <p className="text-sm mt-1">
                   Solution : Accolade ou crochet non fermé quelque part dans votre JSON

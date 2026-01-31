@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import MultiplicationTable from "@/components/MultiplicationTable";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBook, faBullseye, faCalculator, faCalendar, faClock, faGamepad, faHome, faMoneyBill, faMusic, faPalette, faRunning, faStar, faStopwatch, faSync } from '@fortawesome/free-solid-svg-icons';
 
 export default function MultiplicationTablePage() {
   return (
@@ -103,7 +105,7 @@ export default function MultiplicationTablePage() {
             <h2 className="text-2xl font-bold mb-4">Méthodes efficaces pour mémoriser les tables</h2>
             <div className="space-y-4 text-gray-700 dark:text-gray-300">
               <div>
-                <h3 className="text-xl font-semibold mb-2">🎯 Commencez par les tables faciles</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faBullseye} className="inline" /> Commencez par les tables faciles</h3>
                 <p className="mb-2">
                   Créez une base solide avec les tables les plus simples :
                 </p>
@@ -119,7 +121,7 @@ export default function MultiplicationTablePage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🔄 Utilisez la commutativité</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faSync} className="inline" /> Utilisez la commutativité</h3>
                 <p>
                   Propriété magique : 3×7 = 7×3. Cela réduit de moitié le nombre de multiplications à mémoriser ! 
                   Si vous connaissez 4×8=32, vous connaissez automatiquement 8×4=32. Au lieu de mémoriser 100 
@@ -127,7 +129,7 @@ export default function MultiplicationTablePage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🎵 Utilisez des comptines et rythmes</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faMusic} className="inline" /> Utilisez des comptines et rythmes</h3>
                 <p className="mb-2">
                   Le cerveau retient mieux l&apos;information rythmée et musicale. Créez des comptines :
                 </p>
@@ -150,7 +152,7 @@ export default function MultiplicationTablePage() {
                 </ol>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🧮 Décomposez les nombres</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faCalculator} className="inline" /> Décomposez les nombres</h3>
                 <p className="mb-2">
                   Si 7×8 est difficile, décomposez :
                 </p>
@@ -163,7 +165,7 @@ export default function MultiplicationTablePage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🎨 Visualisation et associations</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faPalette} className="inline" /> Visualisation et associations</h3>
                 <p>
                   Créez des images mentales : 8×8=64 ressemble à un échiquier (8×8 cases). 6×6=36 : deux chiffres 
                   pairs consécutifs descendant (6 puis 3, 6 puis 6 = 36). 7×7=49 : deux sept côte à côte ressemblent 
@@ -171,7 +173,7 @@ export default function MultiplicationTablePage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">⏱️ Pratique espacée et répétition</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faStopwatch} className="inline" /> Pratique espacée et répétition</h3>
                 <p>
                   La mémorisation à long terme nécessite de la répétition espacée. Pratiquez 10-15 minutes par 
                   jour plutôt que 2 heures une fois par semaine. Revoyez les tables apprises après 1 jour, 3 jours, 
@@ -254,7 +256,7 @@ export default function MultiplicationTablePage() {
             <h2 className="text-2xl font-bold mb-4">Programme d&apos;apprentissage progressif (4 semaines)</h2>
             <div className="space-y-4 text-gray-700 dark:text-gray-300">
               <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded">
-                <h3 className="text-xl font-semibold mb-2">📅 Semaine 1 : Les bases</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faCalendar} className="inline" /> Semaine 1 : Les bases</h3>
                 <ul className="list-disc list-inside space-y-1 text-sm ml-4">
                   <li><strong>Jour 1-2</strong> : Tables de 0, 1, 10 (très faciles, boost de confiance)</li>
                   <li><strong>Jour 3-4</strong> : Table de 2 (doubler, addition répétée)</li>
@@ -264,7 +266,7 @@ export default function MultiplicationTablePage() {
                 <p className="text-sm mt-2 italic">Objectif : 100% de bonnes réponses en moins de 3 secondes par question</p>
               </div>
               <div className="bg-green-50 dark:bg-green-900/20 p-4 rounded">
-                <h3 className="text-xl font-semibold mb-2">📅 Semaine 2 : Progression</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faCalendar} className="inline" /> Semaine 2 : Progression</h3>
                 <ul className="list-disc list-inside space-y-1 text-sm ml-4">
                   <li><strong>Jour 1-2</strong> : Table de 3 (introduction des nombres impairs)</li>
                   <li><strong>Jour 3-4</strong> : Table de 4 (doubler la table de 2)</li>
@@ -274,7 +276,7 @@ export default function MultiplicationTablePage() {
                 <p className="text-sm mt-2 italic">Objectif : 90% de bonnes réponses en moins de 4 secondes</p>
               </div>
               <div className="bg-orange-50 dark:bg-orange-900/20 p-4 rounded">
-                <h3 className="text-xl font-semibold mb-2">📅 Semaine 3 : Les difficiles</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faCalendar} className="inline" /> Semaine 3 : Les difficiles</h3>
                 <ul className="list-disc list-inside space-y-1 text-sm ml-4">
                   <li><strong>Jour 1-3</strong> : Table de 7 (la plus difficile, prenez votre temps)</li>
                   <li><strong>Jour 4-5</strong> : Table de 8 (doublez 3 fois)</li>
@@ -284,7 +286,7 @@ export default function MultiplicationTablePage() {
                 <p className="text-sm mt-2 italic">Objectif : 85% de bonnes réponses, se concentrer sur les erreurs récurrentes</p>
               </div>
               <div className="bg-purple-50 dark:bg-purple-900/20 p-4 rounded">
-                <h3 className="text-xl font-semibold mb-2">📅 Semaine 4 : Maîtrise et rapidité</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faCalendar} className="inline" /> Semaine 4 : Maîtrise et rapidité</h3>
                 <ul className="list-disc list-inside space-y-1 text-sm ml-4">
                   <li><strong>Jour 1-2</strong> : Quiz mélangés toutes tables, identifier les faiblesses</li>
                   <li><strong>Jour 3-4</strong> : Exercices ciblés sur les 5 multiplications les plus ratées</li>
@@ -308,7 +310,7 @@ export default function MultiplicationTablePage() {
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">🎮 Gamifiez l&apos;apprentissage</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faGamepad} className="inline" /> Gamifiez l&apos;apprentissage</h3>
                 <p className="text-sm">
                   Créez des défis, des points, des récompenses. Utilisez un tableau de progression avec autocollants. 
                   Organisez des &quot;tournois&quot; familiaux. L&apos;aspect ludique réduit le stress et augmente la 
@@ -316,7 +318,7 @@ export default function MultiplicationTablePage() {
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">🌟 Encouragez et célébrez les progrès</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faStar} className="inline" /> Encouragez et célébrez les progrès</h3>
                 <p className="text-sm">
                   Focalisez sur les progrès, pas la perfection. &quot;Tu as amélioré ton temps de 5 secondes !&quot; 
                   plutôt que &quot;Tu as encore raté 3 questions&quot;. Les erreurs sont des opportunités d&apos;apprentissage. 
@@ -324,7 +326,7 @@ export default function MultiplicationTablePage() {
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">🎯 Respectez le rythme de l&apos;enfant</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faBullseye} className="inline" /> Respectez le rythme de l&apos;enfant</h3>
                 <p className="text-sm">
                   Chaque enfant apprend différemment. Certains maîtriseront toutes les tables en 2 semaines, 
                   d&apos;autres auront besoin de 2-3 mois. C&apos;est normal. Ne comparez pas et n&apos;ajoutez pas de pression 
@@ -332,7 +334,7 @@ export default function MultiplicationTablePage() {
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">🔄 Variez les approches</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faSync} className="inline" /> Variez les approches</h3>
                 <p className="text-sm">
                   Alternez entre applications numériques, flashcards papier, jeux de société (Multiplicados, 
                   Times Tables Rock Stars), chansons, manipulation d&apos;objets concrets. Les multi-sensoriels 
@@ -340,7 +342,7 @@ export default function MultiplicationTablePage() {
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">📚 Intégrez dans le quotidien</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faBook} className="inline" /> Intégrez dans le quotidien</h3>
                 <p className="text-sm">
                   &quot;Nous achetons 4 paquets de 6 yaourts, ça fait combien ?&quot; &quot;La recette nécessite 3 œufs, 
                   si on la double ?&quot; &quot;Tu cours 8 tours de 400m, quelle distance totale ?&quot; Les applications 
@@ -348,7 +350,7 @@ export default function MultiplicationTablePage() {
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">⏰ Utilisez les temps morts</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faClock} className="inline" /> Utilisez les temps morts</h3>
                 <p className="text-sm">
                   Dans la voiture, dans la file d&apos;attente, avant le coucher : &quot;Quiz rapide ! 7×8 ?&quot; 
                   Ces micro-sessions de révision espacées sont très efficaces pour ancrer la mémoire à long terme.
@@ -385,7 +387,7 @@ export default function MultiplicationTablePage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🏃 Sport et fitness</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faRunning} className="inline" /> Sport et fitness</h3>
                 <p>
                   Course à pied : &quot;5 tours de 400m = 2000m = 2km&quot;. Musculation : &quot;4 séries de 12 répétitions = 
                   48 mouvements au total&quot;. Natation : &quot;8 longueurs de 25m = 200m&quot;. Suivre ses performances 
@@ -393,7 +395,7 @@ export default function MultiplicationTablePage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🏠 Bricolage et aménagement</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faHome} className="inline" /> Bricolage et aménagement</h3>
                 <p>
                   Calculer la surface d&apos;une pièce : 5m × 4m = 20m². Nombre de carreaux nécessaires : 
                   20m² × 10 carreaux/m² = 200 carreaux. Volume d&apos;une boîte : longueur × largeur × hauteur. 
@@ -401,7 +403,7 @@ export default function MultiplicationTablePage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">💰 Finances et économies</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faMoneyBill} className="inline" /> Finances et économies</h3>
                 <p>
                   Épargne mensuelle : &quot;50€ par mois × 12 mois = 600€ par an&quot;. Investissement : comprendre les 
                   intérêts composés nécessite de maîtriser la multiplication. Pourcentages : &quot;30% de réduction 
@@ -409,7 +411,7 @@ export default function MultiplicationTablePage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">⏱️ Temps et planification</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faStopwatch} className="inline" /> Temps et planification</h3>
                 <p>
                   &quot;Réunion de 45 minutes × 6 réunions = 270 minutes = 4h30&quot;. &quot;Film de 2h20 = 140 minutes&quot;. 
                   &quot;Trajet de 35 minutes × 2 (aller-retour) × 5 jours = 350 minutes = 5h50 par semaine&quot;. 

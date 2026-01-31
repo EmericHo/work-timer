@@ -1,6 +1,8 @@
 "use client";
 
 import { useState } from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faDice, faLightbulb, faTimes } from '@fortawesome/free-solid-svg-icons';
 
 export default function RandomNumberGenerator() {
   const [min, setMin] = useState<number>(1);
@@ -127,13 +129,13 @@ export default function RandomNumberGenerator() {
         onClick={generateNumbers}
         className="w-full px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold"
       >
-        🎲 Générer les nombres
+        <FontAwesomeIcon icon={faDice} className="inline" /> Générer les nombres
       </button>
 
       {error && (
         <div className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg p-4">
           <p className="text-red-800 dark:text-red-200 font-semibold">
-            ❌ {error}
+            <FontAwesomeIcon icon={faTimes} className="inline" /> {error}
           </p>
         </div>
       )}
@@ -169,7 +171,7 @@ export default function RandomNumberGenerator() {
 
       <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4">
         <h4 className="font-semibold mb-2 text-blue-900 dark:text-blue-100">
-          💡 Conseils d&apos;utilisation
+          <FontAwesomeIcon icon={faLightbulb} className="inline" /> Conseils d&apos;utilisation
         </h4>
         <ul className="text-sm text-blue-800 dark:text-blue-200 space-y-1">
           <li><strong>Plage:</strong> Définissez le minimum et maximum pour votre génération</li>

@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import CSSJSMinifier from "@/components/CSSJSMinifier";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBolt, faBox, faChartBar, faCloud, faCompressAlt, faGamepad, faGlobe, faLock, faMobileAlt, faMoneyBill, faSearch, faShieldAlt, faStopwatch } from '@fortawesome/free-solid-svg-icons';
 
 export default function CSSJSMinifierPage() {
   return (
@@ -98,7 +100,7 @@ export default function CSSJSMinifierPage() {
             <h2 className="text-2xl font-bold mb-4">Avantages de la minification CSS et JavaScript</h2>
             <div className="space-y-4 text-gray-700 dark:text-gray-300">
               <div>
-                <h3 className="text-xl font-semibold mb-2">⚡ Amélioration des performances</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faBolt} className="inline" /> Amélioration des performances</h3>
                 <p>
                   La réduction de la taille des fichiers CSS et JavaScript diminue le temps de téléchargement et 
                   d&apos;analyse par le navigateur. Les pages se chargent plus rapidement, offrant une expérience 
@@ -108,7 +110,7 @@ export default function CSSJSMinifierPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">💰 Économie de bande passante</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faMoneyBill} className="inline" /> Économie de bande passante</h3>
                 <p>
                   En réduisant la taille des fichiers de 50 à 70%, vous diminuez considérablement la consommation 
                   de bande passante. Pour un site recevant des millions de visites, cela se traduit par des 
@@ -118,7 +120,7 @@ export default function CSSJSMinifierPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🔍 Meilleur référencement SEO</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faSearch} className="inline" /> Meilleur référencement SEO</h3>
                 <p>
                   Google utilise la vitesse de chargement comme facteur de classement depuis 2010, et cela est 
                   devenu encore plus important avec l&apos;introduction des Core Web Vitals. Un site qui se charge 
@@ -128,7 +130,7 @@ export default function CSSJSMinifierPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🌍 Portée mondiale améliorée</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faGlobe} className="inline" /> Portée mondiale améliorée</h3>
                 <p>
                   Des fichiers plus légers signifient que votre site reste performant même pour les utilisateurs 
                   situés loin de vos serveurs ou ayant des connexions lentes. La minification aide à garantir 
@@ -137,7 +139,7 @@ export default function CSSJSMinifierPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🛡️ Protection du code source</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faShieldAlt} className="inline" /> Protection du code source</h3>
                 <p>
                   Bien que la minification ne soit pas une méthode de sécurité en soi, elle rend votre code plus 
                   difficile à lire et à comprendre pour les personnes non autorisées. Le code minifié perd sa 
@@ -152,7 +154,7 @@ export default function CSSJSMinifierPage() {
             <h2 className="text-2xl font-bold mb-4">Différences entre minification, compression et obfuscation</h2>
             <div className="space-y-4 text-gray-700 dark:text-gray-300">
               <div>
-                <h3 className="text-xl font-semibold mb-2">📦 Minification</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faBox} className="inline" /> Minification</h3>
                 <p>
                   La minification supprime les caractères inutiles (espaces, sauts de ligne, commentaires) et 
                   raccourcit les noms de variables locales. Le code reste fonctionnellement identique et peut 
@@ -160,7 +162,7 @@ export default function CSSJSMinifierPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🗜️ Compression (Gzip/Brotli)</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faCompressAlt} className="inline" /> Compression (Gzip/Brotli)</h3>
                 <p>
                   La compression se fait au niveau du serveur web et compresse les fichiers avant leur envoi. 
                   Elle complète la minification et peut réduire encore la taille de 70-90%. Les navigateurs 
@@ -169,7 +171,7 @@ export default function CSSJSMinifierPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🔒 Obfuscation</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faLock} className="inline" /> Obfuscation</h3>
                 <p>
                   L&apos;obfuscation va plus loin que la minification en rendant le code intentionnellement difficile 
                   à comprendre. Elle transforme les noms de variables et fonctions en chaînes cryptiques, ajoute 
@@ -242,7 +244,7 @@ export default function CSSJSMinifierPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">📱 Applications web progressives (PWA)</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faMobileAlt} className="inline" /> Applications web progressives (PWA)</h3>
                 <p>
                   Les PWA doivent se charger rapidement, même hors ligne. La minification des assets est 
                   essentielle pour réduire la taille du cache et permettre des installations rapides. Chaque 
@@ -260,7 +262,7 @@ export default function CSSJSMinifierPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🎮 Jeux HTML5</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faGamepad} className="inline" /> Jeux HTML5</h3>
                 <p>
                   Les jeux basés sur le web utilisent souvent des quantités importantes de JavaScript. La 
                   minification est cruciale pour réduire les temps de chargement initiaux et permettre aux 
@@ -279,7 +281,7 @@ export default function CSSJSMinifierPage() {
             </p>
             <div className="space-y-4 text-gray-700 dark:text-gray-300">
               <div>
-                <h3 className="text-xl font-semibold mb-2">⏱️ LCP (Largest Contentful Paint)</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faStopwatch} className="inline" /> LCP (Largest Contentful Paint)</h3>
                 <p>
                   Le LCP mesure le temps nécessaire pour afficher le plus grand élément visible. Des fichiers 
                   CSS minifiés se chargent et s&apos;appliquent plus rapidement, permettant un rendu plus rapide du 
@@ -287,7 +289,7 @@ export default function CSSJSMinifierPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">⚡ FID (First Input Delay)</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faBolt} className="inline" /> FID (First Input Delay)</h3>
                 <p>
                   Le FID mesure le temps entre la première interaction de l&apos;utilisateur et la réponse du 
                   navigateur. Des fichiers JavaScript minifiés se parsent plus rapidement, réduisant le temps 
@@ -295,7 +297,7 @@ export default function CSSJSMinifierPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">📊 CLS (Cumulative Layout Shift)</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faChartBar} className="inline" /> CLS (Cumulative Layout Shift)</h3>
                 <p>
                   Bien que la minification n&apos;affecte pas directement le CLS, un chargement plus rapide des 
                   fichiers CSS permet d&apos;appliquer les styles plus tôt, réduisant les changements de mise en 
@@ -379,7 +381,7 @@ export default function CSSJSMinifierPage() {
                 </ul>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">☁️ Services en ligne</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faCloud} className="inline" /> Services en ligne</h3>
                 <p>
                   Notre minificateur en ligne est parfait pour des besoins ponctuels ou pour tester rapidement 
                   la compression d&apos;un fichier. Pour une utilisation régulière en production, l&apos;intégration 

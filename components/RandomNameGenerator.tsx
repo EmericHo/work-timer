@@ -1,6 +1,8 @@
 "use client";
 
 import { useState } from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faDice, faLightbulb } from '@fortawesome/free-solid-svg-icons';
 
 const firstNames = {
   male: ["Alexandre", "Antoine", "Arthur", "Baptiste", "Benjamin", "Charles", "Clément", "Gabriel", "Hugo", "Jules", "Louis", "Lucas", "Mathis", "Nathan", "Nicolas", "Pierre", "Raphaël", "Thomas", "Théo", "Victor"],
@@ -115,7 +117,7 @@ export default function RandomNameGenerator() {
         onClick={generateNames}
         className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
       >
-        🎲 Générer des Noms
+        <FontAwesomeIcon icon={faDice} className="inline" /> Générer des Noms
       </button>
 
       {names.length > 0 && (
@@ -149,7 +151,7 @@ export default function RandomNameGenerator() {
       )}
 
       <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4">
-        <h3 className="font-semibold text-blue-900 dark:text-blue-100 mb-2">💡 Utilisations</h3>
+        <h3 className="font-semibold text-blue-900 dark:text-blue-100 mb-2"><FontAwesomeIcon icon={faLightbulb} className="inline" /> Utilisations</h3>
         <ul className="text-sm text-blue-800 dark:text-blue-200 space-y-1">
           <li>• Personnages de fiction (romans, jeux de rôle, scénarios)</li>
           <li>• Données de test pour applications et bases de données</li>

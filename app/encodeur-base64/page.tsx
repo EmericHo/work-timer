@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import Base64EncoderDecoder from "@/components/Base64EncoderDecoder";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEnvelope, faHashtag, faImage, faRulerHorizontal, faSignal } from '@fortawesome/free-solid-svg-icons';
 
 export default function Base64EncoderDecoderPage() {
   return (
@@ -56,7 +58,7 @@ export default function Base64EncoderDecoderPage() {
             <h2 className="text-2xl font-bold mb-4">Cas d&apos;usage du Base64</h2>
             <div className="space-y-4 text-gray-700 dark:text-gray-300">
               <div>
-                <h3 className="text-xl font-semibold mb-2">🖼️ Data URLs pour les images</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faImage} className="inline" /> Data URLs pour les images</h3>
                 <p>
                   Base64 permet d&apos;intégrer des images directement dans le HTML ou CSS via des data URLs. 
                   Au lieu de référencer un fichier externe, l&apos;image est encodée en Base64 et incluse 
@@ -65,7 +67,7 @@ export default function Base64EncoderDecoderPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">📧 Pièces jointes email</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faEnvelope} className="inline" /> Pièces jointes email</h3>
                 <p>
                   Les emails utilisent Base64 pour encoder les pièces jointes. Le protocole SMTP étant conçu 
                   pour le texte, Base64 permet de transmettre des fichiers binaires (images, PDFs, documents) 
@@ -81,7 +83,7 @@ export default function Base64EncoderDecoderPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">📡 Transmission de données</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faSignal} className="inline" /> Transmission de données</h3>
                 <p>
                   Dans les APIs REST et les formats de données comme JSON ou XML, Base64 est utilisé pour 
                   transmettre des données binaires de manière sûre. C&apos;est particulièrement utile quand on 
@@ -103,7 +105,7 @@ export default function Base64EncoderDecoderPage() {
             <h2 className="text-2xl font-bold mb-4">Comment fonctionne l&apos;encodage Base64 ?</h2>
             <div className="space-y-4 text-gray-700 dark:text-gray-300">
               <div>
-                <h3 className="text-xl font-semibold mb-2">🔢 Principe de conversion</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faHashtag} className="inline" /> Principe de conversion</h3>
                 <p className="mb-2">
                   L&apos;encodage Base64 fonctionne en groupant les données par paquets de 3 octets (24 bits), 
                   puis en les divisant en 4 groupes de 6 bits. Chaque groupe de 6 bits (valeur de 0 à 63) est 
@@ -115,7 +117,7 @@ export default function Base64EncoderDecoderPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">📏 Augmentation de taille</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faRulerHorizontal} className="inline" /> Augmentation de taille</h3>
                 <p>
                   L&apos;encodage Base64 augmente la taille des données d&apos;environ 33%. Des données de 3 octets 
                   deviennent 4 caractères Base64. Cette augmentation est le prix à payer pour représenter des 

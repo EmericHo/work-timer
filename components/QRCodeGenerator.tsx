@@ -3,6 +3,8 @@
 import { useState, useCallback, useEffect, useRef } from "react";
 import Image from "next/image";
 import QRCode from "qrcode";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLightbulb, faPalette } from '@fortawesome/free-solid-svg-icons';
 
 type QRSize = "small" | "medium" | "large";
 type ErrorCorrectionLevel = "L" | "M" | "Q" | "H";
@@ -206,7 +208,7 @@ export default function QRCodeGenerator() {
         onClick={resetColors}
         className="text-sm text-blue-600 dark:text-blue-400 hover:underline"
       >
-        🎨 Réinitialiser les couleurs
+        <FontAwesomeIcon icon={faPalette} className="inline" /> Réinitialiser les couleurs
       </button>
 
       {/* Hidden canvas for generation */}
@@ -249,7 +251,7 @@ export default function QRCodeGenerator() {
       {/* Info Section */}
       <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4">
         <h4 className="font-semibold mb-2 text-blue-900 dark:text-blue-100">
-          💡 Conseils pour un QR code optimal
+          <FontAwesomeIcon icon={faLightbulb} className="inline" /> Conseils pour un QR code optimal
         </h4>
         <ul className="text-sm text-blue-800 dark:text-blue-200 space-y-1">
           <li><strong>Contraste:</strong> Assurez un bon contraste entre la couleur principale et le fond</li>

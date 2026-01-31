@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import TextDiffChecker from "@/components/TextDiffChecker";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBalanceScale, faBook, faCheck, faCog, faFileAlt, faGlobe, faLaptop, faSearch } from '@fortawesome/free-solid-svg-icons';
 
 export default function TextDiffCheckerPage() {
   return (
@@ -89,7 +91,7 @@ export default function TextDiffCheckerPage() {
             <h2 className="text-2xl font-bold mb-4">Cas d&apos;usage du comparateur de texte</h2>
             <div className="space-y-4 text-gray-700 dark:text-gray-300">
               <div>
-                <h3 className="text-xl font-semibold mb-2">💻 Développement logiciel</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faLaptop} className="inline" /> Développement logiciel</h3>
                 <p>
                   Les développeurs utilisent cet outil pour comparer des versions de code source, identifier 
                   les modifications apportées lors d&apos;une mise à jour, vérifier les différences entre branches 
@@ -98,7 +100,7 @@ export default function TextDiffCheckerPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">📝 Rédaction et édition</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faFileAlt} className="inline" /> Rédaction et édition</h3>
                 <p>
                   Les rédacteurs, éditeurs et auteurs comparent différentes versions d&apos;articles, de rapports 
                   ou de manuscrits pour suivre les révisions. Identifiez rapidement ce qui a été ajouté, 
@@ -106,7 +108,7 @@ export default function TextDiffCheckerPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">⚖️ Juridique et contrats</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faBalanceScale} className="inline" /> Juridique et contrats</h3>
                 <p>
                   Les avocats et juristes utilisent ce comparateur pour analyser les modifications entre 
                   différentes versions de contrats, accords ou documents légaux. Assurez-vous qu&apos;aucun 
@@ -114,7 +116,7 @@ export default function TextDiffCheckerPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🌐 Traduction</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faGlobe} className="inline" /> Traduction</h3>
                 <p>
                   Les traducteurs comparent le texte source et la traduction côte à côte, vérifient les 
                   révisions d&apos;une traduction, ou analysent différentes versions linguistiques d&apos;un même 
@@ -122,7 +124,7 @@ export default function TextDiffCheckerPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">📚 Recherche académique</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faBook} className="inline" /> Recherche académique</h3>
                 <p>
                   Les chercheurs et universitaires comparent différentes versions d&apos;articles scientifiques, 
                   suivent les modifications suggérées par les pairs reviewers, ou analysent les variations 
@@ -130,7 +132,7 @@ export default function TextDiffCheckerPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🔍 Détection de plagiat</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faSearch} className="inline" /> Détection de plagiat</h3>
                 <p>
                   Comparez deux textes pour identifier des similitudes suspectes ou vérifier si du contenu 
                   a été copié sans attribution. Utile pour les enseignants, éditeurs et créateurs de contenu 
@@ -138,7 +140,7 @@ export default function TextDiffCheckerPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">⚙️ Configuration système</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faCog} className="inline" /> Configuration système</h3>
                 <p>
                   Les administrateurs système comparent des fichiers de configuration avant et après des 
                   modifications, vérifient les changements dans les logs système, ou analysent les 
@@ -187,7 +189,7 @@ export default function TextDiffCheckerPage() {
             <h2 className="text-2xl font-bold mb-4">Conseils pour une comparaison efficace</h2>
             <div className="space-y-3 text-gray-700 dark:text-gray-300">
               <div>
-                <h3 className="font-semibold mb-1">✅ Respectez la structure originale</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faCheck} className="inline" /> Respectez la structure originale</h3>
                 <p className="text-sm">
                   Pour une comparaison optimale, conservez la même structure de paragraphes et de sauts de 
                   ligne dans les deux textes. Les différences de formatage peuvent rendre la comparaison 
@@ -195,7 +197,7 @@ export default function TextDiffCheckerPage() {
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">✅ Nettoyez vos textes</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faCheck} className="inline" /> Nettoyez vos textes</h3>
                 <p className="text-sm">
                   Supprimez les espaces superflus, les tabulations inutiles et les caractères invisibles 
                   qui pourraient créer de fausses différences. Normalisez les sauts de ligne (LF vs CRLF) 
@@ -203,7 +205,7 @@ export default function TextDiffCheckerPage() {
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">✅ Comparez versions similaires</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faCheck} className="inline" /> Comparez versions similaires</h3>
                 <p className="text-sm">
                   Pour un résultat pertinent, comparez des versions proches du même document. Comparer deux 
                   textes complètement différents donnera un résultat où presque tout est en rouge/vert, 
@@ -211,7 +213,7 @@ export default function TextDiffCheckerPage() {
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">✅ Utilisez pour le versioning</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faCheck} className="inline" /> Utilisez pour le versioning</h3>
                 <p className="text-sm">
                   Avant de valider des modifications importantes, utilisez le comparateur pour revoir tous 
                   les changements. C&apos;est une excellente pratique pour éviter des erreurs involontaires ou 
@@ -219,7 +221,7 @@ export default function TextDiffCheckerPage() {
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">✅ Attention à la casse et la ponctuation</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faCheck} className="inline" /> Attention à la casse et la ponctuation</h3>
                 <p className="text-sm">
                   Le comparateur est sensible à la casse (majuscules/minuscules) et à la ponctuation. 
                   &quot;Bonjour&quot; et &quot;bonjour&quot; seront considérés comme différents. Soyez-en conscient lors de 
@@ -227,14 +229,14 @@ export default function TextDiffCheckerPage() {
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">✅ Sauvegardez vos résultats</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faCheck} className="inline" /> Sauvegardez vos résultats</h3>
                 <p className="text-sm">
                   Si vous devez conserver trace de la comparaison, faites une capture d&apos;écran ou copiez 
                   les textes ailleurs. L&apos;outil ne sauvegarde pas automatiquement vos comparaisons.
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">✅ Vérifiez les encodages</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faCheck} className="inline" /> Vérifiez les encodages</h3>
                 <p className="text-sm">
                   Assurez-vous que les deux textes utilisent le même encodage de caractères (UTF-8 recommandé). 
                   Des encodages différents peuvent causer des problèmes d&apos;affichage, notamment pour les 

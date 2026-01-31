@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import CompoundInterestCalculator from "@/components/CompoundInterestCalculator";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBolt, faBullseye, faChartBar, faChartLine, faClock, faHome, faMoneyBill, faRocket, faUniversity } from '@fortawesome/free-solid-svg-icons';
 
 export default function CompoundInterestCalculatorPage() {
   return (
@@ -59,7 +61,7 @@ export default function CompoundInterestCalculatorPage() {
             <h2 className="text-2xl font-bold mb-4">Intérêts composés vs. Intérêts simples</h2>
             <div className="space-y-4 text-gray-700 dark:text-gray-300">
               <div>
-                <h3 className="text-xl font-semibold mb-2">📈 Intérêts simples</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faChartLine} className="inline" /> Intérêts simples</h3>
                 <p className="mb-2">
                   Les intérêts simples ne s&apos;appliquent que sur le capital de départ. Ils croissent de manière 
                   linéaire :
@@ -72,7 +74,7 @@ export default function CompoundInterestCalculatorPage() {
                 </ul>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🚀 Intérêts composés</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faRocket} className="inline" /> Intérêts composés</h3>
                 <p className="mb-2">
                   Les intérêts composés réinvestissent automatiquement les gains. Ils croissent de manière 
                   exponentielle :
@@ -85,7 +87,7 @@ export default function CompoundInterestCalculatorPage() {
                 </ul>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">⚡ L&apos;impact du temps</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faBolt} className="inline" /> L&apos;impact du temps</h3>
                 <p className="mb-2">
                   Sur 30 ans avec les mêmes paramètres, la différence devient spectaculaire :
                 </p>
@@ -103,7 +105,7 @@ export default function CompoundInterestCalculatorPage() {
             <h2 className="text-2xl font-bold mb-4">La règle des 72 et l&apos;investissement à long terme</h2>
             <div className="space-y-4 text-gray-700 dark:text-gray-300">
               <div>
-                <h3 className="text-xl font-semibold mb-2">🎯 La règle des 72</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faBullseye} className="inline" /> La règle des 72</h3>
                 <p className="mb-2">
                   La règle des 72 est un raccourci mental pour estimer rapidement le temps nécessaire pour doubler 
                   votre capital. Divisez simplement 72 par le taux d&apos;intérêt annuel :
@@ -116,7 +118,7 @@ export default function CompoundInterestCalculatorPage() {
                 </ul>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">⏰ Commencer tôt fait toute la différence</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faClock} className="inline" /> Commencer tôt fait toute la différence</h3>
                 <p className="mb-2">
                   Comparons deux investisseurs pour illustrer l&apos;importance de commencer tôt :
                 </p>
@@ -138,7 +140,7 @@ export default function CompoundInterestCalculatorPage() {
                 </div>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">💰 L&apos;importance des versements réguliers</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faMoneyBill} className="inline" /> L&apos;importance des versements réguliers</h3>
                 <p className="mb-2">
                   Les versements périodiques (mensuel, annuel) amplifient considérablement l&apos;effet des 
                   intérêts composés :
@@ -157,7 +159,7 @@ export default function CompoundInterestCalculatorPage() {
             <h2 className="text-2xl font-bold mb-4">Où bénéficier des intérêts composés ?</h2>
             <div className="space-y-3 text-gray-700 dark:text-gray-300">
               <div>
-                <h3 className="font-semibold mb-1">📊 Actions et ETF (Trackers boursiers)</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faChartBar} className="inline" /> Actions et ETF (Trackers boursiers)</h3>
                 <p className="text-sm mb-1">
                   La bourse offre historiquement les meilleurs rendements à long terme (moyenne de 8-10% annuels). 
                   Les dividendes réinvestis automatiquement créent un effet composé puissant. Les ETF comme le 
@@ -165,7 +167,7 @@ export default function CompoundInterestCalculatorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">🏦 Assurance-vie et PEA</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faUniversity} className="inline" /> Assurance-vie et PEA</h3>
                 <p className="text-sm mb-1">
                   En France, ces enveloppes fiscales permettent de bénéficier de l&apos;effet composé avec une 
                   fiscalité avantageuse après 8 ans pour l&apos;assurance-vie. Les frais doivent être minimisés 
@@ -173,7 +175,7 @@ export default function CompoundInterestCalculatorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">🏠 Immobilier locatif</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faHome} className="inline" /> Immobilier locatif</h3>
                 <p className="text-sm mb-1">
                   Les loyers réinvestis dans de nouveaux biens créent un effet de levier et de composition. 
                   L&apos;emprunt bancaire amplifie les rendements (effet de levier) mais augmente aussi les risques. 

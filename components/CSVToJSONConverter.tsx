@@ -1,6 +1,8 @@
 "use client";
 
 import { useState, useRef } from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLightbulb, faSync, faTimes } from '@fortawesome/free-solid-svg-icons';
 
 export default function CSVToJSONConverter() {
   const [csvInput, setCsvInput] = useState<string>("");
@@ -174,13 +176,13 @@ export default function CSVToJSONConverter() {
         onClick={handleConvert}
         className="w-full px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold"
       >
-        🔄 Convertir en JSON
+        <FontAwesomeIcon icon={faSync} className="inline" /> Convertir en JSON
       </button>
 
       {error && (
         <div className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg p-4">
           <p className="text-red-800 dark:text-red-200 font-semibold">
-            ❌ {error}
+            <FontAwesomeIcon icon={faTimes} className="inline" /> {error}
           </p>
         </div>
       )}
@@ -212,7 +214,7 @@ export default function CSVToJSONConverter() {
 
       <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4">
         <h4 className="font-semibold mb-2 text-blue-900 dark:text-blue-100">
-          💡 Format CSV attendu
+          <FontAwesomeIcon icon={faLightbulb} className="inline" /> Format CSV attendu
         </h4>
         <ul className="text-sm text-blue-800 dark:text-blue-200 space-y-1">
           <li><strong>Première ligne:</strong> En-têtes des colonnes (séparés par des virgules)</li>

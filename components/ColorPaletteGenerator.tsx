@@ -1,6 +1,8 @@
 "use client";
 
 import { useState } from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faImage, faLightbulb, faLock, faPalette, faSync, faUnlock } from '@fortawesome/free-solid-svg-icons';
 
 export default function ColorPaletteGenerator() {
   const [palette, setPalette] = useState<string[]>([]);
@@ -68,7 +70,7 @@ export default function ColorPaletteGenerator() {
           onClick={generatePalette}
           className="flex-1 px-6 py-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold text-lg"
         >
-          🎨 {palette.length === 0 ? "Générer une palette" : "Nouvelle palette"}
+          <FontAwesomeIcon icon={faPalette} className="inline" /> {palette.length === 0 ? "Générer une palette" : "Nouvelle palette"}
         </button>
         {palette.length > 0 && (
           <button
@@ -78,7 +80,7 @@ export default function ColorPaletteGenerator() {
             }}
             className="px-6 py-4 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors font-semibold"
           >
-            🔄
+            <FontAwesomeIcon icon={faSync} className="inline" />
           </button>
         )}
       </div>
@@ -101,7 +103,7 @@ export default function ColorPaletteGenerator() {
                     className="absolute top-2 right-2 w-8 h-8 bg-white/90 dark:bg-gray-800/90 rounded-lg flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
                     title={lockedColors[index] ? "Déverrouiller" : "Verrouiller"}
                   >
-                    {lockedColors[index] ? "🔒" : "🔓"}
+                    {lockedColors[index] ? <FontAwesomeIcon icon={faLock} className="inline" /> : <FontAwesomeIcon icon={faUnlock} className="inline" />}
                   </button>
                   {copied === index && (
                     <div className="absolute inset-0 flex items-center justify-center bg-black/50 rounded-lg text-white font-semibold">
@@ -112,7 +114,7 @@ export default function ColorPaletteGenerator() {
                 <div className="text-center">
                   <p className="font-mono text-sm font-semibold">{color}</p>
                   {lockedColors[index] && (
-                    <p className="text-xs text-gray-500 dark:text-gray-400">🔒 Verrouillé</p>
+                    <p className="text-xs text-gray-500 dark:text-gray-400"><FontAwesomeIcon icon={faLock} className="inline" /> Verrouillé</p>
                   )}
                 </div>
               </div>
@@ -141,7 +143,7 @@ export default function ColorPaletteGenerator() {
 
           <div className="bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg p-4">
             <h4 className="font-semibold mb-3 text-gray-900 dark:text-gray-100">
-              🎨 Codes couleurs
+              <FontAwesomeIcon icon={faPalette} className="inline" /> Codes couleurs
             </h4>
             <div className="space-y-2 font-mono text-sm">
               {palette.map((color, index) => (
@@ -155,7 +157,7 @@ export default function ColorPaletteGenerator() {
                       style={{ backgroundColor: color }}
                     />
                     <span className="font-semibold">{color}</span>
-                    {lockedColors[index] && <span className="text-xs">🔒</span>}
+                    {lockedColors[index] && <span className="text-xs"><FontAwesomeIcon icon={faLock} className="inline" /></span>}
                   </div>
                   <button
                     onClick={() => copyColor(color, index)}
@@ -170,7 +172,7 @@ export default function ColorPaletteGenerator() {
 
           <div className="bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg p-4">
             <h4 className="font-semibold mb-3 text-gray-900 dark:text-gray-100">
-              🖼️ Aperçu de la palette
+              <FontAwesomeIcon icon={faImage} className="inline" /> Aperçu de la palette
             </h4>
             <div className="flex h-16 rounded-lg overflow-hidden border-2 border-gray-300 dark:border-gray-600">
               {palette.map((color, index) => (
@@ -187,12 +189,12 @@ export default function ColorPaletteGenerator() {
 
       <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4">
         <h4 className="font-semibold mb-2 text-blue-900 dark:text-blue-100">
-          💡 Utilisation
+          <FontAwesomeIcon icon={faLightbulb} className="inline" /> Utilisation
         </h4>
         <ul className="text-sm text-blue-800 dark:text-blue-200 space-y-1">
           <li>Cliquez sur &quot;Générer une palette&quot; pour créer 5 couleurs aléatoires</li>
           <li>Cliquez sur une couleur pour copier son code HEX</li>
-          <li>Utilisez 🔒 pour verrouiller une couleur et la conserver lors de la régénération</li>
+          <li>Utilisez <FontAwesomeIcon icon={faLock} className="inline" /> pour verrouiller une couleur et la conserver lors de la régénération</li>
           <li>Exportez votre palette en CSS Variables ou Tailwind Config</li>
           <li>Parfait pour démarrer un projet web avec une palette harmonieuse</li>
         </ul>
@@ -200,7 +202,7 @@ export default function ColorPaletteGenerator() {
 
       <div className="bg-purple-50 dark:bg-purple-900/20 border border-purple-200 dark:border-purple-800 rounded-lg p-4">
         <h4 className="font-semibold mb-2 text-purple-900 dark:text-purple-100">
-          🎨 Conseils design
+          <FontAwesomeIcon icon={faPalette} className="inline" /> Conseils design
         </h4>
         <ul className="text-sm text-purple-800 dark:text-purple-200 space-y-1">
           <li><strong>60-30-10:</strong> Utilisez la règle 60% couleur dominante, 30% secondaire, 10% accent</li>

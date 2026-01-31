@@ -1,6 +1,8 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faExclamationTriangle, faInfoCircle } from '@fortawesome/free-solid-svg-icons';
 
 interface YearlyBreakdown {
   year: number;
@@ -162,7 +164,7 @@ export default function SCPISimulator() {
               className="ml-2 text-blue-600 dark:text-blue-400 cursor-help"
               title="Montant que vous investissez au départ dans la SCPI"
             >
-              ℹ️
+              <FontAwesomeIcon icon={faInfoCircle} className="inline" />
             </span>
           </label>
           <input
@@ -183,7 +185,7 @@ export default function SCPISimulator() {
               className="ml-2 text-blue-600 dark:text-blue-400 cursor-help"
               title="Montant que vous investissez chaque mois dans la SCPI"
             >
-              ℹ️
+              <FontAwesomeIcon icon={faInfoCircle} className="inline" />
             </span>
           </label>
           <input
@@ -204,7 +206,7 @@ export default function SCPISimulator() {
               className="ml-2 text-blue-600 dark:text-blue-400 cursor-help"
               title="Nombre d'années pendant lesquelles vous investissez"
             >
-              ℹ️
+              <FontAwesomeIcon icon={faInfoCircle} className="inline" />
             </span>
           </label>
           <input
@@ -225,7 +227,7 @@ export default function SCPISimulator() {
               className="ml-2 text-blue-600 dark:text-blue-400 cursor-help"
               title="Rendement annuel moyen attendu de la SCPI (généralement entre 4% et 6%)"
             >
-              ℹ️
+              <FontAwesomeIcon icon={faInfoCircle} className="inline" />
             </span>
           </label>
           <input
@@ -247,7 +249,7 @@ export default function SCPISimulator() {
               className="ml-2 text-blue-600 dark:text-blue-400 cursor-help"
               title="Votre taux d'imposition sur les revenus fonciers (TMI + prélèvements sociaux, environ 30% à 47%)"
             >
-              ℹ️
+              <FontAwesomeIcon icon={faInfoCircle} className="inline" />
             </span>
           </label>
           <input
@@ -413,7 +415,7 @@ export default function SCPISimulator() {
           {/* Disclaimer */}
           <div className="bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded-lg p-4">
             <p className="text-sm text-yellow-800 dark:text-yellow-200">
-              ⚠️ <strong>Avertissement :</strong> Cette simulation est fournie à titre indicatif uniquement. 
+              <FontAwesomeIcon icon={faExclamationTriangle} className="inline" /> <strong>Avertissement :</strong> Cette simulation est fournie à titre indicatif uniquement. 
               Les rendements passés ne préjugent pas des rendements futurs. Les SCPI sont des investissements 
               de long terme dont la valeur et les revenus peuvent fluctuer. Consultez un conseiller financier 
               avant de prendre toute décision d&apos;investissement.

@@ -1,6 +1,8 @@
 "use client";
 
 import { useState } from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLightbulb } from '@fortawesome/free-solid-svg-icons';
 
 interface MetaTags {
   title: string;
@@ -242,7 +244,7 @@ export default function SEOMetaTagGenerator() {
       )}
 
       <div className="mt-6 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
-        <h3 className="font-semibold text-blue-900 dark:text-blue-300 mb-2">💡 SEO Tips</h3>
+        <h3 className="font-semibold text-blue-900 dark:text-blue-300 mb-2"><FontAwesomeIcon icon={faLightbulb} className="inline" /> SEO Tips</h3>
         <ul className="text-sm text-blue-800 dark:text-blue-300 list-disc list-inside space-y-1">
           <li>Title: Keep it under 60 characters for best display in search results</li>
           <li>Description: Aim for 150-160 characters to avoid truncation</li>

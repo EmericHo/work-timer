@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import UnitConverter from "@/components/UnitConverter";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBalanceScale, faGlobe, faHardHat, faPlane, faRuler, faRulerHorizontal, faTemperatureHigh } from '@fortawesome/free-solid-svg-icons';
 
 export default function UnitConverterPage() {
   return (
@@ -55,7 +57,7 @@ export default function UnitConverterPage() {
             <h2 className="text-2xl font-bold mb-4">Types de conversions disponibles</h2>
             <div className="space-y-4 text-gray-700 dark:text-gray-300">
               <div>
-                <h3 className="text-xl font-semibold mb-2">📏 Longueur et distance</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faRulerHorizontal} className="inline" /> Longueur et distance</h3>
                 <p className="mb-2">
                   Convertissez entre mètres, kilomètres, centimètres, millimètres, miles, yards, pieds, pouces. 
                   Essentiel pour les projets de construction, l&apos;immobilier, les voyages et la navigation.
@@ -65,7 +67,7 @@ export default function UnitConverterPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">⚖️ Poids et masse</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faBalanceScale} className="inline" /> Poids et masse</h3>
                 <p className="mb-2">
                   Convertissez entre kilogrammes, grammes, tonnes, livres, onces. Utile pour la cuisine, 
                   l&apos;expédition, le fitness et les sciences.
@@ -75,7 +77,7 @@ export default function UnitConverterPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🌡️ Température</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faTemperatureHigh} className="inline" /> Température</h3>
                 <p className="mb-2">
                   Convertissez entre Celsius, Fahrenheit et Kelvin. Indispensable pour la météo, la cuisine, 
                   les sciences et les voyages internationaux.
@@ -95,7 +97,7 @@ export default function UnitConverterPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">📐 Surface</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faRuler} className="inline" /> Surface</h3>
                 <p className="mb-2">
                   Convertissez entre mètres carrés, pieds carrés, acres, hectares. Essentiel pour 
                   l&apos;immobilier, l&apos;agriculture et l&apos;aménagement du territoire.
@@ -119,7 +121,7 @@ export default function UnitConverterPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">✈️ Voyages internationaux</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faPlane} className="inline" /> Voyages internationaux</h3>
                 <p>
                   Comprendre les limitations de bagages (kg vs lbs), les distances routières (km vs miles), les 
                   températures météo (°C vs °F) et les vitesses (km/h vs mph) facilite grandement vos déplacements 
@@ -127,7 +129,7 @@ export default function UnitConverterPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🏗️ Construction et bricolage</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faHardHat} className="inline" /> Construction et bricolage</h3>
                 <p>
                   Les plans et matériaux peuvent utiliser différentes unités. Convertir précisément les mesures 
                   évite les erreurs coûteuses lors de l&apos;achat de matériaux ou de la réalisation de travaux.
@@ -155,7 +157,7 @@ export default function UnitConverterPage() {
             <h2 className="text-2xl font-bold mb-4">Système métrique vs système impérial</h2>
             <div className="space-y-4 text-gray-700 dark:text-gray-300">
               <div>
-                <h3 className="text-xl font-semibold mb-2">🌍 Système métrique (SI)</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faGlobe} className="inline" /> Système métrique (SI)</h3>
                 <p className="mb-2">
                   Utilisé par presque tous les pays du monde. Basé sur des multiples de 10, ce qui rend les 
                   conversions simples : 1 km = 1000 m, 1 kg = 1000 g. Les préfixes standards (kilo-, centi-, 

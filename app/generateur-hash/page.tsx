@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import HashGenerator from "@/components/HashGenerator";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBolt, faBullseye, faCheck, faFileAlt, faFolderOpen, faKey, faLink, faLock } from '@fortawesome/free-solid-svg-icons';
 
 export default function HashGeneratorPage() {
   return (
@@ -57,7 +59,7 @@ export default function HashGeneratorPage() {
             <h2 className="text-2xl font-bold mb-4">Cas d&apos;usage des fonctions de hachage</h2>
             <div className="space-y-4 text-gray-700 dark:text-gray-300">
               <div>
-                <h3 className="text-xl font-semibold mb-2">✅ Vérification d&apos;intégrité de fichiers</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faCheck} className="inline" /> Vérification d&apos;intégrité de fichiers</h3>
                 <p>
                   Le hash permet de vérifier qu&apos;un fichier téléchargé n&apos;a pas été corrompu ou modifié. 
                   Les sites de téléchargement fournissent souvent un hash SHA-256 du fichier : vous calculez le 
@@ -65,7 +67,7 @@ export default function HashGeneratorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🔐 Stockage sécurisé de mots de passe</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faKey} className="inline" /> Stockage sécurisé de mots de passe</h3>
                 <p>
                   Les systèmes sécurisés ne stockent jamais les mots de passe en clair, mais leur hash. Lors de 
                   la connexion, le système hashe le mot de passe saisi et le compare au hash stocké. Même en cas 
@@ -73,7 +75,7 @@ export default function HashGeneratorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">📝 Signatures numériques</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faFileAlt} className="inline" /> Signatures numériques</h3>
                 <p>
                   Dans la cryptographie asymétrique, on hashe d&apos;abord un document avant de le signer avec une 
                   clé privée. C&apos;est plus efficace que de signer tout le document, et le hash garantit que 
@@ -81,7 +83,7 @@ export default function HashGeneratorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🔗 Blockchain et cryptomonnaies</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faLink} className="inline" /> Blockchain et cryptomonnaies</h3>
                 <p>
                   Les blockchains comme Bitcoin utilisent intensivement le hashing (SHA-256). Chaque bloc contient 
                   le hash du bloc précédent, créant une chaîne immuable. Le mining consiste à trouver un hash 
@@ -89,7 +91,7 @@ export default function HashGeneratorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🗂️ Déduplication et cache</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faFolderOpen} className="inline" /> Déduplication et cache</h3>
                 <p>
                   Les systèmes de stockage utilisent des hashs pour identifier rapidement des fichiers dupliqués. 
                   Les CDN et caches web utilisent des hashs de contenu pour générer des URLs uniques et gérer 
@@ -153,7 +155,7 @@ export default function HashGeneratorPage() {
             <h2 className="text-2xl font-bold mb-4">Propriétés importantes des fonctions de hachage</h2>
             <div className="space-y-3 text-gray-700 dark:text-gray-300">
               <div>
-                <h3 className="font-semibold mb-1">🎯 Déterminisme</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faBullseye} className="inline" /> Déterminisme</h3>
                 <p className="text-sm">
                   La même entrée produit toujours le même hash. C&apos;est crucial pour la vérification d&apos;intégrité 
                   et les comparaisons. Si vous hashez &quot;hello&quot; avec SHA-256, vous obtiendrez toujours le 
@@ -161,7 +163,7 @@ export default function HashGeneratorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">⚡ Rapidité de calcul</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faBolt} className="inline" /> Rapidité de calcul</h3>
                 <p className="text-sm">
                   Les bonnes fonctions de hachage sont rapides à calculer, permettant de hasher de grandes 
                   quantités de données efficacement. C&apos;est important pour les systèmes traitant beaucoup 
@@ -169,7 +171,7 @@ export default function HashGeneratorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">🔒 Irréversibilité</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faLock} className="inline" /> Irréversibilité</h3>
                 <p className="text-sm">
                   Il doit être informatiquement infaisable de retrouver l&apos;entrée originale à partir du hash. 
                   C&apos;est ce qui rend les hashs utiles pour protéger les données sensibles comme les mots de passe.

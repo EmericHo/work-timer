@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import DiceRoller from "@/components/DiceRoller";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCrosshairs, faDice, faStar, faTheaterMasks } from '@fortawesome/free-solid-svg-icons';
 
 export default function DiceRollerPage() {
   return (
@@ -56,7 +58,7 @@ export default function DiceRollerPage() {
             <h2 className="text-2xl font-bold mb-4">Types de dés et leurs usages</h2>
             <div className="space-y-4 text-gray-700 dark:text-gray-300">
               <div>
-                <h3 className="text-xl font-semibold mb-2">🎲 D4 (Tétraèdre - 4 faces)</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faDice} className="inline" /> D4 (Tétraèdre - 4 faces)</h3>
                 <p className="mb-2">
                   Le plus petit dé, en forme de pyramide. Utilisé pour les dégâts d&apos;armes légères comme les 
                   dagues, ainsi que certains sorts de faible puissance. Sa forme unique le rend parfois difficile 
@@ -67,7 +69,7 @@ export default function DiceRollerPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🎲 D6 (Cube - 6 faces)</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faDice} className="inline" /> D6 (Cube - 6 faces)</h3>
                 <p className="mb-2">
                   Le dé classique que tout le monde connaît. En JDR, il est utilisé pour diverses armes et sorts 
                   de niveau moyen. Certains systèmes comme Shadowrun utilisent exclusivement des D6.
@@ -77,7 +79,7 @@ export default function DiceRollerPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🎲 D8 (Octaèdre - 8 faces)</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faDice} className="inline" /> D8 (Octaèdre - 8 faces)</h3>
                 <p className="mb-2">
                   Dé à 8 faces utilisé pour les armes moyennes et certains sorts. Les classes comme le clerc 
                   ou le moine utilisent souvent des dés de vie en D8.
@@ -87,7 +89,7 @@ export default function DiceRollerPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🎲 D10 (Pentagonale - 10 faces)</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faDice} className="inline" /> D10 (Pentagonale - 10 faces)</h3>
                 <p className="mb-2">
                   Utilisé pour des dégâts plus importants et comme composant du D100. Deux D10 de couleurs 
                   différentes (un pour les dizaines, un pour les unités) permettent de générer un nombre de 1 à 100.
@@ -97,7 +99,7 @@ export default function DiceRollerPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🎲 D12 (Dodécaèdre - 12 faces)</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faDice} className="inline" /> D12 (Dodécaèdre - 12 faces)</h3>
                 <p className="mb-2">
                   Rarement utilisé mais impressionnant. Principalement pour les grandes armes à deux mains et 
                   les dés de vie de barbares. Sa rareté d&apos;utilisation en fait le moins populaire du set.
@@ -107,7 +109,7 @@ export default function DiceRollerPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🎲 D20 (Icosaèdre - 20 faces)</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faDice} className="inline" /> D20 (Icosaèdre - 20 faces)</h3>
                 <p className="mb-2">
                   Le dé iconique de D&D ! Utilisé pour tous les jets d&apos;attaque, de compétence et de 
                   sauvegarde. Le cœur du système d20. Un 20 naturel est un succès critique, un 1 naturel est 
@@ -118,7 +120,7 @@ export default function DiceRollerPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🎲 D100 (Percentile - 100 valeurs)</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faDice} className="inline" /> D100 (Percentile - 100 valeurs)</h3>
                 <p className="mb-2">
                   Créé en lançant deux D10 (un pour les dizaines, un pour les unités). Utilisé pour les tables 
                   de rencontre aléatoire, les effets de magie sauvage, et tout événement nécessitant 100 
@@ -175,21 +177,21 @@ export default function DiceRollerPage() {
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">⚔️ Pathfinder</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faCrosshairs} className="inline" /> Pathfinder</h3>
                 <p className="text-sm">
                   Héritier spirituel de D&D 3.5, utilise le même système de dés. Très populaire auprès des 
                   vétérans des JDR. Pathfinder 2e a modernisé le système tout en gardant les mêmes dés.
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">🎭 Call of Cthulhu</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faTheaterMasks} className="inline" /> Call of Cthulhu</h3>
                 <p className="text-sm">
                   Utilise principalement le D100 (système percentile) pour résoudre les actions. Les compétences 
                   sont exprimées en pourcentage, et on lance un D100 pour voir si on réussit.
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">🌟 Star Wars RPG</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faStar} className="inline" /> Star Wars RPG</h3>
                 <p className="text-sm">
                   Selon la version, utilise soit le système d20 (comme D&D), soit des dés spéciaux narratifs. 
                   Les versions plus anciennes utilisaient le D6 exclusivement.

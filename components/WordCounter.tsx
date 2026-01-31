@@ -1,6 +1,8 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLightbulb, faTrash } from '@fortawesome/free-solid-svg-icons';
 
 export default function WordCounter() {
   const [text, setText] = useState<string>("");
@@ -112,13 +114,13 @@ export default function WordCounter() {
           onClick={clearText}
           className="w-full bg-red-600 hover:bg-red-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors"
         >
-          🗑️ Effacer le texte
+          <FontAwesomeIcon icon={faTrash} className="inline" /> Effacer le texte
         </button>
       )}
 
       <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4">
         <h3 className="font-semibold text-blue-900 dark:text-blue-100 mb-2">
-          💡 Informations utiles
+          <FontAwesomeIcon icon={faLightbulb} className="inline" /> Informations utiles
         </h3>
         <ul className="text-sm text-blue-800 dark:text-blue-200 space-y-1">
           <li>• Temps de lecture basé sur 200 mots/minute (lecture moyenne)</li>

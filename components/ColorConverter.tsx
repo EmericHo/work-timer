@@ -1,6 +1,8 @@
 "use client";
 
 import { useState } from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLightbulb } from '@fortawesome/free-solid-svg-icons';
 
 export default function ColorConverter() {
   const [hex, setHex] = useState<string>("#3b82f6");
@@ -265,7 +267,7 @@ export default function ColorConverter() {
 
       <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4">
         <h3 className="font-semibold text-blue-900 dark:text-blue-100 mb-2">
-          💡 Formats de couleurs
+          <FontAwesomeIcon icon={faLightbulb} className="inline" /> Formats de couleurs
         </h3>
         <ul className="text-sm text-blue-800 dark:text-blue-200 space-y-1">
           <li>• <strong>HEX</strong>: Format hexadécimal (#RRGGBB), le plus utilisé en web</li>

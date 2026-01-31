@@ -1,5 +1,7 @@
 import { Metadata } from "next";
 import Link from "next/link";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBalanceScale, faEnvelope, faLightbulb, faLock, faStopwatch } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata: Metadata = {
   title: "Contact - Timer Focus Gratuit",
@@ -49,7 +51,7 @@ export default function ContactPage() {
               
               <div className="bg-blue-50 dark:bg-blue-900/20 border-l-4 border-blue-600 p-4 sm:p-6 mb-6 rounded-r-lg">
                 <h3 className="text-xl font-semibold mb-3 text-blue-900 dark:text-blue-100">
-                  📧 Par email
+                  <FontAwesomeIcon icon={faEnvelope} className="inline" /> Par email
                 </h3>
                 <p className="text-gray-700 dark:text-gray-300 mb-3">
                   Pour nous contacter, veuillez envoyer un email à :
@@ -66,7 +68,7 @@ export default function ContactPage() {
 
               <div className="bg-gray-100 dark:bg-gray-700 p-4 sm:p-6 rounded-lg">
                 <h3 className="text-xl font-semibold mb-3">
-                  ⏱️ Délai de réponse
+                  <FontAwesomeIcon icon={faStopwatch} className="inline" /> Délai de réponse
                 </h3>
                 <p className="text-gray-700 dark:text-gray-300">
                   <strong>Délai standard :</strong> 24-48 heures ouvrées (du lundi au vendredi)
@@ -102,7 +104,7 @@ export default function ContactPage() {
 
                 <div>
                   <h3 className="text-xl font-semibold mb-2 flex items-center gap-2">
-                    <span className="text-2xl">💡</span>
+                    <span className="text-2xl"><FontAwesomeIcon icon={faLightbulb} className="inline" /></span>
                     Suggérer une amélioration ou une nouvelle fonctionnalité
                   </h3>
                   <p className="text-gray-700 dark:text-gray-300">
@@ -129,7 +131,7 @@ export default function ContactPage() {
 
                 <div>
                   <h3 className="text-xl font-semibold mb-2 flex items-center gap-2">
-                    <span className="text-2xl">🔒</span>
+                    <span className="text-2xl"><FontAwesomeIcon icon={faLock} className="inline" /></span>
                     Questions sur la confidentialité et les données
                   </h3>
                   <p className="text-gray-700 dark:text-gray-300 mb-2">
@@ -145,7 +147,7 @@ export default function ContactPage() {
 
                 <div>
                   <h3 className="text-xl font-semibold mb-2 flex items-center gap-2">
-                    <span className="text-2xl">⚖️</span>
+                    <span className="text-2xl"><FontAwesomeIcon icon={faBalanceScale} className="inline" /></span>
                     Questions juridiques ou de conformité
                   </h3>
                   <p className="text-gray-700 dark:text-gray-300 mb-2">
@@ -328,7 +330,7 @@ export default function ContactPage() {
                 Notre équipe est là pour vous aider et améliorer constamment votre expérience avec Timer Focus.
               </p>
               <p className="text-xl font-semibold text-blue-600 dark:text-blue-400">
-                📧 contact@timer-focus.com
+                <FontAwesomeIcon icon={faEnvelope} className="inline" /> contact@timer-focus.com
               </p>
               <p className="text-sm text-gray-600 dark:text-gray-400 mt-3">
                 Nous répondons généralement sous 24-48 heures ouvrées

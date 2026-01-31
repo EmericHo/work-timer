@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import ColorConverter from "@/components/ColorConverter";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBullseye, faChartBar, faDesktop, faGlobe, faLaptop, faLightbulb, faPalette } from '@fortawesome/free-solid-svg-icons';
 
 export default function ColorConverterPage() {
   return (
@@ -53,7 +55,7 @@ export default function ColorConverterPage() {
             <h2 className="text-2xl font-bold mb-4">Formats de couleur en détail</h2>
             <div className="space-y-4 text-gray-700 dark:text-gray-300">
               <div>
-                <h3 className="text-xl font-semibold mb-2">🎨 HEX (Hexadécimal)</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faPalette} className="inline" /> HEX (Hexadécimal)</h3>
                 <p className="mb-2">
                   Format le plus utilisé en CSS et HTML. Une couleur HEX commence par # suivi de 6 caractères 
                   hexadécimaux (0-9, A-F) représentant les composantes Rouge, Vert, Bleu. Exemple : #FF5733
@@ -76,7 +78,7 @@ export default function ColorConverterPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🌈 HSL (Hue Saturation Lightness)</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faPalette} className="inline" /> HSL (Hue Saturation Lightness)</h3>
                 <p className="mb-2">
                   Représente les couleurs de manière plus intuitive : Teinte (0-360°), Saturation (0-100%), 
                   Luminosité (0-100%). Exemple : hsl(9, 100%, 60%). Supporte aussi HSLA pour la transparence.
@@ -87,7 +89,7 @@ export default function ColorConverterPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">💡 HSV/HSB (Hue Saturation Value/Brightness)</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faLightbulb} className="inline" /> HSV/HSB (Hue Saturation Value/Brightness)</h3>
                 <p className="mb-2">
                   Similaire à HSL mais utilise Value/Brightness au lieu de Lightness. Populaire dans les logiciels 
                   de design comme Photoshop. Exemple : hsv(9°, 80%, 100%)
@@ -104,7 +106,7 @@ export default function ColorConverterPage() {
             <h2 className="text-2xl font-bold mb-4">Quand utiliser chaque format ?</h2>
             <div className="space-y-4 text-gray-700 dark:text-gray-300">
               <div>
-                <h3 className="text-xl font-semibold mb-2">🌐 Développement web (CSS/HTML)</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faGlobe} className="inline" /> Développement web (CSS/HTML)</h3>
                 <p>
                   <strong>HEX</strong> reste le format le plus courant et le plus compact pour le CSS. Utilisez 
                   <strong> RGB/RGBA</strong> quand vous avez besoin de transparence ou de manipulations dynamiques 
@@ -112,7 +114,7 @@ export default function ColorConverterPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🎨 Design et interfaces graphiques</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faPalette} className="inline" /> Design et interfaces graphiques</h3>
                 <p>
                   <strong>HSL et HSV</strong> sont préférés par les designers car ils permettent de raisonner 
                   intuitivement sur les couleurs. Il&apos;est facile de créer des variantes en ajustant la 
@@ -120,7 +122,7 @@ export default function ColorConverterPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">💻 Programmation et manipulation</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faLaptop} className="inline" /> Programmation et manipulation</h3>
                 <p>
                   <strong>RGB</strong> est idéal pour les calculs et manipulations de couleurs en code. Les 
                   bibliothèques de traitement d&apos;image et les algorithmes de couleur travaillent généralement 
@@ -128,7 +130,7 @@ export default function ColorConverterPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">📊 Data visualization et graphiques</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faChartBar} className="inline" /> Data visualization et graphiques</h3>
                 <p>
                   <strong>HSL</strong> facilite la génération de palettes de couleurs harmonieuses en code. Par 
                   exemple, garder la même saturation et luminosité tout en variant la teinte crée automatiquement 
@@ -142,7 +144,7 @@ export default function ColorConverterPage() {
             <h2 className="text-2xl font-bold mb-4">Conseils pour choisir les bonnes couleurs</h2>
             <div className="space-y-3 text-gray-700 dark:text-gray-300">
               <div>
-                <h3 className="font-semibold mb-1">🎯 Contraste et accessibilité</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faBullseye} className="inline" /> Contraste et accessibilité</h3>
                 <p className="text-sm">
                   Assurez-vous d&apos;un contraste suffisant entre le texte et l&apos;arrière-plan. Le WCAG recommande 
                   un ratio de contraste d&apos;au moins 4.5:1 pour le texte normal et 3:1 pour le texte large. 
@@ -150,7 +152,7 @@ export default function ColorConverterPage() {
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">🌈 Théorie des couleurs</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faPalette} className="inline" /> Théorie des couleurs</h3>
                 <p className="text-sm">
                   Utilisez la roue chromatique pour créer des palettes harmonieuses : complémentaires (opposées), 
                   analogues (adjacentes), triadiques (espacées de 120°). HSL facilite ces calculs en travaillant 
@@ -158,14 +160,14 @@ export default function ColorConverterPage() {
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">🎨 Cohérence de la palette</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faPalette} className="inline" /> Cohérence de la palette</h3>
                 <p className="text-sm">
                   Maintenez une saturation et une luminosité constantes dans votre palette pour un look cohérent. 
                   Variez principalement la teinte pour différencier les éléments tout en gardant une harmonie visuelle.
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">🖥️ Testez sur différents écrans</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faDesktop} className="inline" /> Testez sur différents écrans</h3>
                 <p className="text-sm">
                   Les couleurs peuvent apparaître différemment selon les écrans et leurs calibrations. Testez vos 
                   choix sur plusieurs appareils (desktop, mobile, tablette) et dans différentes conditions d&apos;éclairage.

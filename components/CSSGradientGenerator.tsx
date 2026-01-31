@@ -1,6 +1,8 @@
 "use client";
 
 import { useState } from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLaptop, faLightbulb, faPalette } from '@fortawesome/free-solid-svg-icons';
 
 export default function CSSGradientGenerator() {
   const [color1, setColor1] = useState<string>("#667eea");
@@ -186,7 +188,7 @@ export default function CSSGradientGenerator() {
 
       <div className="bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg p-4">
         <h4 className="font-semibold mb-3 text-gray-900 dark:text-gray-100">
-          🎨 Aperçu
+          <FontAwesomeIcon icon={faPalette} className="inline" /> Aperçu
         </h4>
         <div
           className="w-full h-48 rounded-lg border-2 border-gray-300 dark:border-gray-600"
@@ -197,7 +199,7 @@ export default function CSSGradientGenerator() {
       <div className="bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg p-4">
         <div className="flex items-center justify-between mb-3">
           <h4 className="font-semibold text-gray-900 dark:text-gray-100">
-            💻 Code CSS
+            <FontAwesomeIcon icon={faLaptop} className="inline" /> Code CSS
           </h4>
           <button
             onClick={copyToClipboard}
@@ -215,7 +217,7 @@ export default function CSSGradientGenerator() {
 
       <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4">
         <h4 className="font-semibold mb-2 text-blue-900 dark:text-blue-100">
-          💡 Utilisation
+          <FontAwesomeIcon icon={faLightbulb} className="inline" /> Utilisation
         </h4>
         <ul className="text-sm text-blue-800 dark:text-blue-200 space-y-1">
           <li>Choisissez entre dégradé linéaire ou radial</li>
@@ -228,7 +230,7 @@ export default function CSSGradientGenerator() {
 
       <div className="bg-purple-50 dark:bg-purple-900/20 border border-purple-200 dark:border-purple-800 rounded-lg p-4">
         <h4 className="font-semibold mb-2 text-purple-900 dark:text-purple-100">
-          🎨 Conseils dégradés
+          <FontAwesomeIcon icon={faPalette} className="inline" /> Conseils dégradés
         </h4>
         <ul className="text-sm text-purple-800 dark:text-purple-200 space-y-1">
           <li>Évitez les dégradés trop contrastés pour un rendu harmonieux</li>

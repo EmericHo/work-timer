@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import RandomNumberGenerator from "@/components/RandomNumberGenerator";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBullseye, faChartBar, faCheck, faDice, faExclamationTriangle, faFileAlt, faFlask, faHashtag, faKey, faPalette, faPhone } from '@fortawesome/free-solid-svg-icons';
 
 export default function RandomNumberGeneratorPage() {
   return (
@@ -56,7 +58,7 @@ export default function RandomNumberGeneratorPage() {
             <h2 className="text-2xl font-bold mb-4">Cas d&apos;usage des nombres aléatoires</h2>
             <div className="space-y-4 text-gray-700 dark:text-gray-300">
               <div>
-                <h3 className="text-xl font-semibold mb-2">🎲 Jeux et divertissement</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faDice} className="inline" /> Jeux et divertissement</h3>
                 <p>
                   Les jeux de toutes sortes nécessitent de l&apos;aléatoire : lancer de dés, distribution de cartes, 
                   spawn d&apos;ennemis dans les jeux vidéo, sélection de numéros de loterie. L&apos;aléatoire 
@@ -64,7 +66,7 @@ export default function RandomNumberGeneratorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🎯 Tirages au sort</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faBullseye} className="inline" /> Tirages au sort</h3>
                 <p>
                   Organisez des tirages au sort équitables pour des concours, giveaways ou distributions de prix. 
                   Attribuez un numéro à chaque participant et générez aléatoirement le(s) numéro(s) gagnant(s). 
@@ -72,7 +74,7 @@ export default function RandomNumberGeneratorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">📊 Statistiques et échantillonnage</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faChartBar} className="inline" /> Statistiques et échantillonnage</h3>
                 <p>
                   En recherche et statistiques, la sélection aléatoire d&apos;échantillons est cruciale pour obtenir 
                   des résultats représentatifs. Générez des nombres aléatoires pour sélectionner des participants 
@@ -80,7 +82,7 @@ export default function RandomNumberGeneratorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🧪 Tests et simulations</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faFlask} className="inline" /> Tests et simulations</h3>
                 <p>
                   Les développeurs utilisent des données aléatoires pour tester leurs applications. Créez des 
                   données de test variées, simulez différents scénarios utilisateurs, ou testez la robustesse 
@@ -88,7 +90,7 @@ export default function RandomNumberGeneratorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🎨 Art génératif et créativité</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faPalette} className="inline" /> Art génératif et créativité</h3>
                 <p>
                   Les artistes et designers utilisent l&apos;aléatoire pour créer des patterns, textures et designs 
                   uniques. L&apos;art génératif exploite le hasard pour produire des œuvres qui ne peuvent être 
@@ -127,7 +129,7 @@ export default function RandomNumberGeneratorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">📞 Sondages et enquêtes</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faPhone} className="inline" /> Sondages et enquêtes</h3>
                 <p>
                   Sélectionnez aléatoirement des numéros de téléphone ou des adresses email dans une base de 
                   données pour conduire des sondages. La sélection aléatoire élimine les biais et améliore la 
@@ -141,7 +143,7 @@ export default function RandomNumberGeneratorPage() {
             <h2 className="text-2xl font-bold mb-4">Randomisation : avantages et limites</h2>
             <div className="space-y-4 text-gray-700 dark:text-gray-300">
               <div>
-                <h3 className="text-xl font-semibold mb-2">✅ Avantages de l&apos;aléatoire</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faCheck} className="inline" /> Avantages de l&apos;aléatoire</h3>
                 <ul className="list-disc pl-6 space-y-1 text-sm mt-2">
                   <li><strong>Équité :</strong> Élimine les biais humains dans la sélection</li>
                   <li><strong>Imprévisibilité :</strong> Impossible de prédire ou manipuler les résultats</li>
@@ -151,7 +153,7 @@ export default function RandomNumberGeneratorPage() {
                 </ul>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">⚠️ Considérations importantes</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faExclamationTriangle} className="inline" /> Considérations importantes</h3>
                 <ul className="list-disc pl-6 space-y-1 text-sm mt-2">
                   <li>
                     <strong>Pseudo-aléatoire vs vraiment aléatoire :</strong> Les générateurs informatiques sont 
@@ -178,7 +180,7 @@ export default function RandomNumberGeneratorPage() {
             <h2 className="text-2xl font-bold mb-4">Conseils d&apos;utilisation</h2>
             <div className="space-y-3 text-gray-700 dark:text-gray-300">
               <div>
-                <h3 className="font-semibold mb-1">🎯 Définissez la bonne plage</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faBullseye} className="inline" /> Définissez la bonne plage</h3>
                 <p className="text-sm">
                   Réfléchissez à vos besoins réels. Pour un tirage au sort avec 50 participants, utilisez 1-50. 
                   Pour simuler un dé à 6 faces, utilisez 1-6. Une plage inappropriée peut donner des résultats 
@@ -186,7 +188,7 @@ export default function RandomNumberGeneratorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">🔢 Générez plusieurs nombres si nécessaire</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faHashtag} className="inline" /> Générez plusieurs nombres si nécessaire</h3>
                 <p className="text-sm">
                   Si vous avez besoin de sélectionner plusieurs gagnants ou créer un échantillon, générez plusieurs 
                   nombres d&apos;un coup. Notez que les doublons sont possibles - si vous voulez des nombres uniques, 
@@ -194,14 +196,14 @@ export default function RandomNumberGeneratorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">📝 Documentez le processus</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faFileAlt} className="inline" /> Documentez le processus</h3>
                 <p className="text-sm">
                   Pour des tirages au sort officiels ou des sélections importantes, documentez le processus : 
                   date, heure, plage utilisée, résultats obtenus. Cela garantit la transparence et la traçabilité.
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">🔐 Pour la sécurité, utilisez crypto.getRandomValues()</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faKey} className="inline" /> Pour la sécurité, utilisez crypto.getRandomValues()</h3>
                 <p className="text-sm">
                   Si vous générez des nombres pour la cryptographie, la sécurité ou des enjeux financiers, 
                   n&apos;utilisez pas un simple RNG. Utilisez des générateurs cryptographiquement sûrs comme 

@@ -1,6 +1,8 @@
 "use client";
 
 import { useState } from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faKey, faLightbulb } from '@fortawesome/free-solid-svg-icons';
 
 export default function HashGenerator() {
   const [input, setInput] = useState<string>("");
@@ -79,7 +81,7 @@ export default function HashGenerator() {
         onClick={generateHashes}
         className="w-full px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold"
       >
-        🔐 Générer les hashs
+        <FontAwesomeIcon icon={faKey} className="inline" /> Générer les hashs
       </button>
 
       {Object.keys(hashes).length > 0 && (
@@ -112,7 +114,7 @@ export default function HashGenerator() {
 
       <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4">
         <h4 className="font-semibold mb-2 text-blue-900 dark:text-blue-100">
-          💡 À propos des algorithmes de hachage
+          <FontAwesomeIcon icon={faLightbulb} className="inline" /> À propos des algorithmes de hachage
         </h4>
         <ul className="text-sm text-blue-800 dark:text-blue-200 space-y-1">
           <li><strong>MD5:</strong> 128 bits - Démonstration uniquement (non cryptographique)</li>

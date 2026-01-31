@@ -1,6 +1,8 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLightbulb, faTimes } from '@fortawesome/free-solid-svg-icons';
 
 export default function RegexTester() {
   const [pattern, setPattern] = useState<string>("");
@@ -177,7 +179,7 @@ export default function RegexTester() {
       {error && (
         <div className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg p-4">
           <p className="text-red-800 dark:text-red-200 font-semibold">
-            ❌ Erreur: {error}
+            <FontAwesomeIcon icon={faTimes} className="inline" /> Erreur: {error}
           </p>
         </div>
       )}
@@ -229,7 +231,7 @@ export default function RegexTester() {
 
       <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4">
         <h4 className="font-semibold mb-2 text-blue-900 dark:text-blue-100">
-          💡 Guide rapide Regex
+          <FontAwesomeIcon icon={faLightbulb} className="inline" /> Guide rapide Regex
         </h4>
         <ul className="text-sm text-blue-800 dark:text-blue-200 space-y-1">
           <li><strong>\d</strong> - Chiffre (0-9)</li>

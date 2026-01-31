@@ -1,6 +1,8 @@
 "use client";
 
 import { useState } from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLightbulb, faPlay, faStop, faVolumeUp } from '@fortawesome/free-solid-svg-icons';
 
 export default function TextToSpeech() {
   const [text, setText] = useState<string>("");
@@ -128,20 +130,20 @@ export default function TextToSpeech() {
           disabled={isPlaying}
           className="flex-1 bg-blue-600 hover:bg-blue-700 disabled:bg-gray-400 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
         >
-          {isPlaying ? "🔊 En cours..." : "▶️ Lire le Texte"}
+          {isPlaying ? <><FontAwesomeIcon icon={faVolumeUp} className="inline" /> En cours...</> : <><FontAwesomeIcon icon={faPlay} className="inline" /> Lire le Texte</>}
         </button>
         {isPlaying && (
           <button
             onClick={stop}
             className="bg-red-600 hover:bg-red-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
           >
-            ⏹️ Arrêter
+            <FontAwesomeIcon icon={faStop} className="inline" /> Arrêter
           </button>
         )}
       </div>
 
       <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4">
-        <h3 className="font-semibold text-blue-900 dark:text-blue-100 mb-2">💡 Utilisations</h3>
+        <h3 className="font-semibold text-blue-900 dark:text-blue-100 mb-2"><FontAwesomeIcon icon={faLightbulb} className="inline" /> Utilisations</h3>
         <ul className="text-sm text-blue-800 dark:text-blue-200 space-y-1">
           <li>• Accessibilité: écouter du texte pour les personnes malvoyantes</li>
           <li>• Apprentissage: pratiquer la prononciation et l&apos;écoute</li>

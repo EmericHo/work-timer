@@ -1,6 +1,8 @@
 "use client";
 
 import { useState } from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChartBar, faExclamationTriangle, faFile, faLightbulb, faSync } from '@fortawesome/free-solid-svg-icons';
 
 export default function TextRepeater() {
   const [text, setText] = useState<string>("");
@@ -135,7 +137,7 @@ export default function TextRepeater() {
         disabled={!text || !repetitions}
         className="w-full px-6 py-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold text-lg disabled:opacity-50 disabled:cursor-not-allowed"
       >
-        🔄 Générer le texte répété
+        <FontAwesomeIcon icon={faSync} className="inline" /> Générer le texte répété
       </button>
 
       {result && (
@@ -143,7 +145,7 @@ export default function TextRepeater() {
           <div className="bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg p-4">
             <div className="flex items-center justify-between mb-3">
               <h4 className="font-semibold text-gray-900 dark:text-gray-100">
-                📄 Résultat
+                <FontAwesomeIcon icon={faFile} className="inline" /> Résultat
               </h4>
               <button
                 onClick={copyToClipboard}
@@ -162,7 +164,7 @@ export default function TextRepeater() {
 
           <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4">
             <h4 className="font-semibold mb-3 text-blue-900 dark:text-blue-100">
-              📊 Statistiques
+              <FontAwesomeIcon icon={faChartBar} className="inline" /> Statistiques
             </h4>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
               <div>
@@ -204,7 +206,7 @@ export default function TextRepeater() {
 
       <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4">
         <h4 className="font-semibold mb-2 text-blue-900 dark:text-blue-100">
-          💡 Cas d&apos;usage
+          <FontAwesomeIcon icon={faLightbulb} className="inline" /> Cas d&apos;usage
         </h4>
         <ul className="text-sm text-blue-800 dark:text-blue-200 space-y-1">
           <li><strong>Tests:</strong> Générer des données de test répétitives</li>
@@ -217,7 +219,7 @@ export default function TextRepeater() {
 
       <div className="bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded-lg p-4">
         <h4 className="font-semibold mb-2 text-yellow-900 dark:text-yellow-100">
-          ⚠️ Limites
+          <FontAwesomeIcon icon={faExclamationTriangle} className="inline" /> Limites
         </h4>
         <p className="text-sm text-yellow-800 dark:text-yellow-200">
           Le nombre maximum de répétitions est limité à 1000 pour éviter les problèmes de performance du navigateur. Pour de grandes quantités de texte, utilisez plusieurs répétitions.

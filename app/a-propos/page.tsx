@@ -1,5 +1,7 @@
 import { Metadata } from "next";
 import Link from "next/link";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBriefcase, faBullseye, faHome, faLaptop, faLock, faMobileAlt } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata: Metadata = {
   title: "À Propos - Timer Focus Gratuit",
@@ -90,7 +92,7 @@ export default function AboutPage() {
               <div className="space-y-6">
                 <div>
                   <h3 className="text-xl sm:text-2xl font-semibold mb-3 flex items-center gap-2">
-                    <span className="text-2xl">🎯</span>
+                    <span className="text-2xl"><FontAwesomeIcon icon={faBullseye} className="inline" /></span>
                     Simplicité avant tout
                   </h3>
                   <p className="text-gray-700 dark:text-gray-300">
@@ -133,7 +135,7 @@ export default function AboutPage() {
 
                 <div>
                   <h3 className="text-xl sm:text-2xl font-semibold mb-3 flex items-center gap-2">
-                    <span className="text-2xl">🔒</span>
+                    <span className="text-2xl"><FontAwesomeIcon icon={faLock} className="inline" /></span>
                     Respect de Votre Vie Privée
                   </h3>
                   <p className="text-gray-700 dark:text-gray-300">
@@ -149,7 +151,7 @@ export default function AboutPage() {
 
                 <div>
                   <h3 className="text-xl sm:text-2xl font-semibold mb-3 flex items-center gap-2">
-                    <span className="text-2xl">📱</span>
+                    <span className="text-2xl"><FontAwesomeIcon icon={faMobileAlt} className="inline" /></span>
                     Accessible Partout
                   </h3>
                   <p className="text-gray-700 dark:text-gray-300">
@@ -196,7 +198,7 @@ export default function AboutPage() {
               
               <div className="space-y-6">
                 <div>
-                  <h3 className="text-xl font-semibold mb-2">👨‍💼 Professionnels et Salariés</h3>
+                  <h3 className="text-xl font-semibold mb-2">👨‍<FontAwesomeIcon icon={faBriefcase} className="inline" /> Professionnels et Salariés</h3>
                   <p className="text-gray-700 dark:text-gray-300">
                     Que vous travailliez au bureau ou en télétravail, Timer Focus vous aide à structurer vos 
                     journées, à rester concentré sur vos tâches prioritaires et à éviter les distractions. 
@@ -217,7 +219,7 @@ export default function AboutPage() {
                 </div>
 
                 <div>
-                  <h3 className="text-xl font-semibold mb-2">💼 Freelances et Entrepreneurs</h3>
+                  <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faBriefcase} className="inline" /> Freelances et Entrepreneurs</h3>
                   <p className="text-gray-700 dark:text-gray-300">
                     Gérez votre temps de manière autonome en suivant précisément le temps passé sur chaque projet 
                     client. Le chronomètre standard est parfait pour facturer vos heures avec précision. Le 
@@ -227,7 +229,7 @@ export default function AboutPage() {
                 </div>
 
                 <div>
-                  <h3 className="text-xl font-semibold mb-2">👨‍💻 Développeurs et Créatifs</h3>
+                  <h3 className="text-xl font-semibold mb-2">👨‍<FontAwesomeIcon icon={faLaptop} className="inline" /> Développeurs et Créatifs</h3>
                   <p className="text-gray-700 dark:text-gray-300">
                     Les tâches créatives et techniques nécessitent une concentration soutenue. Timer Focus vous 
                     aide à entrer et maintenir l&apos;état de flow nécessaire à la programmation, au design, à 
@@ -237,7 +239,7 @@ export default function AboutPage() {
                 </div>
 
                 <div>
-                  <h3 className="text-xl font-semibold mb-2">🏠 Télétravailleurs</h3>
+                  <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faHome} className="inline" /> Télétravailleurs</h3>
                   <p className="text-gray-700 dark:text-gray-300">
                     Le télétravail brouille souvent les frontières entre vie professionnelle et personnelle. 
                     Timer Focus vous aide à maintenir une discipline de travail saine avec des sessions structurées 

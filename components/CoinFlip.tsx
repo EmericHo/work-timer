@@ -1,6 +1,8 @@
 "use client";
 
 import { useState } from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCoins, faDice, faHashtag, faLightbulb, faSync, faTrash, faUser } from '@fortawesome/free-solid-svg-icons';
 
 interface FlipResult {
   result: "heads" | "tails";
@@ -57,12 +59,12 @@ export default function CoinFlip() {
             "💫"
           ) : currentResult === "heads" ? (
             <div className="text-center">
-              <div className="text-7xl">👤</div>
+              <div className="text-7xl"><FontAwesomeIcon icon={faUser} className="inline" /></div>
               <div className="text-lg mt-2">Face</div>
             </div>
           ) : currentResult === "tails" ? (
             <div className="text-center">
-              <div className="text-7xl">🔢</div>
+              <div className="text-7xl"><FontAwesomeIcon icon={faHashtag} className="inline" /></div>
               <div className="text-lg mt-2">Pile</div>
             </div>
           ) : (
@@ -79,14 +81,14 @@ export default function CoinFlip() {
               : "bg-blue-600 hover:bg-blue-700 text-white"
           }`}
         >
-          {isFlipping ? "🔄 Lancement..." : "🪙 Lancer la pièce"}
+          {isFlipping ? <><FontAwesomeIcon icon={faSync} className="inline" /> Lancement...</> : <><FontAwesomeIcon icon={faCoins} className="inline" /> Lancer la pièce</>}
         </button>
       </div>
 
       {history.length > 0 && (
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <div className="bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded-lg p-4 text-center">
-            <div className="text-4xl mb-2">👤</div>
+            <div className="text-4xl mb-2"><FontAwesomeIcon icon={faUser} className="inline" /></div>
             <div className="text-2xl font-bold text-yellow-900 dark:text-yellow-100">
               {stats.heads}
             </div>
@@ -96,7 +98,7 @@ export default function CoinFlip() {
           </div>
 
           <div className="bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-4 text-center">
-            <div className="text-4xl mb-2">🎲</div>
+            <div className="text-4xl mb-2"><FontAwesomeIcon icon={faDice} className="inline" /></div>
             <div className="text-2xl font-bold text-gray-900 dark:text-gray-100">
               {stats.total}
             </div>
@@ -106,7 +108,7 @@ export default function CoinFlip() {
           </div>
 
           <div className="bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-4 text-center">
-            <div className="text-4xl mb-2">🔢</div>
+            <div className="text-4xl mb-2"><FontAwesomeIcon icon={faHashtag} className="inline" /></div>
             <div className="text-2xl font-bold text-gray-900 dark:text-gray-100">
               {stats.tails}
             </div>
@@ -127,7 +129,7 @@ export default function CoinFlip() {
               onClick={clearHistory}
               className="px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors text-sm"
             >
-              🗑️ Effacer
+              <FontAwesomeIcon icon={faTrash} className="inline" /> Effacer
             </button>
           </div>
 
@@ -142,7 +144,7 @@ export default function CoinFlip() {
                 }`}
                 title={flip.timestamp.toLocaleTimeString()}
               >
-                {flip.result === "heads" ? "👤 Face" : "🔢 Pile"}
+                {flip.result === "heads" ? <><FontAwesomeIcon icon={faUser} className="inline" /> Face</> : <><FontAwesomeIcon icon={faHashtag} className="inline" /> Pile</>}
               </div>
             ))}
           </div>
@@ -151,7 +153,7 @@ export default function CoinFlip() {
 
       <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4">
         <h4 className="font-semibold mb-2 text-blue-900 dark:text-blue-100">
-          💡 À propos du pile ou face
+          <FontAwesomeIcon icon={faLightbulb} className="inline" /> À propos du pile ou face
         </h4>
         <ul className="text-sm text-blue-800 dark:text-blue-200 space-y-1">
           <li><strong>Probabilité:</strong> 50% de chances pour chaque face</li>

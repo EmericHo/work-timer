@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import SEOMetaTagGenerator from "@/components/SEOMetaTagGenerator";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBriefcase, faCheck, faGlobe, faPalette } from '@fortawesome/free-solid-svg-icons';
 
 export default function SEOMetaTagGeneratorPage() {
   return (
@@ -142,7 +144,7 @@ export default function SEOMetaTagGeneratorPage() {
             <h2 className="text-2xl font-bold mb-4">Cas d&apos;usage des balises meta</h2>
             <div className="space-y-4 text-gray-700 dark:text-gray-300">
               <div>
-                <h3 className="text-xl font-semibold mb-2">🌐 Sites web et blogs</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faGlobe} className="inline" /> Sites web et blogs</h3>
                 <p>
                   Optimisez chaque article de blog, page produit ou page de service pour les moteurs de recherche. 
                   Des balises meta bien rédigées augmentent le taux de clic depuis les résultats de recherche, 
@@ -166,14 +168,14 @@ export default function SEOMetaTagGeneratorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">💼 Sites d&apos;entreprise</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faBriefcase} className="inline" /> Sites d&apos;entreprise</h3>
                 <p>
                   Landing pages, pages de services, études de cas : chaque page B2B doit avoir des balises meta 
                   professionnelles qui communiquent clairement votre proposition de valeur et incitent à l&apos;action.
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🎨 Portfolios créatifs</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faPalette} className="inline" /> Portfolios créatifs</h3>
                 <p>
                   Les designers, photographes et artistes peuvent optimiser chaque projet pour le partage social. 
                   Des images Open Graph attrayantes garantissent que votre travail s&apos;affiche magnifiquement 
@@ -187,7 +189,7 @@ export default function SEOMetaTagGeneratorPage() {
             <h2 className="text-2xl font-bold mb-4">Meilleures pratiques SEO</h2>
             <div className="space-y-3 text-gray-700 dark:text-gray-300">
               <div>
-                <h3 className="font-semibold mb-1">✅ Respectez les longueurs optimales</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faCheck} className="inline" /> Respectez les longueurs optimales</h3>
                 <p className="text-sm">
                   Titre : 50-60 caractères (maximum 70). Meta description : 150-160 caractères (maximum 155). 
                   Au-delà, Google tronque avec &quot;...&quot;. Comptez les caractères, pas les mots. Incluez les 
@@ -195,7 +197,7 @@ export default function SEOMetaTagGeneratorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">✅ Rendez chaque titre et description unique</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faCheck} className="inline" /> Rendez chaque titre et description unique</h3>
                 <p className="text-sm">
                   Chaque page de votre site doit avoir un titre et une description uniques. Les duplicatas 
                   confondent les moteurs de recherche et diluent votre SEO. Personnalisez selon le contenu 
@@ -203,7 +205,7 @@ export default function SEOMetaTagGeneratorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">✅ Incluez vos mots-clés stratégiquement</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faCheck} className="inline" /> Incluez vos mots-clés stratégiquement</h3>
                 <p className="text-sm">
                   Placez le mot-clé principal dans le titre (idéalement au début) et la description. Mais 
                   restez naturel et lisible pour les humains. Le bourrage de mots-clés (keyword stuffing) 
@@ -211,7 +213,7 @@ export default function SEOMetaTagGeneratorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">✅ Utilisez des images optimisées</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faCheck} className="inline" /> Utilisez des images optimisées</h3>
                 <p className="text-sm">
                   Dimensions recommandées : 1200x630px pour Open Graph et Twitter. Format JPG ou PNG, taille 
                   &lt; 1MB. Incluez texte lisible si pertinent (mais pas trop). Testez avec les validateurs 
@@ -219,7 +221,7 @@ export default function SEOMetaTagGeneratorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">✅ Rédigez pour les humains, pas les robots</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faCheck} className="inline" /> Rédigez pour les humains, pas les robots</h3>
                 <p className="text-sm">
                   Vos meta descriptions doivent donner envie de cliquer. Utilisez un appel à l&apos;action, 
                   créez de la curiosité, montrez la valeur. &quot;Découvrez comment...&quot;, &quot;Obtenez...&quot;, 

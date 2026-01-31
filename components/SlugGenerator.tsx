@@ -1,6 +1,8 @@
 "use client";
 
 import { useState } from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLightbulb } from '@fortawesome/free-solid-svg-icons';
 
 export default function SlugGenerator() {
   const [input, setInput] = useState<string>("");
@@ -129,7 +131,7 @@ export default function SlugGenerator() {
 
       <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4">
         <h4 className="font-semibold mb-2 text-blue-900 dark:text-blue-100">
-          💡 Qu&apos;est-ce qu&apos;un slug URL?
+          <FontAwesomeIcon icon={faLightbulb} className="inline" /> Qu&apos;est-ce qu&apos;un slug URL?
         </h4>
         <ul className="text-sm text-blue-800 dark:text-blue-200 space-y-1">
           <li><strong>SEO-friendly:</strong> Les slugs améliorent le référencement de vos pages</li>

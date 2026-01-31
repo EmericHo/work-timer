@@ -1,6 +1,8 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChartBar, faExclamationTriangle, faLightbulb } from '@fortawesome/free-solid-svg-icons';
 
 interface TaxBracket {
   ceiling: number;
@@ -539,7 +541,7 @@ export default function TaxCalculator() {
           {/* Bracket Details */}
           {result.bracketDetails.length > 0 && (
             <div className="mt-4 pt-4 border-t border-blue-300 dark:border-blue-700">
-              <h4 className="font-semibold mb-2">📊 DÉTAIL BARÈME :</h4>
+              <h4 className="font-semibold mb-2"><FontAwesomeIcon icon={faChartBar} className="inline" /> DÉTAIL BARÈME :</h4>
               <div className="space-y-1 text-xs sm:text-sm">
                 {result.bracketDetails.map((bracket, index) => (
                   <div key={index} className="flex justify-between">
@@ -552,7 +554,7 @@ export default function TaxCalculator() {
           )}
 
           <div className="mt-4 p-3 bg-yellow-100 dark:bg-yellow-900/20 border border-yellow-400 dark:border-yellow-600 rounded text-xs sm:text-sm">
-            <p className="font-semibold">⚠️ ATTENTION :</p>
+            <p className="font-semibold"><FontAwesomeIcon icon={faExclamationTriangle} className="inline" /> ATTENTION :</p>
             <p>Calcul indicatif basé sur barèmes 2025-2026.</p>
             <p>Pour déclaration officielle : {country === "france" 
               ? <a href="https://www.impots.gouv.fr" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 underline">impots.gouv.fr</a>
@@ -643,7 +645,7 @@ export default function TaxCalculator() {
           }`}>
             <div className="text-center">
               <p className="text-lg font-bold mb-2">
-                💡 AVANTAGE : {comparisonResult.difference > 0 ? "🇱🇺 LUXEMBOURG" : comparisonResult.difference < 0 ? "🇫🇷 FRANCE" : "ÉQUIVALENT"}
+                <FontAwesomeIcon icon={faLightbulb} className="inline" /> AVANTAGE : {comparisonResult.difference > 0 ? "🇱🇺 LUXEMBOURG" : comparisonResult.difference < 0 ? "🇫🇷 FRANCE" : "ÉQUIVALENT"}
               </p>
               <p className="text-2xl font-bold">
                 {Math.abs(comparisonResult.difference).toLocaleString("fr-FR", { maximumFractionDigits: 0 })} € /an
@@ -661,7 +663,7 @@ export default function TaxCalculator() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {/* France Details */}
             <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg">
-              <h4 className="font-semibold mb-2 text-blue-600 dark:text-blue-400">📊 DÉCOMPOSITION FRANCE :</h4>
+              <h4 className="font-semibold mb-2 text-blue-600 dark:text-blue-400"><FontAwesomeIcon icon={faChartBar} className="inline" /> DÉCOMPOSITION FRANCE :</h4>
               <div className="space-y-1 text-xs sm:text-sm">
                 <p>• Cotisations 23% : {comparisonResult.france.socialContributions.toLocaleString("fr-FR", { maximumFractionDigits: 0 })} €</p>
                 <p>• Abattement 10% : {comparisonResult.france.professionalDeduction.toLocaleString("fr-FR", { maximumFractionDigits: 0 })} €</p>
@@ -673,7 +675,7 @@ export default function TaxCalculator() {
 
             {/* Luxembourg Details */}
             <div className="bg-green-50 dark:bg-green-900/20 p-4 rounded-lg">
-              <h4 className="font-semibold mb-2 text-green-600 dark:text-green-400">📊 DÉCOMPOSITION LUXEMBOURG :</h4>
+              <h4 className="font-semibold mb-2 text-green-600 dark:text-green-400"><FontAwesomeIcon icon={faChartBar} className="inline" /> DÉCOMPOSITION LUXEMBOURG :</h4>
               <div className="space-y-1 text-xs sm:text-sm">
                 <p>• Cotisations 15.75% : {comparisonResult.luxembourg.socialContributions.toLocaleString("fr-FR", { maximumFractionDigits: 0 })} €</p>
                 <p>• Classe impôt : {luxembourgClass}</p>
@@ -686,7 +688,7 @@ export default function TaxCalculator() {
 
           {/* Conseils */}
           <div className="bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-400 dark:border-yellow-600 p-4 rounded-lg">
-            <h4 className="font-semibold mb-2">💡 CONSEILS PERSONNALISÉS :</h4>
+            <h4 className="font-semibold mb-2"><FontAwesomeIcon icon={faLightbulb} className="inline" /> CONSEILS PERSONNALISÉS :</h4>
             <div className="space-y-2 text-xs sm:text-sm">
               {comparisonResult.difference > 0 && (
                 <>
@@ -711,7 +713,7 @@ export default function TaxCalculator() {
           </div>
 
           <div className="mt-4 p-3 bg-yellow-100 dark:bg-yellow-900/20 border border-yellow-400 dark:border-yellow-600 rounded text-xs sm:text-sm">
-            <p className="font-semibold">⚠️ ATTENTION :</p>
+            <p className="font-semibold"><FontAwesomeIcon icon={faExclamationTriangle} className="inline" /> ATTENTION :</p>
             <p>Calculs indicatifs basés sur barèmes 2025-2026</p>
             <p>France : <a href="https://www.impots.gouv.fr" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 underline">impots.gouv.fr</a> | Luxembourg : <a href="https://guichet.public.lu" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 underline">guichet.lu</a></p>
           </div>

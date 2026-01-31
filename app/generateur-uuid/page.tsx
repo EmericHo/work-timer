@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import UUIDGenerator from "@/components/UUIDGenerator";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faClock, faDatabase, faDice, faGlobe, faKey } from '@fortawesome/free-solid-svg-icons';
 
 export default function UUIDGeneratorPage() {
   return (
@@ -57,7 +59,7 @@ export default function UUIDGeneratorPage() {
             <h2 className="text-2xl font-bold mb-4">Différences entre UUID v1 et UUID v4</h2>
             <div className="space-y-4 text-gray-700 dark:text-gray-300">
               <div>
-                <h3 className="text-xl font-semibold mb-2">🎲 UUID v4 - Aléatoire (Recommandé)</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faDice} className="inline" /> UUID v4 - Aléatoire (Recommandé)</h3>
                 <p className="mb-2">
                   Les UUID v4 sont générés de manière purement aléatoire (ou pseudo-aléatoire). C&apos;est la 
                   version la plus couramment utilisée car elle offre plusieurs avantages :
@@ -70,7 +72,7 @@ export default function UUIDGeneratorPage() {
                 </ul>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">⏰ UUID v1 - Basé sur l&apos;horodatage</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faClock} className="inline" /> UUID v1 - Basé sur l&apos;horodatage</h3>
                 <p className="mb-2">
                   Les UUID v1 incorporent un timestamp (horodatage) et généralement l&apos;adresse MAC de la 
                   machine qui les génère. Caractéristiques :
@@ -89,7 +91,7 @@ export default function UUIDGeneratorPage() {
             <h2 className="text-2xl font-bold mb-4">Cas d&apos;usage des UUIDs</h2>
             <div className="space-y-4 text-gray-700 dark:text-gray-300">
               <div>
-                <h3 className="text-xl font-semibold mb-2">🗄️ Bases de données</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faDatabase} className="inline" /> Bases de données</h3>
                 <p>
                   Les UUIDs sont excellents comme clés primaires dans les bases de données distribuées. 
                   Contrairement aux identifiants auto-incrémentés, ils peuvent être générés côté client sans 
@@ -97,7 +99,7 @@ export default function UUIDGeneratorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🌐 APIs REST et Microservices</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faGlobe} className="inline" /> APIs REST et Microservices</h3>
                 <p>
                   Dans les architectures microservices, les UUIDs permettent de créer des identifiants uniques 
                   indépendamment entre différents services. Chaque service peut générer ses propres identifiants 
@@ -105,7 +107,7 @@ export default function UUIDGeneratorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🔐 Tokens et Sessions</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faKey} className="inline" /> Tokens et Sessions</h3>
                 <p>
                   Les UUIDs v4 sont parfaits pour générer des tokens de session, des clés API temporaires ou 
                   des identifiants de transaction sécurisés. Leur caractère aléatoire les rend impossibles à 

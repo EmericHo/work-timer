@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import CharacterNameGenerator from "@/components/CharacterNameGenerator";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBalanceScale, faBook, faBullseye, faChartBar, faDice, faFileAlt, faFilm, faGamepad, faGlobe, faPen, faSync, faTheaterMasks, faVolumeUp } from '@fortawesome/free-solid-svg-icons';
 
 export default function CharacterNameGeneratorPage() {
   return (
@@ -58,7 +60,7 @@ export default function CharacterNameGeneratorPage() {
             <h2 className="text-2xl font-bold mb-4">Comment utiliser le générateur de noms ?</h2>
             <div className="space-y-4 text-gray-700 dark:text-gray-300">
               <div>
-                <h3 className="text-xl font-semibold mb-2">📊 Choisissez le nombre de noms</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faChartBar} className="inline" /> Choisissez le nombre de noms</h3>
                 <p>
                   Définissez combien de noms vous souhaitez générer en une seule fois (de 1 à 50). 
                   Générez plusieurs options d&apos;un coup pour avoir le choix parmi différentes 
@@ -76,7 +78,7 @@ export default function CharacterNameGeneratorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🎭 Générez et copiez</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faTheaterMasks} className="inline" /> Générez et copiez</h3>
                 <p>
                   Cliquez sur le bouton &quot;Générer&quot; pour créer vos noms de personnages. Chaque nom 
                   généré affiche le prénom et le nom de famille. Vous pouvez copier chaque nom 
@@ -85,7 +87,7 @@ export default function CharacterNameGeneratorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🔄 Regénérez à volonté</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faSync} className="inline" /> Regénérez à volonté</h3>
                 <p>
                   Pas satisfait des résultats ? Cliquez simplement à nouveau sur &quot;Générer&quot; pour obtenir 
                   un tout nouveau lot de noms. Notre générateur crée des combinaisons uniques à chaque fois, 
@@ -99,7 +101,7 @@ export default function CharacterNameGeneratorPage() {
             <h2 className="text-2xl font-bold mb-4">Conseils pour créer des noms de personnages mémorables</h2>
             <div className="space-y-4 text-gray-700 dark:text-gray-300">
               <div>
-                <h3 className="text-xl font-semibold mb-2">🎯 Adaptez le nom à la personnalité</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faBullseye} className="inline" /> Adaptez le nom à la personnalité</h3>
                 <p>
                   Un nom peut suggérer des traits de caractère. Des noms courts et percutants comme 
                   &quot;Max&quot; ou &quot;Léo&quot; évoquent souvent l&apos;énergie et la dynamique, tandis que des noms 
@@ -108,7 +110,7 @@ export default function CharacterNameGeneratorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🌍 Considérez l&apos;origine culturelle</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faGlobe} className="inline" /> Considérez l&apos;origine culturelle</h3>
                 <p>
                   Le nom d&apos;un personnage devrait correspondre à ses origines culturelles et à l&apos;univers 
                   de votre histoire. Notre générateur mélange des noms français et internationaux, vous 
@@ -117,7 +119,7 @@ export default function CharacterNameGeneratorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🔊 Testez la prononciation</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faVolumeUp} className="inline" /> Testez la prononciation</h3>
                 <p>
                   Lisez le nom à voix haute pour vous assurer qu&apos;il sonne bien. Un nom qui coule 
                   naturellement à l&apos;oral sera plus facile à mémoriser pour vos lecteurs. Évitez les 
@@ -126,7 +128,7 @@ export default function CharacterNameGeneratorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">⚖️ Équilibrez l&apos;unicité et la crédibilité</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faBalanceScale} className="inline" /> Équilibrez l&apos;unicité et la crédibilité</h3>
                 <p>
                   Un bon nom de personnage trouve l&apos;équilibre entre être mémorable et être réaliste. 
                   Trop commun, et votre personnage se perd dans la foule. Trop excentrique, et il brise 
@@ -135,7 +137,7 @@ export default function CharacterNameGeneratorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">📝 Variez les premières lettres</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faFileAlt} className="inline" /> Variez les premières lettres</h3>
                 <p>
                   Si vous créez plusieurs personnages, assurez-vous qu&apos;ils ne commencent pas tous par 
                   la même lettre. Cela évite la confusion pour vos lecteurs. Générez plusieurs lots de 
@@ -150,7 +152,7 @@ export default function CharacterNameGeneratorPage() {
             <h2 className="text-2xl font-bold mb-4">Cas d&apos;usage du générateur de noms</h2>
             <div className="space-y-4 text-gray-700 dark:text-gray-300">
               <div>
-                <h3 className="text-xl font-semibold mb-2">📚 Romans et nouvelles</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faBook} className="inline" /> Romans et nouvelles</h3>
                 <p>
                   Que vous écriviez de la fiction contemporaine, historique ou fantastique, notre générateur 
                   vous aide à créer rapidement des noms réalistes pour vos personnages. Gagnez du temps sur 
@@ -159,7 +161,7 @@ export default function CharacterNameGeneratorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🎮 Jeux vidéo et développement</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faGamepad} className="inline" /> Jeux vidéo et développement</h3>
                 <p>
                   Les développeurs de jeux vidéo ont besoin de nombreux noms pour les PNJ (personnages 
                   non-joueurs), les personnages de quêtes, et même pour suggérer des noms aux joueurs. 
@@ -168,7 +170,7 @@ export default function CharacterNameGeneratorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🎲 Jeux de rôle (JDR/RPG)</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faDice} className="inline" /> Jeux de rôle (JDR/RPG)</h3>
                 <p>
                   Maîtres du jeu et joueurs de JDR comme Donjons et Dragons, Pathfinder ou autres systèmes 
                   peuvent utiliser cet outil pour créer rapidement des noms pour leurs personnages. Plus 
@@ -177,7 +179,7 @@ export default function CharacterNameGeneratorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🎬 Scénarios et scripts</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faFilm} className="inline" /> Scénarios et scripts</h3>
                 <p>
                   Scénaristes de cinéma, télévision, théâtre ou webséries peuvent utiliser notre générateur 
                   pour nommer leurs personnages de manière efficace. Un bon nom de personnage dans un 
@@ -186,7 +188,7 @@ export default function CharacterNameGeneratorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">✍️ Fanfiction et écriture créative</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faPen} className="inline" /> Fanfiction et écriture créative</h3>
                 <p>
                   Les auteurs de fanfiction et d&apos;écriture créative en ligne peuvent rapidement générer 
                   des noms pour leurs personnages originaux (OC). Que vous écriviez sur Wattpad, Archive of 
@@ -195,7 +197,7 @@ export default function CharacterNameGeneratorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🎭 Tests et prototypes</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faTheaterMasks} className="inline" /> Tests et prototypes</h3>
                 <p>
                   Designers UI/UX, développeurs web et créateurs de prototypes ont besoin de noms réalistes 
                   pour leurs maquettes et démonstrations. Plutôt que d&apos;utiliser des placeholders 

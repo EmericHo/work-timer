@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import MarkdownEditor from "@/components/MarkdownEditor";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBook, faBox, faBriefcase, faBullseye, faChartBar, faEnvelope, faFileAlt, faGlobe, faLaptop, faLink, faMobileAlt, faPalette, faPen, faRocket, faSync } from '@fortawesome/free-solid-svg-icons';
 
 export default function MarkdownEditorPage() {
   return (
@@ -98,7 +100,7 @@ export default function MarkdownEditorPage() {
             <h2 className="text-2xl font-bold mb-4">Guide de la syntaxe Markdown</h2>
             <div className="space-y-4 text-gray-700 dark:text-gray-300">
               <div>
-                <h3 className="text-xl font-semibold mb-2">📝 Titres et sous-titres</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faFileAlt} className="inline" /> Titres et sous-titres</h3>
                 <p className="mb-2">
                   Utilisez le symbole # pour créer des titres. Plus vous ajoutez de #, plus le titre est petit :
                 </p>
@@ -110,7 +112,7 @@ export default function MarkdownEditorPage() {
                 </pre>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">✍️ Formatage du texte</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faPen} className="inline" /> Formatage du texte</h3>
                 <p className="mb-2">
                   Mettez en forme votre texte avec des astérisques ou des underscores :
                 </p>
@@ -140,7 +142,7 @@ Liste ordonnée:
                 </pre>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🔗 Liens et images</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faLink} className="inline" /> Liens et images</h3>
                 <p className="mb-2">
                   Insérez des liens hypertextes et des images avec une syntaxe simple :
                 </p>
@@ -151,7 +153,7 @@ Liste ordonnée:
                 </pre>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">💻 Code</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faLaptop} className="inline" /> Code</h3>
                 <p className="mb-2">
                   Affichez du code inline ou en blocs avec coloration syntaxique :
                 </p>
@@ -167,7 +169,7 @@ function hello() {
                 </pre>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">📊 Tableaux</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faChartBar} className="inline" /> Tableaux</h3>
                 <p className="mb-2">
                   Créez des tableaux structurés avec des pipes et des tirets :
                 </p>
@@ -197,7 +199,7 @@ function hello() {
             <h2 className="text-2xl font-bold mb-4">Avantages de Markdown</h2>
             <div className="space-y-4 text-gray-700 dark:text-gray-300">
               <div>
-                <h3 className="text-xl font-semibold mb-2">🚀 Simplicité et rapidité</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faRocket} className="inline" /> Simplicité et rapidité</h3>
                 <p>
                   Markdown est incroyablement facile à apprendre. La plupart des gens peuvent maîtriser les 
                   bases en moins de 15 minutes. Une fois que vous connaissez la syntaxe, vous pouvez écrire 
@@ -206,7 +208,7 @@ function hello() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">📱 Portabilité universelle</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faMobileAlt} className="inline" /> Portabilité universelle</h3>
                 <p>
                   Les fichiers Markdown sont de simples fichiers texte qui peuvent être ouverts avec n&apos;importe 
                   quel éditeur de texte, sur n&apos;importe quelle plateforme. Contrairement aux formats 
@@ -215,7 +217,7 @@ function hello() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🔄 Conversion flexible</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faSync} className="inline" /> Conversion flexible</h3>
                 <p>
                   Markdown peut être facilement converti vers de nombreux formats : HTML pour le web, PDF pour 
                   l&apos;impression, DOCX pour Microsoft Word, EPUB pour les ebooks, et bien d&apos;autres. Des 
@@ -233,7 +235,7 @@ function hello() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🎯 Focus sur le contenu</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faBullseye} className="inline" /> Focus sur le contenu</h3>
                 <p>
                   Avec Markdown, vous vous concentrez sur le contenu et la structure plutôt que sur l&apos;apparence 
                   visuelle. La mise en forme est séparée du contenu, ce qui permet de maintenir une cohérence 
@@ -248,7 +250,7 @@ function hello() {
             <h2 className="text-2xl font-bold mb-4">Cas d&apos;usage de Markdown</h2>
             <div className="space-y-4 text-gray-700 dark:text-gray-300">
               <div>
-                <h3 className="text-xl font-semibold mb-2">📚 Documentation technique</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faBook} className="inline" /> Documentation technique</h3>
                 <p>
                   Markdown est le format de prédilection pour la documentation de logiciels. Les fichiers README, 
                   guides d&apos;installation, documentations API et wikis techniques utilisent massivement Markdown. 
@@ -258,7 +260,7 @@ function hello() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">✍️ Blogging et publication</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faPen} className="inline" /> Blogging et publication</h3>
                 <p>
                   De nombreux générateurs de sites statiques (Jekyll, Hugo, Gatsby, Next.js) utilisent Markdown 
                   pour le contenu des blogs. Vous écrivez vos articles en Markdown et le système génère 
@@ -267,7 +269,7 @@ function hello() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">📝 Prise de notes</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faFileAlt} className="inline" /> Prise de notes</h3>
                 <p>
                   Applications de notes comme Obsidian, Notion, Bear et Joplin utilisent Markdown comme format 
                   principal. Vous pouvez créer des notes structurées avec des liens internes, des listes de 
@@ -276,7 +278,7 @@ function hello() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">📧 Emails et communications</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faEnvelope} className="inline" /> Emails et communications</h3>
                 <p>
                   Certains clients email supportent Markdown, permettant d&apos;écrire des emails formatés 
                   rapidement. Des outils comme Markdown Here permettent de composer en Markdown dans Gmail ou 
@@ -300,7 +302,7 @@ function hello() {
             <h2 className="text-2xl font-bold mb-4">Extensions et variantes de Markdown</h2>
             <div className="space-y-4 text-gray-700 dark:text-gray-300">
               <div>
-                <h3 className="text-xl font-semibold mb-2">📦 GitHub Flavored Markdown (GFM)</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faBox} className="inline" /> GitHub Flavored Markdown (GFM)</h3>
                 <p>
                   GFM est une variante populaire qui ajoute des fonctionnalités utiles : tableaux, listes de 
                   tâches avec cases à cocher, rayé automatique des URLs, coloration syntaxique du code par 
@@ -308,7 +310,7 @@ function hello() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">📊 Markdown Extra</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faChartBar} className="inline" /> Markdown Extra</h3>
                 <p>
                   Markdown Extra ajoute le support pour les définitions, les notes de bas de page, les tableaux, 
                   les attributs d&apos;ID pour les titres et d&apos;autres fonctionnalités avancées. Populaire dans 
@@ -316,7 +318,7 @@ function hello() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🎨 CommonMark</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faPalette} className="inline" /> CommonMark</h3>
                 <p>
                   CommonMark est une spécification stricte de Markdown qui vise à éliminer les ambiguïtés de 
                   la spécification originale. Elle définit exactement comment chaque construction Markdown doit 
@@ -338,7 +340,7 @@ function hello() {
             <h2 className="text-2xl font-bold mb-4">Outils et ressources Markdown</h2>
             <div className="space-y-4 text-gray-700 dark:text-gray-300">
               <div>
-                <h3 className="text-xl font-semibold mb-2">💼 Éditeurs de bureau</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faBriefcase} className="inline" /> Éditeurs de bureau</h3>
                 <ul className="list-disc pl-6 space-y-1 mt-2">
                   <li><strong>Typora</strong> - Éditeur WYSIWYG élégant avec prévisualisation en direct</li>
                   <li><strong>Obsidian</strong> - Puissant pour la prise de notes avec liens et graphes</li>
@@ -347,7 +349,7 @@ function hello() {
                 </ul>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🌐 Éditeurs en ligne</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faGlobe} className="inline" /> Éditeurs en ligne</h3>
                 <ul className="list-disc pl-6 space-y-1 mt-2">
                   <li><strong>StackEdit</strong> - Éditeur complet avec synchronisation cloud</li>
                   <li><strong>Dillinger</strong> - Interface épurée, export vers plusieurs formats</li>

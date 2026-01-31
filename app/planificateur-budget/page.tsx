@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import BudgetPlanner from "@/components/BudgetPlanner";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBolt, faBriefcase, faBullseye, faChartBar, faChartLine, faCheck, faClock, faExclamationTriangle, faFileAlt, faGift, faHashtag, faHome, faLightbulb, faMobileAlt, faMoneyBill, faRocket, faStar, faTimes, faUniversity } from '@fortawesome/free-solid-svg-icons';
 
 export default function BudgetPlannerPage() {
   return (
@@ -15,7 +17,7 @@ export default function BudgetPlannerPage() {
             ← Retour à l&apos;accueil
           </Link>
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-4">
-            💰 Planificateur de Budget Interactif Gratuit
+            <FontAwesomeIcon icon={faMoneyBill} className="inline" /> Planificateur de Budget Interactif Gratuit
           </h1>
           <p className="text-center text-gray-600 dark:text-gray-400 text-base sm:text-lg max-w-3xl mx-auto">
             Gérez vos finances personnelles facilement avec notre outil de planification budgétaire gratuit. Suivez vos revenus, dépenses et objectifs d&apos;épargne en temps réel.
@@ -26,7 +28,7 @@ export default function BudgetPlannerPage() {
           {/* Budget Planner Component */}
           <section className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-4 sm:p-6 md:p-8">
             <h2 className="text-2xl sm:text-3xl font-bold mb-6 text-center">
-              📊 Mon Planificateur de Budget
+              <FontAwesomeIcon icon={faChartBar} className="inline" /> Mon Planificateur de Budget
             </h2>
             <BudgetPlanner />
           </section>
@@ -35,7 +37,7 @@ export default function BudgetPlannerPage() {
           <section className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-4 sm:p-6 md:p-8">
             <article className="prose prose-sm sm:prose-base lg:prose-lg dark:prose-invert max-w-none">
               <h2 className="text-2xl sm:text-3xl font-bold mb-4">
-                💡 Pourquoi créer un budget personnel ?
+                <FontAwesomeIcon icon={faLightbulb} className="inline" /> Pourquoi créer un budget personnel ?
               </h2>
 
               <p className="text-gray-700 dark:text-gray-300 mb-4">
@@ -52,7 +54,7 @@ export default function BudgetPlannerPage() {
 
               <div className="bg-blue-50 dark:bg-blue-900/20 p-6 rounded-lg border border-blue-300 dark:border-blue-700 mb-6">
                 <h3 className="text-xl font-bold text-blue-600 dark:text-blue-400 mb-3">
-                  🎯 La règle 50/30/20 expliquée
+                  <FontAwesomeIcon icon={faBullseye} className="inline" /> La règle 50/30/20 expliquée
                 </h3>
                 <p className="text-gray-700 dark:text-gray-300 mb-4">
                   La règle 50/30/20 est une méthode simple et efficace de gestion budgétaire popularisée par la sénatrice américaine Elizabeth Warren. Elle divise votre revenu net mensuel en trois catégories :
@@ -86,13 +88,13 @@ export default function BudgetPlannerPage() {
               </div>
 
               <h3 className="text-xl sm:text-2xl font-bold mb-3 mt-8">
-                📝 Comment créer un budget efficace en 5 étapes
+                <FontAwesomeIcon icon={faFileAlt} className="inline" /> Comment créer un budget efficace en 5 étapes
               </h3>
 
               <div className="space-y-4 mb-6">
                 <div className="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg">
                   <h4 className="font-bold text-gray-900 dark:text-gray-100 mb-2">
-                    1️⃣ Calculez vos revenus mensuels nets
+                    <FontAwesomeIcon icon={faHashtag} className="inline" /> Calculez vos revenus mensuels nets
                   </h4>
                   <p className="text-gray-700 dark:text-gray-300 text-sm">
                     Listez tous vos revenus : salaire net, primes, revenus complémentaires (freelance, locations), allocations. Utilisez le montant réel que vous recevez chaque mois sur votre compte bancaire.
@@ -101,7 +103,7 @@ export default function BudgetPlannerPage() {
 
                 <div className="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg">
                   <h4 className="font-bold text-gray-900 dark:text-gray-100 mb-2">
-                    2️⃣ Listez vos dépenses fixes mensuelles
+                    <FontAwesomeIcon icon={faHashtag} className="inline" /> Listez vos dépenses fixes mensuelles
                   </h4>
                   <p className="text-gray-700 dark:text-gray-300 text-sm">
                     Identifiez toutes les dépenses récurrentes : loyer/crédit immobilier, assurances, abonnements (internet, téléphone, électricité), crédits en cours. Ces montants sont généralement stables chaque mois.
@@ -110,7 +112,7 @@ export default function BudgetPlannerPage() {
 
                 <div className="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg">
                   <h4 className="font-bold text-gray-900 dark:text-gray-100 mb-2">
-                    3️⃣ Estimez vos dépenses variables
+                    <FontAwesomeIcon icon={faHashtag} className="inline" /> Estimez vos dépenses variables
                   </h4>
                   <p className="text-gray-700 dark:text-gray-300 text-sm">
                     Analysez vos relevés bancaires des 3 derniers mois pour estimer : alimentation, transports, loisirs, vêtements, restaurants, sorties. Utilisez la moyenne mensuelle.
@@ -119,7 +121,7 @@ export default function BudgetPlannerPage() {
 
                 <div className="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg">
                   <h4 className="font-bold text-gray-900 dark:text-gray-100 mb-2">
-                    4️⃣ Définissez vos objectifs d&apos;épargne
+                    <FontAwesomeIcon icon={faHashtag} className="inline" /> Définissez vos objectifs d&apos;épargne
                   </h4>
                   <p className="text-gray-700 dark:text-gray-300 text-sm">
                     Fixez-vous des objectifs réalistes : épargne de précaution, projet d&apos;achat, vacances, retraite. Commencez par au moins 10% de vos revenus si possible, et augmentez progressivement.
@@ -128,7 +130,7 @@ export default function BudgetPlannerPage() {
 
                 <div className="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg">
                   <h4 className="font-bold text-gray-900 dark:text-gray-100 mb-2">
-                    5️⃣ Ajustez et suivez régulièrement
+                    <FontAwesomeIcon icon={faHashtag} className="inline" /> Ajustez et suivez régulièrement
                   </h4>
                   <p className="text-gray-700 dark:text-gray-300 text-sm">
                     Revisitez votre budget chaque mois. Identifiez les écarts entre prévisionnel et réel, ajustez vos catégories si nécessaire, et célébrez vos progrès. Un budget est un outil vivant !
@@ -137,7 +139,7 @@ export default function BudgetPlannerPage() {
               </div>
 
               <h3 className="text-xl sm:text-2xl font-bold mb-3 mt-8">
-                💰 10 astuces pour économiser de l&apos;argent au quotidien
+                <FontAwesomeIcon icon={faMoneyBill} className="inline" /> 10 astuces pour économiser de l&apos;argent au quotidien
               </h3>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
@@ -152,7 +154,7 @@ export default function BudgetPlannerPage() {
 
                 <div className="bg-green-50 dark:bg-green-900/20 p-4 rounded-lg border border-green-300 dark:border-green-700">
                   <h4 className="font-bold text-green-700 dark:text-green-400 mb-2">
-                    📱 Revoyez vos abonnements
+                    <FontAwesomeIcon icon={faMobileAlt} className="inline" /> Revoyez vos abonnements
                   </h4>
                   <p className="text-sm text-gray-700 dark:text-gray-300">
                     Supprimez les abonnements non utilisés (streaming, salles de sport, magazines). Économie : 50-100€/mois.
@@ -170,7 +172,7 @@ export default function BudgetPlannerPage() {
 
                 <div className="bg-green-50 dark:bg-green-900/20 p-4 rounded-lg border border-green-300 dark:border-green-700">
                   <h4 className="font-bold text-green-700 dark:text-green-400 mb-2">
-                    💡 Réduisez votre consommation d&apos;énergie
+                    <FontAwesomeIcon icon={faLightbulb} className="inline" /> Réduisez votre consommation d&apos;énergie
                   </h4>
                   <p className="text-sm text-gray-700 dark:text-gray-300">
                     Baissez le chauffage d&apos;1°C, débranchez les appareils en veille. Économie : 30-80€/mois.
@@ -188,7 +190,7 @@ export default function BudgetPlannerPage() {
 
                 <div className="bg-green-50 dark:bg-green-900/20 p-4 rounded-lg border border-green-300 dark:border-green-700">
                   <h4 className="font-bold text-green-700 dark:text-green-400 mb-2">
-                    🏦 Automatisez votre épargne
+                    <FontAwesomeIcon icon={faUniversity} className="inline" /> Automatisez votre épargne
                   </h4>
                   <p className="text-sm text-gray-700 dark:text-gray-300">
                     Configurez un virement automatique vers votre compte épargne dès réception du salaire.
@@ -197,7 +199,7 @@ export default function BudgetPlannerPage() {
 
                 <div className="bg-green-50 dark:bg-green-900/20 p-4 rounded-lg border border-green-300 dark:border-green-700">
                   <h4 className="font-bold text-green-700 dark:text-green-400 mb-2">
-                    🎁 Achetez d&apos;occasion
+                    <FontAwesomeIcon icon={faGift} className="inline" /> Achetez d&apos;occasion
                   </h4>
                   <p className="text-sm text-gray-700 dark:text-gray-300">
                     Vêtements, meubles, électronique : les plateformes d&apos;occasion offrent de belles économies.
@@ -206,7 +208,7 @@ export default function BudgetPlannerPage() {
 
                 <div className="bg-green-50 dark:bg-green-900/20 p-4 rounded-lg border border-green-300 dark:border-green-700">
                   <h4 className="font-bold text-green-700 dark:text-green-400 mb-2">
-                    ⏰ Appliquez la règle des 24h
+                    <FontAwesomeIcon icon={faClock} className="inline" /> Appliquez la règle des 24h
                   </h4>
                   <p className="text-sm text-gray-700 dark:text-gray-300">
                     Attendez 24h avant tout achat non essentiel pour éviter les achats impulsifs.
@@ -215,7 +217,7 @@ export default function BudgetPlannerPage() {
 
                 <div className="bg-green-50 dark:bg-green-900/20 p-4 rounded-lg border border-green-300 dark:border-green-700">
                   <h4 className="font-bold text-green-700 dark:text-green-400 mb-2">
-                    📊 Comparez les prix
+                    <FontAwesomeIcon icon={faChartBar} className="inline" /> Comparez les prix
                   </h4>
                   <p className="text-sm text-gray-700 dark:text-gray-300">
                     Utilisez des comparateurs en ligne avant tout achat important (assurances, fournisseurs énergie).
@@ -233,13 +235,13 @@ export default function BudgetPlannerPage() {
               </div>
 
               <h3 className="text-xl sm:text-2xl font-bold mb-3 mt-8">
-                ⚠️ Erreurs courantes à éviter dans la gestion de budget
+                <FontAwesomeIcon icon={faExclamationTriangle} className="inline" /> Erreurs courantes à éviter dans la gestion de budget
               </h3>
 
               <div className="bg-red-50 dark:bg-red-900/20 p-6 rounded-lg border border-red-300 dark:border-red-700 mb-6">
                 <ul className="space-y-3">
                   <li className="flex gap-3">
-                    <span className="text-red-600 dark:text-red-400 font-bold">❌</span>
+                    <span className="text-red-600 dark:text-red-400 font-bold"><FontAwesomeIcon icon={faTimes} className="inline" /></span>
                     <div>
                       <strong className="text-gray-900 dark:text-gray-100">Ne pas prévoir de fonds d&apos;urgence</strong>
                       <p className="text-sm text-gray-700 dark:text-gray-300">
@@ -248,7 +250,7 @@ export default function BudgetPlannerPage() {
                     </div>
                   </li>
                   <li className="flex gap-3">
-                    <span className="text-red-600 dark:text-red-400 font-bold">❌</span>
+                    <span className="text-red-600 dark:text-red-400 font-bold"><FontAwesomeIcon icon={faTimes} className="inline" /></span>
                     <div>
                       <strong className="text-gray-900 dark:text-gray-100">Sous-estimer les dépenses variables</strong>
                       <p className="text-sm text-gray-700 dark:text-gray-300">
@@ -257,7 +259,7 @@ export default function BudgetPlannerPage() {
                     </div>
                   </li>
                   <li className="flex gap-3">
-                    <span className="text-red-600 dark:text-red-400 font-bold">❌</span>
+                    <span className="text-red-600 dark:text-red-400 font-bold"><FontAwesomeIcon icon={faTimes} className="inline" /></span>
                     <div>
                       <strong className="text-gray-900 dark:text-gray-100">Oublier les dépenses annuelles</strong>
                       <p className="text-sm text-gray-700 dark:text-gray-300">
@@ -266,7 +268,7 @@ export default function BudgetPlannerPage() {
                     </div>
                   </li>
                   <li className="flex gap-3">
-                    <span className="text-red-600 dark:text-red-400 font-bold">❌</span>
+                    <span className="text-red-600 dark:text-red-400 font-bold"><FontAwesomeIcon icon={faTimes} className="inline" /></span>
                     <div>
                       <strong className="text-gray-900 dark:text-gray-100">Être trop restrictif</strong>
                       <p className="text-sm text-gray-700 dark:text-gray-300">
@@ -275,7 +277,7 @@ export default function BudgetPlannerPage() {
                     </div>
                   </li>
                   <li className="flex gap-3">
-                    <span className="text-red-600 dark:text-red-400 font-bold">❌</span>
+                    <span className="text-red-600 dark:text-red-400 font-bold"><FontAwesomeIcon icon={faTimes} className="inline" /></span>
                     <div>
                       <strong className="text-gray-900 dark:text-gray-100">Ne pas réviser son budget</strong>
                       <p className="text-sm text-gray-700 dark:text-gray-300">
@@ -284,7 +286,7 @@ export default function BudgetPlannerPage() {
                     </div>
                   </li>
                   <li className="flex gap-3">
-                    <span className="text-red-600 dark:text-red-400 font-bold">❌</span>
+                    <span className="text-red-600 dark:text-red-400 font-bold"><FontAwesomeIcon icon={faTimes} className="inline" /></span>
                     <div>
                       <strong className="text-gray-900 dark:text-gray-100">Ignorer les petites dépenses</strong>
                       <p className="text-sm text-gray-700 dark:text-gray-300">
@@ -311,7 +313,7 @@ export default function BudgetPlannerPage() {
 
                 <div className="bg-purple-50 dark:bg-purple-900/20 p-4 rounded-lg border border-purple-300 dark:border-purple-700">
                   <h4 className="font-bold text-purple-700 dark:text-purple-400 mb-2">
-                    🏦 PEL et assurance-vie pour l&apos;épargne moyen terme
+                    <FontAwesomeIcon icon={faUniversity} className="inline" /> PEL et assurance-vie pour l&apos;épargne moyen terme
                   </h4>
                   <p className="text-sm text-gray-700 dark:text-gray-300">
                     Pour des projets à 4-8 ans (achat immobilier, travaux), ces supports offrent de meilleurs rendements avec avantages fiscaux après 8 ans pour l&apos;assurance-vie.
@@ -320,7 +322,7 @@ export default function BudgetPlannerPage() {
 
                 <div className="bg-purple-50 dark:bg-purple-900/20 p-4 rounded-lg border border-purple-300 dark:border-purple-700">
                   <h4 className="font-bold text-purple-700 dark:text-purple-400 mb-2">
-                    📈 PEA et PEA-PME pour investir en bourse
+                    <FontAwesomeIcon icon={faChartLine} className="inline" /> PEA et PEA-PME pour investir en bourse
                   </h4>
                   <p className="text-sm text-gray-700 dark:text-gray-300">
                     Exonération d&apos;impôts sur les plus-values après 5 ans (hors prélèvements sociaux). Idéal pour faire fructifier son épargne long terme avec un horizon 10+ ans.
@@ -329,7 +331,7 @@ export default function BudgetPlannerPage() {
 
                 <div className="bg-purple-50 dark:bg-purple-900/20 p-4 rounded-lg border border-purple-300 dark:border-purple-700">
                   <h4 className="font-bold text-purple-700 dark:text-purple-400 mb-2">
-                    🏠 Investissement immobilier locatif
+                    <FontAwesomeIcon icon={faHome} className="inline" /> Investissement immobilier locatif
                   </h4>
                   <p className="text-sm text-gray-700 dark:text-gray-300">
                     Dispositifs Pinel, Denormandie, LMNP : l&apos;immobilier reste un placement privilégié des Français avec avantages fiscaux possibles. Nécessite un apport et une gestion active.
@@ -338,7 +340,7 @@ export default function BudgetPlannerPage() {
 
                 <div className="bg-purple-50 dark:bg-purple-900/20 p-4 rounded-lg border border-purple-300 dark:border-purple-700">
                   <h4 className="font-bold text-purple-700 dark:text-purple-400 mb-2">
-                    💼 Plan d&apos;Épargne Retraite (PER)
+                    <FontAwesomeIcon icon={faBriefcase} className="inline" /> Plan d&apos;Épargne Retraite (PER)
                   </h4>
                   <p className="text-sm text-gray-700 dark:text-gray-300">
                     Déduction fiscale des versements, blocage jusqu&apos;à la retraite (sauf cas exceptionnels). Complément idéal pour préparer votre retraite avec avantage fiscal immédiat.
@@ -347,13 +349,13 @@ export default function BudgetPlannerPage() {
               </div>
 
               <h3 className="text-xl sm:text-2xl font-bold mb-3 mt-8">
-                🌟 Conseils pour votre bien-être financier
+                <FontAwesomeIcon icon={faStar} className="inline" /> Conseils pour votre bien-être financier
               </h3>
 
               <div className="bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 p-6 rounded-lg border border-blue-300 dark:border-blue-700 mb-6">
                 <ul className="space-y-3">
                   <li className="flex gap-3">
-                    <span>✅</span>
+                    <span><FontAwesomeIcon icon={faCheck} className="inline" /></span>
                     <div>
                       <strong className="text-gray-900 dark:text-gray-100">Payez-vous en premier</strong>
                       <p className="text-sm text-gray-700 dark:text-gray-300">
@@ -362,7 +364,7 @@ export default function BudgetPlannerPage() {
                     </div>
                   </li>
                   <li className="flex gap-3">
-                    <span>✅</span>
+                    <span><FontAwesomeIcon icon={faCheck} className="inline" /></span>
                     <div>
                       <strong className="text-gray-900 dark:text-gray-100">Diversifiez vos sources de revenus</strong>
                       <p className="text-sm text-gray-700 dark:text-gray-300">
@@ -371,7 +373,7 @@ export default function BudgetPlannerPage() {
                     </div>
                   </li>
                   <li className="flex gap-3">
-                    <span>✅</span>
+                    <span><FontAwesomeIcon icon={faCheck} className="inline" /></span>
                     <div>
                       <strong className="text-gray-900 dark:text-gray-100">Investissez en vous-même</strong>
                       <p className="text-sm text-gray-700 dark:text-gray-300">
@@ -380,7 +382,7 @@ export default function BudgetPlannerPage() {
                     </div>
                   </li>
                   <li className="flex gap-3">
-                    <span>✅</span>
+                    <span><FontAwesomeIcon icon={faCheck} className="inline" /></span>
                     <div>
                       <strong className="text-gray-900 dark:text-gray-100">Négociez vos contrats</strong>
                       <p className="text-sm text-gray-700 dark:text-gray-300">
@@ -389,7 +391,7 @@ export default function BudgetPlannerPage() {
                     </div>
                   </li>
                   <li className="flex gap-3">
-                    <span>✅</span>
+                    <span><FontAwesomeIcon icon={faCheck} className="inline" /></span>
                     <div>
                       <strong className="text-gray-900 dark:text-gray-100">Éduquez-vous financièrement</strong>
                       <p className="text-sm text-gray-700 dark:text-gray-300">
@@ -480,7 +482,7 @@ export default function BudgetPlannerPage() {
 
               <div className="bg-yellow-50 dark:bg-yellow-900/20 p-6 rounded-lg border border-yellow-300 dark:border-yellow-700 mt-8">
                 <h4 className="font-bold text-yellow-700 dark:text-yellow-400 mb-3 flex items-center gap-2">
-                  ⚡ Conseil d&apos;expert
+                  <FontAwesomeIcon icon={faBolt} className="inline" /> Conseil d&apos;expert
                 </h4>
                 <p className="text-gray-700 dark:text-gray-300 text-sm">
                   Le meilleur moment pour créer un budget était hier. Le deuxième meilleur moment est maintenant ! Ne cherchez pas la perfection dès le début. Commencez simple avec quelques catégories principales, et affinez votre budget au fil des mois. L&apos;important est de démarrer et de persévérer. Un budget imparfait que vous suivez vaut mieux qu&apos;un budget parfait que vous abandonnez.
@@ -501,7 +503,7 @@ export default function BudgetPlannerPage() {
               onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
               className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
-              🚀 Créer mon budget maintenant
+              <FontAwesomeIcon icon={faRocket} className="inline" /> Créer mon budget maintenant
             </button>
           </section>
         </main>

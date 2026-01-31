@@ -1,6 +1,8 @@
 "use client";
 
 import { useState } from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLock, faTrash, faUnlock } from '@fortawesome/free-solid-svg-icons';
 
 export default function Base64EncoderDecoder() {
   const [mode, setMode] = useState<"encode" | "decode">("encode");
@@ -116,7 +118,7 @@ export default function Base64EncoderDecoder() {
           onClick={handleProcess}
           className="flex-1 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
         >
-          {mode === "encode" ? "🔒 Encoder" : "🔓 Décoder"}
+          {mode === "encode" ? <><FontAwesomeIcon icon={faLock} className="inline" /> Encoder</> : <><FontAwesomeIcon icon={faUnlock} className="inline" /> Décoder</>}
         </button>
         
         {output && (
@@ -132,7 +134,7 @@ export default function Base64EncoderDecoder() {
               onClick={clear}
               className="bg-gray-600 hover:bg-gray-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
             >
-              🗑️
+              <FontAwesomeIcon icon={faTrash} className="inline" />
             </button>
           </>
         )}

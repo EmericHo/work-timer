@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import CSVToJSONConverter from "@/components/CSVToJSONConverter";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChartBar, faCheck, faFileAlt, faGlobe, faHardHat, faHashtag, faLaptop, faMobileAlt, faSync } from '@fortawesome/free-solid-svg-icons';
 
 export default function CSVToJSONConverterPage() {
   return (
@@ -64,7 +66,7 @@ export default function CSVToJSONConverterPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">💻 Développement web et JavaScript</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faLaptop} className="inline" /> Développement web et JavaScript</h3>
                 <p>
                   JSON est le format natif de JavaScript. Convertir des données CSV en JSON facilite leur 
                   utilisation dans des applications React, Vue, Angular ou Node.js. Vous pouvez directement 
@@ -72,7 +74,7 @@ export default function CSVToJSONConverterPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">📊 Migration de données</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faChartBar} className="inline" /> Migration de données</h3>
                 <p>
                   Lors de la migration depuis des systèmes legacy ou des tableurs vers des bases de données 
                   modernes, convertir CSV en JSON est souvent une étape nécessaire. Le JSON peut ensuite être 
@@ -80,7 +82,7 @@ export default function CSVToJSONConverterPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🔄 Transformation de données</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faSync} className="inline" /> Transformation de données</h3>
                 <p>
                   JSON offre plus de flexibilité pour manipuler et transformer les données. Une fois converti, 
                   vous pouvez facilement filtrer, regrouper, enrichir ou restructurer vos données avec des 
@@ -88,7 +90,7 @@ export default function CSVToJSONConverterPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">📱 Applications mobiles</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faMobileAlt} className="inline" /> Applications mobiles</h3>
                 <p>
                   Les applications iOS et Android consomment généralement des données en JSON. Convertir vos 
                   données CSV en JSON facilite leur intégration dans des apps mobiles pour du prototypage 
@@ -110,7 +112,7 @@ export default function CSVToJSONConverterPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🏗️ Structure hiérarchique</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faHardHat} className="inline" /> Structure hiérarchique</h3>
                 <p>
                   Contrairement au CSV qui est plat, JSON supporte l&apos;imbrication d&apos;objets et de tableaux. 
                   Vous pouvez représenter des relations complexes et des données hiérarchiques naturellement, comme 
@@ -118,7 +120,7 @@ export default function CSVToJSONConverterPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🔢 Types de données natifs</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faHashtag} className="inline" /> Types de données natifs</h3>
                 <p>
                   JSON distingue les types : chaînes de caractères, nombres, booléens, null, objets et tableaux. 
                   Le CSV traite tout comme du texte, nécessitant un parsing supplémentaire. JSON préserve le type 
@@ -126,7 +128,7 @@ export default function CSVToJSONConverterPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🌐 Standard web universel</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faGlobe} className="inline" /> Standard web universel</h3>
                 <p>
                   JSON est le format d&apos;échange de données standard du web moderne. Presque tous les langages 
                   de programmation ont des bibliothèques natives pour parser et générer du JSON. Il est supporté 
@@ -170,7 +172,7 @@ export default function CSVToJSONConverterPage() {
             <h2 className="text-2xl font-bold mb-4">Conseils pour une conversion réussie</h2>
             <div className="space-y-3 text-gray-700 dark:text-gray-300">
               <div>
-                <h3 className="font-semibold mb-1">✅ Vérifiez vos en-têtes</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faCheck} className="inline" /> Vérifiez vos en-têtes</h3>
                 <p className="text-sm">
                   Assurez-vous que la première ligne de votre CSV contient des en-têtes clairs et uniques. Ces 
                   en-têtes deviendront les clés de vos objets JSON. Évitez les espaces et caractères spéciaux 
@@ -186,14 +188,14 @@ export default function CSVToJSONConverterPage() {
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">📝 Gérez les valeurs vides</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faFileAlt} className="inline" /> Gérez les valeurs vides</h3>
                 <p className="text-sm">
                   Les cellules vides en CSV seront converties en chaînes vides (&quot;&quot;) ou null en JSON selon 
                   le convertisseur. Vérifiez comment votre application gère ces valeurs manquantes.
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">🔢 Types de données</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faHashtag} className="inline" /> Types de données</h3>
                 <p className="text-sm">
                   Le CSV ne préserve pas les types. Notre convertisseur essaie de détecter les nombres et booléens, 
                   mais vérifiez le résultat. Vous devrez peut-être ajuster les types manuellement pour des cas 

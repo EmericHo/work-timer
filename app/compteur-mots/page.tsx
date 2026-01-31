@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import WordCounter from "@/components/WordCounter";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBullseye, faChartBar, faFile, faMobileAlt, faPen, faScissors, faSearch, faStopwatch } from '@fortawesome/free-solid-svg-icons';
 
 export default function WordCounterPage() {
   return (
@@ -55,7 +57,7 @@ export default function WordCounterPage() {
             <h2 className="text-2xl font-bold mb-4">Cas d&apos;usage du compteur de mots</h2>
             <div className="space-y-4 text-gray-700 dark:text-gray-300">
               <div>
-                <h3 className="text-xl font-semibold mb-2">✍️ Rédaction et écriture</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faPen} className="inline" /> Rédaction et écriture</h3>
                 <p>
                   Parfait pour les écrivains, blogueurs et rédacteurs web qui doivent respecter des limites de 
                   mots spécifiques. Suivez votre progression en temps réel et assurez-vous que vos articles, 
@@ -71,7 +73,7 @@ export default function WordCounterPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">📱 Réseaux sociaux et marketing</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faMobileAlt} className="inline" /> Réseaux sociaux et marketing</h3>
                 <p>
                   Optimisez vos publications pour Twitter (280 caractères), LinkedIn, Facebook et autres 
                   plateformes qui limitent la longueur des posts. Les professionnels du marketing peuvent 
@@ -79,7 +81,7 @@ export default function WordCounterPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🔍 SEO et rédaction web</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faSearch} className="inline" /> SEO et rédaction web</h3>
                 <p>
                   Les spécialistes du SEO utilisent le comptage de mots pour optimiser la longueur des articles 
                   de blog, méta-descriptions et contenus web. Le temps de lecture aide à prévoir l&apos;engagement 
@@ -87,7 +89,7 @@ export default function WordCounterPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">📄 Documents professionnels</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faFile} className="inline" /> Documents professionnels</h3>
                 <p>
                   Contrôlez la longueur de vos CV, lettres de motivation, rapports d&apos;activité et 
                   présentations. Beaucoup d&apos;employeurs et d&apos;institutions fixent des limites strictes 
@@ -101,7 +103,7 @@ export default function WordCounterPage() {
             <h2 className="text-2xl font-bold mb-4">Conseils pour une rédaction efficace</h2>
             <div className="space-y-4 text-gray-700 dark:text-gray-300">
               <div>
-                <h3 className="text-xl font-semibold mb-2">📊 Respectez les longueurs optimales par type de contenu</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faChartBar} className="inline" /> Respectez les longueurs optimales par type de contenu</h3>
                 <ul className="list-disc pl-6 mt-2 space-y-1">
                   <li>Article de blog : 1 500 - 2 500 mots pour un bon SEO</li>
                   <li>Post LinkedIn : 150 - 300 mots pour un engagement optimal</li>
@@ -111,7 +113,7 @@ export default function WordCounterPage() {
                 </ul>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">✂️ Soyez concis</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faScissors} className="inline" /> Soyez concis</h3>
                 <p>
                   Plus n&apos;est pas toujours mieux. Visez la clarté et la concision. Supprimez les mots inutiles, 
                   les répétitions et les phrases trop complexes. Un texte dense et précis est souvent plus efficace 
@@ -119,14 +121,14 @@ export default function WordCounterPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🎯 Structurez vos paragraphes</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faBullseye} className="inline" /> Structurez vos paragraphes</h3>
                 <p>
                   Les paragraphes courts (3-5 phrases) sont plus faciles à lire, surtout sur écran. Utilisez notre 
                   compteur de paragraphes pour vous assurer que votre texte est bien aéré et agréable à lire.
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">⏱️ Pensez au temps de lecture</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faStopwatch} className="inline" /> Pensez au temps de lecture</h3>
                 <p>
                   La capacité d&apos;attention en ligne est limitée. Un article de 2 000 mots prend environ 8-10 
                   minutes à lire. Si votre contenu est plus long, assurez-vous qu&apos;il justifie ce temps 

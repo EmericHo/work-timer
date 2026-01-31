@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import LoanCalculator from "@/components/LoanCalculator";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBolt, faBullseye, faChartBar, faCheck, faExclamationTriangle, faHome, faLightbulb, faMoneyBill, faSearch } from '@fortawesome/free-solid-svg-icons';
 
 export default function LoanCalculatorPage() {
   return (
@@ -70,7 +72,7 @@ export default function LoanCalculatorPage() {
                 </ul>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🏠 Crédit Immobilier</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faHome} className="inline" /> Crédit Immobilier</h3>
                 <ul className="list-disc list-inside space-y-2 ml-4">
                   <li><strong>Durée :</strong> De 10 à 25 ans, voire 30 ans dans certains cas</li>
                   <li><strong>Montant :</strong> De 50 000€ à plusieurs millions d&apos;euros</li>
@@ -125,7 +127,7 @@ export default function LoanCalculatorPage() {
             <h2 className="text-2xl font-bold mb-4">Conseils pour obtenir le meilleur taux</h2>
             <div className="space-y-4 text-gray-700 dark:text-gray-300">
               <div>
-                <h3 className="text-xl font-semibold mb-2">💡 Optimisez votre profil</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faLightbulb} className="inline" /> Optimisez votre profil</h3>
                 <ul className="list-disc list-inside space-y-2 ml-4">
                   <li>
                     <strong>Augmentez votre apport :</strong> Plus votre apport est important, moins le 
@@ -149,7 +151,7 @@ export default function LoanCalculatorPage() {
                 </ul>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🔍 Comparez et négociez</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faSearch} className="inline" /> Comparez et négociez</h3>
                 <ul className="list-disc list-inside space-y-2 ml-4">
                   <li>
                     <strong>Faites jouer la concurrence :</strong> Consultez plusieurs banques et 
@@ -395,7 +397,7 @@ export default function LoanCalculatorPage() {
             <h2 className="text-2xl font-bold mb-4">Conseils financiers pour emprunteurs</h2>
             <div className="space-y-4 text-gray-700 dark:text-gray-300">
               <div>
-                <h3 className="text-xl font-semibold mb-2">✅ Avant de souscrire un crédit</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faCheck} className="inline" /> Avant de souscrire un crédit</h3>
                 <ul className="list-disc list-inside space-y-2 ml-4">
                   <li>Évaluez votre budget réel et prévoyez une marge de sécurité</li>
                   <li>Constituez une épargne de précaution (3 à 6 mois de dépenses)</li>
@@ -406,7 +408,7 @@ export default function LoanCalculatorPage() {
                 </ul>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">⚠️ Pendant le remboursement</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faExclamationTriangle} className="inline" /> Pendant le remboursement</h3>
                 <ul className="list-disc list-inside space-y-2 ml-4">
                   <li>Payez vos mensualités en priorité pour éviter les pénalités</li>
                   <li>Surveillez les évolutions des taux si vous avez un taux variable</li>
@@ -416,7 +418,7 @@ export default function LoanCalculatorPage() {
                 </ul>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">💰 Optimisation fiscale</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faMoneyBill} className="inline" /> Optimisation fiscale</h3>
                 <ul className="list-disc list-inside space-y-2 ml-4">
                   <li>
                     <strong>Crédit immobilier pour investissement locatif :</strong> Les intérêts 
@@ -472,14 +474,14 @@ export default function LoanCalculatorPage() {
             <h2 className="text-2xl font-bold mb-4">Pourquoi utiliser notre calculateur ?</h2>
             <div className="grid md:grid-cols-2 gap-4 text-gray-700 dark:text-gray-300">
               <div className="flex items-start gap-3">
-                <span className="text-2xl">⚡</span>
+                <span className="text-2xl"><FontAwesomeIcon icon={faBolt} className="inline" /></span>
                 <div>
                   <strong className="block mb-1">Rapide et gratuit</strong>
                   <p className="text-sm">Résultat instantané, aucune inscription requise</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
-                <span className="text-2xl">🎯</span>
+                <span className="text-2xl"><FontAwesomeIcon icon={faBullseye} className="inline" /></span>
                 <div>
                   <strong className="block mb-1">Précis et complet</strong>
                   <p className="text-sm">Formules mathématiques exactes, tableau d&apos;amortissement détaillé</p>
@@ -493,7 +495,7 @@ export default function LoanCalculatorPage() {
                 </div>
               </div>
               <div className="flex items-start gap-3">
-                <span className="text-2xl">📊</span>
+                <span className="text-2xl"><FontAwesomeIcon icon={faChartBar} className="inline" /></span>
                 <div>
                   <strong className="block mb-1">Visualisation claire</strong>
                   <p className="text-sm">Graphiques et tableaux pour mieux comprendre votre crédit</p>

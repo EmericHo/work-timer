@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import HTMLMinifier from "@/components/HTMLMinifier";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBolt, faBullseye, faChartBar, faChartLine, faCheck, faExclamationTriangle, faGlobe, faLaptop, faMobileAlt, faMoneyBill, faSync } from '@fortawesome/free-solid-svg-icons';
 
 export default function HTMLMinifierPage() {
   return (
@@ -100,7 +102,7 @@ export default function HTMLMinifierPage() {
             <h2 className="text-2xl font-bold mb-4">Avantages de la minification HTML</h2>
             <div className="space-y-4 text-gray-700 dark:text-gray-300">
               <div>
-                <h3 className="text-xl font-semibold mb-2">⚡ Temps de chargement plus rapides</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faBolt} className="inline" /> Temps de chargement plus rapides</h3>
                 <p>
                   Des fichiers HTML plus petits se téléchargent plus rapidement, réduisant le temps de chargement 
                   de vos pages. Selon Google, 53% des visiteurs mobiles abandonnent un site qui met plus de 3 
@@ -108,7 +110,7 @@ export default function HTMLMinifierPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">📊 Amélioration du SEO</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faChartBar} className="inline" /> Amélioration du SEO</h3>
                 <p>
                   La vitesse de chargement est un facteur de classement confirmé par Google. Les sites rapides 
                   obtiennent un meilleur positionnement dans les résultats de recherche. Google&apos;s Core Web Vitals, 
@@ -117,7 +119,7 @@ export default function HTMLMinifierPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">💰 Réduction des coûts de bande passante</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faMoneyBill} className="inline" /> Réduction des coûts de bande passante</h3>
                 <p>
                   Pour les sites à fort trafic, chaque pourcentage de réduction de taille de fichier se traduit 
                   par des économies substantielles sur les coûts d&apos;hébergement et de CDN. Un site avec 1 million 
@@ -125,7 +127,7 @@ export default function HTMLMinifierPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">📱 Meilleure expérience mobile</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faMobileAlt} className="inline" /> Meilleure expérience mobile</h3>
                 <p>
                   Les utilisateurs mobiles, souvent sur des connexions 3G ou 4G avec data limitée, bénéficient 
                   énormément de fichiers plus légers. La minification réduit la consommation de données et 
@@ -133,7 +135,7 @@ export default function HTMLMinifierPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🔄 Optimisation du cache</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faSync} className="inline" /> Optimisation du cache</h3>
                 <p>
                   Des fichiers plus petits signifient une utilisation plus efficace du cache du navigateur, 
                   permettant de stocker plus de ressources localement et de réduire les requêtes serveur lors 
@@ -141,7 +143,7 @@ export default function HTMLMinifierPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🌍 Accessibilité internationale</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faGlobe} className="inline" /> Accessibilité internationale</h3>
                 <p>
                   Pour les utilisateurs dans des régions avec une infrastructure internet limitée, des fichiers 
                   légers peuvent faire la différence entre un site accessible et un site inutilisable. La 
@@ -149,7 +151,7 @@ export default function HTMLMinifierPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🎯 Meilleur taux de conversion</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faBullseye} className="inline" /> Meilleur taux de conversion</h3>
                 <p>
                   Des études montrent qu&apos;une amélioration d&apos;une seconde du temps de chargement peut augmenter 
                   les conversions de 7%. Amazon a calculé que chaque 100ms de latence leur coûte 1% de ventes. 
@@ -214,7 +216,7 @@ export default function HTMLMinifierPage() {
             <h2 className="text-2xl font-bold mb-4">Bonnes pratiques de minification</h2>
             <div className="space-y-3 text-gray-700 dark:text-gray-300">
               <div>
-                <h3 className="font-semibold mb-1">✅ Gardez une version source lisible</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faCheck} className="inline" /> Gardez une version source lisible</h3>
                 <p className="text-sm">
                   Conservez toujours votre fichier HTML original, non minifié, pour le développement et la 
                   maintenance. Utilisez la version minifiée uniquement en production. Mettez en place un système 
@@ -222,7 +224,7 @@ export default function HTMLMinifierPage() {
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">✅ Testez après minification</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faCheck} className="inline" /> Testez après minification</h3>
                 <p className="text-sm">
                   Vérifiez toujours que votre page s&apos;affiche et fonctionne correctement après minification. 
                   Bien que rare, certains cas particuliers de HTML peuvent être affectés par une minification 
@@ -230,42 +232,42 @@ export default function HTMLMinifierPage() {
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">✅ Combinez avec gzip/brotli</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faCheck} className="inline" /> Combinez avec gzip/brotli</h3>
                 <p className="text-sm">
                   La minification et la compression serveur (gzip ou brotli) sont complémentaires. Activez les 
                   deux pour des gains de performance maximaux. Un fichier minifié se compresse également mieux.
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">✅ Minifiez également CSS et JavaScript</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faCheck} className="inline" /> Minifiez également CSS et JavaScript</h3>
                 <p className="text-sm">
                   Pour des performances optimales, minifiez aussi vos fichiers CSS et JavaScript externes. 
                   L&apos;économie cumulée peut être significative, surtout pour les applications web modernes.
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">✅ Utilisez des source maps pour le debug</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faCheck} className="inline" /> Utilisez des source maps pour le debug</h3>
                 <p className="text-sm">
                   Pour faciliter le débogage en production, envisagez d&apos;utiliser des source maps qui permettent 
                   de mapper le code minifié vers le code source original dans les outils de développement.
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">✅ Automatisez le processus</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faCheck} className="inline" /> Automatisez le processus</h3>
                 <p className="text-sm">
                   Intégrez la minification dans votre workflow de build avec des outils comme Webpack, Gulp, 
                   Grunt ou npm scripts. La minification manuelle est sujette aux erreurs et aux oublis.
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">⚠️ Attention au contenu inline</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faExclamationTriangle} className="inline" /> Attention au contenu inline</h3>
                 <p className="text-sm">
                   Si vous avez du JavaScript ou CSS inline dans votre HTML, assurez-vous que le minificateur 
                   les gère correctement. Certains minificateurs peuvent avoir des options spécifiques pour cela.
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">⚠️ Préservez les espaces significatifs</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faExclamationTriangle} className="inline" /> Préservez les espaces significatifs</h3>
                 <p className="text-sm">
                   Dans certains contextes (comme à l&apos;intérieur de balises &lt;pre&gt; ou avec certaines 
                   propriétés CSS white-space), les espaces sont significatifs. Les bons minificateurs les 
@@ -279,7 +281,7 @@ export default function HTMLMinifierPage() {
             <h2 className="text-2xl font-bold mb-4">Impact sur les performances web</h2>
             <div className="space-y-4 text-gray-700 dark:text-gray-300">
               <div>
-                <h3 className="text-xl font-semibold mb-2">📈 Métriques de performance</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faChartLine} className="inline" /> Métriques de performance</h3>
                 <p className="mb-2">
                   La minification HTML impacte directement plusieurs métriques clés de performance web :
                 </p>
@@ -292,7 +294,7 @@ export default function HTMLMinifierPage() {
                 </ul>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🎯 Score PageSpeed Insights</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faBullseye} className="inline" /> Score PageSpeed Insights</h3>
                 <p>
                   Google PageSpeed Insights recommande explicitement la minification des ressources HTML, CSS et 
                   JavaScript. Un code minifié peut améliorer votre score de 5 à 15 points, particulièrement dans 
@@ -300,7 +302,7 @@ export default function HTMLMinifierPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🌐 Réseaux CDN</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faGlobe} className="inline" /> Réseaux CDN</h3>
                 <p>
                   Les CDN (Content Delivery Networks) distribuent vos fichiers depuis des serveurs proches de vos 
                   utilisateurs. Des fichiers HTML minifiés se propagent plus rapidement à travers le réseau CDN 
@@ -308,7 +310,7 @@ export default function HTMLMinifierPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">💻 Cas d&apos;usage spécifiques</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faLaptop} className="inline" /> Cas d&apos;usage spécifiques</h3>
                 <p>
                   La minification est particulièrement bénéfique pour :
                 </p>

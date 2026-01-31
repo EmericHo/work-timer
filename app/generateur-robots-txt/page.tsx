@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import RobotsGenerator from "@/components/RobotsGenerator";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBolt, faBullseye, faCheck, faExclamationTriangle, faFileAlt, faGlobe, faLock, faMoneyBill, faSearch, faShieldAlt, faTimes } from '@fortawesome/free-solid-svg-icons';
 
 export default function RobotsGeneratorPage() {
   return (
@@ -171,7 +173,7 @@ export default function RobotsGeneratorPage() {
             <h2 className="text-2xl font-bold mb-4">Exemples de configurations robots.txt</h2>
             <div className="space-y-4 text-gray-700 dark:text-gray-300">
               <div>
-                <h3 className="text-xl font-semibold mb-2">🌐 Configuration de base (autoriser tout)</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faGlobe} className="inline" /> Configuration de base (autoriser tout)</h3>
                 <p className="text-sm mb-2">Permet à tous les robots d&apos;explorer tout le site.</p>
                 <div className="bg-gray-100 dark:bg-gray-900 p-3 rounded font-mono text-sm">
                   User-agent: *<br/>
@@ -189,7 +191,7 @@ export default function RobotsGeneratorPage() {
                 </div>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🔒 Protéger des répertoires spécifiques</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faLock} className="inline" /> Protéger des répertoires spécifiques</h3>
                 <p className="text-sm mb-2">Bloque l&apos;accès aux zones d&apos;administration et fichiers privés.</p>
                 <div className="bg-gray-100 dark:bg-gray-900 p-3 rounded font-mono text-sm">
                   User-agent: *<br/>
@@ -231,7 +233,7 @@ export default function RobotsGeneratorPage() {
                 </div>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">📝 Configuration WordPress</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faFileAlt} className="inline" /> Configuration WordPress</h3>
                 <p className="text-sm mb-2">Optimisée pour les sites WordPress.</p>
                 <div className="bg-gray-100 dark:bg-gray-900 p-3 rounded font-mono text-sm">
                   User-agent: *<br/>
@@ -278,70 +280,70 @@ export default function RobotsGeneratorPage() {
             <h2 className="text-2xl font-bold mb-4">Bonnes pratiques pour votre fichier robots.txt</h2>
             <div className="space-y-3 text-gray-700 dark:text-gray-300">
               <div>
-                <h3 className="font-semibold mb-1">✅ Placez-le à la racine du domaine</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faCheck} className="inline" /> Placez-le à la racine du domaine</h3>
                 <p className="text-sm">
                   Le fichier robots.txt doit impérativement être accessible à https://votresite.com/robots.txt. 
                   Il ne fonctionnera pas dans un sous-répertoire ou sous-domaine (sauf si configuré spécifiquement).
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">✅ Utilisez un encodage UTF-8</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faCheck} className="inline" /> Utilisez un encodage UTF-8</h3>
                 <p className="text-sm">
                   Enregistrez toujours votre fichier robots.txt en UTF-8 pour éviter les problèmes de caractères 
                   spéciaux. N&apos;utilisez pas de BOM (Byte Order Mark).
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">✅ Respectez la casse</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faCheck} className="inline" /> Respectez la casse</h3>
                 <p className="text-sm">
                   Les directives dans robots.txt sont sensibles à la casse. /Admin/ est différent de /admin/. 
                   Par convention, utilisez toujours des minuscules pour les chemins.
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">✅ Testez votre fichier</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faCheck} className="inline" /> Testez votre fichier</h3>
                 <p className="text-sm">
                   Utilisez Google Search Console (outil de test robots.txt) ou Bing Webmaster Tools pour vérifier 
                   que votre fichier est correctement formaté et qu&apos;il bloque/autorise les bonnes URLs.
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">✅ Ajoutez toujours votre sitemap</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faCheck} className="inline" /> Ajoutez toujours votre sitemap</h3>
                 <p className="text-sm">
                   Incluez la directive Sitemap pour aider les moteurs de recherche à découvrir rapidement toutes 
                   vos pages importantes. Vous pouvez spécifier plusieurs sitemaps si nécessaire.
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">✅ Commentez votre code</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faCheck} className="inline" /> Commentez votre code</h3>
                 <p className="text-sm">
                   Utilisez le symbole # pour ajouter des commentaires expliquant vos règles. Cela facilite la 
                   maintenance future : # Bloquer l&apos;accès au panneau d&apos;administration
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">✅ Soyez spécifique avant général</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faCheck} className="inline" /> Soyez spécifique avant général</h3>
                 <p className="text-sm">
                   Les règles plus spécifiques doivent précéder les règles générales. Les robots appliquent 
                   généralement la règle la plus longue qui correspond.
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">✅ Vérifiez régulièrement</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faCheck} className="inline" /> Vérifiez régulièrement</h3>
                 <p className="text-sm">
                   Auditez votre robots.txt au moins une fois par trimestre pour vous assurer qu&apos;il est toujours 
                   à jour avec la structure de votre site et vos objectifs SEO.
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">⚠️ N&apos;utilisez pas pour cacher des données sensibles</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faExclamationTriangle} className="inline" /> N&apos;utilisez pas pour cacher des données sensibles</h3>
                 <p className="text-sm">
                   Le fichier robots.txt est public et accessible à tous. Ne l&apos;utilisez pas comme mesure de 
                   sécurité. Les robots malveillants l&apos;ignoreront. Utilisez l&apos;authentification ou .htaccess.
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">⚠️ Attention aux erreurs de syntaxe</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faExclamationTriangle} className="inline" /> Attention aux erreurs de syntaxe</h3>
                 <p className="text-sm">
                   Une simple faute de frappe peut bloquer l&apos;indexation de tout votre site. Vérifiez toujours 
                   la syntaxe avant de déployer et testez dans Google Search Console.
@@ -354,7 +356,7 @@ export default function RobotsGeneratorPage() {
             <h2 className="text-2xl font-bold mb-4">Erreurs courantes à éviter</h2>
             <div className="space-y-3 text-gray-700 dark:text-gray-300">
               <div className="flex items-start gap-3">
-                <span className="text-red-600 text-xl">❌</span>
+                <span className="text-red-600 text-xl"><FontAwesomeIcon icon={faTimes} className="inline" /></span>
                 <div>
                   <h3 className="font-semibold mb-1">Bloquer accidentellement tout le site</h3>
                   <p className="text-sm">
@@ -365,7 +367,7 @@ export default function RobotsGeneratorPage() {
                 </div>
               </div>
               <div className="flex items-start gap-3">
-                <span className="text-red-600 text-xl">❌</span>
+                <span className="text-red-600 text-xl"><FontAwesomeIcon icon={faTimes} className="inline" /></span>
                 <div>
                   <h3 className="font-semibold mb-1">Bloquer CSS et JavaScript</h3>
                   <p className="text-sm">
@@ -375,7 +377,7 @@ export default function RobotsGeneratorPage() {
                 </div>
               </div>
               <div className="flex items-start gap-3">
-                <span className="text-red-600 text-xl">❌</span>
+                <span className="text-red-600 text-xl"><FontAwesomeIcon icon={faTimes} className="inline" /></span>
                 <div>
                   <h3 className="font-semibold mb-1">Oublier le trailing slash</h3>
                   <p className="text-sm">
@@ -387,7 +389,7 @@ export default function RobotsGeneratorPage() {
                 </div>
               </div>
               <div className="flex items-start gap-3">
-                <span className="text-red-600 text-xl">❌</span>
+                <span className="text-red-600 text-xl"><FontAwesomeIcon icon={faTimes} className="inline" /></span>
                 <div>
                   <h3 className="font-semibold mb-1">Multiples User-agent pour une même règle</h3>
                   <p className="text-sm">
@@ -397,7 +399,7 @@ export default function RobotsGeneratorPage() {
                 </div>
               </div>
               <div className="flex items-start gap-3">
-                <span className="text-red-600 text-xl">❌</span>
+                <span className="text-red-600 text-xl"><FontAwesomeIcon icon={faTimes} className="inline" /></span>
                 <div>
                   <h3 className="font-semibold mb-1">Utiliser Allow seul sans Disallow</h3>
                   <p className="text-sm">
@@ -407,7 +409,7 @@ export default function RobotsGeneratorPage() {
                 </div>
               </div>
               <div className="flex items-start gap-3">
-                <span className="text-red-600 text-xl">❌</span>
+                <span className="text-red-600 text-xl"><FontAwesomeIcon icon={faTimes} className="inline" /></span>
                 <div>
                   <h3 className="font-semibold mb-1">Bloquer des pages déjà indexées</h3>
                   <p className="text-sm">
@@ -417,7 +419,7 @@ export default function RobotsGeneratorPage() {
                 </div>
               </div>
               <div className="flex items-start gap-3">
-                <span className="text-red-600 text-xl">❌</span>
+                <span className="text-red-600 text-xl"><FontAwesomeIcon icon={faTimes} className="inline" /></span>
                 <div>
                   <h3 className="font-semibold mb-1">Fichier robots.txt trop volumineux</h3>
                   <p className="text-sm">
@@ -433,7 +435,7 @@ export default function RobotsGeneratorPage() {
             <h2 className="text-2xl font-bold mb-4">Robots.txt et stratégie SEO</h2>
             <div className="space-y-4 text-gray-700 dark:text-gray-300">
               <div>
-                <h3 className="text-xl font-semibold mb-2">💰 Optimiser le budget de crawl</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faMoneyBill} className="inline" /> Optimiser le budget de crawl</h3>
                 <p>
                   Chaque moteur de recherche alloue un &quot;budget de crawl&quot; limité à votre site - le nombre de pages 
                   qu&apos;il explorera lors d&apos;une visite. En bloquant les pages sans valeur SEO (pages de compte utilisateur, 
@@ -442,7 +444,7 @@ export default function RobotsGeneratorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🎯 Éviter le contenu dupliqué</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faBullseye} className="inline" /> Éviter le contenu dupliqué</h3>
                 <p>
                   Bloquez les versions alternatives de vos pages (paramètres de tri, filtres, sessions) qui créent 
                   du contenu dupliqué. Par exemple, /produits?tri=prix et /produits?tri=nom affichent le même 
@@ -450,7 +452,7 @@ export default function RobotsGeneratorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🔍 Contrôler l&apos;indexation stratégique</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faSearch} className="inline" /> Contrôler l&apos;indexation stratégique</h3>
                 <p>
                   Guidez les moteurs vers vos pages stratégiques (pages produits, articles de blog, pages de 
                   services) plutôt que vers des pages techniques (CGU, mentions légales, pages de remerciement) 
@@ -458,7 +460,7 @@ export default function RobotsGeneratorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">⚡ Améliorer les performances du site</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faBolt} className="inline" /> Améliorer les performances du site</h3>
                 <p>
                   En réduisant la charge d&apos;exploration des robots, vous diminuez la charge serveur et libérez 
                   des ressources pour vos visiteurs humains, améliorant ainsi les temps de réponse et l&apos;expérience 
@@ -466,7 +468,7 @@ export default function RobotsGeneratorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🛡️ Protéger les informations sensibles</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faShieldAlt} className="inline" /> Protéger les informations sensibles</h3>
                 <p>
                   Bien que ce ne soit pas une mesure de sécurité complète, robots.txt empêche l&apos;indexation 
                   accidentelle de pages en développement, pages de test, ou sections destinées uniquement aux 

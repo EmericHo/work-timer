@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import QRCodeGenerator from "@/components/QRCodeGenerator";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBox, faBriefcase, faBuilding, faCheck, faExclamationTriangle, faLock, faMobileAlt, faShieldAlt, faTicketAlt, faUtensils } from '@fortawesome/free-solid-svg-icons';
 
 export default function QRCodeGeneratorPage() {
   return (
@@ -83,7 +85,7 @@ export default function QRCodeGeneratorPage() {
             <h2 className="text-2xl font-bold mb-4">Cas d&apos;usage des QR Codes</h2>
             <div className="space-y-4 text-gray-700 dark:text-gray-300">
               <div>
-                <h3 className="text-xl font-semibold mb-2">💼 Cartes de visite professionnelles</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faBriefcase} className="inline" /> Cartes de visite professionnelles</h3>
                 <p>
                   Ajoutez un QR code sur vos cartes de visite pour permettre à vos contacts de sauvegarder 
                   instantanément vos coordonnées (vCard) dans leur téléphone. Plus besoin de ressaisir 
@@ -91,7 +93,7 @@ export default function QRCodeGeneratorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🍽️ Menus de restaurant</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faUtensils} className="inline" /> Menus de restaurant</h3>
                 <p>
                   Les QR codes sur les tables permettent aux clients de consulter le menu sur leur smartphone 
                   sans contact physique. Idéal pour les restaurants, cafés, bars et food trucks. Mise à jour 
@@ -99,7 +101,7 @@ export default function QRCodeGeneratorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">📱 Marketing et publicité</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faMobileAlt} className="inline" /> Marketing et publicité</h3>
                 <p>
                   Intégrez des QR codes dans vos affiches, flyers, emballages produits ou publicités pour 
                   rediriger vers votre site web, une page promo, une vidéo YouTube ou vos réseaux sociaux. 
@@ -121,21 +123,21 @@ export default function QRCodeGeneratorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🎟️ Billetterie et événements</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faTicketAlt} className="inline" /> Billetterie et événements</h3>
                 <p>
                   Générez des QR codes uniques pour les billets d&apos;événements, concerts, conférences ou 
                   cinémas. Scan rapide à l&apos;entrée pour validation et contrôle d&apos;accès sécurisé.
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">📦 Suivi logistique</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faBox} className="inline" /> Suivi logistique</h3>
                 <p>
                   Utilisez les QR codes pour le suivi des colis, la gestion d&apos;inventaire, l&apos;identification 
                   de produits et la traçabilité. Scan rapide pour accéder aux informations détaillées.
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🏢 Immobilier</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faBuilding} className="inline" /> Immobilier</h3>
                 <p>
                   Placez des QR codes sur les panneaux &quot;À vendre&quot; ou &quot;À louer&quot; pour permettre aux 
                   visiteurs d&apos;accéder instantanément aux détails du bien, photos, visite virtuelle et formulaire 
@@ -149,14 +151,14 @@ export default function QRCodeGeneratorPage() {
             <h2 className="text-2xl font-bold mb-4">Bonnes pratiques pour créer des QR Codes efficaces</h2>
             <div className="space-y-3 text-gray-700 dark:text-gray-300">
               <div>
-                <h3 className="font-semibold mb-1">✅ Assurez un contraste suffisant</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faCheck} className="inline" /> Assurez un contraste suffisant</h3>
                 <p className="text-sm">
                   La couleur principale (généralement noire) doit fortement contraster avec le fond (généralement 
                   blanc). Un mauvais contraste peut empêcher la lecture du QR code par certains lecteurs.
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">✅ Choisissez la bonne taille</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faCheck} className="inline" /> Choisissez la bonne taille</h3>
                 <p className="text-sm">
                   Pour l&apos;impression, utilisez au minimum 2x2 cm pour un scan à 10-20 cm de distance. Plus la 
                   distance de scan est grande, plus le QR code doit être grand. Règle générale : taille = 
@@ -164,7 +166,7 @@ export default function QRCodeGeneratorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">✅ Ajustez le niveau de correction d&apos;erreur</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faCheck} className="inline" /> Ajustez le niveau de correction d&apos;erreur</h3>
                 <p className="text-sm">
                   Le niveau de correction d&apos;erreur détermine combien le QR code peut être endommagé tout en 
                   restant lisible. Niveau Bas (7%) pour QR codes simples, Élevé (25-30%) si le code peut être 
@@ -172,35 +174,35 @@ export default function QRCodeGeneratorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">✅ Laissez une marge blanche (zone silencieuse)</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faCheck} className="inline" /> Laissez une marge blanche (zone silencieuse)</h3>
                 <p className="text-sm">
                   Prévoyez au moins 4 modules de marge blanche autour du QR code. Cette zone vierge aide les 
                   lecteurs à identifier clairement les limites du code.
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">✅ Testez avant impression</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faCheck} className="inline" /> Testez avant impression</h3>
                 <p className="text-sm">
                   Testez toujours votre QR code avec plusieurs applications de lecture (iOS Camera, Google Lens, 
                   apps tierces) sur différents appareils avant l&apos;impression en masse.
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">✅ Utilisez des URLs courtes</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faCheck} className="inline" /> Utilisez des URLs courtes</h3>
                 <p className="text-sm">
                   Plus le contenu est court, plus le QR code sera simple et facile à scanner. Utilisez un 
                   raccourcisseur d&apos;URL (bit.ly, tinyurl.com) pour les longues URLs.
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">✅ Privilégiez le format SVG pour l&apos;impression</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faCheck} className="inline" /> Privilégiez le format SVG pour l&apos;impression</h3>
                 <p className="text-sm">
                   Le format SVG est vectoriel et peut être agrandi à l&apos;infini sans perte de qualité. Idéal 
                   pour l&apos;impression professionnelle, affiches grand format et signalétique.
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">✅ Ajoutez un appel à l&apos;action</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faCheck} className="inline" /> Ajoutez un appel à l&apos;action</h3>
                 <p className="text-sm">
                   Indiquez clairement ce que l&apos;utilisateur obtiendra en scannant : &quot;Scannez pour voir le 
                   menu&quot;, &quot;Scannez pour vous connecter au WiFi&quot;, &quot;Scannez pour plus d&apos;infos&quot;.
@@ -334,7 +336,7 @@ export default function QRCodeGeneratorPage() {
             <div className="space-y-3 text-gray-700 dark:text-gray-300">
               <div>
                 <h3 className="font-semibold mb-2 flex items-center gap-2">
-                  <span className="text-green-600">🔒</span>
+                  <span className="text-green-600"><FontAwesomeIcon icon={faLock} className="inline" /></span>
                   Génération côté client
                 </h3>
                 <p className="text-sm">
@@ -344,7 +346,7 @@ export default function QRCodeGeneratorPage() {
               </div>
               <div>
                 <h3 className="font-semibold mb-2 flex items-center gap-2">
-                  <span className="text-green-600">🛡️</span>
+                  <span className="text-green-600"><FontAwesomeIcon icon={faShieldAlt} className="inline" /></span>
                   Aucun stockage de données
                 </h3>
                 <p className="text-sm">
@@ -354,7 +356,7 @@ export default function QRCodeGeneratorPage() {
               </div>
               <div>
                 <h3 className="font-semibold mb-2 flex items-center gap-2">
-                  <span className="text-green-600">⚠️</span>
+                  <span className="text-green-600"><FontAwesomeIcon icon={faExclamationTriangle} className="inline" /></span>
                   Attention aux QR codes suspects
                 </h3>
                 <p className="text-sm">

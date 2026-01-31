@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import ColorPaletteGenerator from "@/components/ColorPaletteGenerator";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBook, faBullseye, faImage, faLightbulb, faPalette, faRuler, faStar, faSync } from '@fortawesome/free-solid-svg-icons';
 
 export default function ColorPaletteGeneratorPage() {
   return (
@@ -60,7 +62,7 @@ export default function ColorPaletteGeneratorPage() {
             <h2 className="text-2xl font-bold mb-4">Théorie des couleurs et harmonies</h2>
             <div className="space-y-4 text-gray-700 dark:text-gray-300">
               <div>
-                <h3 className="text-xl font-semibold mb-2">🎨 Le cercle chromatique</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faPalette} className="inline" /> Le cercle chromatique</h3>
                 <p className="mb-2">
                   Inventé par Isaac Newton, le cercle chromatique organise les couleurs selon leurs relations :
                 </p>
@@ -72,7 +74,7 @@ export default function ColorPaletteGeneratorPage() {
                 </ul>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🔄 Schémas de couleurs classiques</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faSync} className="inline" /> Schémas de couleurs classiques</h3>
                 <div className="space-y-2">
                   <div className="bg-gray-100 dark:bg-gray-700 p-3 rounded">
                     <p className="font-semibold mb-1">Monochromatique</p>
@@ -97,7 +99,7 @@ export default function ColorPaletteGeneratorPage() {
                 </div>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">💡 Teinte, Saturation, Luminosité (HSL)</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faLightbulb} className="inline" /> Teinte, Saturation, Luminosité (HSL)</h3>
                 <ul className="list-disc pl-6 space-y-1">
                   <li><strong>Teinte (Hue)</strong> : La couleur pure (0-360° sur le cercle chromatique)</li>
                   <li><strong>Saturation</strong> : Intensité de la couleur (0% = gris, 100% = couleur pure)</li>
@@ -112,7 +114,7 @@ export default function ColorPaletteGeneratorPage() {
             <h2 className="text-2xl font-bold mb-4">Couleurs de marque et identité visuelle</h2>
             <div className="space-y-4 text-gray-700 dark:text-gray-300">
               <div>
-                <h3 className="text-xl font-semibold mb-2">🎯 Choisir les couleurs de votre marque</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faBullseye} className="inline" /> Choisir les couleurs de votre marque</h3>
                 <p className="mb-2">
                   Les couleurs de marque doivent refléter votre personnalité et vos valeurs :
                 </p>
@@ -125,7 +127,7 @@ export default function ColorPaletteGeneratorPage() {
                 </ul>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">📐 La règle 60-30-10</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faRuler} className="inline" /> La règle 60-30-10</h3>
                 <p className="mb-2">
                   Principe de répartition des couleurs dans un design équilibré :
                 </p>
@@ -137,7 +139,7 @@ export default function ColorPaletteGeneratorPage() {
                 </ul>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">✨ Cohérence multi-supports</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faStar} className="inline" /> Cohérence multi-supports</h3>
                 <p className="mb-2">
                   Assurez la cohérence de vos couleurs sur tous les supports :
                 </p>
@@ -167,7 +169,7 @@ export default function ColorPaletteGeneratorPage() {
                 </ul>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🎨 Daltonisme et perception des couleurs</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faPalette} className="inline" /> Daltonisme et perception des couleurs</h3>
                 <p className="mb-2">
                   Environ 8% des hommes et 0,5% des femmes souffrent de daltonisme :
                 </p>
@@ -205,7 +207,7 @@ export default function ColorPaletteGeneratorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">📚 S&apos;inspirer des palettes existantes</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faBook} className="inline" /> S&apos;inspirer des palettes existantes</h3>
                 <p className="text-sm">
                   Dribbble et Behance pour voir les tendances design, Color Hunt et Coolors pour des palettes 
                   pré-créées, Adobe Color Trends pour les palettes populaires par secteur, Pinterest avec des 
@@ -221,7 +223,7 @@ export default function ColorPaletteGeneratorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">🖼️ Extraction de couleurs depuis images</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faImage} className="inline" /> Extraction de couleurs depuis images</h3>
                 <p className="text-sm">
                   Importez une photo dans Adobe Color, Coolors ou Canva pour extraire automatiquement une palette. 
                   Parfait pour créer une cohérence visuelle avec vos photos de produits ou pour s&apos;inspirer 

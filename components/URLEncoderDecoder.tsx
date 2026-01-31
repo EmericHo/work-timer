@@ -1,6 +1,8 @@
 "use client";
 
 import { useState } from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCheck, faFile, faLightbulb, faLock, faTrash, faUnlock } from '@fortawesome/free-solid-svg-icons';
 
 export default function URLEncoderDecoder() {
   const [mode, setMode] = useState<string>("encode");
@@ -53,7 +55,7 @@ export default function URLEncoderDecoder() {
                 : "bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300"
             }`}
           >
-            🔒 Encoder
+            <FontAwesomeIcon icon={faLock} className="inline" /> Encoder
           </button>
           <button
             onClick={() => {
@@ -66,7 +68,7 @@ export default function URLEncoderDecoder() {
                 : "bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300"
             }`}
           >
-            🔓 Décoder
+            <FontAwesomeIcon icon={faUnlock} className="inline" /> Décoder
           </button>
         </div>
       </div>
@@ -94,13 +96,13 @@ export default function URLEncoderDecoder() {
           disabled={!input.trim()}
           className="flex-1 px-6 py-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold text-lg disabled:opacity-50 disabled:cursor-not-allowed"
         >
-          {mode === "encode" ? "🔒 Encoder" : "🔓 Décoder"}
+          {mode === "encode" ? <><FontAwesomeIcon icon={faLock} className="inline" /> Encoder</> : <><FontAwesomeIcon icon={faUnlock} className="inline" /> Décoder</>}
         </button>
         <button
           onClick={handleClear}
           className="px-6 py-4 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors font-semibold"
         >
-          🗑️
+          <FontAwesomeIcon icon={faTrash} className="inline" />
         </button>
       </div>
 
@@ -108,7 +110,7 @@ export default function URLEncoderDecoder() {
         <div className="bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg p-4">
           <div className="flex items-center justify-between mb-3">
             <h4 className="font-semibold text-gray-900 dark:text-gray-100">
-              📄 Résultat
+              <FontAwesomeIcon icon={faFile} className="inline" /> Résultat
             </h4>
             <button
               onClick={copyToClipboard}
@@ -132,7 +134,7 @@ export default function URLEncoderDecoder() {
 
       <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4">
         <h4 className="font-semibold mb-2 text-blue-900 dark:text-blue-100">
-          💡 Qu&apos;est-ce que l&apos;encodage URL ?
+          <FontAwesomeIcon icon={faLightbulb} className="inline" /> Qu&apos;est-ce que l&apos;encodage URL ?
         </h4>
         <p className="text-sm text-blue-800 dark:text-blue-200 mb-3">
           L&apos;encodage URL (aussi appelé pourcentage d&apos;encodage) convertit les caractères spéciaux en une forme sûre pour les URLs. Les caractères sont remplacés par % suivi de leur code hexadécimal.
@@ -172,7 +174,7 @@ export default function URLEncoderDecoder() {
 
       <div className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg p-4">
         <h4 className="font-semibold mb-2 text-green-900 dark:text-green-100">
-          ✅ Quand utiliser l&apos;encodage URL ?
+          <FontAwesomeIcon icon={faCheck} className="inline" /> Quand utiliser l&apos;encodage URL ?
         </h4>
         <ul className="text-sm text-green-800 dark:text-green-200 space-y-1">
           <li><strong>Paramètres d&apos;URL:</strong> Pour passer des valeurs dans les query strings</li>

@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import ImageCompressor from "@/components/ImageCompressor";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLock, faMobileAlt, faRocket } from '@fortawesome/free-solid-svg-icons';
 
 export default function ImageCompressorPage() {
   return (
@@ -80,7 +82,7 @@ export default function ImageCompressorPage() {
             <h2 className="text-2xl font-bold mb-4">Avantages de la compression d&apos;images pour le web</h2>
             <div className="space-y-4 text-gray-700 dark:text-gray-300">
               <div>
-                <h3 className="text-xl font-semibold mb-2">🚀 Amélioration des performances</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faRocket} className="inline" /> Amélioration des performances</h3>
                 <p>
                   Les images compressées se chargent plus rapidement, ce qui améliore significativement la vitesse 
                   de votre site web. Google privilégie les sites rapides dans ses résultats de recherche, ce qui 
@@ -96,7 +98,7 @@ export default function ImageCompressorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">📱 Optimisation mobile</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faMobileAlt} className="inline" /> Optimisation mobile</h3>
                 <p>
                   Les utilisateurs mobiles représentent plus de 50% du trafic web. Des images légères garantissent 
                   une navigation fluide même sur des connexions 3G ou 4G, améliorant l&apos;expérience utilisateur 
@@ -104,7 +106,7 @@ export default function ImageCompressorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🔒 Confidentialité garantie</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faLock} className="inline" /> Confidentialité garantie</h3>
                 <p>
                   Contrairement à certains outils en ligne, notre compresseur traite vos images directement dans 
                   votre navigateur. Vos photos ne sont jamais envoyées sur nos serveurs, garantissant une 

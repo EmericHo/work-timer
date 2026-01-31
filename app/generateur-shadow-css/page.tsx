@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import CSSShadowGenerator from "@/components/CSSShadowGenerator";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBolt, faBullseye, faFileAlt, faFilm, faImage, faMobileAlt, faMountain, faPalette, faRulerHorizontal, faSmog, faStar } from '@fortawesome/free-solid-svg-icons';
 
 export default function CSSShadowGeneratorPage() {
   return (
@@ -73,7 +75,7 @@ export default function CSSShadowGeneratorPage() {
                 </ul>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🌫️ Blur Radius (Rayon de flou)</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faSmog} className="inline" /> Blur Radius (Rayon de flou)</h3>
                 <p className="mb-2">
                   Détermine la netteté ou diffusion de l&apos;ombre :
                 </p>
@@ -85,7 +87,7 @@ export default function CSSShadowGeneratorPage() {
                 </ul>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">📏 Spread Radius (Rayon d&apos;expansion)</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faRulerHorizontal} className="inline" /> Spread Radius (Rayon d&apos;expansion)</h3>
                 <p className="mb-2">
                   Agrandit ou réduit la taille de l&apos;ombre avant le flou :
                 </p>
@@ -97,7 +99,7 @@ export default function CSSShadowGeneratorPage() {
                 </ul>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🎨 Couleur de l&apos;ombre</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faPalette} className="inline" /> Couleur de l&apos;ombre</h3>
                 <p className="mb-2">
                   La couleur influence fortement le réalisme :
                 </p>
@@ -115,7 +117,7 @@ export default function CSSShadowGeneratorPage() {
             <h2 className="text-2xl font-bold mb-4">Créer de la profondeur avec les ombres</h2>
             <div className="space-y-4 text-gray-700 dark:text-gray-300">
               <div>
-                <h3 className="text-xl font-semibold mb-2">🏔️ Niveaux d&apos;élévation</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faMountain} className="inline" /> Niveaux d&apos;élévation</h3>
                 <p className="mb-2">
                   Le Material Design de Google définit des niveaux d&apos;élévation standardisés :
                 </p>
@@ -139,7 +141,7 @@ export default function CSSShadowGeneratorPage() {
                 </div>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">✨ Ombres multiples</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faStar} className="inline" /> Ombres multiples</h3>
                 <p className="mb-2">
                   Combinez plusieurs ombres pour un réalisme accru (séparées par des virgules) :
                 </p>
@@ -175,7 +177,7 @@ export default function CSSShadowGeneratorPage() {
             <h2 className="text-2xl font-bold mb-4">Ombres et design systems</h2>
             <div className="space-y-4 text-gray-700 dark:text-gray-300">
               <div>
-                <h3 className="text-xl font-semibold mb-2">🎨 Material Design</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faPalette} className="inline" /> Material Design</h3>
                 <p className="mb-2">
                   Le système de Google utilise des ombres pour indiquer la hiérarchie :
                 </p>
@@ -247,7 +249,7 @@ export default function CSSShadowGeneratorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">📝 Champs de formulaire</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faFileAlt} className="inline" /> Champs de formulaire</h3>
                 <p className="text-sm">
                   Les inputs peuvent avoir une ombre interne au repos et une ombre externe au focus : 
                   <code className="bg-gray-200 dark:bg-gray-700 px-1 rounded text-xs ml-1">box-shadow: inset 0 1px 3px rgba(0,0,0,0.1)</code> 
@@ -256,7 +258,7 @@ export default function CSSShadowGeneratorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">🖼️ Images et médias</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faImage} className="inline" /> Images et médias</h3>
                 <p className="text-sm">
                   Ajoutez une ombre subtile aux images pour les faire ressortir : 
                   <code className="bg-gray-200 dark:bg-gray-700 px-1 rounded text-xs ml-1">box-shadow: 0 4px 12px rgba(0,0,0,0.15)</code>. 
@@ -264,7 +266,7 @@ export default function CSSShadowGeneratorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">🎯 Effet de glow (lueur)</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faBullseye} className="inline" /> Effet de glow (lueur)</h3>
                 <p className="text-sm">
                   Utilisez une couleur d&apos;ombre pour créer un effet lumineux : 
                   <code className="bg-gray-200 dark:bg-gray-700 px-1 rounded text-xs ml-1">box-shadow: 0 0 20px rgba(66,153,225,0.6)</code>. 
@@ -278,7 +280,7 @@ export default function CSSShadowGeneratorPage() {
             <h2 className="text-2xl font-bold mb-4">Performance et bonnes pratiques</h2>
             <div className="space-y-3 text-gray-700 dark:text-gray-300">
               <div>
-                <h3 className="font-semibold mb-1">⚡ Impact sur les performances</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faBolt} className="inline" /> Impact sur les performances</h3>
                 <p className="text-sm">
                   Les box-shadow sont rendues par le GPU et généralement performantes. Cependant, des ombres très 
                   floues (blur-radius &#62; 50px) ou de nombreux éléments avec ombres peuvent ralentir le rendu, 
@@ -287,7 +289,7 @@ export default function CSSShadowGeneratorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">🎬 Animations d&apos;ombres</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faFilm} className="inline" /> Animations d&apos;ombres</h3>
                 <p className="text-sm">
                   Animer box-shadow peut être coûteux. Pour de meilleures performances, animez plutôt transform 
                   et opacity. Si vous devez animer l&apos;ombre, utilisez <code className="bg-gray-200 dark:bg-gray-700 px-1 rounded text-xs">transition: box-shadow 0.3s ease</code> 
@@ -305,7 +307,7 @@ export default function CSSShadowGeneratorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">📱 Responsive et mobile</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faMobileAlt} className="inline" /> Responsive et mobile</h3>
                 <p className="text-sm">
                   Sur petits écrans, des ombres trop prononcées peuvent sembler lourdes. Réduisez légèrement 
                   l&apos;intensité des ombres sur mobile avec des media queries. Évitez les ombres très floues 

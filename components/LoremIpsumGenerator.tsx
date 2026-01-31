@@ -1,6 +1,8 @@
 "use client";
 
 import { useState } from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFileAlt, faLightbulb } from '@fortawesome/free-solid-svg-icons';
 
 const LOREM_WORDS = [
   "lorem", "ipsum", "dolor", "sit", "amet", "consectetur", "adipiscing", "elit",
@@ -131,7 +133,7 @@ export default function LoremIpsumGenerator() {
         onClick={generate}
         className="w-full px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold"
       >
-        📝 Générer Lorem Ipsum
+        <FontAwesomeIcon icon={faFileAlt} className="inline" /> Générer Lorem Ipsum
       </button>
 
       {output && (
@@ -155,7 +157,7 @@ export default function LoremIpsumGenerator() {
 
       <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4">
         <h4 className="font-semibold mb-2 text-blue-900 dark:text-blue-100">
-          💡 À propos du Lorem Ipsum
+          <FontAwesomeIcon icon={faLightbulb} className="inline" /> À propos du Lorem Ipsum
         </h4>
         <ul className="text-sm text-blue-800 dark:text-blue-200 space-y-1">
           <li><strong>Origine:</strong> Texte latin utilisé depuis les années 1500</li>

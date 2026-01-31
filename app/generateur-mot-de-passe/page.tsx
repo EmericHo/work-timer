@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import PasswordGenerator from "@/components/PasswordGenerator";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faDice, faExclamationTriangle, faKey, faRulerHorizontal, faSync } from '@fortawesome/free-solid-svg-icons';
 
 export default function PasswordGeneratorPage() {
   return (
@@ -54,7 +56,7 @@ export default function PasswordGeneratorPage() {
             <h2 className="text-2xl font-bold mb-4">Critères d&apos;un mot de passe fort</h2>
             <div className="space-y-4 text-gray-700 dark:text-gray-300">
               <div>
-                <h3 className="text-xl font-semibold mb-2">📏 Longueur minimale de 12 caractères</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faRulerHorizontal} className="inline" /> Longueur minimale de 12 caractères</h3>
                 <p>
                   Plus un mot de passe est long, plus il est difficile à craquer. Nous recommandons au minimum 12 
                   caractères, mais 16 caractères ou plus est idéal pour les comptes sensibles comme les emails, 
@@ -70,7 +72,7 @@ export default function PasswordGeneratorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🎲 Aléatoire et imprévisible</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faDice} className="inline" /> Aléatoire et imprévisible</h3>
                 <p>
                   Évitez les mots du dictionnaire, les suites logiques (123456, abcdef) et les informations 
                   personnelles (dates de naissance, noms). Un bon mot de passe doit être généré aléatoirement 
@@ -100,7 +102,7 @@ export default function PasswordGeneratorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🔐 Activez l&apos;authentification à deux facteurs (2FA)</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faKey} className="inline" /> Activez l&apos;authentification à deux facteurs (2FA)</h3>
                 <p>
                   Même avec un mot de passe fort, activez la 2FA quand c&apos;est possible. Cette couche de 
                   sécurité supplémentaire nécessite un deuxième élément de vérification (code SMS, application 
@@ -108,7 +110,7 @@ export default function PasswordGeneratorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🔄 Changez régulièrement vos mots de passe</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faSync} className="inline" /> Changez régulièrement vos mots de passe</h3>
                 <p>
                   Bien qu&apos;un mot de passe fort puisse durer longtemps, il est sage de le changer périodiquement, 
                   surtout pour les comptes sensibles. Changez immédiatement vos mots de passe si vous soupçonnez 
@@ -116,7 +118,7 @@ export default function PasswordGeneratorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">⚠️ Méfiez-vous du phishing</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faExclamationTriangle} className="inline" /> Méfiez-vous du phishing</h3>
                 <p>
                   Même le meilleur mot de passe ne vous protège pas si vous le donnez à un site malveillant. 
                   Vérifiez toujours l&apos;URL du site et ne cliquez pas sur des liens suspects dans les emails.

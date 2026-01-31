@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import TravelDestinationSelector from "@/components/TravelDestinationSelector";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSuitcase, faBook, faDice, faDollarSign, faGlobe, faLightbulb, faMapMarkedAlt, faMobileAlt, faMoneyBill, faMountain, faPlane, faStar, faUmbrellaBeach } from '@fortawesome/free-solid-svg-icons';
 
 export default function TravelDestinationPage() {
   return (
@@ -57,7 +59,7 @@ export default function TravelDestinationPage() {
             <h2 className="text-2xl font-bold mb-4">Comment planifier un voyage spontané ?</h2>
             <div className="space-y-4 text-gray-700 dark:text-gray-300">
               <div>
-                <h3 className="text-xl font-semibold mb-2">🎲 Laissez le hasard décider</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faDice} className="inline" /> Laissez le hasard décider</h3>
                 <p>
                   Utilisez notre sélecteur pour choisir une destination au hasard. Vous pouvez exclure 
                   les pays que vous avez déjà visités ou ceux qui ne correspondent pas à votre budget 
@@ -66,7 +68,7 @@ export default function TravelDestinationPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">✈️ Vérifiez les vols et les visas</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faPlane} className="inline" /> Vérifiez les vols et les visas</h3>
                 <p>
                   Une fois votre destination choisie, recherchez les vols disponibles et leurs prix. 
                   Consultez également les exigences en matière de visa pour votre nationalité. Certains 
@@ -85,7 +87,7 @@ export default function TravelDestinationPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">📱 Téléchargez les applications essentielles</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faMobileAlt} className="inline" /> Téléchargez les applications essentielles</h3>
                 <p>
                   Avant de partir, téléchargez Google Maps pour la navigation hors ligne, une application 
                   de traduction comme Google Translate, et des applications de transport local. Sauvegardez 
@@ -94,7 +96,7 @@ export default function TravelDestinationPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">💰 Préparez vos finances</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faMoneyBill} className="inline" /> Préparez vos finances</h3>
                 <p>
                   Informez votre banque de votre voyage pour éviter le blocage de votre carte. Emportez 
                   une carte de crédit internationale sans frais de transaction si possible. Ayez toujours 
@@ -103,7 +105,7 @@ export default function TravelDestinationPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🎒 Faites un bagage léger</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faSuitcase} className="inline" /> Faites un bagage léger</h3>
                 <p>
                   Pour un voyage spontané, voyagez léger avec seulement un bagage cabine si possible. 
                   Cela vous donne plus de flexibilité pour changer de plans et évite les frais de bagages. 
@@ -118,7 +120,7 @@ export default function TravelDestinationPage() {
             <h2 className="text-2xl font-bold mb-4">Les avantages de voyager vers des destinations aléatoires</h2>
             <div className="space-y-4 text-gray-700 dark:text-gray-300">
               <div>
-                <h3 className="text-xl font-semibold mb-2">🌍 Découvrez de nouvelles cultures</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faGlobe} className="inline" /> Découvrez de nouvelles cultures</h3>
                 <p>
                   Voyager vers une destination aléatoire vous expose à des cultures que vous n&apos;auriez 
                   peut-être jamais explorées autrement. Vous apprenez à apprécier différentes façons de 
@@ -127,7 +129,7 @@ export default function TravelDestinationPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">💡 Sortez de votre zone de confort</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faLightbulb} className="inline" /> Sortez de votre zone de confort</h3>
                 <p>
                   Le voyage spontané vous pousse à être plus aventureux et flexible. Vous développez des 
                   compétences en résolution de problèmes et en adaptation. Face à l&apos;imprévu, vous 
@@ -136,7 +138,7 @@ export default function TravelDestinationPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">💰 Économisez de l&apos;argent</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faMoneyBill} className="inline" /> Économisez de l&apos;argent</h3>
                 <p>
                   Les destinations moins touristiques sont souvent beaucoup plus abordables. En évitant 
                   les pièges à touristes des destinations populaires, vous pouvez voyager plus longtemps 
@@ -163,7 +165,7 @@ export default function TravelDestinationPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🌟 Découvrez des joyaux cachés</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faStar} className="inline" /> Découvrez des joyaux cachés</h3>
                 <p>
                   Les destinations moins connues regorgent de trésors cachés que peu de gens ont eu le 
                   privilège de découvrir. Des plages désertes aux sites historiques méconnus, en passant 
@@ -217,7 +219,7 @@ export default function TravelDestinationPage() {
               </div>
               <div>
                 <h3 className="text-xl font-semibold mb-2 flex items-center gap-2">
-                  <span>🏔️</span> Amérique du Sud - Aventure et Passion
+                  <span><FontAwesomeIcon icon={faMountain} className="inline" /></span> Amérique du Sud - Aventure et Passion
                 </h3>
                 <p>
                   Destination idéale pour les aventuriers avec un budget modéré. La nourriture est 
@@ -242,7 +244,7 @@ export default function TravelDestinationPage() {
               </div>
               <div>
                 <h3 className="text-xl font-semibold mb-2 flex items-center gap-2">
-                  <span>🏝️</span> Océanie - Paradis Naturels
+                  <span><FontAwesomeIcon icon={faUmbrellaBeach} className="inline" /></span> Océanie - Paradis Naturels
                 </h3>
                 <p>
                   L&apos;Australie et la Nouvelle-Zélande offrent des paysages époustouflants mais 
@@ -260,7 +262,7 @@ export default function TravelDestinationPage() {
             <h2 className="text-2xl font-bold mb-4">Conseils pour voyager avec un budget limité</h2>
             <ul className="space-y-3 text-gray-700 dark:text-gray-300">
               <li className="flex items-start gap-3">
-                <span className="text-xl">💵</span>
+                <span className="text-xl"><FontAwesomeIcon icon={faDollarSign} className="inline" /></span>
                 <div>
                   <strong>Choisissez des destinations abordables :</strong> L&apos;Asie du Sud-Est, 
                   l&apos;Europe de l&apos;Est, l&apos;Amérique centrale et certains pays d&apos;Afrique 
@@ -269,7 +271,7 @@ export default function TravelDestinationPage() {
                 </div>
               </li>
               <li className="flex items-start gap-3">
-                <span className="text-xl">✈️</span>
+                <span className="text-xl"><FontAwesomeIcon icon={faPlane} className="inline" /></span>
                 <div>
                   <strong>Soyez flexible avec les dates :</strong> Voyager en basse saison ou en milieu 
                   de semaine peut réduire considérablement les coûts. Utilisez les alertes de prix sur 
@@ -323,7 +325,7 @@ export default function TravelDestinationPage() {
                 </div>
               </li>
               <li className="flex items-start gap-3">
-                <span className="text-xl">📱</span>
+                <span className="text-xl"><FontAwesomeIcon icon={faMobileAlt} className="inline" /></span>
                 <div>
                   <strong>Utilisez des cartes SIM locales :</strong> Achetez une carte SIM locale avec 
                   des données plutôt que d&apos;utiliser le roaming international. C&apos;est beaucoup 
@@ -332,7 +334,7 @@ export default function TravelDestinationPage() {
                 </div>
               </li>
               <li className="flex items-start gap-3">
-                <span className="text-xl">🎒</span>
+                <span className="text-xl"><FontAwesomeIcon icon={faSuitcase} className="inline" /></span>
                 <div>
                   <strong>Voyagez léger :</strong> Avec seulement un bagage cabine, vous évitez les frais 
                   de bagages en soute et gagnez du temps à l&apos;aéroport. C&apos;est aussi plus facile 
@@ -454,7 +456,7 @@ export default function TravelDestinationPage() {
             <h2 className="text-2xl font-bold mb-4">Ressources et recommandations pour voyageurs</h2>
             <div className="space-y-4 text-gray-700 dark:text-gray-300">
               <div>
-                <h3 className="text-xl font-semibold mb-2">✈️ Recherche et réservation de vols</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faPlane} className="inline" /> Recherche et réservation de vols</h3>
                 <p>
                   <strong>Skyscanner, Google Flights, Kayak :</strong> Ces comparateurs de vols vous 
                   permettent de trouver les meilleures offres. Activez les alertes de prix pour être 
@@ -472,7 +474,7 @@ export default function TravelDestinationPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">📚 Guides et inspiration</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faBook} className="inline" /> Guides et inspiration</h3>
                 <p>
                   <strong>Lonely Planet, Routard, TripAdvisor :</strong> Guides de voyage complets avec 
                   des informations pratiques. Les blogs de voyage comme Nomadic Matt, The Blonde Abroad, 
@@ -481,7 +483,7 @@ export default function TravelDestinationPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🗺️ Navigation et transport</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faMapMarkedAlt} className="inline" /> Navigation et transport</h3>
                 <p>
                   <strong>Google Maps, Maps.me, Rome2Rio :</strong> Google Maps pour la navigation urbaine 
                   (téléchargez les cartes hors ligne), Maps.me pour la randonnée et les zones sans 
@@ -499,7 +501,7 @@ export default function TravelDestinationPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">💰 Finances en voyage</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faMoneyBill} className="inline" /> Finances en voyage</h3>
                 <p>
                   <strong>Revolut, Wise (TransferWise), XE Currency :</strong> Cartes multi-devises sans 
                   frais de transaction internationale. XE Currency pour convertir rapidement les prix. 
@@ -545,7 +547,7 @@ export default function TravelDestinationPage() {
             </p>
             <p className="text-gray-700 dark:text-gray-300">
               Cliquez sur le bouton ci-dessus pour découvrir votre prochaine destination de rêve. 
-              L&apos;aventure commence maintenant ! 🌍✈️🎒
+              L&apos;aventure commence maintenant ! <FontAwesomeIcon icon={faGlobe} className="inline" /><FontAwesomeIcon icon={faPlane} className="inline" /><FontAwesomeIcon icon={faSuitcase} className="inline" />
             </p>
           </div>
         </section>

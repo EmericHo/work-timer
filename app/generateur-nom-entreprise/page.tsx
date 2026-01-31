@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import BusinessNameGenerator from "@/components/BusinessNameGenerator";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBalanceScale, faBriefcase, faBullseye, faGlobe, faMobileAlt, faRocket, faTimes } from '@fortawesome/free-solid-svg-icons';
 
 export default function BusinessNameGeneratorPage() {
   return (
@@ -98,7 +100,7 @@ export default function BusinessNameGeneratorPage() {
             <h2 className="text-2xl font-bold mb-4">Critères d&apos;un bon nom d&apos;entreprise</h2>
             <div className="space-y-4 text-gray-700 dark:text-gray-300">
               <div>
-                <h3 className="text-xl font-semibold mb-2">🎯 Simple et mémorable</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faBullseye} className="inline" /> Simple et mémorable</h3>
                 <p>
                   Un bon nom d&apos;entreprise doit être facile à retenir et à prononcer. Évitez les noms trop longs 
                   (idéalement 2-3 syllabes maximum), les orthographes complexes ou les combinaisons de lettres 
@@ -114,7 +116,7 @@ export default function BusinessNameGeneratorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🌐 Disponible comme nom de domaine</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faGlobe} className="inline" /> Disponible comme nom de domaine</h3>
                 <p>
                   Vérifiez impérativement que le nom de domaine correspondant est disponible (idéalement en .com, 
                   .fr ou votre extension locale). Votre présence en ligne est cruciale, et avoir le même nom pour 
@@ -122,7 +124,7 @@ export default function BusinessNameGeneratorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">⚖️ Unique et distinctif</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faBalanceScale} className="inline" /> Unique et distinctif</h3>
                 <p>
                   Le nom doit vous différencier de vos concurrents et éviter toute confusion avec des marques 
                   existantes. Effectuez une recherche approfondie sur Google, l&apos;INPI (Institut National de la 
@@ -130,7 +132,7 @@ export default function BusinessNameGeneratorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🚀 Évolutif et intemporel</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faRocket} className="inline" /> Évolutif et intemporel</h3>
                 <p>
                   Pensez à long terme. Votre nom doit pouvoir accompagner la croissance de votre entreprise sans 
                   devenir obsolète ou limitant. Évitez les références trop spécifiques à une localité, un produit 
@@ -138,7 +140,7 @@ export default function BusinessNameGeneratorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">💼 Professionnel et approprié</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faBriefcase} className="inline" /> Professionnel et approprié</h3>
                 <p>
                   Le nom doit inspirer confiance et correspondre à votre secteur d&apos;activité. Un nom trop fantaisiste 
                   peut nuire à une entreprise de services juridiques, tandis qu&apos;un nom trop formel peut sembler 
@@ -146,7 +148,7 @@ export default function BusinessNameGeneratorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🌍 International-friendly</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faGlobe} className="inline" /> International-friendly</h3>
                 <p>
                   Si vous envisagez une expansion internationale, assurez-vous que votre nom n&apos;a pas de 
                   signification négative ou embarrassante dans d&apos;autres langues. Testez la prononciation dans 
@@ -154,7 +156,7 @@ export default function BusinessNameGeneratorPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">📱 Compatible réseaux sociaux</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faMobileAlt} className="inline" /> Compatible réseaux sociaux</h3>
                 <p>
                   Vérifiez que le nom d&apos;utilisateur correspondant est disponible sur les principales plateformes 
                   sociales (Instagram, Facebook, Twitter/X, LinkedIn, TikTok). Une présence cohérente renforce 
@@ -227,7 +229,7 @@ export default function BusinessNameGeneratorPage() {
             <h2 className="text-2xl font-bold mb-4">Erreurs à éviter lors du choix d&apos;un nom</h2>
             <div className="space-y-3 text-gray-700 dark:text-gray-300">
               <div className="flex items-start gap-3">
-                <span className="text-red-600 text-xl">❌</span>
+                <span className="text-red-600 text-xl"><FontAwesomeIcon icon={faTimes} className="inline" /></span>
                 <div>
                   <h3 className="font-semibold mb-1">Noms trop génériques</h3>
                   <p className="text-sm">
@@ -237,7 +239,7 @@ export default function BusinessNameGeneratorPage() {
                 </div>
               </div>
               <div className="flex items-start gap-3">
-                <span className="text-red-600 text-xl">❌</span>
+                <span className="text-red-600 text-xl"><FontAwesomeIcon icon={faTimes} className="inline" /></span>
                 <div>
                   <h3 className="font-semibold mb-1">Orthographes créatives complexes</h3>
                   <p className="text-sm">
@@ -247,7 +249,7 @@ export default function BusinessNameGeneratorPage() {
                 </div>
               </div>
               <div className="flex items-start gap-3">
-                <span className="text-red-600 text-xl">❌</span>
+                <span className="text-red-600 text-xl"><FontAwesomeIcon icon={faTimes} className="inline" /></span>
                 <div>
                   <h3 className="font-semibold mb-1">Noms trop longs</h3>
                   <p className="text-sm">
@@ -257,7 +259,7 @@ export default function BusinessNameGeneratorPage() {
                 </div>
               </div>
               <div className="flex items-start gap-3">
-                <span className="text-red-600 text-xl">❌</span>
+                <span className="text-red-600 text-xl"><FontAwesomeIcon icon={faTimes} className="inline" /></span>
                 <div>
                   <h3 className="font-semibold mb-1">Noms trop restrictifs</h3>
                   <p className="text-sm">
@@ -267,7 +269,7 @@ export default function BusinessNameGeneratorPage() {
                 </div>
               </div>
               <div className="flex items-start gap-3">
-                <span className="text-red-600 text-xl">❌</span>
+                <span className="text-red-600 text-xl"><FontAwesomeIcon icon={faTimes} className="inline" /></span>
                 <div>
                   <h3 className="font-semibold mb-1">Ignorer la signification internationale</h3>
                   <p className="text-sm">
@@ -277,7 +279,7 @@ export default function BusinessNameGeneratorPage() {
                 </div>
               </div>
               <div className="flex items-start gap-3">
-                <span className="text-red-600 text-xl">❌</span>
+                <span className="text-red-600 text-xl"><FontAwesomeIcon icon={faTimes} className="inline" /></span>
                 <div>
                   <h3 className="font-semibold mb-1">Suivre aveuglément les tendances</h3>
                   <p className="text-sm">
@@ -287,7 +289,7 @@ export default function BusinessNameGeneratorPage() {
                 </div>
               </div>
               <div className="flex items-start gap-3">
-                <span className="text-red-600 text-xl">❌</span>
+                <span className="text-red-600 text-xl"><FontAwesomeIcon icon={faTimes} className="inline" /></span>
                 <div>
                   <h3 className="font-semibold mb-1">Ne pas vérifier la disponibilité légale</h3>
                   <p className="text-sm">
@@ -297,7 +299,7 @@ export default function BusinessNameGeneratorPage() {
                 </div>
               </div>
               <div className="flex items-start gap-3">
-                <span className="text-red-600 text-xl">❌</span>
+                <span className="text-red-600 text-xl"><FontAwesomeIcon icon={faTimes} className="inline" /></span>
                 <div>
                   <h3 className="font-semibold mb-1">Choisir seul sans feedback</h3>
                   <p className="text-sm">

@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import MortgageCalculatorEnhanced from "@/components/MortgageCalculatorEnhanced";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBalanceScale, faBolt, faBriefcase, faBullseye, faChartBar, faChartLine, faHome, faMoneyBill } from '@fortawesome/free-solid-svg-icons';
 
 export default function MortgageCalculatorPage() {
   return (
@@ -60,7 +62,7 @@ export default function MortgageCalculatorPage() {
             <h2 className="text-2xl font-bold mb-4">Types de prêts immobiliers</h2>
             <div className="space-y-4 text-gray-700 dark:text-gray-300">
               <div>
-                <h3 className="text-xl font-semibold mb-2">🏠 Prêt amortissable classique</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faHome} className="inline" /> Prêt amortissable classique</h3>
                 <p className="mb-2">
                   Le plus courant : mensualités constantes incluant capital + intérêts. Au début, vous payez 
                   surtout des intérêts, puis progressivement plus de capital :
@@ -73,7 +75,7 @@ export default function MortgageCalculatorPage() {
                 </ul>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">📉 Prêt à taux variable (révisable)</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faChartLine} className="inline" /> Prêt à taux variable (révisable)</h3>
                 <p className="mb-2">
                   Le taux suit un indice de référence (Euribor) et varie dans le temps :
                 </p>
@@ -85,7 +87,7 @@ export default function MortgageCalculatorPage() {
                 </ul>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🎯 Prêts aidés et réglementés</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faBullseye} className="inline" /> Prêts aidés et réglementés</h3>
                 <p className="mb-2">
                   Plusieurs dispositifs publics facilitent l&apos;accès à la propriété :
                 </p>
@@ -97,7 +99,7 @@ export default function MortgageCalculatorPage() {
                 </ul>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">💼 Prêt in fine</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faBriefcase} className="inline" /> Prêt in fine</h3>
                 <p className="mb-2">
                   Réservé aux investisseurs locatifs et contribuables fortement imposés :
                 </p>
@@ -115,7 +117,7 @@ export default function MortgageCalculatorPage() {
             <h2 className="text-2xl font-bold mb-4">Comprendre l&apos;amortissement</h2>
             <div className="space-y-4 text-gray-700 dark:text-gray-300">
               <div>
-                <h3 className="text-xl font-semibold mb-2">📊 Le tableau d&apos;amortissement</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faChartBar} className="inline" /> Le tableau d&apos;amortissement</h3>
                 <p className="mb-2">
                   Le tableau d&apos;amortissement détaille mois par mois la composition de vos mensualités :
                 </p>
@@ -127,7 +129,7 @@ export default function MortgageCalculatorPage() {
                 </ul>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">⚡ L&apos;impact de la durée</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faBolt} className="inline" /> L&apos;impact de la durée</h3>
                 <p className="mb-2">
                   La durée du prêt influence drastiquement le coût total :
                 </p>
@@ -144,7 +146,7 @@ export default function MortgageCalculatorPage() {
                 </div>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">💰 Le remboursement anticipé</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faMoneyBill} className="inline" /> Le remboursement anticipé</h3>
                 <p className="mb-2">
                   Vous pouvez rembourser tout ou partie de votre prêt avant son terme :
                 </p>
@@ -162,7 +164,7 @@ export default function MortgageCalculatorPage() {
             <h2 className="text-2xl font-bold mb-4">Acheter ou louer : quelle stratégie ?</h2>
             <div className="space-y-4 text-gray-700 dark:text-gray-300">
               <div>
-                <h3 className="text-xl font-semibold mb-2">🏘️ Avantages de l&apos;achat</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faHome} className="inline" /> Avantages de l&apos;achat</h3>
                 <ul className="list-disc pl-6 space-y-1">
                   <li><strong>Patrimoine</strong> : vous construisez un capital au lieu d&apos;enrichir un propriétaire</li>
                   <li><strong>Stabilité</strong> : pas d&apos;augmentation de loyer ni de risque d&apos;expulsion</li>
@@ -182,7 +184,7 @@ export default function MortgageCalculatorPage() {
                 </ul>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">⚖️ Le calcul du point mort</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faBalanceScale} className="inline" /> Le calcul du point mort</h3>
                 <p className="mb-2">
                   Généralement, l&apos;achat devient plus avantageux que la location après :
                 </p>

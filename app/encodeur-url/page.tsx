@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import URLEncoderDecoder from "@/components/URLEncoderDecoder";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCheck, faEnvelope, faGlobe, faLink, faLock, faPalette, faTimes } from '@fortawesome/free-solid-svg-icons';
 
 export default function URLEncoderDecoderPage() {
   return (
@@ -62,7 +64,7 @@ export default function URLEncoderDecoderPage() {
             <h2 className="text-2xl font-bold mb-4">Caractères réservés et encodage</h2>
             <div className="space-y-4 text-gray-700 dark:text-gray-300">
               <div>
-                <h3 className="text-xl font-semibold mb-2">🔒 Caractères réservés dans les URLs</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faLock} className="inline" /> Caractères réservés dans les URLs</h3>
                 <p className="mb-2">
                   Certains caractères ont une signification spéciale dans les URLs et doivent être encodés 
                   s&apos;ils sont utilisés littéralement :
@@ -79,7 +81,7 @@ export default function URLEncoderDecoderPage() {
                 </div>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">✅ Caractères non réservés (pas d&apos;encodage requis)</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faCheck} className="inline" /> Caractères non réservés (pas d&apos;encodage requis)</h3>
                 <p className="mb-2">
                   Ces caractères peuvent être utilisés tels quels dans une URL :
                 </p>
@@ -91,7 +93,7 @@ export default function URLEncoderDecoderPage() {
                 </ul>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🌍 Caractères non-ASCII et Unicode</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faGlobe} className="inline" /> Caractères non-ASCII et Unicode</h3>
                 <p className="mb-2">
                   Tous les caractères en dehors de l&apos;ASCII de base doivent être encodés :
                 </p>
@@ -110,7 +112,7 @@ export default function URLEncoderDecoderPage() {
             <h2 className="text-2xl font-bold mb-4">Différences entre URI, URL et URN</h2>
             <div className="space-y-4 text-gray-700 dark:text-gray-300">
               <div>
-                <h3 className="text-xl font-semibold mb-2">🔗 URI (Uniform Resource Identifier)</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faLink} className="inline" /> URI (Uniform Resource Identifier)</h3>
                 <p className="mb-2">
                   Terme générique désignant tout identifiant de ressource. Les URLs et URNs sont des types d&apos;URI :
                 </p>
@@ -122,7 +124,7 @@ export default function URLEncoderDecoderPage() {
                 </ul>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🌐 URL (Uniform Resource Locator)</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faGlobe} className="inline" /> URL (Uniform Resource Locator)</h3>
                 <p className="mb-2">
                   Type d&apos;URI qui fournit également le moyen d&apos;accéder à la ressource (son emplacement) :
                 </p>
@@ -164,12 +166,12 @@ export default function URLEncoderDecoderPage() {
                   Lors de la création de liens de recherche, les requêtes doivent être encodées :
                 </p>
                 <div className="bg-gray-100 dark:bg-gray-700 p-3 rounded text-xs">
-                  <p className="mb-1">❌ Incorrect : <code>https://site.com/search?q=C++ développement</code></p>
-                  <p>✅ Correct : <code>https://site.com/search?q=C%2B%2B%20d%C3%A9veloppement</code></p>
+                  <p className="mb-1"><FontAwesomeIcon icon={faTimes} className="inline" /> Incorrect : <code>https://site.com/search?q=C++ développement</code></p>
+                  <p><FontAwesomeIcon icon={faCheck} className="inline" /> Correct : <code>https://site.com/search?q=C%2B%2B%20d%C3%A9veloppement</code></p>
                 </div>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">🔗 URLs de redirection</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faLink} className="inline" /> URLs de redirection</h3>
                 <p className="text-sm mb-2">
                   Lorsqu&apos;une URL entière est passée comme paramètre (redirect, callback URL) :
                 </p>
@@ -179,7 +181,7 @@ export default function URLEncoderDecoderPage() {
                 </div>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">📧 Liens mailto avec sujet et corps</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faEnvelope} className="inline" /> Liens mailto avec sujet et corps</h3>
                 <p className="text-sm mb-2">
                   Les liens email avec contenu pré-rempli nécessitent un encodage :
                 </p>
@@ -188,7 +190,7 @@ export default function URLEncoderDecoderPage() {
                 </div>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">🎨 Data URLs et Base64</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faPalette} className="inline" /> Data URLs et Base64</h3>
                 <p className="text-sm">
                   Les data URLs qui embarquent du contenu (images, SVG) utilisent souvent l&apos;encodage URL : 
                   <code className="bg-gray-200 dark:bg-gray-700 px-1 rounded text-xs ml-1">data:image/svg+xml,%3Csvg...</code>. 

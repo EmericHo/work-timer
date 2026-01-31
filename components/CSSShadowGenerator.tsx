@@ -1,6 +1,8 @@
 "use client";
 
 import { useState } from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLaptop, faLightbulb, faPalette } from '@fortawesome/free-solid-svg-icons';
 
 export default function CSSShadowGenerator() {
   const [shadows, setShadows] = useState<Array<{
@@ -214,7 +216,7 @@ export default function CSSShadowGenerator() {
 
       <div className="bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg p-4">
         <h4 className="font-semibold mb-3 text-gray-900 dark:text-gray-100">
-          🎨 Aperçu
+          <FontAwesomeIcon icon={faPalette} className="inline" /> Aperçu
         </h4>
         <div className="bg-white dark:bg-gray-900 p-8 rounded-lg flex items-center justify-center">
           <div
@@ -227,7 +229,7 @@ export default function CSSShadowGenerator() {
       <div className="bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg p-4">
         <div className="flex items-center justify-between mb-3">
           <h4 className="font-semibold text-gray-900 dark:text-gray-100">
-            💻 Code CSS
+            <FontAwesomeIcon icon={faLaptop} className="inline" /> Code CSS
           </h4>
           <button
             onClick={copyToClipboard}
@@ -245,7 +247,7 @@ export default function CSSShadowGenerator() {
 
       <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4">
         <h4 className="font-semibold mb-2 text-blue-900 dark:text-blue-100">
-          💡 Paramètres
+          <FontAwesomeIcon icon={faLightbulb} className="inline" /> Paramètres
         </h4>
         <ul className="text-sm text-blue-800 dark:text-blue-200 space-y-1">
           <li><strong>Horizontal/Vertical:</strong> Position de l&apos;ombre (négatif = gauche/haut)</li>
@@ -258,7 +260,7 @@ export default function CSSShadowGenerator() {
 
       <div className="bg-purple-50 dark:bg-purple-900/20 border border-purple-200 dark:border-purple-800 rounded-lg p-4">
         <h4 className="font-semibold mb-2 text-purple-900 dark:text-purple-100">
-          🎨 Conseils d&apos;utilisation
+          <FontAwesomeIcon icon={faPalette} className="inline" /> Conseils d&apos;utilisation
         </h4>
         <ul className="text-sm text-purple-800 dark:text-purple-200 space-y-1">
           <li>Des ombres subtiles (faible opacité) donnent un effet plus professionnel</li>

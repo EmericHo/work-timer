@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import TextToSpeech from "@/components/TextToSpeech";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBolt, faBook, faBriefcase, faBullseye, faCheck, faExclamationTriangle, faFilm, faGlobe, faMusic, faRocket, faTheaterMasks, faVolumeUp } from '@fortawesome/free-solid-svg-icons';
 
 export default function TextToSpeechPage() {
   return (
@@ -100,7 +102,7 @@ export default function TextToSpeechPage() {
             <h2 className="text-2xl font-bold mb-4">Cas d&apos;usage de la synthèse vocale</h2>
             <div className="space-y-4 text-gray-700 dark:text-gray-300">
               <div>
-                <h3 className="text-xl font-semibold mb-2">📚 Apprentissage et éducation</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faBook} className="inline" /> Apprentissage et éducation</h3>
                 <p>
                   Étudiants : Convertissez vos cours, notes et polycopiés en audio pour réviser en marchant, 
                   en faisant du sport ou dans les transports. L&apos;écoute répétée améliore la mémorisation. 
@@ -119,7 +121,7 @@ export default function TextToSpeechPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">💼 Productivité professionnelle</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faBriefcase} className="inline" /> Productivité professionnelle</h3>
                 <p>
                   Écoutez vos emails, rapports, articles de veille pendant les trajets domicile-travail. 
                   Transformez les longues documentations techniques en podcasts. Révisez des présentations en 
@@ -137,7 +139,7 @@ export default function TextToSpeechPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🌍 Apprentissage des langues</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faGlobe} className="inline" /> Apprentissage des langues</h3>
                 <p>
                   Écoutez la prononciation correcte de textes en langue étrangère. Améliore la compréhension 
                   orale. Permet de s&apos;immerger dans une langue pendant les activités quotidiennes. Utile pour 
@@ -146,7 +148,7 @@ export default function TextToSpeechPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🎬 Création de contenu</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faFilm} className="inline" /> Création de contenu</h3>
                 <p>
                   Créateurs de contenu : Générez des voix-off pour vidéos YouTube, tutoriels, présentations. 
                   Podcasters : Créez rapidement des narrations. Développeurs : Ajoutez des fonctionnalités 
@@ -244,7 +246,7 @@ export default function TextToSpeechPage() {
             <h2 className="text-2xl font-bold mb-4">Paramètres de synthèse vocale expliqués</h2>
             <div className="space-y-4 text-gray-700 dark:text-gray-300">
               <div>
-                <h3 className="text-xl font-semibold mb-2">⚡ Vitesse de lecture (Rate)</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faBolt} className="inline" /> Vitesse de lecture (Rate)</h3>
                 <p className="mb-2">
                   Contrôle la rapidité de la parole synthétisée :
                 </p>
@@ -260,7 +262,7 @@ export default function TextToSpeechPage() {
                 </ul>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🎵 Hauteur tonale (Pitch)</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faMusic} className="inline" /> Hauteur tonale (Pitch)</h3>
                 <p className="mb-2">
                   Modifie la hauteur de la voix (graves vs aigus) :
                 </p>
@@ -276,7 +278,7 @@ export default function TextToSpeechPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🔊 Volume</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faVolumeUp} className="inline" /> Volume</h3>
                 <p>
                   Contrôle l&apos;amplitude sonore de 0% (muet) à 100% (maximum). Ajustez selon votre environnement 
                   d&apos;écoute. Pour une écoute dans un environnement bruyant, augmentez le volume. Pour une écoute 
@@ -291,7 +293,7 @@ export default function TextToSpeechPage() {
             <h2 className="text-2xl font-bold mb-4">Optimiser la qualité de la synthèse vocale</h2>
             <div className="space-y-3 text-gray-700 dark:text-gray-300">
               <div>
-                <h3 className="font-semibold mb-1">✅ Utilisez une ponctuation correcte</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faCheck} className="inline" /> Utilisez une ponctuation correcte</h3>
                 <p className="text-sm">
                   Les points, virgules et points-virgules créent des pauses naturelles. Les points d&apos;exclamation 
                   et d&apos;interrogation influencent l&apos;intonation. Un texte bien ponctué sonne plus naturel et est 
@@ -299,7 +301,7 @@ export default function TextToSpeechPage() {
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">✅ Évitez les abréviations</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faCheck} className="inline" /> Évitez les abréviations</h3>
                 <p className="text-sm">
                   Écrivez &quot;Monsieur&quot; au lieu de &quot;M.&quot;, &quot;kilomètres&quot; au lieu de &quot;km&quot;, &quot;et cetera&quot; 
                   au lieu de &quot;etc.&quot;. Certaines abréviations ne sont pas correctement interprétées et peuvent 
@@ -307,7 +309,7 @@ export default function TextToSpeechPage() {
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">✅ Épeler les acronymes complexes</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faCheck} className="inline" /> Épeler les acronymes complexes</h3>
                 <p className="text-sm">
                   Les acronymes connus (NASA, UNESCO, SNCF) sont généralement bien prononcés. Pour les acronymes 
                   obscurs ou spécifiques à votre domaine, ajoutez des espaces entre les lettres : C D N devient 
@@ -315,7 +317,7 @@ export default function TextToSpeechPage() {
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">✅ Écrivez les nombres en toutes lettres</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faCheck} className="inline" /> Écrivez les nombres en toutes lettres</h3>
                 <p className="text-sm">
                   Pour les dates, montants ou mesures importantes, écrivez &quot;vingt-cinq euros&quot; plutôt que 
                   &quot;25 €&quot;, surtout si la prononciation est ambiguë. Les nombres sont généralement bien 
@@ -323,7 +325,7 @@ export default function TextToSpeechPage() {
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">✅ Choisissez la bonne langue</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faCheck} className="inline" /> Choisissez la bonne langue</h3>
                 <p className="text-sm">
                   Si votre texte mélange plusieurs langues, séparez-le en sections et synthétisez chaque section 
                   avec la voix appropriée. Une voix française lira mal l&apos;anglais et vice versa. Pour les mots 
@@ -331,7 +333,7 @@ export default function TextToSpeechPage() {
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">✅ Utilisez des voix premium si disponibles</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faCheck} className="inline" /> Utilisez des voix premium si disponibles</h3>
                 <p className="text-sm">
                   Certains navigateurs proposent des voix de base (gratuites) et des voix premium (Neural/WaveNet). 
                   Les voix premium sonnent beaucoup plus naturelles avec meilleure intonation. Elles valent le 
@@ -339,7 +341,7 @@ export default function TextToSpeechPage() {
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">✅ Ajustez pour votre contexte d&apos;écoute</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faCheck} className="inline" /> Ajustez pour votre contexte d&apos;écoute</h3>
                 <p className="text-sm">
                   Environnement calme (bureau, maison) : Vitesse normale, volume moyen. Transports bruyants : 
                   Volume élevé, vitesse légèrement réduite pour clarté. Écoute avant le sommeil : Vitesse réduite, 
@@ -347,7 +349,7 @@ export default function TextToSpeechPage() {
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">⚠️ Limitez les caractères spéciaux</h3>
+                <h3 className="font-semibold mb-1"><FontAwesomeIcon icon={faExclamationTriangle} className="inline" /> Limitez les caractères spéciaux</h3>
                 <p className="text-sm">
                   Les emojis, symboles mathématiques complexes, et formatage HTML ne sont pas bien gérés. 
                   Nettoyez votre texte avant synthèse. Les URLs longues sont lues caractère par caractère - 
@@ -361,7 +363,7 @@ export default function TextToSpeechPage() {
             <h2 className="text-2xl font-bold mb-4">Comparaison : Synthèse vocale vs Audiobooks professionnels</h2>
             <div className="space-y-4 text-gray-700 dark:text-gray-300">
               <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded">
-                <h3 className="text-xl font-semibold mb-2">✅ Avantages de la synthèse vocale (TTS)</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faCheck} className="inline" /> Avantages de la synthèse vocale (TTS)</h3>
                 <ul className="list-disc list-inside space-y-2 text-sm ml-4">
                   <li><strong>Instantané</strong> : Convertit n&apos;importe quel texte en secondes</li>
                   <li><strong>Gratuit</strong> : Aucun coût pour convertir vos propres textes</li>
@@ -373,7 +375,7 @@ export default function TextToSpeechPage() {
                 </ul>
               </div>
               <div className="bg-orange-50 dark:bg-orange-900/20 p-4 rounded">
-                <h3 className="text-xl font-semibold mb-2">📚 Avantages des audiobooks professionnels</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faBook} className="inline" /> Avantages des audiobooks professionnels</h3>
                 <ul className="list-disc list-inside space-y-2 text-sm ml-4">
                   <li><strong>Qualité vocale supérieure</strong> : Voix humaines avec émotions authentiques</li>
                   <li><strong>Performance théâtrale</strong> : Narration dramatique, personnages distincts</li>
@@ -384,7 +386,7 @@ export default function TextToSpeechPage() {
                 </ul>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🎯 Quand utiliser chaque option ?</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faBullseye} className="inline" /> Quand utiliser chaque option ?</h3>
                 <p className="mb-2"><strong>Utilisez la synthèse vocale TTS pour :</strong></p>
                 <ul className="list-disc list-inside space-y-1 text-sm ml-4 mb-3">
                   <li>Articles de presse, blogs, documentation technique</li>
@@ -425,7 +427,7 @@ export default function TextToSpeechPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🚀 Neural TTS (Deep Learning)</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faRocket} className="inline" /> Neural TTS (Deep Learning)</h3>
                 <p className="mb-2">
                   Révolution actuelle utilisant les réseaux de neurones profonds :
                 </p>
@@ -441,7 +443,7 @@ export default function TextToSpeechPage() {
                 </ul>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">🎭 Synthèse vocale émotionnelle</h3>
+                <h3 className="text-xl font-semibold mb-2"><FontAwesomeIcon icon={faTheaterMasks} className="inline" /> Synthèse vocale émotionnelle</h3>
                 <p>
                   Les dernières avancées permettent de contrôler l&apos;émotion dans la voix synthétique : joie, 
                   tristesse, colère, surprise. Utile pour assistants virtuels, jeux vidéo, narration dynamique. 

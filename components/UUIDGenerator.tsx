@@ -1,6 +1,8 @@
 "use client";
 
 import { useState, useCallback } from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faDice, faLightbulb } from '@fortawesome/free-solid-svg-icons';
 
 export default function UUIDGenerator() {
   const [uuids, setUuids] = useState<string[]>([]);
@@ -92,7 +94,7 @@ export default function UUIDGenerator() {
         onClick={generateUUIDs}
         className="w-full px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold"
       >
-        🎲 Générer UUID{count > 1 ? "s" : ""}
+        <FontAwesomeIcon icon={faDice} className="inline" /> Générer UUID{count > 1 ? "s" : ""}
       </button>
 
       {uuids.length > 0 && (
@@ -133,7 +135,7 @@ export default function UUIDGenerator() {
 
       <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4">
         <h4 className="font-semibold mb-2 text-blue-900 dark:text-blue-100">
-          💡 À propos des UUIDs
+          <FontAwesomeIcon icon={faLightbulb} className="inline" /> À propos des UUIDs
         </h4>
         <ul className="text-sm text-blue-800 dark:text-blue-200 space-y-1">
           <li><strong>UUID v4:</strong> Généré aléatoirement, idéal pour la plupart des cas d&apos;usage</li>

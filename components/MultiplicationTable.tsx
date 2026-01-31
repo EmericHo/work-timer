@@ -1,6 +1,8 @@
 "use client";
 
 import { useState } from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBook, faChartBar } from '@fortawesome/free-solid-svg-icons';
 
 export default function MultiplicationTable() {
   const [number, setNumber] = useState<number>(7);
@@ -73,7 +75,7 @@ export default function MultiplicationTable() {
             onClick={() => setShowAll(true)}
             className="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
           >
-            📊 Voir toutes les tables (1-10)
+            <FontAwesomeIcon icon={faChartBar} className="inline" /> Voir toutes les tables (1-10)
           </button>
         </>
       ) : (
@@ -110,7 +112,7 @@ export default function MultiplicationTable() {
 
       <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4">
         <h3 className="font-semibold text-blue-900 dark:text-blue-100 mb-2">
-          📚 Apprendre les tables
+          <FontAwesomeIcon icon={faBook} className="inline" /> Apprendre les tables
         </h3>
         <ul className="text-sm text-blue-800 dark:text-blue-200 space-y-1">
           <li>• Commencez par les tables de 1, 2, 5 et 10 (les plus faciles)</li>

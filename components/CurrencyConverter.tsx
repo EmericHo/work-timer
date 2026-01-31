@@ -1,6 +1,8 @@
 "use client";
 
 import { useState } from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChartBar, faExclamationTriangle, faLightbulb } from '@fortawesome/free-solid-svg-icons';
 
 export default function CurrencyConverter() {
   const currencies = {
@@ -137,7 +139,7 @@ export default function CurrencyConverter() {
 
           <div className="bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg p-4">
             <h4 className="font-semibold mb-3 text-gray-900 dark:text-gray-100">
-              📊 Formule de conversion
+              <FontAwesomeIcon icon={faChartBar} className="inline" /> Formule de conversion
             </h4>
             <div className="text-sm space-y-2">
               <p className="font-mono bg-white dark:bg-gray-700 p-3 rounded border border-gray-300 dark:border-gray-600">
@@ -156,7 +158,7 @@ export default function CurrencyConverter() {
 
       <div className="bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded-lg p-4">
         <h4 className="font-semibold mb-2 text-yellow-900 dark:text-yellow-100">
-          ⚠️ Note importante
+          <FontAwesomeIcon icon={faExclamationTriangle} className="inline" /> Note importante
         </h4>
         <p className="text-sm text-yellow-800 dark:text-yellow-200">
           Taux de change approximatifs, non contractuels. Ces taux sont fournis à titre indicatif et peuvent ne pas refléter les taux réels du marché. Pour des transactions réelles, consultez votre banque ou un service de change officiel.
@@ -165,7 +167,7 @@ export default function CurrencyConverter() {
 
       <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4">
         <h4 className="font-semibold mb-2 text-blue-900 dark:text-blue-100">
-          💡 À propos des devises
+          <FontAwesomeIcon icon={faLightbulb} className="inline" /> À propos des devises
         </h4>
         <ul className="text-sm text-blue-800 dark:text-blue-200 space-y-1">
           <li><strong>EUR:</strong> Euro - Union européenne</li>

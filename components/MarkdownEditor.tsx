@@ -1,6 +1,8 @@
 "use client";
 
 import { useState, useCallback } from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowsAltH, faEdit, faEye } from '@fortawesome/free-solid-svg-icons';
 
 export default function MarkdownEditor() {
   const [markdown, setMarkdown] = useState<string>("# Bienvenue dans l'éditeur Markdown\n\nCommencez à écrire votre contenu ici...\n\n## Fonctionnalités supportées\n\n- **Gras** et *italique*\n- [Liens](https://example.com)\n- `Code inline`\n\n```\nBloc de code\n```\n\n> Citations\n\n1. Listes numérotées\n2. Deuxième élément");
@@ -85,7 +87,7 @@ export default function MarkdownEditor() {
               : "bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300"
           }`}
         >
-          ✏️ Édition
+          <FontAwesomeIcon icon={faEdit} className="inline" /> Édition
         </button>
         <button
           onClick={() => setPreviewMode("split")}
@@ -95,7 +97,7 @@ export default function MarkdownEditor() {
               : "bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300"
           }`}
         >
-          ↔️ Divisé
+          <FontAwesomeIcon icon={faArrowsAltH} className="inline" /> Divisé
         </button>
         <button
           onClick={() => setPreviewMode("preview")}
@@ -105,7 +107,7 @@ export default function MarkdownEditor() {
               : "bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300"
           }`}
         >
-          👁️ Aperçu
+          <FontAwesomeIcon icon={faEye} className="inline" /> Aperçu
         </button>
         
         <div className="ml-auto flex gap-2">
