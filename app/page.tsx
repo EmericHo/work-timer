@@ -2,10 +2,30 @@ import Link from "next/link";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Outils Gratuits en Ligne - Timer, Calculatrices, Générateurs et Plus",
-  description: "Suite d'outils gratuits en ligne : Timer Pomodoro, compresseur d'image, générateur UUID, JSON formatter, minificateur CSS/JS, éditeur Markdown, calculatrice scientifique et générateur IBAN. Outils professionnels pour développeurs et travailleurs.",
+  title: "🚀 +60 Outils Gratuits Pro - Boostez Productivité & Dev Web 2025",
+  description: "Découvrez +60 outils professionnels 100% gratuits pour maximiser votre productivité : Timer Pomodoro expert, compresseur d'image ultra-performant, générateurs (UUID, QR Code, mots de passe), calculatrices avancées, convertisseurs, minificateurs CSS/JS/HTML, éditeurs en ligne et plus. Sans inscription, traitement sécurisé côté client, disponible 24/7.",
   alternates: {
     canonical: "/",
+  },
+  openGraph: {
+    title: "🚀 +60 Outils Gratuits Pro - Boostez Productivité & Dev Web 2025",
+    description: "Découvrez +60 outils professionnels 100% gratuits : Timer Pomodoro, compresseur d'image, générateurs, calculatrices et plus. Sans inscription !",
+    url: "/",
+    type: "website",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "+60 Outils Gratuits Professionnels pour la Productivité et le Développement Web",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "🚀 +60 Outils Gratuits Pro - Productivité & Dev",
+    description: "+60 outils professionnels gratuits pour booster votre productivité : Timer, compresseur, générateurs et plus !",
+    images: ["/og-image.png"],
   },
 };
 
@@ -16,11 +36,12 @@ export default function Home() {
         {/* Hero Section */}
         <section className="text-center py-8">
           <h1 className="text-4xl sm:text-5xl font-bold text-balance mb-4">
-            Outils Gratuits en Ligne - Productivité & Développement
+            🚀 +60 Outils Gratuits Pro - Boostez Votre Productivité & Développement Web
           </h1>
           <p className="text-lg sm:text-xl text-gray-700 dark:text-gray-300 max-w-3xl mx-auto mb-6">
-            Suite complète d&apos;outils professionnels 100% gratuits pour améliorer votre productivité, 
-            optimiser votre code et faciliter votre développement web.
+            Suite complète de +60 outils professionnels 100% gratuits, sans inscription : 
+            Timer Pomodoro expert, compresseur d&apos;image ultra-rapide, générateurs (UUID, QR Code, mots de passe), 
+            calculatrices avancées, convertisseurs, minificateurs et bien plus pour maximiser votre efficacité au quotidien.
           </p>
         </section>
 
