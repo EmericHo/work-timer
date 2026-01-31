@@ -90,10 +90,23 @@ export default function UnitConverter() {
   };
 
   const swapUnits = () => {
+    const tempUnit = fromUnit;
     setFromUnit(toUnit);
-    setToUnit(fromUnit);
-    setInputValue(result);
-    setResult(inputValue);
+    setToUnit(tempUnit);
+    
+    // Swap values and recalculate
+    if (result) {
+      setInputValue(result);
+      // Calculate reverse conversion
+      const value = parseFloat(result);
+      if (!isNaN(value)) {
+        const fromConversion = units[category][toUnit]; // Note: using swapped units
+        const toConversion = units[category][tempUnit];
+        const baseValue = fromConversion.toBase(value);
+        const convertedValue = toConversion.fromBase(baseValue);
+        setResult(convertedValue.toFixed(6).replace(/\.?0+$/, ""));
+      }
+    }
   };
 
   return (

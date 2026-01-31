@@ -6,7 +6,7 @@ export default function HashGenerator() {
   const [input, setInput] = useState<string>("");
   const [hashes, setHashes] = useState<Record<string, string>>({});
 
-  const md5 = (str: string): string => {
+  const simpleDemoHash = (str: string): string => {
     // Simplified hash for demo purposes only - NOT a real MD5 implementation
     // For production use, please use a proper crypto library like crypto-js
     let hash = 0;
@@ -28,8 +28,8 @@ export default function HashGenerator() {
     const data = encoder.encode(input);
 
     try {
-      // MD5 (using simple implementation)
-      const md5Hash = md5(input);
+      // MD5 (using simple demo hash)
+      const md5Hash = simpleDemoHash(input);
 
       // SHA variants using Web Crypto API
       const sha1Buffer = await crypto.subtle.digest("SHA-1", data);

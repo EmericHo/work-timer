@@ -15,13 +15,13 @@ export default function RegexTester() {
   });
   const [matches, setMatches] = useState<RegExpMatchArray[]>([]);
   const [error, setError] = useState<string>("");
-  const [highlightedText, setHighlightedText] = useState<string>("");
+  const [matchPositions, setMatchPositions] = useState<{ start: number; end: number }[]>([]);
 
   useEffect(() => {
     if (!pattern || !testString) {
       setMatches([]);
       setError("");
-      setHighlightedText(testString);
+      setMatchPositions([]);
       return;
     }
 
@@ -33,53 +33,75 @@ export default function RegexTester() {
       
       const regex = new RegExp(pattern, flagString);
       const allMatches: RegExpMatchArray[] = [];
+      const positions: { start: number; end: number }[] = [];
       
       if (flags.g) {
         let match;
         const globalRegex = new RegExp(pattern, flagString);
         while ((match = globalRegex.exec(testString)) !== null) {
           allMatches.push(match);
+          if (match.index !== undefined) {
+            positions.push({
+              start: match.index,
+              end: match.index + match[0].length,
+            });
+          }
           if (match.index === globalRegex.lastIndex) {
             globalRegex.lastIndex++;
           }
         }
       } else {
         const match = testString.match(regex);
-        if (match) allMatches.push(match);
+        if (match && match.index !== undefined) {
+          allMatches.push(match);
+          positions.push({
+            start: match.index,
+            end: match.index + match[0].length,
+          });
+        }
       }
 
       setMatches(allMatches);
+      setMatchPositions(positions);
       setError("");
-
-      // Highlight matches
-      let highlighted = testString;
-      if (allMatches.length > 0) {
-        const replacements: { start: number; end: number; text: string }[] = [];
-        allMatches.forEach((match) => {
-          if (match.index !== undefined) {
-            replacements.push({
-              start: match.index,
-              end: match.index + match[0].length,
-              text: match[0],
-            });
-          }
-        });
-
-        replacements.sort((a, b) => b.start - a.start);
-        replacements.forEach((rep) => {
-          highlighted =
-            highlighted.substring(0, rep.start) +
-            `<mark class="bg-yellow-300 dark:bg-yellow-600">${rep.text}</mark>` +
-            highlighted.substring(rep.end);
-        });
-      }
-      setHighlightedText(highlighted);
     } catch (err) {
       setError(err instanceof Error ? err.message : "Invalid regex pattern");
       setMatches([]);
-      setHighlightedText(testString);
+      setMatchPositions([]);
     }
   }, [pattern, testString, flags]);
+
+  const renderHighlightedText = () => {
+    if (!testString || matchPositions.length === 0) {
+      return testString;
+    }
+
+    const parts: React.ReactNode[] = [];
+    let lastIndex = 0;
+
+    matchPositions.forEach((pos, idx) => {
+      // Add text before match
+      if (pos.start > lastIndex) {
+        parts.push(
+          <span key={`text-${idx}`}>{testString.substring(lastIndex, pos.start)}</span>
+        );
+      }
+      // Add highlighted match
+      parts.push(
+        <mark key={`mark-${idx}`} className="bg-yellow-300 dark:bg-yellow-600">
+          {testString.substring(pos.start, pos.end)}
+        </mark>
+      );
+      lastIndex = pos.end;
+    });
+
+    // Add remaining text
+    if (lastIndex < testString.length) {
+      parts.push(<span key="text-end">{testString.substring(lastIndex)}</span>);
+    }
+
+    return parts;
+  };
 
   const toggleFlag = (flag: keyof typeof flags) => {
     setFlags((prev) => ({ ...prev, [flag]: !prev[flag] }));
@@ -167,10 +189,9 @@ export default function RegexTester() {
               Résultat ({matches.length} correspondance{matches.length !== 1 ? "s" : ""})
             </label>
           </div>
-          <div
-            className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-gray-100 font-mono whitespace-pre-wrap min-h-[150px]"
-            dangerouslySetInnerHTML={{ __html: highlightedText }}
-          />
+          <div className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-gray-100 font-mono whitespace-pre-wrap min-h-[150px]">
+            {renderHighlightedText()}
+          </div>
         </div>
       )}
 

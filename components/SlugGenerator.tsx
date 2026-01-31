@@ -8,25 +8,25 @@ export default function SlugGenerator() {
   const [separator, setSeparator] = useState<string>("-");
   const [lowercase, setLowercase] = useState<boolean>(true);
 
-  const generateSlug = (text: string) => {
+  const generateSlug = (text: string, sep: string, lower: boolean) => {
     let result = text.trim();
 
     // Remove accents
     result = result.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 
     // Convert to lowercase if option is enabled
-    if (lowercase) {
+    if (lower) {
       result = result.toLowerCase();
     }
 
     // Replace spaces and special characters with separator
-    result = result.replace(/[^a-zA-Z0-9]+/g, separator);
+    result = result.replace(/[^a-zA-Z0-9]+/g, sep);
 
     // Remove leading/trailing separators
-    result = result.replace(new RegExp(`^${separator}+|${separator}+$`, "g"), "");
+    result = result.replace(new RegExp(`^${sep}+|${sep}+$`, "g"), "");
 
     // Replace multiple separators with single one
-    result = result.replace(new RegExp(`${separator}{2,}`, "g"), separator);
+    result = result.replace(new RegExp(`${sep}{2,}`, "g"), sep);
 
     setSlug(result);
   };
@@ -34,7 +34,7 @@ export default function SlugGenerator() {
   const handleInputChange = (text: string) => {
     setInput(text);
     if (text) {
-      generateSlug(text);
+      generateSlug(text, separator, lowercase);
     } else {
       setSlug("");
     }
@@ -69,7 +69,7 @@ export default function SlugGenerator() {
             value={separator}
             onChange={(e) => {
               setSeparator(e.target.value);
-              if (input) generateSlug(input);
+              if (input) generateSlug(input, e.target.value, lowercase);
             }}
             className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100"
           >
@@ -86,7 +86,7 @@ export default function SlugGenerator() {
               checked={lowercase}
               onChange={(e) => {
                 setLowercase(e.target.checked);
-                if (input) generateSlug(input);
+                if (input) generateSlug(input, separator, e.target.checked);
               }}
               className="w-5 h-5 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
             />
