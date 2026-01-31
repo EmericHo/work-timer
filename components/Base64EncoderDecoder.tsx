@@ -11,7 +11,10 @@ export default function Base64EncoderDecoder() {
   const handleEncode = () => {
     try {
       setError("");
-      const encoded = btoa(unescape(encodeURIComponent(input)));
+      // Modern approach using TextEncoder
+      const utf8Bytes = new TextEncoder().encode(input);
+      const binaryString = Array.from(utf8Bytes, byte => String.fromCharCode(byte)).join('');
+      const encoded = btoa(binaryString);
       setOutput(encoded);
     } catch (err) {
       setError("Erreur lors de l'encodage. Vérifiez votre texte.");
@@ -22,7 +25,10 @@ export default function Base64EncoderDecoder() {
   const handleDecode = () => {
     try {
       setError("");
-      const decoded = decodeURIComponent(escape(atob(input)));
+      // Modern approach using TextDecoder
+      const binaryString = atob(input);
+      const bytes = Uint8Array.from(binaryString, char => char.charCodeAt(0));
+      const decoded = new TextDecoder().decode(bytes);
       setOutput(decoded);
     } catch (err) {
       setError("Erreur lors du décodage. Vérifiez que le texte est bien encodé en Base64.");

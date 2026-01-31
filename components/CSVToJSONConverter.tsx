@@ -16,11 +16,32 @@ export default function CSVToJSONConverter() {
         throw new Error("Le CSV doit contenir au moins un en-tête et une ligne de données");
       }
 
-      const headers = lines[0].split(",").map((h) => h.trim());
+      // Simple CSV parser - handles basic quoted fields
+      const parseLine = (line: string): string[] => {
+        const result: string[] = [];
+        let current = "";
+        let inQuotes = false;
+        
+        for (let i = 0; i < line.length; i++) {
+          const char = line[i];
+          if (char === '"') {
+            inQuotes = !inQuotes;
+          } else if (char === "," && !inQuotes) {
+            result.push(current.trim());
+            current = "";
+          } else {
+            current += char;
+          }
+        }
+        result.push(current.trim());
+        return result;
+      };
+
+      const headers = parseLine(lines[0]);
       const result: Record<string, string>[] = [];
 
       for (let i = 1; i < lines.length; i++) {
-        const values = lines[i].split(",").map((v) => v.trim());
+        const values = parseLine(lines[i]);
         const obj: Record<string, string> = {};
         
         headers.forEach((header, index) => {
@@ -197,6 +218,7 @@ export default function CSVToJSONConverter() {
           <li><strong>Première ligne:</strong> En-têtes des colonnes (séparés par des virgules)</li>
           <li><strong>Lignes suivantes:</strong> Données correspondantes</li>
           <li><strong>Exemple:</strong> name,age,city puis John,30,Paris</li>
+          <li><strong>Guillemets:</strong> Utilisez &quot; pour les valeurs contenant des virgules</li>
           <li>Chaque ligne sera convertie en un objet JSON avec les en-têtes comme clés</li>
         </ul>
       </div>

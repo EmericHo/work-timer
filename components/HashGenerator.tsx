@@ -7,8 +7,8 @@ export default function HashGenerator() {
   const [hashes, setHashes] = useState<Record<string, string>>({});
 
   const md5 = (str: string): string => {
-    // Simple hash implementation for demo purposes
-    // Note: This is not a true MD5, for production use a proper crypto library
+    // Simplified hash for demo purposes only - NOT a real MD5 implementation
+    // For production use, please use a proper crypto library like crypto-js
     let hash = 0;
     for (let i = 0; i < str.length; i++) {
       const char = str.charCodeAt(i);
@@ -115,11 +115,11 @@ export default function HashGenerator() {
           💡 À propos des algorithmes de hachage
         </h4>
         <ul className="text-sm text-blue-800 dark:text-blue-200 space-y-1">
-          <li><strong>MD5:</strong> 128 bits - Rapide mais non sécurisé (collisions connues)</li>
+          <li><strong>MD5:</strong> 128 bits - Démonstration uniquement (non cryptographique)</li>
           <li><strong>SHA-1:</strong> 160 bits - Déprécié pour la sécurité (collisions possibles)</li>
           <li><strong>SHA-256:</strong> 256 bits - Recommandé pour la plupart des usages</li>
           <li><strong>SHA-512:</strong> 512 bits - Très sécurisé, idéal pour données sensibles</li>
-          <li><strong>Usage:</strong> Vérification d&apos;intégrité, stockage de mots de passe, signatures</li>
+          <li><strong>Note:</strong> MD5 affiché est une simulation, utilisez une vraie bibliothèque crypto pour la production</li>
         </ul>
       </div>
     </div>

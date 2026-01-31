@@ -57,13 +57,13 @@ export default function CoinFlip() {
             "💫"
           ) : currentResult === "heads" ? (
             <div className="text-center">
-              <div className="text-7xl">👑</div>
-              <div className="text-lg mt-2">Pile</div>
+              <div className="text-7xl">👤</div>
+              <div className="text-lg mt-2">Face</div>
             </div>
           ) : currentResult === "tails" ? (
             <div className="text-center">
-              <div className="text-7xl">⚔️</div>
-              <div className="text-lg mt-2">Face</div>
+              <div className="text-7xl">🔢</div>
+              <div className="text-lg mt-2">Pile</div>
             </div>
           ) : (
             "?"
@@ -86,12 +86,12 @@ export default function CoinFlip() {
       {history.length > 0 && (
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <div className="bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded-lg p-4 text-center">
-            <div className="text-4xl mb-2">👑</div>
+            <div className="text-4xl mb-2">👤</div>
             <div className="text-2xl font-bold text-yellow-900 dark:text-yellow-100">
               {stats.heads}
             </div>
             <div className="text-sm text-yellow-700 dark:text-yellow-300">
-              Pile ({stats.total > 0 ? ((stats.heads / stats.total) * 100).toFixed(1) : 0}%)
+              Face ({stats.total > 0 ? ((stats.heads / stats.total) * 100).toFixed(1) : 0}%)
             </div>
           </div>
 
@@ -106,12 +106,12 @@ export default function CoinFlip() {
           </div>
 
           <div className="bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-4 text-center">
-            <div className="text-4xl mb-2">⚔️</div>
+            <div className="text-4xl mb-2">🔢</div>
             <div className="text-2xl font-bold text-gray-900 dark:text-gray-100">
               {stats.tails}
             </div>
             <div className="text-sm text-gray-600 dark:text-gray-400">
-              Face ({stats.total > 0 ? ((stats.tails / stats.total) * 100).toFixed(1) : 0}%)
+              Pile ({stats.total > 0 ? ((stats.tails / stats.total) * 100).toFixed(1) : 0}%)
             </div>
           </div>
         </div>
@@ -142,7 +142,7 @@ export default function CoinFlip() {
                 }`}
                 title={flip.timestamp.toLocaleTimeString()}
               >
-                {flip.result === "heads" ? "👑 Pile" : "⚔️ Face"}
+                {flip.result === "heads" ? "👤 Face" : "🔢 Pile"}
               </div>
             ))}
           </div>
