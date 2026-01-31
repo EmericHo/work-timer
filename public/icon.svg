@@ -1,7 +1,50 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-  <rect width="512" height="512" fill="#3b82f6"/>
-  <circle cx="256" cy="256" r="180" fill="none" stroke="white" stroke-width="20"/>
-  <line x1="256" y1="256" x2="256" y2="140" stroke="white" stroke-width="15" stroke-linecap="round"/>
-  <line x1="256" y1="256" x2="340" y2="256" stroke="white" stroke-width="15" stroke-linecap="round"/>
-  <text x="256" y="420" font-family="Arial, sans-serif" font-size="60" font-weight="bold" fill="white" text-anchor="middle">TIMER</text>
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2563eb;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="512" height="512" fill="url(#bgGradient)" rx="80"/>
+  
+  <!-- Clock face -->
+  <circle cx="256" cy="256" r="160" fill="white" filter="url(#shadow)"/>
+  
+  <!-- Clock tick marks -->
+  <g stroke="#3b82f6" stroke-width="6" stroke-linecap="round">
+    <!-- 12, 3, 6, 9 positions (longer) -->
+    <line x1="256" y1="106" x2="256" y2="126"/>
+    <line x1="406" y1="256" x2="386" y2="256"/>
+    <line x1="256" y1="406" x2="256" y2="386"/>
+    <line x1="106" y1="256" x2="126" y2="256"/>
+    <!-- Other hour marks -->
+    <line x1="336" y1="136" x2="326" y2="146"/>
+    <line x1="376" y1="176" x2="366" y2="186"/>
+    <line x1="376" y1="336" x2="366" y2="326"/>
+    <line x1="336" y1="376" x2="326" y2="366"/>
+    <line x1="176" y1="376" x2="186" y2="366"/>
+    <line x1="136" y1="336" x2="146" y2="326"/>
+    <line x1="136" y1="176" x2="146" y2="186"/>
+    <line x1="176" y1="136" x2="186" y2="146"/>
+  </g>
+  
+  <!-- Clock center dot -->
+  <circle cx="256" cy="256" r="12" fill="#3b82f6"/>
+  
+  <!-- Clock hands (showing 10:10 - classic watch advertising pose) -->
+  <g stroke="#3b82f6" stroke-linecap="round">
+    <!-- Hour hand -->
+    <line x1="256" y1="256" x2="226" y2="186" stroke-width="12"/>
+    <!-- Minute hand -->
+    <line x1="256" y1="256" x2="316" y2="196" stroke-width="10"/>
+  </g>
+  
+  <!-- Subtle play button hint for timer functionality -->
+  <path d="M 256 440 L 290 460 L 290 420 Z" fill="#3b82f6" opacity="0.8"/>
 </svg>
