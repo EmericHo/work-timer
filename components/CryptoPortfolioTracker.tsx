@@ -206,7 +206,11 @@ export default function CryptoPortfolioTracker() {
       {/* Form */}
       <div className="bg-gray-50 dark:bg-gray-700 p-4 sm:p-6 rounded-lg">
         <h3 className="text-xl font-bold mb-4 text-gray-900 dark:text-gray-100">
-          {editingId ? <><FontAwesomeIcon icon={faEdit} className="inline" /> Modifier une position</> : <><FontAwesomeIcon icon={faPlus} className="inline" /> Ajouter une position crypto</>}
+          {editingId ? (
+            <><FontAwesomeIcon icon={faEdit} className="inline" /> Modifier une position</>
+          ) : (
+            <><FontAwesomeIcon icon={faPlus} className="inline" /> Ajouter une position crypto</>
+          )}
         </h3>
         
         <div className="bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-300 dark:border-yellow-700 p-3 rounded-lg mb-4">

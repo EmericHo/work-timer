@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDice, faHashtag, faLightbulb, faSortUp, faSquare, faStar, faTrash } from '@fortawesome/free-solid-svg-icons';
+import type { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 
 type DiceType = "d4" | "d6" | "d8" | "d10" | "d12" | "d20" | "d100";
 
@@ -49,7 +50,7 @@ export default function DiceRoller() {
   };
 
   const getDiceIcon = (dice: DiceType) => {
-    const iconMap: Record<DiceType, any> = {
+    const iconMap: Record<DiceType, IconDefinition> = {
       d4: faSortUp,
       d6: faDice,
       d8: faSquare,
