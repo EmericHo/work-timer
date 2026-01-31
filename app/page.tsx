@@ -24,39 +24,87 @@ export default function Home() {
           </p>
         </section>
 
-        {/* Outils de Productivité */}
+        {/* Outils de Productivité & Texte */}
         <section>
-          <h2 className="text-3xl font-bold mb-6 text-center">🎯 Outils de Productivité</h2>
+          <h2 className="text-3xl font-bold mb-6 text-center">🎯 Outils de Productivité & Texte</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-4">
             <Link href="/timer" className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-all border-2 border-transparent hover:border-blue-500">
               <h3 className="text-2xl font-semibold mb-3">⏱️ Timer & Pomodoro</h3>
               <p className="text-gray-600 dark:text-gray-400 mb-3">
-                Chronomètre précis et technique Pomodoro pour maximiser votre concentration et productivité
+                Chronomètre précis et technique Pomodoro pour maximiser votre concentration
               </p>
               <span className="text-blue-600 dark:text-blue-400 text-sm font-semibold">En savoir plus →</span>
             </Link>
-            
-            <Link href="/calculatrice-fiscale" className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-all border-2 border-transparent hover:border-green-500">
-              <h3 className="text-2xl font-semibold mb-3">🧮 Calculatrice Fiscale</h3>
+
+            <Link href="/compteur-mots" className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-all border-2 border-transparent hover:border-green-500">
+              <h3 className="text-2xl font-semibold mb-3">📝 Compteur de Mots</h3>
               <p className="text-gray-600 dark:text-gray-400 mb-3">
-                Calculez votre impôt sur le revenu et simulez votre fiscalité 2025-2026
+                Comptez mots, caractères, phrases et temps de lecture en temps réel
               </p>
               <span className="text-green-600 dark:text-green-400 text-sm font-semibold">En savoir plus →</span>
             </Link>
-            
-            <Link href="/calculatrice-avancee" className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-all border-2 border-transparent hover:border-purple-500">
-              <h3 className="text-2xl font-semibold mb-3">🔬 Calculatrice Scientifique</h3>
+
+            <Link href="/generateur-lorem-ipsum" className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-all border-2 border-transparent hover:border-purple-500">
+              <h3 className="text-2xl font-semibold mb-3">📄 Lorem Ipsum</h3>
               <p className="text-gray-600 dark:text-gray-400 mb-3">
-                Fonctions trigonométriques, logarithmes et calculs avancés pour vos projets
+                Générez du texte de remplissage pour vos maquettes et designs
               </p>
               <span className="text-purple-600 dark:text-purple-400 text-sm font-semibold">En savoir plus →</span>
+            </Link>
+
+            <Link href="/generateur-slug" className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-all border-2 border-transparent hover:border-indigo-500">
+              <h3 className="text-2xl font-semibold mb-3">🔗 Générateur de Slug</h3>
+              <p className="text-gray-600 dark:text-gray-400 mb-3">
+                Créez des URLs SEO-friendly à partir de n&apos;importe quel texte
+              </p>
+              <span className="text-indigo-600 dark:text-indigo-400 text-sm font-semibold">En savoir plus →</span>
+            </Link>
+
+            <Link href="/repeteur-texte" className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-all border-2 border-transparent hover:border-pink-500">
+              <h3 className="text-2xl font-semibold mb-3">🔁 Répéteur de Texte</h3>
+              <p className="text-gray-600 dark:text-gray-400 mb-3">
+                Répétez du texte plusieurs fois avec séparateur personnalisable
+              </p>
+              <span className="text-pink-600 dark:text-pink-400 text-sm font-semibold">En savoir plus →</span>
+            </Link>
+
+            <Link href="/convertisseur-morse" className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-all border-2 border-transparent hover:border-teal-500">
+              <h3 className="text-2xl font-semibold mb-3">📡 Code Morse</h3>
+              <p className="text-gray-600 dark:text-gray-400 mb-3">
+                Convertissez texte en morse et vice-versa avec lecture audio
+              </p>
+              <span className="text-teal-600 dark:text-teal-400 text-sm font-semibold">En savoir plus →</span>
+            </Link>
+
+            <Link href="/comparateur-texte" className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-all border-2 border-transparent hover:border-orange-500">
+              <h3 className="text-2xl font-semibold mb-3">🔍 Comparateur de Texte</h3>
+              <p className="text-gray-600 dark:text-gray-400 mb-3">
+                Comparez deux textes et visualisez les différences ligne par ligne
+              </p>
+              <span className="text-orange-600 dark:text-orange-400 text-sm font-semibold">En savoir plus →</span>
+            </Link>
+
+            <Link href="/convertisseur-unites" className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-all border-2 border-transparent hover:border-cyan-500">
+              <h3 className="text-2xl font-semibold mb-3">⚖️ Convertisseur d&apos;Unités</h3>
+              <p className="text-gray-600 dark:text-gray-400 mb-3">
+                Convertissez longueurs, poids, températures et volumes facilement
+              </p>
+              <span className="text-cyan-600 dark:text-cyan-400 text-sm font-semibold">En savoir plus →</span>
+            </Link>
+
+            <Link href="/csv-to-json" className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-all border-2 border-transparent hover:border-emerald-500">
+              <h3 className="text-2xl font-semibold mb-3">📊 CSV vers JSON</h3>
+              <p className="text-gray-600 dark:text-gray-400 mb-3">
+                Convertissez vos fichiers CSV en JSON instantanément
+              </p>
+              <span className="text-emerald-600 dark:text-emerald-400 text-sm font-semibold">En savoir plus →</span>
             </Link>
           </div>
         </section>
 
-        {/* Outils pour Développeurs */}
+        {/* Outils pour Développeurs & Sécurité */}
         <section>
-          <h2 className="text-3xl font-bold mb-6 text-center">💻 Outils pour Développeurs</h2>
+          <h2 className="text-3xl font-bold mb-6 text-center">💻 Outils pour Développeurs & Sécurité</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-4">
             <Link href="/json-formatter" className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-all border-2 border-transparent hover:border-blue-500">
               <h3 className="text-2xl font-semibold mb-3">📋 JSON Formatter</h3>
@@ -81,15 +129,180 @@ export default function Home() {
               </p>
               <span className="text-indigo-600 dark:text-indigo-400 text-sm font-semibold">En savoir plus →</span>
             </Link>
+
+            <Link href="/encodeur-base64" className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-all border-2 border-transparent hover:border-green-500">
+              <h3 className="text-2xl font-semibold mb-3">🔐 Encodeur Base64</h3>
+              <p className="text-gray-600 dark:text-gray-400 mb-3">
+                Encodez et décodez vos données en Base64 pour emails et APIs
+              </p>
+              <span className="text-green-600 dark:text-green-400 text-sm font-semibold">En savoir plus →</span>
+            </Link>
+
+            <Link href="/generateur-hash" className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-all border-2 border-transparent hover:border-red-500">
+              <h3 className="text-2xl font-semibold mb-3">🔒 Générateur de Hash</h3>
+              <p className="text-gray-600 dark:text-gray-400 mb-3">
+                Générez des hash MD5, SHA-1, SHA-256, SHA-512 pour vos données
+              </p>
+              <span className="text-red-600 dark:text-red-400 text-sm font-semibold">En savoir plus →</span>
+            </Link>
+
+            <Link href="/testeur-regex" className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-all border-2 border-transparent hover:border-purple-500">
+              <h3 className="text-2xl font-semibold mb-3">🎯 Testeur Regex</h3>
+              <p className="text-gray-600 dark:text-gray-400 mb-3">
+                Testez vos expressions régulières avec mise en surbrillance en direct
+              </p>
+              <span className="text-purple-600 dark:text-purple-400 text-sm font-semibold">En savoir plus →</span>
+            </Link>
+
+            <Link href="/encodeur-url" className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-all border-2 border-transparent hover:border-yellow-500">
+              <h3 className="text-2xl font-semibold mb-3">🌐 Encodeur URL</h3>
+              <p className="text-gray-600 dark:text-gray-400 mb-3">
+                Encodez et décodez les URLs pour vos liens et APIs web
+              </p>
+              <span className="text-yellow-600 dark:text-yellow-400 text-sm font-semibold">En savoir plus →</span>
+            </Link>
+
+            <Link href="/decodeur-jwt" className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-all border-2 border-transparent hover:border-teal-500">
+              <h3 className="text-2xl font-semibold mb-3">🎫 Décodeur JWT</h3>
+              <p className="text-gray-600 dark:text-gray-400 mb-3">
+                Décodez et inspectez vos tokens JWT visuellement
+              </p>
+              <span className="text-teal-600 dark:text-teal-400 text-sm font-semibold">En savoir plus →</span>
+            </Link>
+
+            <Link href="/generateur-meta-seo" className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-all border-2 border-transparent hover:border-pink-500">
+              <h3 className="text-2xl font-semibold mb-3">🏷️ Meta Tags SEO</h3>
+              <p className="text-gray-600 dark:text-gray-400 mb-3">
+                Générez des meta tags optimisés pour le référencement de votre site
+              </p>
+              <span className="text-pink-600 dark:text-pink-400 text-sm font-semibold">En savoir plus →</span>
+            </Link>
+
+            <Link href="/generateur-robots-txt" className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-all border-2 border-transparent hover:border-cyan-500">
+              <h3 className="text-2xl font-semibold mb-3">🤖 Robots.txt</h3>
+              <p className="text-gray-600 dark:text-gray-400 mb-3">
+                Créez votre fichier robots.txt pour contrôler l&apos;indexation
+              </p>
+              <span className="text-cyan-600 dark:text-cyan-400 text-sm font-semibold">En savoir plus →</span>
+            </Link>
+
+            <Link href="/minificateur-html" className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-all border-2 border-transparent hover:border-blue-500">
+              <h3 className="text-2xl font-semibold mb-3">📦 Minificateur HTML</h3>
+              <p className="text-gray-600 dark:text-gray-400 mb-3">
+                Compressez votre code HTML pour améliorer les performances web
+              </p>
+              <span className="text-blue-600 dark:text-blue-400 text-sm font-semibold">En savoir plus →</span>
+            </Link>
           </div>
         </section>
 
-        {/* Outils Générateurs */}
+        {/* Outils Design & Créatifs */}
         <section>
-          <h2 className="text-3xl font-bold mb-6 text-center">🎲 Générateurs & Utilitaires</h2>
+          <h2 className="text-3xl font-bold mb-6 text-center">🎨 Outils Design & Créatifs</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-4">
+            <Link href="/convertisseur-couleur" className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-all border-2 border-transparent hover:border-red-500">
+              <h3 className="text-2xl font-semibold mb-3">🎨 Convertisseur Couleur</h3>
+              <p className="text-gray-600 dark:text-gray-400 mb-3">
+                Convertissez entre HEX, RGB et HSL avec prévisualisation en direct
+              </p>
+              <span className="text-red-600 dark:text-red-400 text-sm font-semibold">En savoir plus →</span>
+            </Link>
+
+            <Link href="/generateur-palette-couleurs" className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-all border-2 border-transparent hover:border-purple-500">
+              <h3 className="text-2xl font-semibold mb-3">🌈 Palette de Couleurs</h3>
+              <p className="text-gray-600 dark:text-gray-400 mb-3">
+                Générez des palettes harmonieuses, export CSS et Tailwind
+              </p>
+              <span className="text-purple-600 dark:text-purple-400 text-sm font-semibold">En savoir plus →</span>
+            </Link>
+
+            <Link href="/generateur-gradient-css" className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-all border-2 border-transparent hover:border-pink-500">
+              <h3 className="text-2xl font-semibold mb-3">🌅 Gradient CSS</h3>
+              <p className="text-gray-600 dark:text-gray-400 mb-3">
+                Créez des dégradés CSS linéaires et radiaux interactifs
+              </p>
+              <span className="text-pink-600 dark:text-pink-400 text-sm font-semibold">En savoir plus →</span>
+            </Link>
+
+            <Link href="/generateur-shadow-css" className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-all border-2 border-transparent hover:border-indigo-500">
+              <h3 className="text-2xl font-semibold mb-3">💫 Box Shadow CSS</h3>
+              <p className="text-gray-600 dark:text-gray-400 mb-3">
+                Générez des ombres CSS avec prévisualisation instantanée
+              </p>
+              <span className="text-indigo-600 dark:text-indigo-400 text-sm font-semibold">En savoir plus →</span>
+            </Link>
+
+            <Link href="/generateur-banniere-linkedin" className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-all border-2 border-transparent hover:border-blue-500">
+              <h3 className="text-2xl font-semibold mb-3">💼 Bannière LinkedIn</h3>
+              <p className="text-gray-600 dark:text-gray-400 mb-3">
+                Créez des bannières professionnelles pour votre profil LinkedIn
+              </p>
+              <span className="text-blue-600 dark:text-blue-400 text-sm font-semibold">En savoir plus →</span>
+            </Link>
+          </div>
+        </section>
+        {/* Outils Générateurs & Aléatoires */}
+        <section>
+          <h2 className="text-3xl font-bold mb-6 text-center">🎲 Générateurs & Aléatoires</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-4">
+            <Link href="/generateur-mot-de-passe" className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-all border-2 border-transparent hover:border-red-500">
+              <h3 className="text-2xl font-semibold mb-3">🔑 Mot de Passe</h3>
+              <p className="text-gray-600 dark:text-gray-400 mb-3">
+                Générez des mots de passe sécurisés et personnalisables
+              </p>
+              <span className="text-red-600 dark:text-red-400 text-sm font-semibold">En savoir plus →</span>
+            </Link>
+
+            <Link href="/generateur-nombre-aleatoire" className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-all border-2 border-transparent hover:border-green-500">
+              <h3 className="text-2xl font-semibold mb-3">🎲 Nombre Aléatoire</h3>
+              <p className="text-gray-600 dark:text-gray-400 mb-3">
+                Générez des nombres aléatoires avec plage personnalisable
+              </p>
+              <span className="text-green-600 dark:text-green-400 text-sm font-semibold">En savoir plus →</span>
+            </Link>
+
+            <Link href="/lanceur-des" className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-all border-2 border-transparent hover:border-purple-500">
+              <h3 className="text-2xl font-semibold mb-3">🎲 Lanceur de Dés</h3>
+              <p className="text-gray-600 dark:text-gray-400 mb-3">
+                Lancez des dés D&D (d4, d6, d8, d10, d12, d20, d100)
+              </p>
+              <span className="text-purple-600 dark:text-purple-400 text-sm font-semibold">En savoir plus →</span>
+            </Link>
+
+            <Link href="/pile-ou-face" className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-all border-2 border-transparent hover:border-blue-500">
+              <h3 className="text-2xl font-semibold mb-3">🪙 Pile ou Face</h3>
+              <p className="text-gray-600 dark:text-gray-400 mb-3">
+                Tirez à pile ou face avec animation et historique
+              </p>
+              <span className="text-blue-600 dark:text-blue-400 text-sm font-semibold">En savoir plus →</span>
+            </Link>
+
+            <Link href="/generateur-nom-aleatoire" className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-all border-2 border-transparent hover:border-yellow-500">
+              <h3 className="text-2xl font-semibold mb-3">👤 Noms Aléatoires</h3>
+              <p className="text-gray-600 dark:text-gray-400 mb-3">
+                Générez des prénoms, noms complets ou pseudos aléatoires
+              </p>
+              <span className="text-yellow-600 dark:text-yellow-400 text-sm font-semibold">En savoir plus →</span>
+            </Link>
+
+            <Link href="/generateur-nom-entreprise" className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-all border-2 border-transparent hover:border-orange-500">
+              <h3 className="text-2xl font-semibold mb-3">🏢 Nom d&apos;Entreprise</h3>
+              <p className="text-gray-600 dark:text-gray-400 mb-3">
+                Trouvez le nom parfait pour votre startup ou entreprise
+              </p>
+              <span className="text-orange-600 dark:text-orange-400 text-sm font-semibold">En savoir plus →</span>
+            </Link>
+
+            <Link href="/generateur-excuses" className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-all border-2 border-transparent hover:border-pink-500">
+              <h3 className="text-2xl font-semibold mb-3">😅 Excuses Amusantes</h3>
+              <p className="text-gray-600 dark:text-gray-400 mb-3">
+                Générez des excuses créatives pour toutes les situations
+              </p>
+              <span className="text-pink-600 dark:text-pink-400 text-sm font-semibold">En savoir plus →</span>
+            </Link>
+
             <Link href="/generateur-uuid" className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-all border-2 border-transparent hover:border-cyan-500">
-              <h3 className="text-2xl font-semibold mb-3">🎲 Générateur UUID</h3>
+              <h3 className="text-2xl font-semibold mb-3">🆔 Générateur UUID</h3>
               <p className="text-gray-600 dark:text-gray-400 mb-3">
                 Créez des identifiants uniques universels v1 et v4 en masse
               </p>
@@ -112,66 +325,106 @@ export default function Home() {
               <span className="text-purple-600 dark:text-purple-400 text-sm font-semibold">En savoir plus →</span>
             </Link>
 
-            <Link href="/generateur-nom-startup" className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-all border-2 border-transparent hover:border-yellow-500">
-              <h3 className="text-2xl font-semibold mb-3">🚀 Générateur Nom Startup</h3>
-              <p className="text-gray-600 dark:text-gray-400 mb-3">
-                Trouvez le nom parfait pour votre startup ou entreprise tech
-              </p>
-              <span className="text-yellow-600 dark:text-yellow-400 text-sm font-semibold">En savoir plus →</span>
-            </Link>
-
             <Link href="/generateur-nom-personnage" className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-all border-2 border-transparent hover:border-red-500">
-              <h3 className="text-2xl font-semibold mb-3">👤 Générateur Nom Personnage</h3>
+              <h3 className="text-2xl font-semibold mb-3">🧙 Nom de Personnage</h3>
               <p className="text-gray-600 dark:text-gray-400 mb-3">
                 Générez des noms de personnages pour vos histoires et jeux
               </p>
               <span className="text-red-600 dark:text-red-400 text-sm font-semibold">En savoir plus →</span>
             </Link>
-
-            <Link href="/generateur-banniere-linkedin" className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-all border-2 border-transparent hover:border-blue-500">
-              <h3 className="text-2xl font-semibold mb-3">💼 Bannière LinkedIn</h3>
-              <p className="text-gray-600 dark:text-gray-400 mb-3">
-                Créez des bannières professionnelles pour votre profil LinkedIn
-              </p>
-              <span className="text-blue-600 dark:text-blue-400 text-sm font-semibold">En savoir plus →</span>
-            </Link>
             
-            <Link href="/compresseur-image" className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-all border-2 border-transparent hover:border-pink-500">
+            <Link href="/compresseur-image" className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-all border-2 border-transparent hover:border-teal-500">
               <h3 className="text-2xl font-semibold mb-3">🖼️ Compresseur d&apos;Images</h3>
               <p className="text-gray-600 dark:text-gray-400 mb-3">
                 Réduisez la taille de vos images JPG, PNG et WebP sans perte visible
               </p>
-              <span className="text-pink-600 dark:text-pink-400 text-sm font-semibold">En savoir plus →</span>
+              <span className="text-teal-600 dark:text-teal-400 text-sm font-semibold">En savoir plus →</span>
             </Link>
           </div>
         </section>
 
-        {/* Outils Financiers */}
+        {/* Outils Financiers & Calculatrices */}
         <section>
-          <h2 className="text-3xl font-bold mb-6 text-center">💰 Outils Financiers</h2>
+          <h2 className="text-3xl font-bold mb-6 text-center">💰 Outils Financiers & Calculatrices</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-4">
-            <Link href="/simulateur-scpi" className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-all border-2 border-transparent hover:border-green-500">
-              <h3 className="text-2xl font-semibold mb-3">🏢 Simulateur SCPI</h3>
+            <Link href="/calculatrice-fiscale" className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-all border-2 border-transparent hover:border-green-500">
+              <h3 className="text-2xl font-semibold mb-3">🧮 Calculatrice Fiscale</h3>
               <p className="text-gray-600 dark:text-gray-400 mb-3">
-                Simulez vos investissements immobiliers en SCPI avec rendements
+                Calculez votre impôt sur le revenu 2025-2026
               </p>
               <span className="text-green-600 dark:text-green-400 text-sm font-semibold">En savoir plus →</span>
             </Link>
 
-            <Link href="/calculateur-credit" className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-all border-2 border-transparent hover:border-orange-500">
-              <h3 className="text-2xl font-semibold mb-3">🏦 Calculateur Crédit</h3>
+            <Link href="/calculatrice-avancee" className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-all border-2 border-transparent hover:border-purple-500">
+              <h3 className="text-2xl font-semibold mb-3">🔬 Calculatrice Scientifique</h3>
               <p className="text-gray-600 dark:text-gray-400 mb-3">
-                Calculez vos mensualités de crédit auto et immobilier
+                Fonctions trigonométriques, logarithmes et calculs avancés
+              </p>
+              <span className="text-purple-600 dark:text-purple-400 text-sm font-semibold">En savoir plus →</span>
+            </Link>
+
+            <Link href="/convertisseur-devises" className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-all border-2 border-transparent hover:border-blue-500">
+              <h3 className="text-2xl font-semibold mb-3">💱 Convertisseur Devises</h3>
+              <p className="text-gray-600 dark:text-gray-400 mb-3">
+                Convertissez entre 8 devises majeures (EUR, USD, GBP, JPY...)
+              </p>
+              <span className="text-blue-600 dark:text-blue-400 text-sm font-semibold">En savoir plus →</span>
+            </Link>
+
+            <Link href="/calculateur-roi" className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-all border-2 border-transparent hover:border-yellow-500">
+              <h3 className="text-2xl font-semibold mb-3">📈 Calculateur ROI</h3>
+              <p className="text-gray-600 dark:text-gray-400 mb-3">
+                Calculez votre retour sur investissement facilement
+              </p>
+              <span className="text-yellow-600 dark:text-yellow-400 text-sm font-semibold">En savoir plus →</span>
+            </Link>
+
+            <Link href="/calculateur-interets-composes" className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-all border-2 border-transparent hover:border-emerald-500">
+              <h3 className="text-2xl font-semibold mb-3">💸 Intérêts Composés</h3>
+              <p className="text-gray-600 dark:text-gray-400 mb-3">
+                Calculez la croissance de vos investissements à long terme
+              </p>
+              <span className="text-emerald-600 dark:text-emerald-400 text-sm font-semibold">En savoir plus →</span>
+            </Link>
+
+            <Link href="/calculateur-credit-immobilier" className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-all border-2 border-transparent hover:border-orange-500">
+              <h3 className="text-2xl font-semibold mb-3">🏠 Crédit Immobilier</h3>
+              <p className="text-gray-600 dark:text-gray-400 mb-3">
+                Calculez vos mensualités de prêt immobilier détaillées
               </p>
               <span className="text-orange-600 dark:text-orange-400 text-sm font-semibold">En savoir plus →</span>
             </Link>
 
-            <Link href="/planificateur-budget" className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-all border-2 border-transparent hover:border-teal-500">
+            <Link href="/calculateur-pourboire" className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-all border-2 border-transparent hover:border-pink-500">
+              <h3 className="text-2xl font-semibold mb-3">💵 Calculateur Pourboire</h3>
+              <p className="text-gray-600 dark:text-gray-400 mb-3">
+                Calculez pourboires et division de l&apos;addition facilement
+              </p>
+              <span className="text-pink-600 dark:text-pink-400 text-sm font-semibold">En savoir plus →</span>
+            </Link>
+
+            <Link href="/simulateur-scpi" className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-all border-2 border-transparent hover:border-teal-500">
+              <h3 className="text-2xl font-semibold mb-3">🏢 Simulateur SCPI</h3>
+              <p className="text-gray-600 dark:text-gray-400 mb-3">
+                Simulez vos investissements immobiliers en SCPI avec rendements
+              </p>
+              <span className="text-teal-600 dark:text-teal-400 text-sm font-semibold">En savoir plus →</span>
+            </Link>
+
+            <Link href="/calculateur-credit" className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-all border-2 border-transparent hover:border-indigo-500">
+              <h3 className="text-2xl font-semibold mb-3">🚗 Calculateur Crédit</h3>
+              <p className="text-gray-600 dark:text-gray-400 mb-3">
+                Calculez vos mensualités de crédit auto et immobilier
+              </p>
+              <span className="text-indigo-600 dark:text-indigo-400 text-sm font-semibold">En savoir plus →</span>
+            </Link>
+
+            <Link href="/planificateur-budget" className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-all border-2 border-transparent hover:border-cyan-500">
               <h3 className="text-2xl font-semibold mb-3">📊 Budget Planner</h3>
               <p className="text-gray-600 dark:text-gray-400 mb-3">
                 Gérez votre budget personnel avec la règle 50/30/20
               </p>
-              <span className="text-teal-600 dark:text-teal-400 text-sm font-semibold">En savoir plus →</span>
+              <span className="text-cyan-600 dark:text-cyan-400 text-sm font-semibold">En savoir plus →</span>
             </Link>
 
             <Link href="/tracker-crypto" className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-all border-2 border-transparent hover:border-yellow-500">
@@ -184,16 +437,78 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Outils Voyage */}
+        {/* Outils Média & Utilitaires */}
         <section>
-          <h2 className="text-3xl font-bold mb-6 text-center">✈️ Outils Voyage</h2>
+          <h2 className="text-3xl font-bold mb-6 text-center">🎬 Outils Média & Divers</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-4">
+            <Link href="/redimensionneur-image" className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-all border-2 border-transparent hover:border-purple-500">
+              <h3 className="text-2xl font-semibold mb-3">📐 Redimensionneur Image</h3>
+              <p className="text-gray-600 dark:text-gray-400 mb-3">
+                Redimensionnez vos images avec prévisualisation en direct
+              </p>
+              <span className="text-purple-600 dark:text-purple-400 text-sm font-semibold">En savoir plus →</span>
+            </Link>
+
+            <Link href="/generateur-code-barres" className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-all border-2 border-transparent hover:border-indigo-500">
+              <h3 className="text-2xl font-semibold mb-3">📊 Code-Barres</h3>
+              <p className="text-gray-600 dark:text-gray-400 mb-3">
+                Générez codes-barres Code128, EAN13, UPC et Code39
+              </p>
+              <span className="text-indigo-600 dark:text-indigo-400 text-sm font-semibold">En savoir plus →</span>
+            </Link>
+
+            <Link href="/calculateur-duree-video" className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-all border-2 border-transparent hover:border-teal-500">
+              <h3 className="text-2xl font-semibold mb-3">⏱️ Durée Vidéo</h3>
+              <p className="text-gray-600 dark:text-gray-400 mb-3">
+                Calculez la durée totale de plusieurs vidéos facilement
+              </p>
+              <span className="text-teal-600 dark:text-teal-400 text-sm font-semibold">En savoir plus →</span>
+            </Link>
+
+            <Link href="/convertisseur-fuseau-horaire" className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-all border-2 border-transparent hover:border-blue-500">
+              <h3 className="text-2xl font-semibold mb-3">🌍 Fuseau Horaire</h3>
+              <p className="text-gray-600 dark:text-gray-400 mb-3">
+                Convertissez heures entre différents fuseaux horaires
+              </p>
+              <span className="text-blue-600 dark:text-blue-400 text-sm font-semibold">En savoir plus →</span>
+            </Link>
+
+            <Link href="/text-to-speech" className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-all border-2 border-transparent hover:border-pink-500">
+              <h3 className="text-2xl font-semibold mb-3">🔊 Text to Speech</h3>
+              <p className="text-gray-600 dark:text-gray-400 mb-3">
+                Convertissez texte en audio avec voix synthétique
+              </p>
+              <span className="text-pink-600 dark:text-pink-400 text-sm font-semibold">En savoir plus →</span>
+            </Link>
+
             <Link href="/destination-voyage-aleatoire" className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-all border-2 border-transparent hover:border-sky-500">
-              <h3 className="text-2xl font-semibold mb-3">🌍 Destination Aléatoire</h3>
+              <h3 className="text-2xl font-semibold mb-3">✈️ Destination Aléatoire</h3>
               <p className="text-gray-600 dark:text-gray-400 mb-3">
                 Découvrez votre prochaine destination de voyage au hasard
               </p>
               <span className="text-sky-600 dark:text-sky-400 text-sm font-semibold">En savoir plus →</span>
+            </Link>
+          </div>
+        </section>
+
+        {/* Outils Éducatifs */}
+        <section>
+          <h2 className="text-3xl font-bold mb-6 text-center">📚 Outils Éducatifs</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-4">
+            <Link href="/table-multiplication" className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-all border-2 border-transparent hover:border-green-500">
+              <h3 className="text-2xl font-semibold mb-3">✖️ Tables de Multiplication</h3>
+              <p className="text-gray-600 dark:text-gray-400 mb-3">
+                Apprenez et révisez les tables de multiplication interactives
+              </p>
+              <span className="text-green-600 dark:text-green-400 text-sm font-semibold">En savoir plus →</span>
+            </Link>
+
+            <Link href="/calculateur-formules" className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-all border-2 border-transparent hover:border-purple-500">
+              <h3 className="text-2xl font-semibold mb-3">🧪 Calculateur Formules</h3>
+              <p className="text-gray-600 dark:text-gray-400 mb-3">
+                Calculez formules mathématiques avec variables personnalisables
+              </p>
+              <span className="text-purple-600 dark:text-purple-400 text-sm font-semibold">En savoir plus →</span>
             </Link>
           </div>
         </section>
@@ -212,7 +527,7 @@ export default function Home() {
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-8">
               <div className="text-center p-4">
-                <div className="text-4xl font-bold text-blue-600 dark:text-blue-400 mb-2">20+</div>
+                <div className="text-4xl font-bold text-blue-600 dark:text-blue-400 mb-2">55+</div>
                 <div className="text-sm font-semibold">Outils Gratuits</div>
               </div>
               <div className="text-center p-4">
