@@ -35,7 +35,7 @@ export default function MultiplicationTable() {
 
             <div>
               <label className="block text-sm font-medium mb-2">
-                Jusqu'à: {range}
+                Jusqu&apos;à: {range}
               </label>
               <input
                 type="range"

@@ -144,9 +144,9 @@ export default function TextToSpeech() {
         <h3 className="font-semibold text-blue-900 dark:text-blue-100 mb-2">💡 Utilisations</h3>
         <ul className="text-sm text-blue-800 dark:text-blue-200 space-y-1">
           <li>• Accessibilité: écouter du texte pour les personnes malvoyantes</li>
-          <li>• Apprentissage: pratiquer la prononciation et l'écoute</li>
-          <li>• Productivité: écouter des articles pendant d'autres tâches</li>
-          <li>• Vérification: entendre comment un texte sonne à l'oral</li>
+          <li>• Apprentissage: pratiquer la prononciation et l&apos;écoute</li>
+          <li>• Productivité: écouter des articles pendant d&apos;autres tâches</li>
+          <li>• Vérification: entendre comment un texte sonne à l&apos;oral</li>
           <li>• Limite de 500 caractères par lecture pour des raisons de performance</li>
         </ul>
       </div>

@@ -59,7 +59,7 @@ export default function FormulaCalculator() {
     }
   };
 
-  const examples = [
+  const examples: Array<{ label: string; formula: string; vars: Record<string, number> }> = [
     { label: "Aire cercle", formula: "π * r^2", vars: { r: 5 } },
     { label: "Volume sphère", formula: "(4/3) * π * r^3", vars: { r: 3 } },
     { label: "Pythagore", formula: "sqrt(a^2 + b^2)", vars: { a: 3, b: 4 } },
