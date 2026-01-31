@@ -593,7 +593,7 @@ export default function RobotsGeneratorPage() {
               <li className="flex items-start gap-2">
                 <span className="text-blue-600 font-bold">✓</span>
                 <span>
-                  <strong>Prévisualisatio n en temps réel</strong> - Voyez le fichier final avant téléchargement
+                  <strong>Prévisualisation en temps réel</strong> - Voyez le fichier final avant téléchargement
                 </span>
               </li>
               <li className="flex items-start gap-2">
