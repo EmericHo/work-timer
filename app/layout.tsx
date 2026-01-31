@@ -278,13 +278,6 @@ export default function RootLayout({
                 "@type": "Organization",
                 "name": "Outils Gratuits Pro",
                 "url": process.env.NEXT_PUBLIC_BASE_URL || "https://work-timer.com"
-              },
-              "aggregateRating": {
-                "@type": "AggregateRating",
-                "ratingValue": "4.8",
-                "ratingCount": "1250",
-                "bestRating": "5",
-                "worstRating": "1"
               }
             })
           }}
