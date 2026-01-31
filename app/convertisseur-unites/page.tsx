@@ -36,7 +36,7 @@ export default function UnitConverterPage() {
             <p className="text-gray-700 dark:text-gray-300 mb-4">
               La conversion d&apos;unités est essentielle dans de nombreux contextes quotidiens et professionnels. 
               Que vous voyagiez à l&apos;étranger, suiviez une recette de cuisine, travailliez sur un projet de 
-              construction, ou étudiiez les sciences, vous devrez régulièrement convertir entre différents systèmes 
+              construction, ou étudiez les sciences, vous devrez régulièrement convertir entre différents systèmes 
               de mesure.
             </p>
             <p className="text-gray-700 dark:text-gray-300 mb-4">
