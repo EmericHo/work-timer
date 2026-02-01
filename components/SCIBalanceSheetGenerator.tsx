@@ -5,6 +5,14 @@ import Papa from "papaparse";
 import jsPDF from "jspdf";
 import autoTable from "jspdf-autotable";
 
+/**
+ * Transaction representing a single financial entry
+ * @property date - Transaction date in format YYYY-MM-DD
+ * @property type - Transaction type: "Recette" (Revenue) or "Dépense" (Expense)
+ * @property category - Category of the transaction (e.g., Loyer, Charges, Travaux)
+ * @property description - Detailed description of the transaction
+ * @property amount - Transaction amount in euros (always positive, type determines debit/credit)
+ */
 interface Transaction {
   date: string;
   type: "Recette" | "Dépense";
@@ -172,10 +180,6 @@ export default function SCIBalanceSheetGenerator() {
     const revenueRows = Object.entries(balanceSheet.revenues).map(
       ([category, amount]) => [category, `${amount.toFixed(2)} €`]
     );
-    revenueRows.push([
-      "TOTAL PRODUITS",
-      `${balanceSheet.totalRevenues.toFixed(2)} €`,
-    ]);
 
     autoTable(doc, {
       startY: yPosition,
@@ -199,10 +203,6 @@ export default function SCIBalanceSheetGenerator() {
     const expenseRows = Object.entries(balanceSheet.expenses).map(
       ([category, amount]) => [category, `${amount.toFixed(2)} €`]
     );
-    expenseRows.push([
-      "TOTAL CHARGES",
-      `${balanceSheet.totalExpenses.toFixed(2)} €`,
-    ]);
 
     autoTable(doc, {
       startY: yPosition,
