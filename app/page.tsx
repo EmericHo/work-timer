@@ -2,14 +2,14 @@ import Link from "next/link";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "🚀 +60 Outils Gratuits Pro - Boostez Productivité & Dev Web 2025",
-  description: "Découvrez +60 outils professionnels 100% gratuits pour maximiser votre productivité : Timer Pomodoro expert, compresseur d'image ultra-performant, générateurs (UUID, QR Code, mots de passe), calculatrices avancées, convertisseurs, minificateurs CSS/JS/HTML, éditeurs en ligne et plus. Sans inscription, traitement sécurisé côté client, disponible 24/7.",
+  title: "🚀 +61 Outils Gratuits Pro - Boostez Productivité & Dev Web 2025",
+  description: "Découvrez +61 outils professionnels 100% gratuits pour maximiser votre productivité : Timer Pomodoro expert, générateur de bilan SCI, compresseur d'image ultra-performant, générateurs (UUID, QR Code, mots de passe), calculatrices avancées, convertisseurs, minificateurs CSS/JS/HTML, éditeurs en ligne et plus. Sans inscription, traitement sécurisé côté client, disponible 24/7.",
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "🚀 +60 Outils Gratuits Pro - Boostez Productivité & Dev Web 2025",
-    description: "Découvrez +60 outils professionnels 100% gratuits : Timer Pomodoro, compresseur d'image, générateurs, calculatrices et plus. Sans inscription !",
+    title: "🚀 +61 Outils Gratuits Pro - Boostez Productivité & Dev Web 2025",
+    description: "Découvrez +61 outils professionnels 100% gratuits : Timer Pomodoro, générateur de bilan SCI, compresseur d'image, générateurs, calculatrices et plus. Sans inscription !",
     url: "/",
     type: "website",
     images: [
@@ -17,14 +17,14 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "+60 Outils Gratuits Professionnels pour la Productivité et le Développement Web",
+        alt: "+61 Outils Gratuits Professionnels pour la Productivité et le Développement Web",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "🚀 +60 Outils Gratuits Pro - Productivité & Dev",
-    description: "+60 outils professionnels gratuits pour booster votre productivité : Timer, compresseur, générateurs et plus !",
+    title: "🚀 +61 Outils Gratuits Pro - Productivité & Dev",
+    description: "+61 outils professionnels gratuits pour booster votre productivité : Timer, compresseur, générateurs et plus !",
     images: ["/og-image.png"],
   },
 };
@@ -36,11 +36,11 @@ export default function Home() {
         {/* Hero Section */}
         <section className="text-center py-8">
           <h1 className="text-4xl sm:text-5xl font-bold text-balance mb-4">
-            🚀 +60 Outils Gratuits Pro - Boostez Votre Productivité & Développement Web
+            🚀 +61 Outils Gratuits Pro - Boostez Votre Productivité & Développement Web
           </h1>
           <p className="text-lg sm:text-xl text-gray-700 dark:text-gray-300 max-w-3xl mx-auto mb-6">
-            Suite complète de +60 outils professionnels 100% gratuits, sans inscription : 
-            Timer Pomodoro expert, compresseur d&apos;image ultra-rapide, générateurs (UUID, QR Code, mots de passe), 
+            Suite complète de +61 outils professionnels 100% gratuits, sans inscription : 
+            Timer Pomodoro expert, générateur de bilan SCI, compresseur d&apos;image ultra-rapide, générateurs (UUID, QR Code, mots de passe), 
             calculatrices avancées, convertisseurs, minificateurs et bien plus pour maximiser votre efficacité au quotidien.
           </p>
         </section>
@@ -454,6 +454,14 @@ export default function Home() {
                 Suivez vos investissements crypto et calculez vos gains/pertes
               </p>
               <span className="text-yellow-600 dark:text-yellow-400 text-sm font-semibold">En savoir plus →</span>
+            </Link>
+
+            <Link href="/generateur-bilan-sci" className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-all border-2 border-transparent hover:border-red-500">
+              <h3 className="text-2xl font-semibold mb-3">🏢 Bilan SCI</h3>
+              <p className="text-gray-600 dark:text-gray-400 mb-3">
+                Générez le bilan comptable de votre Société Civile Immobilière
+              </p>
+              <span className="text-red-600 dark:text-red-400 text-sm font-semibold">En savoir plus →</span>
             </Link>
           </div>
         </section>

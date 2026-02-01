@@ -1,0 +1,11 @@
+Date,Type,Catégorie,Description,Montant
+2024-01-15,Recette,Loyer,Loyer mensuel appartement 1,1200.00
+2024-01-15,Recette,Loyer,Loyer mensuel appartement 2,950.00
+2024-02-01,Dépense,Charges,Charges de copropriété,250.00
+2024-02-15,Dépense,Entretien,Réparation chauffage,450.00
+2024-03-10,Dépense,Impôts,Taxe foncière,1500.00
+2024-04-05,Recette,Loyer,Loyer mensuel appartement 1,1200.00
+2024-05-01,Dépense,Assurance,Assurance propriétaire non-occupant,380.00
+2024-06-12,Dépense,Travaux,Rénovation salle de bain,3500.00
+2024-07-20,Recette,Loyer,Loyer mensuel appartement 2,950.00
+2024-08-15,Dépense,Gestion,Frais de gestion locative,120.00
