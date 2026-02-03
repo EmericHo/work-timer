@@ -5,6 +5,7 @@ import Link from "next/link";
 import PomodoroFocus from "@/components/PomodoroFocus";
 import WorkCalculator from "@/components/WorkCalculator";
 import CountdownTimer from "@/components/CountdownTimer";
+import AdSenseAd from "@/components/AdSenseAd";
 
 // Note: Client components can't export metadata directly
 // Metadata is defined in layout.tsx or a separate metadata file
@@ -204,6 +205,15 @@ export default function TimerPage() {
             </li>
           </ul>
         </section>
+
+        {/* AdSense Ad */}
+        <div className="flex justify-center my-8">
+          <AdSenseAd 
+            slot="4567890123"
+            format="horizontal"
+            style={{ minWidth: "320px", maxWidth: "970px", width: "100%", minHeight: "90px" }}
+          />
+        </div>
 
         <section className="bg-white dark:bg-gray-800 rounded-lg shadow p-6">
           <h2 className="text-2xl font-bold mb-4">Comment utiliser la technique Pomodoro ?</h2>
