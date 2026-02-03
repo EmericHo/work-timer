@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Metadata } from "next";
+import AdSenseAd from "@/components/AdSenseAd";
 
 export const metadata: Metadata = {
   title: "🚀 +60 Outils Gratuits Pro - Boostez Productivité & Dev Web 2025",
@@ -44,6 +45,15 @@ export default function Home() {
             calculatrices avancées, convertisseurs, minificateurs et bien plus pour maximiser votre efficacité au quotidien.
           </p>
         </section>
+
+        {/* AdSense Ad - Top */}
+        <div className="flex justify-center my-8">
+          <AdSenseAd 
+            slot="1234567890"
+            format="horizontal"
+            style={{ minWidth: "320px", maxWidth: "970px", width: "100%", minHeight: "90px" }}
+          />
+        </div>
 
         {/* Outils de Productivité & Texte */}
         <section>
@@ -262,6 +272,16 @@ export default function Home() {
             </Link>
           </div>
         </section>
+
+        {/* AdSense Ad - Middle */}
+        <div className="flex justify-center my-8">
+          <AdSenseAd 
+            slot="2345678901"
+            format="horizontal"
+            style={{ minWidth: "320px", maxWidth: "970px", width: "100%", minHeight: "90px" }}
+          />
+        </div>
+
         {/* Outils Générateurs & Aléatoires */}
         <section>
           <h2 className="text-3xl font-bold mb-6 text-center">🎲 Générateurs & Aléatoires</h2>
@@ -616,6 +636,15 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        {/* AdSense Ad - Bottom */}
+        <div className="flex justify-center my-8">
+          <AdSenseAd 
+            slot="3456789012"
+            format="horizontal"
+            style={{ minWidth: "320px", maxWidth: "970px", width: "100%", minHeight: "90px" }}
+          />
+        </div>
 
         {/* Call to Action */}
         <section className="text-center py-8">
