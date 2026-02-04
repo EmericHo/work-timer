@@ -50,7 +50,15 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## Advertising Integration
 
-This application is ready for Google AdSense or other advertising networks. See [PUBLICITE.md](.github/docs/PUBLICITE.md) for:
+This application is ready for Google AdSense with **4 ad placements already integrated**:
+- **Homepage**: 3 horizontal ad units (top, middle, bottom)
+- **Timer page**: 1 horizontal ad unit
+
+### 🚀 Quick Start
+See **[ADSENSE_SETUP.md](ADSENSE_SETUP.md)** for step-by-step instructions to activate ads (30 minutes).
+
+### 📚 Complete Documentation
+See **[PUBLICITE.md](.github/docs/PUBLICITE.md)** for comprehensive information:
 - Complete Google AdSense setup guide
 - Complete Google Analytics setup guide (for tracking traffic)
 - Domain name requirements
