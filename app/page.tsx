@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { Metadata } from "next";
 import AdSenseAd from "@/components/AdSenseAd";
+import HomePageContent from "@/components/HomePageContent";
+import { SectionHeader, LearnMore } from "@/components/SectionHeaders";
 
 export const metadata: Metadata = {
   title: "🚀 +61 Outils Gratuits Pro - Boostez Productivité & Dev Web 2025",
@@ -34,17 +36,7 @@ export default function Home() {
   return (
     <div className="min-h-screen flex flex-col p-4 sm:p-8">
       <main className="flex flex-col gap-12 max-w-7xl mx-auto w-full">
-        {/* Hero Section */}
-        <section className="text-center py-8">
-          <h1 className="text-4xl sm:text-5xl font-bold text-balance mb-4">
-            🚀 +61 Outils Gratuits Pro - Boostez Votre Productivité & Développement Web
-          </h1>
-          <p className="text-lg sm:text-xl text-gray-700 dark:text-gray-300 max-w-3xl mx-auto mb-6">
-            Suite complète de +61 outils professionnels 100% gratuits, sans inscription : 
-            Timer Pomodoro expert, générateur de bilan SCI, compresseur d&apos;image ultra-rapide, générateurs (UUID, QR Code, mots de passe), 
-            calculatrices avancées, convertisseurs, minificateurs et bien plus pour maximiser votre efficacité au quotidien.
-          </p>
-        </section>
+        <HomePageContent />
 
         {/* AdSense Ad - Top */}
         <div className="flex justify-center my-8">
@@ -57,14 +49,14 @@ export default function Home() {
 
         {/* Outils de Productivité & Texte */}
         <section>
-          <h2 className="text-3xl font-bold mb-6 text-center">🎯 Outils de Productivité & Texte</h2>
+          <SectionHeader translationKey="sections.productivityAndText" />
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-4">
             <Link href="/timer" className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-all border-2 border-transparent hover:border-blue-500">
               <h3 className="text-2xl font-semibold mb-3">⏱️ Timer & Pomodoro</h3>
               <p className="text-gray-600 dark:text-gray-400 mb-3">
                 Chronomètre précis et technique Pomodoro pour maximiser votre concentration
               </p>
-              <span className="text-blue-600 dark:text-blue-400 text-sm font-semibold">En savoir plus →</span>
+              <span className="text-blue-600 dark:text-blue-400"><LearnMore /></span>
             </Link>
 
             <Link href="/compteur-mots" className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-all border-2 border-transparent hover:border-green-500">
@@ -72,7 +64,7 @@ export default function Home() {
               <p className="text-gray-600 dark:text-gray-400 mb-3">
                 Comptez mots, caractères, phrases et temps de lecture en temps réel
               </p>
-              <span className="text-green-600 dark:text-green-400 text-sm font-semibold">En savoir plus →</span>
+              <span className="text-green-600 dark:text-green-400"><LearnMore /></span>
             </Link>
 
             <Link href="/generateur-lorem-ipsum" className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-all border-2 border-transparent hover:border-purple-500">
@@ -80,7 +72,7 @@ export default function Home() {
               <p className="text-gray-600 dark:text-gray-400 mb-3">
                 Générez du texte de remplissage pour vos maquettes et designs
               </p>
-              <span className="text-purple-600 dark:text-purple-400 text-sm font-semibold">En savoir plus →</span>
+              <span className="text-purple-600 dark:text-purple-400"><LearnMore /></span>
             </Link>
 
             <Link href="/generateur-slug" className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-all border-2 border-transparent hover:border-indigo-500">
