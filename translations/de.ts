@@ -70,7 +70,7 @@ export const de = {
     legal: "Rechtliche Informationen",
   },
   metadata: {
-    siteTitle: "🚀 +60 Kostenlose Online-Tools - Produktivität, Webentwicklung & Design",
-    siteDescription: "Steigern Sie Ihre Produktivität mit +60 kostenlosen professionellen Tools: Pomodoro-Timer, ultraschneller Bildkompressor, Generatoren (UUID, QR-Code, Passwörter), erweiterte Rechner, Konverter, CSS/JS/HTML-Minifizierer, Online-Editoren und vieles mehr. 100% kostenlos, keine Registrierung, sichere clientseitige Verarbeitung.",
+    siteTitle: "🚀 +61 Kostenlose Online-Tools - Produktivität, Webentwicklung & Design",
+    siteDescription: "Steigern Sie Ihre Produktivität mit +61 kostenlosen professionellen Tools: Pomodoro-Timer, ultraschneller Bildkompressor, Generatoren (UUID, QR-Code, Passwörter), erweiterte Rechner, Konverter, CSS/JS/HTML-Minifizierer, Online-Editoren und vieles mehr. 100% kostenlos, keine Registrierung, sichere clientseitige Verarbeitung.",
   },
 };

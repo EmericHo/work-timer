@@ -70,7 +70,7 @@ export const es = {
     legal: "Información Legal",
   },
   metadata: {
-    siteTitle: "🚀 +60 Herramientas Gratuitas en Línea - Productividad, Desarrollo Web y Diseño",
-    siteDescription: "Impulsa tu productividad con +60 herramientas profesionales gratuitas: Temporizador Pomodoro, compresor de imágenes ultra-rápido, generadores (UUID, Códigos QR, contraseñas), calculadoras avanzadas, convertidores, minificadores CSS/JS/HTML, editores en línea y mucho más. 100% gratuito, sin registro, procesamiento seguro del lado del cliente.",
+    siteTitle: "🚀 +61 Herramientas Gratuitas en Línea - Productividad, Desarrollo Web y Diseño",
+    siteDescription: "Impulsa tu productividad con +61 herramientas profesionales gratuitas: Temporizador Pomodoro, compresor de imágenes ultra-rápido, generadores (UUID, Códigos QR, contraseñas), calculadoras avanzadas, convertidores, minificadores CSS/JS/HTML, editores en línea y mucho más. 100% gratuito, sin registro, procesamiento seguro del lado del cliente.",
   },
 };

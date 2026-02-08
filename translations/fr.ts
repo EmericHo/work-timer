@@ -70,7 +70,7 @@ export const fr = {
     legal: "Informations Légales",
   },
   metadata: {
-    siteTitle: "🚀 +60 Outils Gratuits en Ligne - Productivité, Développement Web & Design",
-    siteDescription: "Boostez votre productivité avec +60 outils gratuits professionnels : Timer Pomodoro, compresseur d'image ultra-rapide, générateurs (UUID, QR Code, mots de passe), calculatrices avancées, convertisseurs, minificateurs CSS/JS/HTML, éditeurs en ligne et bien plus. 100% gratuit, sans inscription, traitement sécurisé côté client.",
+    siteTitle: "🚀 +61 Outils Gratuits en Ligne - Productivité, Développement Web & Design",
+    siteDescription: "Boostez votre productivité avec +61 outils gratuits professionnels : Timer Pomodoro, compresseur d'image ultra-rapide, générateurs (UUID, QR Code, mots de passe), calculatrices avancées, convertisseurs, minificateurs CSS/JS/HTML, éditeurs en ligne et bien plus. 100% gratuit, sans inscription, traitement sécurisé côté client.",
   },
 };

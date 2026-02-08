@@ -31,17 +31,17 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     if (!isClient) return key;
     
     const keys = key.split('.');
-    let value: any = translations[language];
+    let value: Record<string, unknown> = translations[language] as Record<string, unknown>;
     
     for (const k of keys) {
       if (value && typeof value === 'object' && k in value) {
-        value = value[k];
+        value = value[k] as Record<string, unknown>;
       } else {
         // Fallback to English if key not found
-        value = translations[defaultLanguage];
+        value = translations[defaultLanguage] as Record<string, unknown>;
         for (const fallbackKey of keys) {
           if (value && typeof value === 'object' && fallbackKey in value) {
-            value = value[fallbackKey];
+            value = value[fallbackKey] as Record<string, unknown>;
           } else {
             return key; // Return key if not found
           }

@@ -70,7 +70,7 @@ export const en = {
     legal: "Legal Information",
   },
   metadata: {
-    siteTitle: "🚀 +60 Free Online Tools - Productivity, Web Development & Design",
-    siteDescription: "Boost your productivity with +60 free professional tools: Pomodoro Timer, ultra-fast image compressor, generators (UUID, QR Code, passwords), advanced calculators, converters, CSS/JS/HTML minifiers, online editors and much more. 100% free, no registration, secure client-side processing.",
+    siteTitle: "🚀 +61 Free Online Tools - Productivity, Web Development & Design",
+    siteDescription: "Boost your productivity with +61 free professional tools: Pomodoro Timer, ultra-fast image compressor, generators (UUID, QR Code, passwords), advanced calculators, converters, CSS/JS/HTML minifiers, online editors and much more. 100% free, no registration, secure client-side processing.",
   },
 };
