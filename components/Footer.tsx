@@ -1,7 +1,11 @@
+'use client';
+
 import Link from "next/link";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
+  const { t } = useLanguage();
 
   return (
     <footer className="w-full bg-gray-100 dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800 mt-auto py-6 sm:py-8">
@@ -13,26 +17,25 @@ export default function Footer() {
               Timer Focus
             </h3>
             <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">
-              Suite complète d&apos;outils gratuits en ligne : Timer Pomodoro, compresseur d&apos;image, 
-              générateurs, formatters et calculatrices pour améliorer votre productivité.
+              {t('footer.siteDescription')}
             </p>
             <Link 
               href="/a-propos" 
               className="text-sm text-blue-600 dark:text-blue-400 hover:underline"
             >
-              En savoir plus →
+              {t('common.learnMore')}
             </Link>
           </div>
 
           {/* Quick Links */}
           <div>
             <h3 className="text-lg font-semibold mb-3 text-gray-900 dark:text-gray-100">
-              Outils Principaux
+              {t('footer.mainTools')}
             </h3>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link href="/" className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400">
-                  Accueil
+                  {t('common.home')}
                 </Link>
               </li>
               <li>
@@ -61,7 +64,7 @@ export default function Footer() {
           {/* Developer Tools */}
           <div>
             <h3 className="text-lg font-semibold mb-3 text-gray-900 dark:text-gray-100">
-              Outils Développeurs
+              {t('footer.developerTools')}
             </h3>
             <ul className="space-y-2 text-sm">
               <li>
@@ -95,27 +98,27 @@ export default function Footer() {
           {/* Information Links */}
           <div>
             <h3 className="text-lg font-semibold mb-3 text-gray-900 dark:text-gray-100">
-              Informations
+              {t('footer.information')}
             </h3>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link href="/guide" className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400">
-                  Guide de Productivité
+                  {t('common.guide')}
                 </Link>
               </li>
               <li>
                 <Link href="/faq" className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400">
-                  FAQ
+                  {t('common.faq')}
                 </Link>
               </li>
               <li>
                 <Link href="/a-propos" className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400">
-                  À Propos
+                  {t('common.about')}
                 </Link>
               </li>
               <li>
                 <Link href="/contact" className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400">
-                  Contact
+                  {t('common.contact')}
                 </Link>
               </li>
             </ul>
@@ -124,17 +127,17 @@ export default function Footer() {
           {/* Legal Links */}
           <div>
             <h3 className="text-lg font-semibold mb-3 text-gray-900 dark:text-gray-100">
-              Informations Légales
+              {t('footer.legal')}
             </h3>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link href="/politique-confidentialite" className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400">
-                  Politique de Confidentialité
+                  {t('common.privacyPolicy')}
                 </Link>
               </li>
               <li>
                 <Link href="/conditions-utilisation" className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400">
-                  Conditions d&apos;Utilisation
+                  {t('common.termsOfUse')}
                 </Link>
               </li>
               <li>
@@ -175,10 +178,10 @@ export default function Footer() {
         <div className="pt-6 border-t border-gray-200 dark:border-gray-800">
           <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
             <p className="text-sm text-gray-600 dark:text-gray-400 text-center sm:text-left">
-              © {currentYear} Outils Gratuits en Ligne. Tous droits réservés.
+              © {currentYear} {t('common.freeOnlineTools')}. {t('common.allRightsReserved')}.
             </p>
             <p className="text-xs text-gray-500 dark:text-gray-500 text-center sm:text-right">
-              Application gratuite financée par la publicité (Google AdSense)
+              {t('common.appFundedByAds')}
             </p>
           </div>
         </div>

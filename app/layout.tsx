@@ -3,6 +3,8 @@ import "./globals.css";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 import Footer from "@/components/Footer";
 import CookieConsent from "@/components/CookieConsent";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
+import { LanguageProvider } from "@/contexts/LanguageContext";
 import { Suspense } from "react";
 
 export const viewport: Viewport = {
@@ -344,15 +346,18 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-screen antialiased flex flex-col">
-        {gaMeasurementId && (
-          <Suspense fallback={null}>
-            <GoogleAnalytics />
-          </Suspense>
-        )}
-        <div className="flex-1">{children}</div>
-        <Footer />
-        {/* GDPR Cookie Consent Banner */}
-        <CookieConsent />
+        <LanguageProvider>
+          {gaMeasurementId && (
+            <Suspense fallback={null}>
+              <GoogleAnalytics />
+            </Suspense>
+          )}
+          <LanguageSwitcher />
+          <div className="flex-1">{children}</div>
+          <Footer />
+          {/* GDPR Cookie Consent Banner */}
+          <CookieConsent />
+        </LanguageProvider>
       </body>
     </html>
   );
