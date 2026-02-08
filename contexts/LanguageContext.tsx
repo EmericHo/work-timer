@@ -22,6 +22,13 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     setLanguageState(initialLang);
   }, []);
 
+  // Update HTML lang attribute when language changes
+  useEffect(() => {
+    if (typeof document !== 'undefined') {
+      document.documentElement.lang = language;
+    }
+  }, [language]);
+
   const setLanguage = (lang: Language) => {
     setLanguageState(lang);
     storeLanguage(lang);
