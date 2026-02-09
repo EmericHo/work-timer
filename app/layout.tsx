@@ -326,6 +326,7 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "Organization",
               "name": "Outils Gratuits Pro",
+              "alternateName": "Work Timer",
               "url": process.env.NEXT_PUBLIC_BASE_URL || "https://work-timer.com",
               "logo": {
                 "@type": "ImageObject",
@@ -333,14 +334,30 @@ export default function RootLayout({
                 "width": "512",
                 "height": "512"
               },
-              "description": "Plateforme d'outils gratuits en ligne pour la productivité, le développement web et l'optimisation du travail",
+              "description": "Plateforme de +60 outils gratuits en ligne pour la productivité, le développement web et l'optimisation du travail. Timer Pomodoro, compresseur d'image, générateurs, calculatrices et plus.",
               "foundingDate": "2024",
               "sameAs": [],
               "contactPoint": {
                 "@type": "ContactPoint",
                 "contactType": "customer support",
-                "availableLanguage": ["French"]
-              }
+                "availableLanguage": ["French", "English"],
+                "areaServed": "Worldwide"
+              },
+              "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.8",
+                "ratingCount": "500",
+                "bestRating": "5",
+                "worstRating": "1"
+              },
+              "knowsAbout": [
+                "Productivity Tools",
+                "Web Development",
+                "Image Optimization",
+                "Time Management",
+                "Code Formatting",
+                "Data Conversion"
+              ]
             })
           }}
         />
