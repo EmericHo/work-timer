@@ -343,13 +343,6 @@ export default function RootLayout({
                 "availableLanguage": ["French", "English"],
                 "areaServed": "Worldwide"
               },
-              "aggregateRating": {
-                "@type": "AggregateRating",
-                "ratingValue": "4.8",
-                "ratingCount": "500",
-                "bestRating": "5",
-                "worstRating": "1"
-              },
               "knowsAbout": [
                 "Productivity Tools",
                 "Web Development",

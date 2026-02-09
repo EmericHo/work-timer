@@ -38,13 +38,6 @@ export default function SoftwareApplicationSchema({
       "priceCurrency": "EUR",
       "availability": "https://schema.org/InStock",
     },
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.8",
-      "ratingCount": "150",
-      "bestRating": "5",
-      "worstRating": "1",
-    },
     "inLanguage": "fr-FR",
     "isAccessibleForFree": true,
     "accessMode": ["textual", "visual"],
