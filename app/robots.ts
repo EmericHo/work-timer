@@ -5,6 +5,7 @@ export default function robots(): MetadataRoute.Robots {
   
   return {
     rules: [
+      // Main crawlers - full access
       {
         userAgent: '*',
         allow: '/',
@@ -13,7 +14,37 @@ export default function robots(): MetadataRoute.Robots {
           '/.github/',
           '/docs/',
           '/*.md',
+          '/_next/webpack-hmr',
         ],
+        crawlDelay: 0,
+      },
+      // Google specific optimizations
+      {
+        userAgent: 'Googlebot',
+        allow: '/',
+        disallow: [
+          '/api/',
+          '/.github/',
+        ],
+      },
+      // Optimize for Googlebot Image crawler
+      {
+        userAgent: 'Googlebot-Image',
+        allow: '/',
+        disallow: [
+          '/api/',
+        ],
+      },
+      // Block bad bots
+      {
+        userAgent: [
+          'AhrefsBot',
+          'SemrushBot',
+          'MJ12bot',
+          'DotBot',
+          'BLEXBot',
+        ],
+        disallow: '/',
       },
     ],
     sitemap: `${baseUrl}/sitemap.xml`,
