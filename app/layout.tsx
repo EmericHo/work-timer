@@ -340,7 +340,7 @@ export default function RootLayout({
               "contactPoint": {
                 "@type": "ContactPoint",
                 "contactType": "customer support",
-                "availableLanguage": ["French", "English"],
+                "availableLanguage": ["fr", "en"],
                 "areaServed": "Worldwide"
               },
               "knowsAbout": [
