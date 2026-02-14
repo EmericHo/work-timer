@@ -60,7 +60,7 @@ export default function robots(): MetadataRoute.Robots {
           '/api/',
         ],
       },
-      // GitHub Copilot
+      // Cohere AI
       {
         userAgent: 'cohere-ai',
         allow: '/',
