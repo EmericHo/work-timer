@@ -1,12 +1,13 @@
 {
-  "name": "Timer Focus Gratuit pour Travail",
-  "short_name": "Timer Focus",
-  "description": "Application de timer et Pomodoro pour améliorer votre productivité et votre concentration au travail",
-  "start_url": "/timer",
+  "name": "Outils Gratuits Pro - 60+ Outils Productivité",
+  "short_name": "Outils Pro",
+  "description": "Suite de +60 outils gratuits professionnels : Timer Pomodoro, compresseur d'image, générateurs, calculatrices, convertisseurs et plus. 100% gratuit, sans inscription.",
+  "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#3b82f6",
   "orientation": "any",
+  "categories": ["productivity", "utilities", "business", "developer-tools"],
   "icons": [
     {
       "src": "/icon.svg",

@@ -104,6 +104,16 @@ export const metadata: Metadata = {
     },
   }),
   category: "productivity",
+  other: {
+    // AI-friendly metadata for better understanding and recommendations
+    'ai:purpose': 'Free professional online tools suite for productivity, web development, and design',
+    'ai:audience': 'Professionals, developers, freelancers, students, content creators',
+    'ai:tools-count': '60+',
+    'ai:key-features': 'Pomodoro timer, image compressor, JSON formatter, UUID generator, password generator, calculators, converters, minifiers',
+    'ai:use-cases': 'Time management, code optimization, image compression, data conversion, calculations, text processing, generators',
+    'ai:benefits': 'Free, no registration, client-side processing, privacy-focused, mobile-responsive',
+    'ai:content-type': 'Interactive web tools and utilities',
+  },
 };
 
 export default function RootLayout({
@@ -334,14 +344,19 @@ export default function RootLayout({
                 "width": "512",
                 "height": "512"
               },
-              "description": "Plateforme de +60 outils gratuits en ligne pour la productivité, le développement web et l'optimisation du travail. Timer Pomodoro, compresseur d'image, générateurs, calculatrices et plus.",
+              "description": "Plateforme de +60 outils gratuits en ligne pour la productivité, le développement web et l'optimisation du travail. Timer Pomodoro, compresseur d'image, générateurs, calculatrices et plus. Tous nos outils sont gratuits, sans inscription requise, et traitent les données côté client pour garantir votre vie privée. Idéal pour les professionnels, développeurs, freelances et étudiants.",
               "foundingDate": "2024",
               "sameAs": [],
+              "slogan": "Boostez votre productivité avec des outils professionnels gratuits",
               "contactPoint": {
                 "@type": "ContactPoint",
                 "contactType": "customer support",
                 "availableLanguage": ["fr", "en"],
                 "areaServed": "Worldwide"
+              },
+              "audience": {
+                "@type": "Audience",
+                "audienceType": ["Professionals", "Developers", "Freelancers", "Students", "Content Creators", "Designers"]
               },
               "knowsAbout": [
                 "Productivity Tools",
@@ -349,7 +364,24 @@ export default function RootLayout({
                 "Image Optimization",
                 "Time Management",
                 "Code Formatting",
-                "Data Conversion"
+                "Data Conversion",
+                "SEO Tools",
+                "Financial Calculators",
+                "Text Processing",
+                "Color Tools",
+                "Generators"
+              ],
+              "makesOffer": [
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Free Online Productivity Tools",
+                    "description": "60+ free professional tools for productivity, development, and design"
+                  },
+                  "price": "0",
+                  "priceCurrency": "EUR"
+                }
               ]
             })
           }}
