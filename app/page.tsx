@@ -33,10 +33,125 @@ export const metadata: Metadata = {
 };
 
 export default function Home() {
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://work-timer.com';
+  
   return (
-    <div className="min-h-screen flex flex-col p-4 sm:p-8">
-      <main className="flex flex-col gap-12 max-w-7xl mx-auto w-full">
-        <HomePageContent />
+    <>
+      {/* ItemList Structured Data for better AI tool discovery */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            "name": "Outils Gratuits Pro - Suite complète d'outils",
+            "description": "Collection de +60 outils gratuits pour la productivité, le développement web et le design",
+            "numberOfItems": 61,
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "item": {
+                  "@type": "SoftwareApplication",
+                  "name": "Timer Pomodoro",
+                  "url": `${baseUrl}/timer`,
+                  "description": "Timer professionnel pour la technique Pomodoro avec cycles de 25 minutes de travail et 5 minutes de pause",
+                  "applicationCategory": "ProductivityApplication",
+                  "operatingSystem": "Any"
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "item": {
+                  "@type": "SoftwareApplication",
+                  "name": "Compresseur d'image",
+                  "url": `${baseUrl}/compresseur-image`,
+                  "description": "Compression ultra-rapide d'images JPG, PNG, WebP sans perte de qualité significative",
+                  "applicationCategory": "DesignApplication",
+                  "operatingSystem": "Any"
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "item": {
+                  "@type": "SoftwareApplication",
+                  "name": "Générateur UUID",
+                  "url": `${baseUrl}/generateur-uuid`,
+                  "description": "Générez des UUID v1 et v4 instantanément pour vos applications",
+                  "applicationCategory": "DeveloperApplication",
+                  "operatingSystem": "Any"
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 4,
+                "item": {
+                  "@type": "SoftwareApplication",
+                  "name": "JSON Formatter",
+                  "url": `${baseUrl}/json-formatter`,
+                  "description": "Formatez, validez et minifiez vos fichiers JSON avec coloration syntaxique",
+                  "applicationCategory": "DeveloperApplication",
+                  "operatingSystem": "Any"
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 5,
+                "item": {
+                  "@type": "SoftwareApplication",
+                  "name": "Générateur de mots de passe",
+                  "url": `${baseUrl}/generateur-mot-de-passe`,
+                  "description": "Créez des mots de passe sécurisés avec options personnalisables",
+                  "applicationCategory": "SecurityApplication",
+                  "operatingSystem": "Any"
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 6,
+                "item": {
+                  "@type": "SoftwareApplication",
+                  "name": "Générateur QR Code",
+                  "url": `${baseUrl}/generateur-qr-code`,
+                  "description": "Créez des QR codes personnalisés pour URLs, textes et contacts",
+                  "applicationCategory": "UtilitiesApplication",
+                  "operatingSystem": "Any"
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 7,
+                "item": {
+                  "@type": "SoftwareApplication",
+                  "name": "Calculatrice Fiscale",
+                  "url": `${baseUrl}/calculatrice-fiscale`,
+                  "description": "Calculez votre impôt sur le revenu en France pour 2025-2026",
+                  "applicationCategory": "FinanceApplication",
+                  "operatingSystem": "Any"
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 8,
+                "item": {
+                  "@type": "SoftwareApplication",
+                  "name": "Éditeur Markdown",
+                  "url": `${baseUrl}/editeur-markdown`,
+                  "description": "Éditeur Markdown avec prévisualisation en direct et export",
+                  "applicationCategory": "DeveloperApplication",
+                  "operatingSystem": "Any"
+                }
+              }
+            ]
+          })
+        }}
+      />
+      
+      <div className="min-h-screen flex flex-col p-4 sm:p-8">
+        <main className="flex flex-col gap-12 max-w-7xl mx-auto w-full">
+          <HomePageContent />
 
         {/* AdSense Ad - Top */}
         <div className="flex justify-center my-8">
@@ -676,5 +791,6 @@ export default function Home() {
         </section>
       </main>
     </div>
+    </>
   );
 }
