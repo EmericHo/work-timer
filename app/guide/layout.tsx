@@ -29,5 +29,70 @@ export default function GuideLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return <>{children}</>;
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://work-timer.com';
+  
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": "Guide Complet de la Technique Pomodoro et des Outils de Productivité",
+            "description": "Guide complet pour maîtriser la technique Pomodoro, améliorer votre concentration et maximiser votre productivité au travail avec nos outils gratuits.",
+            "url": `${baseUrl}/guide`,
+            "datePublished": "2024-01-01T00:00:00Z",
+            "dateModified": new Date().toISOString(),
+            "author": {
+              "@type": "Organization",
+              "name": "Outils Gratuits Pro",
+              "url": baseUrl
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Outils Gratuits Pro",
+              "url": baseUrl,
+              "logo": {
+                "@type": "ImageObject",
+                "url": `${baseUrl}/icon.svg`
+              }
+            },
+            "mainEntityOfPage": {
+              "@type": "WebPage",
+              "@id": `${baseUrl}/guide`
+            },
+            "articleSection": "Productivity",
+            "keywords": [
+              "Technique Pomodoro",
+              "Productivité",
+              "Gestion du temps",
+              "Concentration",
+              "Timer",
+              "Organisation travail",
+              "Méthode de travail"
+            ],
+            "about": [
+              {
+                "@type": "Thing",
+                "name": "Pomodoro Technique",
+                "description": "Time management method using 25-minute focused work sessions"
+              },
+              {
+                "@type": "Thing",
+                "name": "Time Management",
+                "description": "Strategies and tools to organize and plan time effectively"
+              },
+              {
+                "@type": "Thing",
+                "name": "Productivity Tools",
+                "description": "Software and applications to enhance work efficiency"
+              }
+            ]
+          })
+        }}
+      />
+      {children}
+    </>
+  );
 }

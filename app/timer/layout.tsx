@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import SoftwareApplicationSchema from "@/components/SoftwareApplicationSchema";
 import FAQSchema from "@/components/FAQSchema";
+import HowToSchema from "@/components/HowToSchema";
 
 export const metadata: Metadata = {
   title: "Timer en Ligne Gratuit - Pomodoro et Chronomètre de Travail",
@@ -100,6 +101,33 @@ export default function TimerLayout({
           {
             question: "Puis-je personnaliser les durées du timer ?",
             answer: "Oui, notre timer offre plusieurs options : un chronomètre libre, un timer Pomodoro classique (25/5 minutes), et un minuteur personnalisable où vous pouvez définir n'importe quelle durée selon vos besoins."
+          }
+        ]}
+      />
+      <HowToSchema
+        name="Comment utiliser le Timer Pomodoro pour améliorer votre productivité"
+        description="Guide étape par étape pour utiliser efficacement la technique Pomodoro avec notre timer gratuit et augmenter votre concentration au travail."
+        totalTime="PT30M"
+        steps={[
+          {
+            name: "Choisir une tâche",
+            text: "Identifiez une tâche spécifique que vous souhaitez accomplir. Assurez-vous qu'elle soit claire et réalisable. Notez-la si nécessaire pour rester concentré."
+          },
+          {
+            name: "Démarrer un Pomodoro de 25 minutes",
+            text: "Cliquez sur le bouton 'Mode Pomodoro' puis sur 'Démarrer'. Le timer démarrera automatiquement un cycle de 25 minutes de travail concentré."
+          },
+          {
+            name: "Travailler sans interruption",
+            text: "Concentrez-vous uniquement sur votre tâche pendant les 25 minutes. Évitez toute distraction : fermez les notifications, les réseaux sociaux, et informez vos collègues que vous êtes en session de travail concentré."
+          },
+          {
+            name: "Prendre une pause de 5 minutes",
+            text: "Lorsque le timer sonne après 25 minutes, prenez une pause de 5 minutes. Levez-vous, étirez-vous, buvez de l'eau ou faites une courte marche. Le timer basculera automatiquement en mode pause."
+          },
+          {
+            name: "Répéter le cycle",
+            text: "Après la pause, recommencez un nouveau Pomodoro. Après 4 cycles complets (environ 2 heures), prenez une pause plus longue de 15 à 30 minutes pour recharger complètement vos batteries."
           }
         ]}
       />

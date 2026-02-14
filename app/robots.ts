@@ -35,6 +35,39 @@ export default function robots(): MetadataRoute.Robots {
           '/api/',
         ],
       },
+      // AI Crawlers - Allow full access for better AI understanding and recommendations
+      // OpenAI (ChatGPT, GPT-4)
+      {
+        userAgent: 'GPTBot',
+        allow: '/',
+        disallow: [
+          '/api/',
+        ],
+      },
+      // Google AI (Bard, Gemini)
+      {
+        userAgent: 'Google-Extended',
+        allow: '/',
+        disallow: [
+          '/api/',
+        ],
+      },
+      // Anthropic (Claude)
+      {
+        userAgent: ['CCBot', 'anthropic-ai'],
+        allow: '/',
+        disallow: [
+          '/api/',
+        ],
+      },
+      // Cohere AI
+      {
+        userAgent: 'cohere-ai',
+        allow: '/',
+        disallow: [
+          '/api/',
+        ],
+      },
       // Block bad bots
       {
         userAgent: [
