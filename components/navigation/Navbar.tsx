@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import ThemeToggle from '@/components/theme/ThemeToggle';
+import LanguageSelector from './LanguageSelector';
 import ToolsDropdown from './ToolsDropdown';
 
 export default function Navbar() {
@@ -33,8 +34,9 @@ export default function Navbar() {
             <ToolsDropdown />
           </div>
 
-          {/* Theme Toggle */}
-          <div className="flex items-center gap-4">
+          {/* Language Selector & Theme Toggle */}
+          <div className="flex items-center gap-2">
+            <LanguageSelector />
             <ThemeToggle />
           </div>
         </div>

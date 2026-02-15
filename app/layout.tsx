@@ -3,7 +3,6 @@ import "./globals.css";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 import Footer from "@/components/Footer";
 import CookieConsent from "@/components/CookieConsent";
-import LanguageSwitcher from "@/components/LanguageSwitcher";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 import { ThemeProvider } from "@/lib/theme-provider";
 import Navbar from "@/components/navigation/Navbar";
@@ -406,7 +405,6 @@ export default function RootLayout({
               </Suspense>
             )}
             <Navbar />
-            <LanguageSwitcher />
             <div className="flex-1">{children}</div>
             <Footer />
             {/* GDPR Cookie Consent Banner */}
