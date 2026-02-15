@@ -31,6 +31,8 @@ export default function LanguageSelector() {
         onClick={() => setIsOpen(!isOpen)}
         className="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors flex items-center gap-1"
         aria-label="Change language"
+        aria-expanded={isOpen}
+        aria-haspopup="true"
         title={`Current language: ${languageNames[language]}`}
       >
         <span className="text-xl">{languageFlags[language]}</span>
