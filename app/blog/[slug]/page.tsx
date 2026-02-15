@@ -15,7 +15,7 @@ import { ShareButtons } from '@/components/blog/article/ShareButtons';
 import { KeyTakeaways } from '@/components/blog/article/KeyTakeaways';
 import { RecommendedTools } from '@/components/blog/article/RecommendedTools';
 import { RelatedArticles } from '@/components/blog/article/RelatedArticles';
-import { defaultLanguage } from '@/lib/i18n';
+import { defaultLanguage, type Language } from '@/lib/i18n';
 
 interface PageProps {
   params: Promise<{
@@ -37,14 +37,22 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const baseUrl = SITE_CONFIG.baseUrl;
   
   // Check which languages have this article available
-  const availableLanguages = ['fr', 'en', 'es', 'de'] as const;
+  // Note: Currently all blog articles use the same URL regardless of language
+  // The language selection happens client-side via the language context
+  const availableLanguages: Language[] = ['fr', 'en', 'es', 'de'];
   const languageAlternates: Record<string, string> = {};
   
+  // Add canonical URL as x-default for multilingual SEO
+  languageAlternates['x-default'] = `${baseUrl}/blog/${post.slug}`;
+  
   // Add hreflang for each available language version
+  // All point to the same URL since language switching is client-side
   for (const lang of availableLanguages) {
     try {
-      const langPost = getPostBySlug(slug, lang as any);
+      const langPost = getPostBySlug(slug, lang);
       if (langPost) {
+        // Since URLs are language-agnostic (client-side switching),
+        // all alternates point to the same canonical URL
         languageAlternates[lang] = `${baseUrl}/blog/${post.slug}`;
       }
     } catch {
