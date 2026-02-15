@@ -2,6 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 import readingTime from 'reading-time';
+import { extractHeadings, extractKeyTakeaways, type Heading } from './mdx-utils';
 
 const postsDirectory = path.join(process.cwd(), 'content/blog');
 
@@ -19,6 +20,8 @@ export interface Post {
   content: string;
   readingTime: string;
   readingMinutes: number;
+  headings: Heading[];
+  keyTakeaways: string[];
 }
 
 export function getAllPosts(): Post[] {
@@ -37,6 +40,8 @@ export function getAllPosts(): Post[] {
 
       const { data, content } = matter(fileContents);
       const readingStats = readingTime(content);
+      const headings = extractHeadings(content);
+      const keyTakeaways = extractKeyTakeaways(content);
 
       return {
         slug,
@@ -52,6 +57,8 @@ export function getAllPosts(): Post[] {
         content,
         readingTime: readingStats.text,
         readingMinutes: Math.ceil(readingStats.minutes),
+        headings,
+        keyTakeaways,
       } as Post;
     });
 

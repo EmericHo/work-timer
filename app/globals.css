@@ -31,3 +31,60 @@ body {
   outline: 2px solid #3b82f6;
   outline-offset: 2px;
 }
+
+/* Enhanced prose styling for blog articles - WCAG AAA compliant */
+.prose-article {
+  @apply prose prose-lg prose-zinc dark:prose-invert max-w-none;
+  
+  /* Headings - perfect contrast */
+  @apply prose-headings:scroll-mt-24 prose-headings:font-bold;
+  @apply prose-headings:text-zinc-900 dark:prose-headings:text-zinc-50;
+  @apply prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-6;
+  @apply prose-h3:text-xl prose-h3:mt-8 prose-h3:mb-4;
+  
+  /* Paragraphs - optimal readability */
+  @apply prose-p:text-lg prose-p:leading-relaxed prose-p:mb-6;
+  @apply prose-p:text-zinc-700 dark:prose-p:text-zinc-200;
+  
+  /* Links */
+  @apply prose-a:text-blue-600 dark:prose-a:text-blue-400;
+  @apply prose-a:no-underline prose-a:font-medium;
+  @apply hover:prose-a:underline hover:prose-a:text-blue-700;
+  @apply dark:hover:prose-a:text-blue-300;
+  
+  /* Lists */
+  @apply prose-ul:my-6 prose-li:my-2;
+  @apply prose-li:text-zinc-700 dark:prose-li:text-zinc-200;
+  
+  /* Blockquotes */
+  @apply prose-blockquote:border-l-4 prose-blockquote:border-blue-600;
+  @apply prose-blockquote:bg-blue-50 dark:prose-blockquote:bg-blue-950/30;
+  @apply prose-blockquote:py-4 prose-blockquote:px-6 prose-blockquote:rounded-r;
+  @apply prose-blockquote:text-zinc-800 dark:prose-blockquote:text-zinc-100;
+  @apply prose-blockquote:not-italic;
+  
+  /* Code inline */
+  @apply prose-code:bg-zinc-100 dark:prose-code:bg-zinc-800;
+  @apply prose-code:text-zinc-900 dark:prose-code:text-zinc-100;
+  @apply prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded;
+  @apply prose-code:before:content-none prose-code:after:content-none;
+  
+  /* Code blocks */
+  @apply prose-pre:bg-zinc-900 dark:prose-pre:bg-zinc-950;
+  @apply prose-pre:border prose-pre:border-zinc-800 dark:prose-pre:border-zinc-700;
+  @apply prose-pre:text-zinc-100;
+  
+  /* Images */
+  @apply prose-img:rounded-lg prose-img:shadow-lg;
+  
+  /* Tables */
+  @apply prose-table:border prose-table:border-zinc-200 dark:prose-table:border-zinc-800;
+  @apply prose-th:bg-zinc-100 dark:prose-th:bg-zinc-800;
+  @apply prose-th:text-zinc-900 dark:prose-th:text-zinc-50;
+  @apply prose-td:text-zinc-700 dark:prose-td:text-zinc-200;
+  @apply prose-td:border-zinc-200 dark:prose-td:border-zinc-800;
+  
+  /* Strong/Bold */
+  @apply prose-strong:text-zinc-900 dark:prose-strong:text-zinc-50;
+  @apply prose-strong:font-bold;
+}
