@@ -40,7 +40,6 @@ export default function ToolsDropdown() {
     <div className="relative">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        onMouseEnter={() => setIsOpen(true)}
         className="flex items-center gap-1 px-4 py-2 text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 font-medium transition-colors"
         aria-expanded={isOpen}
         aria-haspopup="true"

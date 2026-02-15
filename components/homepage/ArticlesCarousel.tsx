@@ -59,7 +59,14 @@ export default function ArticlesCarousel({ articles }: ArticlesCarouselProps) {
   }
 
   const currentArticle = displayArticles[currentIndex];
-  const formattedDate = format(new Date(currentArticle.date), 'dd MMMM yyyy', { locale: fr });
+  
+  // Safe date formatting with error handling
+  let formattedDate = currentArticle.date;
+  try {
+    formattedDate = format(new Date(currentArticle.date), 'dd MMMM yyyy', { locale: fr });
+  } catch (error) {
+    console.error('Error formatting date:', error);
+  }
 
   return (
     <section className="py-16 px-4 bg-white dark:bg-gray-900">

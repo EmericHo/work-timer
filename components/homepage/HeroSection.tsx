@@ -17,7 +17,7 @@ export default function HeroSection({
           {subtitle}
         </p>
         
-        {/* Search Input */}
+        {/* Search Input - Placeholder for future functionality */}
         <div className="max-w-2xl mx-auto">
           <div className="relative">
             <input
@@ -25,10 +25,12 @@ export default function HeroSection({
               placeholder="Rechercher des articles..."
               className="w-full px-6 py-4 rounded-full border-2 border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-500 focus:border-blue-500 dark:focus:border-blue-400 focus:outline-none shadow-lg"
               aria-label="Rechercher des articles"
+              disabled
             />
             <button
-              className="absolute right-2 top-1/2 -translate-y-1/2 p-2 bg-blue-600 hover:bg-blue-700 text-white rounded-full transition-colors"
+              className="absolute right-2 top-1/2 -translate-y-1/2 p-2 bg-blue-600 hover:bg-blue-700 text-white rounded-full transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
               aria-label="Rechercher"
+              disabled
             >
               <svg
                 className="w-5 h-5"

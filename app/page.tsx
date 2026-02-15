@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   },
 };
 
-export default function HomePage() {
+export default function Home() {
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://work-timer.com';
   
   // Get all blog posts
