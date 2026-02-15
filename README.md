@@ -53,11 +53,52 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 This application is ready for Google AdSense with **4 ad placements already integrated**:
 - **Homepage**: 3 horizontal ad units (top, middle, bottom)
 - **Timer page**: 1 horizontal ad unit
+- **Blog pages**: Header banner, sidebar (300x600), in-article (336x280)
 
-### 🚀 Quick Start
-See **[ADSENSE_SETUP.md](ADSENSE_SETUP.md)** for step-by-step instructions to activate ads (30 minutes).
+### 🚀 Quick Start - AdSense Setup
+
+1. **Get approved by Google AdSense**
+   - Go to [https://adsense.google.com](https://adsense.google.com)
+   - Create an account and submit your site for review
+   - Wait for approval (usually 1-2 weeks)
+
+2. **Configure environment variables**
+   ```bash
+   # In your .env.local file
+   NEXT_PUBLIC_ADSENSE_ID=ca-pub-YOUR-PUBLISHER-ID
+   NEXT_PUBLIC_ADSENSE_CLIENT_ID=ca-pub-YOUR-PUBLISHER-ID
+   ```
+
+3. **Create ad units in AdSense dashboard**
+   - Create 4 display ad units:
+     - Header Banner (728x90 or responsive)
+     - Sidebar (300x600)
+     - In-Article (336x280)
+     - Footer Sticky (320x50 mobile)
+   - Copy each ad unit ID
+
+4. **Update ad slot IDs**
+   Edit `lib/adsense.ts` and replace placeholder slot IDs with your real ones:
+   ```typescript
+   export const AD_SLOTS = {
+     HEADER_BANNER: { slot: 'YOUR-SLOT-ID-1', ... },
+     SIDEBAR: { slot: 'YOUR-SLOT-ID-2', ... },
+     IN_ARTICLE: { slot: 'YOUR-SLOT-ID-3', ... },
+     FOOTER_STICKY: { slot: 'YOUR-SLOT-ID-4', ... },
+   };
+   ```
+
+5. **Deploy and verify**
+   - Deploy your site with the environment variables
+   - Check that ads appear correctly (may take 24-48h for first display)
+   - Monitor performance in AdSense dashboard
+
+### Development Mode
+In development, placeholder ads (gray boxes) are shown. Set `NEXT_PUBLIC_ADSENSE_ID` in production to display real ads.
 
 ### 📚 Complete Documentation
+See **[ADSENSE_SETUP.md](ADSENSE_SETUP.md)** for step-by-step instructions to activate ads (30 minutes).
+
 See **[PUBLICITE.md](.github/docs/PUBLICITE.md)** for comprehensive information:
 - Complete Google AdSense setup guide
 - Complete Google Analytics setup guide (for tracking traffic)
@@ -122,13 +163,65 @@ After deployment:
 - Monitor which keywords bring traffic
 - Update content based on search analytics
 
-## Project Structure
+## Blog Integration
+
+This application now includes a complete blog system powered by MDX and Contentlayer:
+
+### Features
+- **SEO Optimized**: Full E-E-A-T compliance with Schema.org markup
+- **MDX Support**: Write articles in Markdown with React components
+- **Categories & Tags**: Organize content by finance, immo, tech categories
+- **Reading Time**: Automatic calculation of article reading time
+- **Related Tools**: Link blog articles to relevant tools on the platform
+- **AdSense Ready**: Ad placements in blog pages (header, sidebar, in-article)
+- **Responsive Design**: Mobile-first design for all blog pages
+
+### Adding New Blog Articles
+
+1. Create a new `.mdx` file in `content/blog/`:
+   ```bash
+   touch content/blog/your-article-slug.mdx
+   ```
+
+2. Add frontmatter metadata:
+   ```yaml
+   ---
+   title: "Your Article Title"
+   date: "2026-02-15"
+   author: "Alex Veldra"
+   image: "/blog/your-image.jpg"
+   tags: ["tag1", "tag2", "tag3"]
+   category: "finance" # or "immo", "tech"
+   description: "Short description for SEO"
+   keywords: "SEO keywords, separated by commas"
+   relatedTools: ["tool-slug-1", "tool-slug-2"]
+   ---
+   ```
+
+3. Write your article content in Markdown
+4. Build the project - Contentlayer will automatically process the MDX
+
+### Blog Structure
+- `/blog` - Main blog page with all articles
+- `/blog/[slug]` - Individual article pages
+- `/blog/categorie/[slug]` - Category-filtered article lists
+
+### Project Structure
 
 - `/app` - Next.js App Router pages
   - `/timer` - Timer page with Pomodoro mode
+  - `/blog` - Blog system (list, articles, categories)
+  - `/[tool-name]` - 60+ tool pages
 - `/components` - Reusable React components
   - `PomodoroFocus.tsx` - Pomodoro component with notifications
   - `AdSenseAd.tsx` - AdSense placeholder component
+  - `/ads` - AdSense components (Banner, Sidebar, InArticle, ConsentBanner)
+  - `/blog` - Blog components (ArticleCard, BlogPreview, BlogList, CategoryFilter)
+  - `/seo` - SEO components (SchemaArticle, AuthorBox)
+- `/content/blog` - MDX blog articles
+- `/lib` - Utility functions and configurations
+  - `adsense.ts` - AdSense configuration and helpers
+- `/public/blog` - Blog images and assets
 
 ## Technologies Used
 

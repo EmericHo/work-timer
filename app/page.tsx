@@ -3,6 +3,9 @@ import { Metadata } from "next";
 import AdSenseAd from "@/components/AdSenseAd";
 import HomePageContent from "@/components/HomePageContent";
 import { SectionHeader, LearnMore } from "@/components/SectionHeaders";
+import BlogPreview from "@/components/blog/BlogPreview";
+import { allPosts } from "contentlayer/generated";
+import { compareDesc } from "date-fns";
 
 export const metadata: Metadata = {
   title: "🚀 +61 Outils Gratuits Pro - Boostez Productivité & Dev Web 2025",
@@ -34,6 +37,22 @@ export const metadata: Metadata = {
 
 export default function Home() {
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://work-timer.com';
+  
+  // Récupérer les 3 derniers articles pour la section blog
+  const latestPosts = allPosts
+    .sort((a, b) => compareDesc(new Date(a.date), new Date(b.date)))
+    .slice(0, 3)
+    .map((post) => ({
+      title: post.title,
+      description: post.description,
+      image: post.image,
+      date: post.date,
+      author: post.author,
+      category: post.category,
+      slug: post.slug,
+      readingTime: post.readingTime,
+      tags: post.tags,
+    }));
   
   return (
     <>
@@ -789,6 +808,11 @@ export default function Home() {
             </Link>
           </div>
         </section>
+
+        {/* Blog Preview Section */}
+        {latestPosts.length > 0 && (
+          <BlogPreview articles={latestPosts} limit={3} />
+        )}
       </main>
     </div>
     </>
