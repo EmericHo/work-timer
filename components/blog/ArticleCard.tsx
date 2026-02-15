@@ -2,6 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { format } from 'date-fns';
 import { fr } from 'date-fns/locale';
+import CategoryBadge from './CategoryBadge';
 
 interface ArticleCardProps {
   title: string;
@@ -45,9 +46,7 @@ export default function ArticleCard({
             />
           )}
           <div className="absolute top-3 left-3">
-            <span className="px-3 py-1 bg-blue-600 text-white text-xs font-semibold rounded-full">
-              {category}
-            </span>
+            <CategoryBadge category={category} />
           </div>
         </div>
       </Link>
