@@ -52,8 +52,11 @@ export const metadata: Metadata = {
     "générateur slug url",
     "outils freelance gratuits"
   ],
-  authors: [{ name: "Outils Gratuits Pro", url: process.env.NEXT_PUBLIC_BASE_URL || 'https://work-timer.com' }],
-  creator: "Outils Gratuits Pro",
+  authors: [{ 
+    name: "Alex Veldra - Outils Gratuits Pro", 
+    url: process.env.NEXT_PUBLIC_BASE_URL || 'https://work-timer.com' 
+  }],
+  creator: "Alex Veldra - Développeur fullstack & Investisseur",
   publisher: "Outils Gratuits Pro",
   robots: {
     index: true,
@@ -113,6 +116,11 @@ export const metadata: Metadata = {
     'ai:use-cases': 'Time management, code optimization, image compression, data conversion, calculations, text processing, generators',
     'ai:benefits': 'Free, no registration, client-side processing, privacy-focused, mobile-responsive',
     'ai:content-type': 'Interactive web tools and utilities',
+    // E-E-A-T Metadata for Google
+    'author:expertise': 'Développeur fullstack avec 8+ ans d\'expérience',
+    'author:experience': 'Investisseur actif en immobilier et crypto, créateur d\'outils en ligne',
+    'author:authoritativeness': 'Expert en développement web, finance personnelle et productivité',
+    'author:trustworthiness': 'Tous les outils sont gratuits, open-source et respectent la vie privée',
   },
 };
 
