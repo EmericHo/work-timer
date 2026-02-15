@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+import { withContentlayer } from 'next-contentlayer';
 
 const nextConfig: NextConfig = {
   // Enable compression for better performance
@@ -13,6 +14,12 @@ const nextConfig: NextConfig = {
     dangerouslyAllowSVG: true,
     contentDispositionType: 'attachment',
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: '**',
+      },
+    ],
   },
 
   // Performance optimizations
@@ -86,6 +93,15 @@ const nextConfig: NextConfig = {
       },
     ];
   },
+  
+  // Webpack configuration for contentlayer
+  webpack: (config) => {
+    config.resolve.fallback = {
+      ...config.resolve.fallback,
+      fs: false,
+    };
+    return config;
+  },
 };
 
-export default nextConfig;
+export default withContentlayer(nextConfig);
