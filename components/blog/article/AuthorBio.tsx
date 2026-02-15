@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import Link from 'next/link';
 
 interface AuthorBioProps {
   variant?: 'sidebar' | 'extended';
@@ -37,24 +36,6 @@ export function AuthorBio({
           8+ ans d&apos;expérience en dev web et investissements immo/crypto. 
           Créateur de 50+ outils gratuits.
         </p>
-        <div className="flex gap-2">
-          <Link 
-            href="https://linkedin.com/in/veldra" 
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex-1 px-3 py-2 text-sm border border-zinc-200 dark:border-zinc-700 rounded-lg hover:bg-zinc-50 dark:hover:bg-zinc-800 transition-colors text-center text-zinc-700 dark:text-zinc-300"
-          >
-            LinkedIn
-          </Link>
-          <Link 
-            href="https://github.com/veldra" 
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex-1 px-3 py-2 text-sm border border-zinc-200 dark:border-zinc-700 rounded-lg hover:bg-zinc-50 dark:hover:bg-zinc-800 transition-colors text-center text-zinc-700 dark:text-zinc-300"
-          >
-            GitHub
-          </Link>
-        </div>
       </div>
     );
   }
@@ -91,24 +72,6 @@ export function AuthorBio({
             <span className="px-3 py-1 bg-blue-100 dark:bg-blue-950 text-blue-800 dark:text-blue-200 text-sm rounded-full font-medium">
               Crypto
             </span>
-          </div>
-          <div className="flex gap-3">
-            <Link 
-              href="https://linkedin.com/in/veldra" 
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-4 py-2 text-sm border border-zinc-200 dark:border-zinc-700 rounded-lg hover:bg-zinc-50 dark:hover:bg-zinc-800 transition-colors text-zinc-700 dark:text-zinc-300 font-medium"
-            >
-              LinkedIn
-            </Link>
-            <Link 
-              href="https://github.com/veldra" 
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-4 py-2 text-sm border border-zinc-200 dark:border-zinc-700 rounded-lg hover:bg-zinc-50 dark:hover:bg-zinc-800 transition-colors text-zinc-700 dark:text-zinc-300 font-medium"
-            >
-              GitHub
-            </Link>
           </div>
         </div>
       </div>
