@@ -5,6 +5,8 @@ import Footer from "@/components/Footer";
 import CookieConsent from "@/components/CookieConsent";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import { LanguageProvider } from "@/contexts/LanguageContext";
+import { ThemeProvider } from "@/lib/theme-provider";
+import Navbar from "@/components/navigation/Navbar";
 import { Suspense } from "react";
 
 export const viewport: Viewport = {
@@ -396,18 +398,21 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-screen antialiased flex flex-col">
-        <LanguageProvider>
-          {gaMeasurementId && (
-            <Suspense fallback={null}>
-              <GoogleAnalytics />
-            </Suspense>
-          )}
-          <LanguageSwitcher />
-          <div className="flex-1">{children}</div>
-          <Footer />
-          {/* GDPR Cookie Consent Banner */}
-          <CookieConsent />
-        </LanguageProvider>
+        <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false}>
+          <LanguageProvider>
+            {gaMeasurementId && (
+              <Suspense fallback={null}>
+                <GoogleAnalytics />
+              </Suspense>
+            )}
+            <Navbar />
+            <LanguageSwitcher />
+            <div className="flex-1">{children}</div>
+            <Footer />
+            {/* GDPR Cookie Consent Banner */}
+            <CookieConsent />
+          </LanguageProvider>
+        </ThemeProvider>
       </body>
     </html>
   );
