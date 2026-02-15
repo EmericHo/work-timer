@@ -15,6 +15,8 @@ import { ShareButtons } from '@/components/blog/article/ShareButtons';
 import { KeyTakeaways } from '@/components/blog/article/KeyTakeaways';
 import { RecommendedTools } from '@/components/blog/article/RecommendedTools';
 import { RelatedArticles } from '@/components/blog/article/RelatedArticles';
+import { defaultLanguage } from '@/lib/i18n';
+
 interface PageProps {
   params: Promise<{
     slug: string;
@@ -24,7 +26,7 @@ interface PageProps {
 // Générer les métadonnées pour SEO
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug } = await params;
-  const post = getPostBySlug(slug);
+  const post = getPostBySlug(slug, defaultLanguage);
 
   if (!post) {
     return {
@@ -68,7 +70,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
 // Générer les routes statiques
 export async function generateStaticParams() {
-  const posts = getAllPosts();
+  // Generate params for all languages and posts
+  const posts = getAllPosts(defaultLanguage);
   return posts.map((post) => ({
     slug: post.slug,
   }));
@@ -76,7 +79,7 @@ export async function generateStaticParams() {
 
 export default async function ArticlePage({ params }: PageProps) {
   const { slug } = await params;
-  const post = getPostBySlug(slug);
+  const post = getPostBySlug(slug, defaultLanguage);
 
   if (!post) {
     notFound();
@@ -86,7 +89,7 @@ export default async function ArticlePage({ params }: PageProps) {
   const articleUrl = `${baseUrl}/blog/${post.slug}`;
 
   // Find related articles
-  const allPosts = getAllPosts();
+  const allPosts = getAllPosts(defaultLanguage);
   const relatedPosts = allPosts
     .filter((p) => p.slug !== post.slug && p.category === post.category)
     .slice(0, 3);
