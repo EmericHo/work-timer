@@ -24,6 +24,7 @@ A productivity timer application built with Next.js 15, React, TypeScript, and T
   - Visible focus indicators
 - **Responsive Design**: Mobile-first Tailwind CSS with minimum 16px font size
 - **French Localization**: Complete French interface with geo-targeting
+- **Multilingual Support**: 18 language support with translated blog content (4 languages fully translated: fr, en, es, de)
 
 ## Getting Started
 
@@ -205,6 +206,139 @@ This application now includes a complete blog system powered by MDX and Contentl
 - `/blog` - Main blog page with all articles
 - `/blog/[slug]` - Individual article pages
 - `/blog/categorie/[slug]` - Category-filtered article lists
+
+## Multilingual System
+
+This application supports 18 languages with a dynamic language switching system. Blog content is available in 4 languages (French, English, Spanish, German).
+
+### Supported Languages
+
+The following 18 languages are supported in the UI:
+- **Français** (fr) 🇫🇷 - Default language
+- **English** (en) 🇬🇧
+- **Español** (es) 🇪🇸
+- **Deutsch** (de) 🇩🇪
+- **Italiano** (it) 🇮🇹
+- **Português** (pt) 🇵🇹
+- **Nederlands** (nl) 🇳🇱
+- **Polski** (pl) 🇵🇱
+- **Русский** (ru) 🇷🇺
+- **日本語** (ja) 🇯🇵
+- **中文** (zh) 🇨🇳
+- **한국어** (ko) 🇰🇷
+- **العربية** (ar) 🇸🇦 - RTL support
+- **हिन्दी** (hi) 🇮🇳
+- **Türkçe** (tr) 🇹🇷
+- **Svenska** (sv) 🇸🇪
+- **Dansk** (da) 🇩🇰
+- **Norsk** (no) 🇳🇴
+
+### Blog Content Translation
+
+Blog articles are organized by language in the `content/blog/` directory:
+
+```
+content/blog/
+├── fr/          # French articles (original)
+├── en/          # English translations
+├── es/          # Spanish translations
+└── de/          # German translations
+```
+
+### Language Switcher
+
+The language switcher appears in two different positions depending on screen size:
+
+- **Desktop**: Sticky button on the left sidebar at `top-24 left-4`
+- **Mobile**: Floating button at the bottom-right corner
+
+The switcher shows:
+- Top 9 most common languages
+- Separator
+- Additional 9 languages under "More Languages"
+- Current language highlighted with a checkmark
+- Dark mode support
+
+### Adding New Translations
+
+#### Translating Blog Articles
+
+1. Create the language directory if it doesn't exist:
+   ```bash
+   mkdir -p content/blog/[lang-code]
+   ```
+
+2. Copy an existing article from `fr/` to the new language directory
+
+3. Translate the frontmatter and content:
+   ```yaml
+   ---
+   title: "Translated Title"
+   description: "Translated description"
+   keywords: "translated, keywords"
+   # Keep these unchanged:
+   date: "2026-02-15"
+   author: "Alex Veldra"
+   image: "/blog/same-image.jpg"
+   category: "finance"
+   tags: ["tag1", "tag2"]
+   relatedTools: ["tool-slug-1", "tool-slug-2"]
+   ---
+   ```
+
+4. Important translation rules:
+   - Keep ALL markdown formatting (headers, lists, links, images)
+   - Translate naturally, not word-by-word
+   - Keep proper nouns unchanged (Veldra, PEA, ETF, etc.)
+   - Adapt idiomatic expressions for the target language
+   - Preserve the exact structure (H2, H3, lists, etc.)
+   - Do NOT translate: code blocks, URLs, tool names in `relatedTools`
+
+#### Translating UI Elements
+
+UI translations are stored in `translations/`:
+
+```
+translations/
+├── fr.ts        # French UI translations
+├── en.ts        # English UI translations
+├── es.ts        # Spanish UI translations
+├── de.ts        # German UI translations
+└── index.ts     # Translation exports
+```
+
+To add a new UI language:
+
+1. Create a new file `translations/[lang].ts`
+2. Copy the structure from `translations/en.ts`
+3. Translate all strings
+4. Export the translations in `translations/index.ts`
+
+### Language Detection
+
+The application automatically detects the user's browser language on first visit and sets it as the default. The language preference is stored in localStorage and persists across sessions.
+
+### API Endpoints
+
+The multilingual system includes API routes for dynamic content loading:
+
+- `/api/blog?lang=[lang-code]` - Get all blog posts and categories for a language
+- Articles are loaded dynamically when the user switches languages
+
+### Technical Implementation
+
+- **Context-based**: Uses React Context API for global language state
+- **Client-side switching**: Language changes are instant, no page reload needed
+- **Server-side rendering**: Blog pages use SSG (Static Site Generation) for SEO
+- **Dynamic loading**: Blog content is fetched via API when language changes
+- **Type-safe**: Full TypeScript support with language types
+
+### SEO Considerations
+
+- Default language (French) is used for static generation
+- Each translated article maintains the same slug across languages
+- Consider adding hreflang tags for better multilingual SEO
+- Blog metadata (title, description) is translated for each language
 
 ### Project Structure
 

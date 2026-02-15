@@ -38,14 +38,22 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     if (!isClient) return key;
     
     const keys = key.split('.');
-    let value: Record<string, unknown> = translations[language] as Record<string, unknown>;
+    
+    // Get translations for current language or fall back to default
+    const langTranslations = translations[language] || translations[defaultLanguage];
+    if (!langTranslations) return key;
+    
+    let value: Record<string, unknown> = langTranslations as Record<string, unknown>;
     
     for (const k of keys) {
       if (value && typeof value === 'object' && k in value) {
         value = value[k] as Record<string, unknown>;
       } else {
-        // Fallback to English if key not found
-        value = translations[defaultLanguage] as Record<string, unknown>;
+        // Fallback to default language if key not found
+        const fallbackTranslations = translations[defaultLanguage];
+        if (!fallbackTranslations) return key;
+        
+        value = fallbackTranslations as Record<string, unknown>;
         for (const fallbackKey of keys) {
           if (value && typeof value === 'object' && fallbackKey in value) {
             value = value[fallbackKey] as Record<string, unknown>;

@@ -3,8 +3,14 @@ import path from 'path';
 import matter from 'gray-matter';
 import readingTime from 'reading-time';
 import { extractHeadings, extractKeyTakeaways, type Heading } from './mdx-utils';
+import { type Language, defaultLanguage } from './i18n';
 
-const postsDirectory = path.join(process.cwd(), 'content/blog');
+const contentDirectory = path.join(process.cwd(), 'content/blog');
+
+// Get the directory for a specific language
+function getPostsDirectory(lang: Language = defaultLanguage): string {
+  return path.join(contentDirectory, lang);
+}
 
 export interface Post {
   slug: string;
@@ -24,7 +30,9 @@ export interface Post {
   keyTakeaways: string[];
 }
 
-export function getAllPosts(): Post[] {
+export function getAllPosts(lang: Language = defaultLanguage): Post[] {
+  const postsDirectory = getPostsDirectory(lang);
+  
   // Vérifier si le dossier existe
   if (!fs.existsSync(postsDirectory)) {
     return [];
@@ -71,18 +79,18 @@ export function getAllPosts(): Post[] {
   });
 }
 
-export function getPostBySlug(slug: string): Post | null {
-  const allPosts = getAllPosts();
+export function getPostBySlug(slug: string, lang: Language = defaultLanguage): Post | null {
+  const allPosts = getAllPosts(lang);
   return allPosts.find((post) => post.slug === slug) || null;
 }
 
-export function getAllCategories(): string[] {
-  const allPosts = getAllPosts();
+export function getAllCategories(lang: Language = defaultLanguage): string[] {
+  const allPosts = getAllPosts(lang);
   const categories = Array.from(new Set(allPosts.map((post) => post.category)));
   return categories;
 }
 
-export function getPostsByCategory(category: string): Post[] {
-  const allPosts = getAllPosts();
+export function getPostsByCategory(category: string, lang: Language = defaultLanguage): Post[] {
+  const allPosts = getAllPosts(lang);
   return allPosts.filter((post) => post.category === category);
 }

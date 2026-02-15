@@ -1,5 +1,6 @@
 import { notFound } from 'next/navigation';
 import { getAllPosts, getPostsByCategory, getAllCategories } from '@/lib/posts';
+import { defaultLanguage } from '@/lib/i18n';
 import BlogList from '@/components/blog/BlogList';
 import Link from 'next/link';
 import { Metadata } from 'next';
@@ -14,7 +15,7 @@ interface PageProps {
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug } = await params;
   const category = slug;
-  const postsInCategory = getPostsByCategory(category);
+  const postsInCategory = getPostsByCategory(category, defaultLanguage);
 
   if (postsInCategory.length === 0) {
     return {
@@ -35,7 +36,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
 // Générer les routes statiques
 export async function generateStaticParams() {
-  const categories = getAllCategories();
+  const categories = getAllCategories(defaultLanguage);
   return categories.map((category) => ({
     slug: category,
   }));
@@ -44,7 +45,7 @@ export async function generateStaticParams() {
 export default async function CategoryPage({ params }: PageProps) {
   const { slug } = await params;
   const category = slug;
-  const postsInCategory = getPostsByCategory(category);
+  const postsInCategory = getPostsByCategory(category, defaultLanguage);
 
   if (postsInCategory.length === 0) {
     notFound();

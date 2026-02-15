@@ -1,7 +1,8 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import Link from 'next/link';
+import { useLanguage } from '@/contexts/LanguageContext';
 import BlogList from '@/components/blog/BlogList';
 import CategoryFilter from '@/components/blog/CategoryFilter';
 import AdSenseBanner from '@/components/ads/AdSenseBanner';
@@ -15,8 +16,33 @@ interface BlogPageProps {
  * Page principale du blog - Client Component
  * Liste tous les articles avec filtrage par catégorie
  */
-export default function BlogPageClient({ posts, categories }: BlogPageProps) {
+export default function BlogPageClient({ posts: initialPosts, categories: initialCategories }: BlogPageProps) {
+  const { language } = useLanguage();
   const [selectedCategory, setSelectedCategory] = useState('tous');
+  const [posts, setPosts] = useState(initialPosts);
+  const [categories, setCategories] = useState(initialCategories);
+  const [loading, setLoading] = useState(false);
+
+  // Load posts when language changes
+  useEffect(() => {
+    const loadPosts = async () => {
+      setLoading(true);
+      try {
+        const response = await fetch(`/api/blog?lang=${language}`);
+        if (response.ok) {
+          const data = await response.json();
+          setPosts(data.posts || []);
+          setCategories(data.categories || []);
+        }
+      } catch (error) {
+        console.error('Error loading posts:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    loadPosts();
+  }, [language]);
 
   // Filtrer les articles par catégorie
   const filteredPosts = useMemo(() => {
@@ -72,23 +98,38 @@ export default function BlogPageClient({ posts, categories }: BlogPageProps) {
 
       {/* Main Content */}
       <div className="max-w-7xl mx-auto px-4 py-12">
-        {/* Category Filter */}
-        <CategoryFilter
-          categories={categories}
-          selectedCategory={selectedCategory}
-          onCategoryChange={setSelectedCategory}
-        />
+        {loading ? (
+          <div className="text-center py-12">
+            <div className="inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-blue-600 border-r-transparent"></div>
+            <p className="text-gray-600 mt-4">Chargement...</p>
+          </div>
+        ) : (
+          <>
+            {/* Category Filter */}
+            <CategoryFilter
+              categories={categories}
+              selectedCategory={selectedCategory}
+              onCategoryChange={setSelectedCategory}
+            />
 
-        {/* Articles Count */}
-        <div className="mb-8 text-center">
-          <p className="text-gray-600">
-            {filteredPosts.length} article{filteredPosts.length > 1 ? 's' : ''}{' '}
-            {selectedCategory !== 'tous' && `dans la catégorie "${selectedCategory}"`}
-          </p>
-        </div>
+            {/* Articles Count */}
+            <div className="mb-8 text-center">
+              <p className="text-gray-600">
+                {filteredPosts.length} article{filteredPosts.length > 1 ? 's' : ''}{' '}
+                {selectedCategory !== 'tous' && `dans la catégorie "${selectedCategory}"`}
+              </p>
+            </div>
 
-        {/* Articles List */}
-        <BlogList articles={articles} />
+            {/* Articles List */}
+            {articles.length > 0 ? (
+              <BlogList articles={articles} />
+            ) : (
+              <div className="text-center py-12">
+                <p className="text-gray-600">Aucun article disponible dans cette langue.</p>
+              </div>
+            )}
+          </>
+        )}
       </div>
     </div>
   );

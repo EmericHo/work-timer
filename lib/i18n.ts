@@ -1,24 +1,73 @@
-// Supported languages
-export type Language = 'en' | 'es' | 'de' | 'fr';
+// Supported languages (18 languages as per requirements)
+export type Language = 'fr' | 'en' | 'es' | 'de' | 'it' | 'pt' | 'nl' | 'pl' | 'ru' | 'ja' | 'zh' | 'ko' | 'ar' | 'hi' | 'tr' | 'sv' | 'da' | 'no';
 
-export const languages: Language[] = ['en', 'es', 'de', 'fr'];
+export const languages: Language[] = ['fr', 'en', 'es', 'de', 'it', 'pt', 'nl', 'pl', 'ru', 'ja', 'zh', 'ko', 'ar', 'hi', 'tr', 'sv', 'da', 'no'];
 
 export const languageNames: Record<Language, string> = {
+  fr: 'Français',
   en: 'English',
   es: 'Español',
   de: 'Deutsch',
-  fr: 'Français',
+  it: 'Italiano',
+  pt: 'Português',
+  nl: 'Nederlands',
+  pl: 'Polski',
+  ru: 'Русский',
+  ja: '日本語',
+  zh: '中文',
+  ko: '한국어',
+  ar: 'العربية',
+  hi: 'हिन्दी',
+  tr: 'Türkçe',
+  sv: 'Svenska',
+  da: 'Dansk',
+  no: 'Norsk',
 };
 
 export const languageFlags: Record<Language, string> = {
+  fr: '🇫🇷',
   en: '🇬🇧',
   es: '🇪🇸',
   de: '🇩🇪',
-  fr: '🇫🇷',
+  it: '🇮🇹',
+  pt: '🇵🇹',
+  nl: '🇳🇱',
+  pl: '🇵🇱',
+  ru: '🇷🇺',
+  ja: '🇯🇵',
+  zh: '🇨🇳',
+  ko: '🇰🇷',
+  ar: '🇸🇦',
+  hi: '🇮🇳',
+  tr: '🇹🇷',
+  sv: '🇸🇪',
+  da: '🇩🇰',
+  no: '🇳🇴',
 };
 
-// Default language is English
-export const defaultLanguage: Language = 'en';
+export const languageDirections: Record<Language, 'ltr' | 'rtl'> = {
+  fr: 'ltr',
+  en: 'ltr',
+  es: 'ltr',
+  de: 'ltr',
+  it: 'ltr',
+  pt: 'ltr',
+  nl: 'ltr',
+  pl: 'ltr',
+  ru: 'ltr',
+  ja: 'ltr',
+  zh: 'ltr',
+  ko: 'ltr',
+  ar: 'rtl',
+  hi: 'ltr',
+  tr: 'ltr',
+  sv: 'ltr',
+  da: 'ltr',
+  no: 'ltr',
+};
+
+// Default language is French (as per requirements)
+export const defaultLanguage: Language = 'fr';
 
 // Detect browser language
 export function detectBrowserLanguage(): Language {
