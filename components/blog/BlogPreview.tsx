@@ -37,7 +37,7 @@ export default function BlogPreview({ articles, limit = 3 }: BlogPreviewProps) {
             Outils puissants. Analyses expertes.
           </p>
           <p className="text-lg text-gray-500 mt-2">
-            Découvrez nos guides, analyses et recommandations sur la finance, l'immobilier et le développement
+            Découvrez nos guides, analyses et recommandations sur la finance, l&apos;immobilier et le développement
           </p>
         </div>
 

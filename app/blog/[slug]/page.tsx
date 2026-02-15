@@ -1,10 +1,10 @@
 import { notFound } from 'next/navigation';
-import { allPosts } from 'contentlayer/generated';
+import { getAllPosts, getPostBySlug } from '@/lib/posts';
 import { format } from 'date-fns';
 import { fr } from 'date-fns/locale';
-import { useMDXComponent } from 'next-contentlayer/hooks';
 import Link from 'next/link';
 import Image from 'next/image';
+import { MDXRemote } from 'next-mdx-remote/rsc';
 import AdSenseSidebar from '@/components/ads/AdSenseSidebar';
 import AdSenseInArticle from '@/components/ads/AdSenseInArticle';
 import SchemaArticle from '@/components/seo/SchemaArticle';
@@ -12,14 +12,15 @@ import AuthorBox from '@/components/seo/AuthorBox';
 import { Metadata } from 'next';
 
 interface PageProps {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 }
 
 // Générer les métadonnées pour SEO
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-  const post = allPosts.find((post) => post.slug === params.slug);
+  const { slug } = await params;
+  const post = getPostBySlug(slug);
 
   if (!post) {
     return {
@@ -63,23 +64,25 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
 // Générer les routes statiques
 export async function generateStaticParams() {
-  return allPosts.map((post) => ({
+  const posts = getAllPosts();
+  return posts.map((post) => ({
     slug: post.slug,
   }));
 }
 
-export default function ArticlePage({ params }: PageProps) {
-  const post = allPosts.find((post) => post.slug === params.slug);
+export default async function ArticlePage({ params }: PageProps) {
+  const { slug } = await params;
+  const post = getPostBySlug(slug);
 
   if (!post) {
     notFound();
   }
 
-  const MDXContent = useMDXComponent(post.body.code);
   const formattedDate = format(new Date(post.date), 'dd MMMM yyyy', { locale: fr });
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://work-timer.com';
 
   // Trouver des articles reliés
+  const allPosts = getAllPosts();
   const relatedPosts = allPosts
     .filter((p) => p.slug !== post.slug && p.category === post.category)
     .slice(0, 3);
@@ -172,33 +175,22 @@ export default function ArticlePage({ params }: PageProps) {
 
                 {/* Featured Image */}
                 {post.image && (
-                  <div className="relative w-full h-[400px] rounded-lg overflow-hidden mb-8">
-                    <Image
-                      src={post.image}
-                      alt={post.title}
-                      fill
-                      className="object-cover"
-                      priority
-                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"
-                    />
+                  <div className="relative w-full h-[400px] rounded-lg overflow-hidden mb-8 bg-gradient-to-r from-blue-500 to-indigo-600">
+                    <div className="flex items-center justify-center h-full text-white text-xl font-semibold">
+                      Image: {post.image}
+                    </div>
                   </div>
                 )}
               </header>
 
               {/* Article Content */}
               <div className="prose prose-lg max-w-none prose-headings:font-bold prose-a:text-blue-600 prose-a:no-underline hover:prose-a:underline prose-img:rounded-lg">
-                <MDXContent components={{
-                  // Insérer la pub InArticle après quelques paragraphes
-                  p: ({ children, ...props }: any) => {
-                    const isThirdParagraph = typeof children === 'string' && children.length > 100;
-                    return (
-                      <>
-                        <p {...props}>{children}</p>
-                        {isThirdParagraph && Math.random() < 0.3 && <AdSenseInArticle />}
-                      </>
-                    );
-                  },
-                }} />
+                <MDXRemote source={post.content} />
+              </div>
+
+              {/* In-Article Ad */}
+              <div className="my-8">
+                <AdSenseInArticle />
               </div>
 
               {/* Outils reliés */}
@@ -255,16 +247,8 @@ export default function ArticlePage({ params }: PageProps) {
                         className="group"
                       >
                         <div className="bg-white rounded-lg shadow-md hover:shadow-xl transition-all overflow-hidden">
-                          <div className="relative h-32 bg-gray-200">
-                            {relatedPost.image && (
-                              <Image
-                                src={relatedPost.image}
-                                alt={relatedPost.title}
-                                fill
-                                className="object-cover group-hover:scale-105 transition-transform"
-                                sizes="300px"
-                              />
-                            )}
+                          <div className="relative h-32 bg-gradient-to-r from-blue-400 to-indigo-500 flex items-center justify-center text-white text-sm">
+                            {relatedPost.image}
                           </div>
                           <div className="p-4">
                             <h4 className="font-semibold text-gray-900 line-clamp-2 group-hover:text-blue-600">

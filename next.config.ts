@@ -1,5 +1,4 @@
 import type { NextConfig } from "next";
-import { withContentlayer } from 'next-contentlayer';
 
 const nextConfig: NextConfig = {
   // Enable compression for better performance
@@ -93,15 +92,6 @@ const nextConfig: NextConfig = {
       },
     ];
   },
-  
-  // Webpack configuration for contentlayer
-  webpack: (config) => {
-    config.resolve.fallback = {
-      ...config.resolve.fallback,
-      fs: false,
-    };
-    return config;
-  },
 };
 
-export default withContentlayer(nextConfig);
+export default nextConfig;

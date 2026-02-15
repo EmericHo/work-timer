@@ -1,20 +1,20 @@
 import { notFound } from 'next/navigation';
-import { allPosts } from 'contentlayer/generated';
-import { compareDesc } from 'date-fns';
+import { getAllPosts, getPostsByCategory, getAllCategories } from '@/lib/posts';
 import BlogList from '@/components/blog/BlogList';
 import Link from 'next/link';
 import { Metadata } from 'next';
 
 interface PageProps {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 }
 
 // Générer les métadonnées pour SEO
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-  const category = params.slug;
-  const postsInCategory = allPosts.filter((post) => post.category === category);
+  const { slug } = await params;
+  const category = slug;
+  const postsInCategory = getPostsByCategory(category);
 
   if (postsInCategory.length === 0) {
     return {
@@ -35,19 +35,16 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
 // Générer les routes statiques
 export async function generateStaticParams() {
-  const categories = Array.from(new Set(allPosts.map((post) => post.category)));
+  const categories = getAllCategories();
   return categories.map((category) => ({
     slug: category,
   }));
 }
 
-export default function CategoryPage({ params }: PageProps) {
-  const category = params.slug;
-
-  // Filtrer les articles par catégorie
-  const postsInCategory = allPosts
-    .filter((post) => post.category === category)
-    .sort((a, b) => compareDesc(new Date(a.date), new Date(b.date)));
+export default async function CategoryPage({ params }: PageProps) {
+  const { slug } = await params;
+  const category = slug;
+  const postsInCategory = getPostsByCategory(category);
 
   if (postsInCategory.length === 0) {
     notFound();

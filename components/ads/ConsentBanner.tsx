@@ -57,7 +57,7 @@ export default function ConsentBanner() {
             </h3>
             <p id="consent-description" className="text-sm text-gray-600">
               Nous utilisons des cookies pour améliorer votre expérience et afficher des publicités pertinentes. 
-              En acceptant, vous consentez à l'utilisation de cookies conformément à notre politique de confidentialité.
+              En acceptant, vous consentez à l&apos;utilisation de cookies conformément à notre politique de confidentialité.
             </p>
           </div>
           <div className="flex gap-3 w-full sm:w-auto">

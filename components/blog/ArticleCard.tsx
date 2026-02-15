@@ -96,7 +96,7 @@ export default function ArticleCard({
             href={`/blog/${slug}`}
             className="text-blue-600 hover:text-blue-700 font-medium text-sm flex items-center gap-1"
           >
-            Lire l'article
+            Lire l&apos;article
             <svg
               className="w-4 h-4"
               fill="none"
