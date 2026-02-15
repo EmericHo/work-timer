@@ -15,7 +15,7 @@ import { ShareButtons } from '@/components/blog/article/ShareButtons';
 import { KeyTakeaways } from '@/components/blog/article/KeyTakeaways';
 import { RecommendedTools } from '@/components/blog/article/RecommendedTools';
 import { RelatedArticles } from '@/components/blog/article/RelatedArticles';
-import { defaultLanguage } from '@/lib/i18n';
+import { defaultLanguage, type Language } from '@/lib/i18n';
 
 interface PageProps {
   params: Promise<{
@@ -35,6 +35,30 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   }
 
   const baseUrl = SITE_CONFIG.baseUrl;
+  
+  // Check which languages have this article available
+  // Note: Currently all blog articles use the same URL regardless of language
+  // The language selection happens client-side via the language context
+  const availableLanguages: Language[] = ['fr', 'en', 'es', 'de'];
+  const languageAlternates: Record<string, string> = {};
+  
+  // Add canonical URL as x-default for multilingual SEO
+  languageAlternates['x-default'] = `${baseUrl}/blog/${post.slug}`;
+  
+  // Add hreflang for each available language version
+  // All point to the same URL since language switching is client-side
+  for (const lang of availableLanguages) {
+    try {
+      const langPost = getPostBySlug(slug, lang);
+      if (langPost) {
+        // Since URLs are language-agnostic (client-side switching),
+        // all alternates point to the same canonical URL
+        languageAlternates[lang] = `${baseUrl}/blog/${post.slug}`;
+      }
+    } catch {
+      // Language version doesn't exist, skip
+    }
+  }
 
   return {
     title: post.title,
@@ -47,6 +71,10 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       type: 'article',
       publishedTime: post.date,
       authors: [post.author],
+      tags: post.tags,
+      locale: 'fr_FR',
+      // Add alternate locales for multilingual SEO
+      alternateLocale: ['en_US', 'es_ES', 'de_DE'],
       images: [
         {
           url: `${baseUrl}${post.image}`,
@@ -61,9 +89,22 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       title: post.title,
       description: post.description,
       images: [`${baseUrl}${post.image}`],
+      creator: '@veldra',
+      site: '@veldra',
     },
     alternates: {
       canonical: `${baseUrl}/blog/${post.slug}`,
+      // Add hreflang tags for multilingual SEO
+      languages: languageAlternates,
+    },
+    // Additional SEO enhancements
+    category: post.category,
+    robots: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+      'max-video-preview': -1,
     },
   };
 }
@@ -106,6 +147,8 @@ export default async function ArticlePage({ params }: PageProps) {
         url={articleUrl}
         keywords={post.keywords}
         readingTime={post.readingTime}
+        category={post.category}
+        tags={post.tags}
       />
 
       {/* Reading progress bar */}
