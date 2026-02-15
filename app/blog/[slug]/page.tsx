@@ -35,6 +35,22 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   }
 
   const baseUrl = SITE_CONFIG.baseUrl;
+  
+  // Check which languages have this article available
+  const availableLanguages = ['fr', 'en', 'es', 'de'] as const;
+  const languageAlternates: Record<string, string> = {};
+  
+  // Add hreflang for each available language version
+  for (const lang of availableLanguages) {
+    try {
+      const langPost = getPostBySlug(slug, lang as any);
+      if (langPost) {
+        languageAlternates[lang] = `${baseUrl}/blog/${post.slug}`;
+      }
+    } catch {
+      // Language version doesn't exist, skip
+    }
+  }
 
   return {
     title: post.title,
@@ -47,6 +63,10 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       type: 'article',
       publishedTime: post.date,
       authors: [post.author],
+      tags: post.tags,
+      locale: 'fr_FR',
+      // Add alternate locales for multilingual SEO
+      alternateLocale: ['en_US', 'es_ES', 'de_DE'],
       images: [
         {
           url: `${baseUrl}${post.image}`,
@@ -61,9 +81,22 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       title: post.title,
       description: post.description,
       images: [`${baseUrl}${post.image}`],
+      creator: '@veldra',
+      site: '@veldra',
     },
     alternates: {
       canonical: `${baseUrl}/blog/${post.slug}`,
+      // Add hreflang tags for multilingual SEO
+      languages: languageAlternates,
+    },
+    // Additional SEO enhancements
+    category: post.category,
+    robots: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+      'max-video-preview': -1,
     },
   };
 }
@@ -106,6 +139,8 @@ export default async function ArticlePage({ params }: PageProps) {
         url={articleUrl}
         keywords={post.keywords}
         readingTime={post.readingTime}
+        category={post.category}
+        tags={post.tags}
       />
 
       {/* Reading progress bar */}
