@@ -12,25 +12,31 @@ export interface AdSenseConfig {
 }
 
 // IDs des emplacements publicitaires
+// ⚠️ IMPORTANT: Ces IDs sont des PLACEHOLDERS
+// Remplacez-les par vos vrais slot IDs depuis Google AdSense:
+// 1. Connectez-vous à https://adsense.google.com
+// 2. Allez dans "Annonces" > "Par unité publicitaire"  
+// 3. Créez 4 unités publicitaires (Banner, Sidebar, In-Article, Footer)
+// 4. Copiez chaque slot ID et remplacez les valeurs ci-dessous
 export const AD_SLOTS = {
   HEADER_BANNER: {
-    slot: '1234567890', // À remplacer par votre slot ID réel
+    slot: '1234567890', // ⚠️ PLACEHOLDER - À remplacer
     format: 'auto',
     responsive: true,
     fullWidthResponsive: true,
   },
   SIDEBAR: {
-    slot: '1234567891', // À remplacer par votre slot ID réel
+    slot: '1234567891', // ⚠️ PLACEHOLDER - À remplacer
     format: 'rectangle',
     responsive: false,
   },
   IN_ARTICLE: {
-    slot: '1234567892', // À remplacer par votre slot ID réel
+    slot: '1234567892', // ⚠️ PLACEHOLDER - À remplacer
     format: 'fluid',
     responsive: true,
   },
   FOOTER_STICKY: {
-    slot: '1234567893', // À remplacer par votre slot ID réel
+    slot: '1234567893', // ⚠️ PLACEHOLDER - À remplacer
     format: 'auto',
     responsive: true,
     fullWidthResponsive: true,

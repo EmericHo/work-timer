@@ -1,3 +1,5 @@
+import { SITE_CONFIG } from '@/lib/config';
+
 interface SchemaArticleProps {
   title: string;
   description: string;
@@ -23,7 +25,7 @@ export default function SchemaArticle({
   keywords,
   readingTime,
 }: SchemaArticleProps) {
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://work-timer.com';
+  const baseUrl = SITE_CONFIG.baseUrl;
 
   const schema = {
     '@context': 'https://schema.org',

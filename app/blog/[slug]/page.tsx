@@ -10,7 +10,7 @@ import AdSenseInArticle from '@/components/ads/AdSenseInArticle';
 import SchemaArticle from '@/components/seo/SchemaArticle';
 import AuthorBox from '@/components/seo/AuthorBox';
 import { Metadata } from 'next';
-
+import { SITE_CONFIG } from '@/lib/config';
 interface PageProps {
   params: Promise<{
     slug: string;
@@ -28,7 +28,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     };
   }
 
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://work-timer.com';
+  const baseUrl = SITE_CONFIG.baseUrl;
 
   return {
     title: post.title,
@@ -79,7 +79,7 @@ export default async function ArticlePage({ params }: PageProps) {
   }
 
   const formattedDate = format(new Date(post.date), 'dd MMMM yyyy', { locale: fr });
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://work-timer.com';
+  const baseUrl = SITE_CONFIG.baseUrl;
 
   // Trouver des articles reliés
   const allPosts = getAllPosts();

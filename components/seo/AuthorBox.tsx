@@ -1,3 +1,5 @@
+import { SITE_CONFIG } from '@/lib/config';
+
 interface AuthorBoxProps {
   author: string;
   bio?: string;
@@ -11,7 +13,7 @@ export default function AuthorBox({
   author = 'Alex Veldra',
   bio = 'Développeur fullstack & investisseur immo/crypto - 8+ ans d\'expérience',
 }: AuthorBoxProps) {
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://work-timer.com';
+  const baseUrl = SITE_CONFIG.baseUrl;
 
   return (
     <div className="mt-12 p-6 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg border border-blue-100">
