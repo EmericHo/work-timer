@@ -29,16 +29,28 @@ export const blogImages = {
 /**
  * Get the full URL for a blog image
  * @param imagePath - The image path from blog frontmatter (e.g., "/blog/automobile/prix-voitures-electriques-2026.jpg")
- * @returns The full URL to the image, or a fallback placeholder
+ * @returns The full URL to the image. If the image is not found in the configuration,
+ *          returns a generic placeholder image from Unsplash showing a laptop/technology theme.
  */
 export function getBlogImageUrl(imagePath: string): string {
   // Extract the filename without extension from the path
-  const filename = imagePath.split('/').pop()?.replace(/\.(jpg|jpeg|png|webp)$/i, '');
+  const lastPart = imagePath.split('/').pop();
+  if (!lastPart) {
+    return 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=1200&h=600&fit=crop';
+  }
   
-  if (filename && filename in blogImages) {
+  const filename = lastPart.replace(/\.(jpg|jpeg|png|webp)$/i, '');
+  
+  // Verify the extension was removed (filename should be different from lastPart)
+  if (filename === lastPart) {
+    // No valid extension found, return fallback
+    return 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=1200&h=600&fit=crop';
+  }
+  
+  if (filename in blogImages) {
     return blogImages[filename as keyof typeof blogImages];
   }
   
-  // Fallback to a generic placeholder if image not found
+  // Fallback to a generic placeholder if image not found in configuration
   return 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=1200&h=600&fit=crop';
 }
