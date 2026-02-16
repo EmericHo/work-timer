@@ -24,6 +24,15 @@ export const blogImages = {
   
   // Development - Coding and tools
   'outils-dev-2026': 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=1200&h=600&fit=crop', // Code on screen
+  'veldra-outils-dev-2026': 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=1200&h=600&fit=crop', // Code on screen - developer tools
+  
+  // Finance - ETF and investment strategies (veldra articles)
+  'veldra-etf-recommandations': 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=600&fit=crop', // Stock market charts - ETF allocations
+  'veldra-pea-2026': 'https://images.unsplash.com/photo-1559526324-593bc073d938?w=1200&h=600&fit=crop', // Investment growth concept - PEA simulator
+  
+  // Real Estate - Property investment and taxation (veldra articles)
+  'veldra-immo-grand-est': 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1200&h=600&fit=crop', // Modern house architecture - Grand Est property
+  'veldra-fiscalite-2026': 'https://images.unsplash.com/photo-1554224311-beee460201e8?w=1200&h=600&fit=crop', // Calculator and documents - rental taxation
 } as const;
 
 /**
