@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { format } from 'date-fns';
 import { fr } from 'date-fns/locale';
 import CategoryBadge from './CategoryBadge';
+import { getBlogImageUrl } from '@/lib/blog-images';
 
 interface ArticleCardProps {
   title: string;
@@ -38,7 +39,7 @@ export default function ArticleCard({
         <div className="relative h-48 w-full overflow-hidden bg-gray-200 dark:bg-gray-700">
           {image && (
             <Image
-              src={image}
+              src={getBlogImageUrl(image)}
               alt={title}
               fill
               className="object-cover group-hover:scale-105 transition-transform duration-300"
