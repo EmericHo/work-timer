@@ -4,26 +4,26 @@
  */
 
 export const blogImages = {
-  // Automobile category
-  'batterie-ev-vie-utile': 'https://images.unsplash.com/photo-1593941707882-a5bba14938c7?w=1200&h=600&fit=crop',
-  'bornes-recharge-france-2026': 'https://images.unsplash.com/photo-1593941707874-ef25b8b4a92b?w=1200&h=600&fit=crop',
-  'full-elec-comparatif-2026': 'https://images.unsplash.com/photo-1560958089-b8a1929cea89?w=1200&h=600&fit=crop',
-  'futur-automobile-2030': 'https://images.unsplash.com/photo-1542362567-b07e54358753?w=1200&h=600&fit=crop',
-  'leasing-ev-vs-essence': 'https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=1200&h=600&fit=crop',
-  'peugeot-citroen-3-motorisations': 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1200&h=600&fit=crop',
-  'prix-voitures-electriques-2026': 'https://images.unsplash.com/photo-1617788138017-80ad40651399?w=1200&h=600&fit=crop',
-  'puretech-problemes-garantie': 'https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=1200&h=600&fit=crop',
+  // Automobile category - Electric vehicles and batteries
+  'batterie-ev-vie-utile': 'https://images.unsplash.com/photo-1617704548623-340376564e68?w=1200&h=600&fit=crop', // EV battery closeup
+  'bornes-recharge-france-2026': 'https://images.unsplash.com/photo-1593941707874-ef25b8b4a92b?w=1200&h=600&fit=crop', // EV charging station
+  'full-elec-comparatif-2026': 'https://images.unsplash.com/photo-1617788138017-80ad40651399?w=1200&h=600&fit=crop', // Modern electric cars
+  'futur-automobile-2030': 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&h=600&fit=crop', // Futuristic car technology
+  'leasing-ev-vs-essence': 'https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=1200&h=600&fit=crop', // Car keys and contract
+  'peugeot-citroen-3-motorisations': 'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=1200&h=600&fit=crop', // Peugeot car front view
+  'prix-voitures-electriques-2026': 'https://images.unsplash.com/photo-1560958089-b8a1929cea89?w=1200&h=600&fit=crop', // Electric car charging
+  'puretech-problemes-garantie': 'https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=1200&h=600&fit=crop', // Car engine maintenance
   
-  // Finance & Investment
-  'etf-2026': 'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200&h=600&fit=crop',
-  'fiscalite-2026': 'https://images.unsplash.com/photo-1554224311-beee460201e8?w=1200&h=600&fit=crop',
-  'pea-2026': 'https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=1200&h=600&fit=crop',
+  // Finance & Investment - Stock market and financial planning
+  'etf-2026': 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=600&fit=crop', // Stock market charts
+  'fiscalite-2026': 'https://images.unsplash.com/photo-1554224311-beee460201e8?w=1200&h=600&fit=crop', // Calculator and documents
+  'pea-2026': 'https://images.unsplash.com/photo-1559526324-593bc073d938?w=1200&h=600&fit=crop', // Investment growth concept
   
-  // Real Estate
-  'immo-grand-est': 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1200&h=600&fit=crop',
+  // Real Estate - Property investment
+  'immo-grand-est': 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1200&h=600&fit=crop', // Modern house architecture
   
-  // Development
-  'outils-dev-2026': 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1200&h=600&fit=crop',
+  // Development - Coding and tools
+  'outils-dev-2026': 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=1200&h=600&fit=crop', // Code on screen
 } as const;
 
 /**
