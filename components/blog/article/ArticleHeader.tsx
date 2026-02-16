@@ -1,6 +1,8 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { format } from 'date-fns';
 import { fr } from 'date-fns/locale';
+import { getBlogImageUrl } from '@/lib/blog-images';
 
 interface ArticleHeaderProps {
   title: string;
@@ -110,13 +112,16 @@ export function ArticleHeader({
       
       {/* Featured Image */}
       {image && (
-        <div className="relative w-full h-[400px] md:h-[500px] rounded-lg overflow-hidden bg-gradient-to-br from-blue-500 to-indigo-600 shadow-xl">
+        <div className="relative w-full h-[400px] md:h-[500px] rounded-lg overflow-hidden shadow-xl">
+          <Image
+            src={getBlogImageUrl(image)}
+            alt={title}
+            fill
+            className="object-cover"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"
+            priority
+          />
           <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-          <div className="flex items-center justify-center h-full">
-            <span className="text-white text-xl font-semibold opacity-50">
-              {image}
-            </span>
-          </div>
         </div>
       )}
     </header>
