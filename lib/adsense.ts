@@ -11,6 +11,8 @@ export interface AdSenseConfig {
   fullWidthResponsive?: boolean;
 }
 
+export const ADSENSE_PUBLISHER_ID = 'ca-pub-7974922980225669';
+
 // IDs des emplacements publicitaires
 // ⚠️ IMPORTANT: Ces IDs sont des PLACEHOLDERS
 // Remplacez-les par vos vrais slot IDs depuis Google AdSense:
@@ -47,10 +49,11 @@ export const AD_SLOTS = {
  * Vérifie si AdSense est activé
  */
 export function isAdSenseEnabled(): boolean {
+  const clientId = process.env.NEXT_PUBLIC_ADSENSE_ID || ADSENSE_PUBLISHER_ID;
   return !!(
     typeof window !== 'undefined' &&
-    process.env.NEXT_PUBLIC_ADSENSE_ID &&
-    process.env.NEXT_PUBLIC_ADSENSE_ID.startsWith('ca-pub-')
+    clientId &&
+    clientId.startsWith('ca-pub-')
   );
 }
 
