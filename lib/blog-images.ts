@@ -25,6 +25,12 @@ export const blogImages = {
   // Development - Coding and tools
   'outils-dev-2026': 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=1200&h=600&fit=crop', // Code on screen
   'veldra-outils-dev-2026': 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=1200&h=600&fit=crop', // Code on screen - developer tools
+
+  // Gaming - Consoles and streaming setups
+  'gaming-comparatifs-2026': 'https://images.unsplash.com/photo-1538481199705-c710c4e965fc?w=1200&h=600&fit=crop', // Gaming controller
+
+  // Finance - Assurance vie
+  'assurance-vie-2026-comparatif': 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1200&h=600&fit=crop', // Insurance / financial planning
   
   // Finance - ETF and investment strategies (veldra articles)
   'veldra-etf-recommandations': 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=600&fit=crop', // Stock market charts - ETF allocations
@@ -42,6 +48,11 @@ export const blogImages = {
  *          returns a generic placeholder image from Unsplash showing a laptop/technology theme.
  */
 export function getBlogImageUrl(imagePath: string): string {
+  // If the path is already an absolute URL, return it as-is
+  if (imagePath.startsWith('http://') || imagePath.startsWith('https://')) {
+    return imagePath;
+  }
+
   // Extract the filename without extension from the path
   const lastPart = imagePath.split('/').pop();
   if (!lastPart) {
