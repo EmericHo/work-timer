@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation';
 import { getAllPosts, getPostBySlug } from '@/lib/posts';
 import Link from 'next/link';
 import { MDXRemote } from 'next-mdx-remote/rsc';
+import remarkGfm from 'remark-gfm';
 import AdSenseSidebar from '@/components/ads/AdSenseSidebar';
 import AdSenseInArticle from '@/components/ads/AdSenseInArticle';
 import SchemaArticle from '@/components/seo/SchemaArticle';
@@ -181,8 +182,11 @@ export default async function ArticlePage({ params }: PageProps) {
             {/* Main Content */}
             <div className="min-w-0">
               {/* Article Content with enhanced prose styling */}
-              <div className="prose-article">
-                <MDXRemote source={post.content} />
+              <div className="prose-article overflow-x-auto">
+                <MDXRemote
+                  source={post.content}
+                  options={{ mdxOptions: { remarkPlugins: [remarkGfm] } }}
+                />
               </div>
 
               {/* In-Article Ad */}
