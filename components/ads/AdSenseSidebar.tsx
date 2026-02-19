@@ -17,7 +17,7 @@ export default function AdSenseSidebar({
   className = '',
 }: AdSenseSidebarProps) {
   const adRef = useRef<HTMLDivElement>(null);
-  const clientId = process.env.NEXT_PUBLIC_ADSENSE_ID || '';
+  const clientId = process.env.NEXT_PUBLIC_ADSENSE_ID || 'ca-pub-7974922980225669';
 
   useEffect(() => {
     if (isAdSenseEnabled() && adRef.current) {

@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import { ADSENSE_PUBLISHER_ID } from "@/lib/adsense";
 
 interface AdSenseAdProps {
   slot: string;
@@ -26,8 +27,9 @@ interface AdSenseAdProps {
  *   style={{ width: "300px", height: "250px" }}
  * />
  */
+
 export default function AdSenseAd({ slot, format, style }: AdSenseAdProps) {
-  const clientId = process.env.NEXT_PUBLIC_ADSENSE_CLIENT_ID;
+  const clientId = process.env.NEXT_PUBLIC_ADSENSE_CLIENT_ID || ADSENSE_PUBLISHER_ID;
   const isProduction = process.env.NODE_ENV === "production";
   const isInitialized = useRef(false);
 
@@ -44,8 +46,8 @@ export default function AdSenseAd({ slot, format, style }: AdSenseAdProps) {
     }
   }, [clientId, isProduction, slot]);
 
-  // En développement ou sans client ID, afficher un placeholder
-  if (!isProduction || !clientId) {
+  // En développement, afficher un placeholder
+  if (!isProduction) {
     const formatClass = {
       horizontal: "bg-gray-100 dark:bg-gray-700 flex items-center justify-center text-gray-500 dark:text-gray-400 text-sm",
       rectangle: "bg-gray-100 dark:bg-gray-700 flex items-center justify-center text-gray-500 dark:text-gray-400 text-sm",
@@ -61,11 +63,6 @@ export default function AdSenseAd({ slot, format, style }: AdSenseAdProps) {
         <div className="text-center p-4">
           <p className="font-semibold">AdSense Placeholder</p>
           <p className="text-xs mt-1">{slot} - {format}</p>
-          {!clientId && (
-            <p className="text-xs mt-2 text-yellow-600 dark:text-yellow-400">
-              Configurez NEXT_PUBLIC_ADSENSE_CLIENT_ID
-            </p>
-          )}
         </div>
       </div>
     );
