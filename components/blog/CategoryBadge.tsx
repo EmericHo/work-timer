@@ -10,12 +10,18 @@ export default function CategoryBadge({ category, className = '' }: CategoryBadg
   const colors: Record<string, { bg: string; text: string; emoji?: string }> = {
     finance: { bg: 'bg-emerald-500', text: 'text-white', emoji: '💰' },
     immobilier: { bg: 'bg-amber-500', text: 'text-white', emoji: '🏠' },
-    tech: { bg: 'bg-blue-500', text: 'text-white', emoji: '💻' },
+    'tech & gaming': { bg: 'bg-blue-500', text: 'text-white', emoji: '🎮' },
     automobile: { bg: 'bg-red-500', text: 'text-white', emoji: '🚗' },
   };
 
   const categoryLower = category.toLowerCase();
-  const style = colors[categoryLower] || { bg: 'bg-gray-500', text: 'text-white' };
+  // Aliases for backwards compatibility
+  const aliases: Record<string, string> = {
+    tech: 'tech & gaming',
+    gaming: 'tech & gaming',
+  };
+  const resolvedCategory = aliases[categoryLower] ?? categoryLower;
+  const style = colors[resolvedCategory] || { bg: 'bg-gray-500', text: 'text-white' };
 
   return (
     <span

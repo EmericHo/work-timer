@@ -43,7 +43,7 @@ export function ArticleHeader({
             </Link>
             <span>/</span>
             <Link
-              href={`/blog/categorie/${category}`}
+              href={`/blog/categorie/${encodeURIComponent(category)}`}
               className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors capitalize"
             >
               {category}
@@ -57,7 +57,7 @@ export function ArticleHeader({
       {/* Category badge */}
       <div className="mt-8 mb-4">
         <Link
-          href={`/blog/categorie/${category}`}
+          href={`/blog/categorie/${encodeURIComponent(category)}`}
           className="inline-flex items-center gap-2 px-4 py-1.5 bg-blue-600 dark:bg-blue-500 text-white text-sm font-semibold rounded-full hover:bg-blue-700 dark:hover:bg-blue-600 transition-colors"
         >
           <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
