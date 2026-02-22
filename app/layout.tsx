@@ -397,7 +397,7 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-screen antialiased flex flex-col">
-        <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false}>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem={true}>
           <LanguageProvider>
             {gaMeasurementId && (
               <Suspense fallback={null}>
