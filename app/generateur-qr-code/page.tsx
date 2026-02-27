@@ -1,7 +1,16 @@
 "use client";
 
 import Link from "next/link";
-import QRCodeGenerator from "@/components/QRCodeGenerator";
+import dynamic from "next/dynamic";
+
+const QRCodeGenerator = dynamic(() => import("@/components/QRCodeGenerator"), {
+  ssr: false,
+  loading: () => (
+    <div className="flex items-center justify-center h-64 text-gray-500 dark:text-gray-400">
+      Chargement du générateur…
+    </div>
+  ),
+});
 
 export default function QRCodeGeneratorPage() {
   return (
