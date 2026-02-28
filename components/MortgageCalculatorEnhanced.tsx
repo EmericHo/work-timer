@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useMemo } from "react";
 
 export default function MortgageCalculatorEnhanced() {
   const [loanAmount, setLoanAmount] = useState<string>("");
@@ -10,14 +10,14 @@ export default function MortgageCalculatorEnhanced() {
   const [propertyTax, setPropertyTax] = useState<string>("");
   const [insurance, setInsurance] = useState<string>("");
 
-  const [monthlyPayment, setMonthlyPayment] = useState<number>(0);
-  const [monthlyPrincipalInterest, setMonthlyPrincipalInterest] = useState<number>(0);
-  const [monthlyTax, setMonthlyTax] = useState<number>(0);
-  const [monthlyInsurance, setMonthlyInsurance] = useState<number>(0);
-  const [totalPayment, setTotalPayment] = useState<number>(0);
-  const [totalInterest, setTotalInterest] = useState<number>(0);
-
-  const handleCalculate = () => {
+  const {
+    monthlyPayment,
+    monthlyPrincipalInterest,
+    monthlyTax,
+    monthlyInsurance,
+    totalPayment,
+    totalInterest,
+  } = useMemo(() => {
     const loan = parseFloat(loanAmount);
     const down = parseFloat(downPayment) || 0;
     const rate = parseFloat(interestRate);
@@ -26,10 +26,14 @@ export default function MortgageCalculatorEnhanced() {
     const ins = parseFloat(insurance) || 0;
 
     if (isNaN(loan) || isNaN(rate) || isNaN(years) || loan <= 0 || years <= 0) {
-      setMonthlyPayment(0);
-      setTotalPayment(0);
-      setTotalInterest(0);
-      return;
+      return {
+        monthlyPayment: 0,
+        monthlyPrincipalInterest: 0,
+        monthlyTax: 0,
+        monthlyInsurance: 0,
+        totalPayment: 0,
+        totalInterest: 0,
+      };
     }
 
     const principal = loan - down;
@@ -53,13 +57,15 @@ export default function MortgageCalculatorEnhanced() {
     const totalPaid = totalMonthly * numberOfPayments;
     const totalInt = (monthlyPI * numberOfPayments) - principal;
 
-    setMonthlyPrincipalInterest(monthlyPI);
-    setMonthlyTax(monthlyTaxAmount);
-    setMonthlyInsurance(monthlyInsAmount);
-    setMonthlyPayment(totalMonthly);
-    setTotalPayment(totalPaid + down);
-    setTotalInterest(totalInt);
-  };
+    return {
+      monthlyPayment: totalMonthly,
+      monthlyPrincipalInterest: monthlyPI,
+      monthlyTax: monthlyTaxAmount,
+      monthlyInsurance: monthlyInsAmount,
+      totalPayment: totalPaid + down,
+      totalInterest: totalInt,
+    };
+  }, [loanAmount, downPayment, interestRate, loanTerm, propertyTax, insurance]);
 
   const copyToClipboard = (text: string) => {
     navigator.clipboard.writeText(text).then(
@@ -80,10 +86,7 @@ export default function MortgageCalculatorEnhanced() {
           <input
             type="number"
             value={loanAmount}
-            onChange={(e) => {
-              setLoanAmount(e.target.value);
-              setTimeout(handleCalculate, 0);
-            }}
+            onChange={(e) => setLoanAmount(e.target.value)}
             placeholder="300000"
             step="1000"
             className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100"
@@ -97,10 +100,7 @@ export default function MortgageCalculatorEnhanced() {
           <input
             type="number"
             value={downPayment}
-            onChange={(e) => {
-              setDownPayment(e.target.value);
-              setTimeout(handleCalculate, 0);
-            }}
+            onChange={(e) => setDownPayment(e.target.value)}
             placeholder="60000"
             step="1000"
             className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100"
@@ -116,10 +116,7 @@ export default function MortgageCalculatorEnhanced() {
           <input
             type="number"
             value={interestRate}
-            onChange={(e) => {
-              setInterestRate(e.target.value);
-              setTimeout(handleCalculate, 0);
-            }}
+            onChange={(e) => setInterestRate(e.target.value)}
             placeholder="3.5"
             step="0.1"
             className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100"
@@ -133,10 +130,7 @@ export default function MortgageCalculatorEnhanced() {
           <input
             type="number"
             value={loanTerm}
-            onChange={(e) => {
-              setLoanTerm(e.target.value);
-              setTimeout(handleCalculate, 0);
-            }}
+            onChange={(e) => setLoanTerm(e.target.value)}
             placeholder="25"
             step="1"
             min="1"
@@ -153,10 +147,7 @@ export default function MortgageCalculatorEnhanced() {
           <input
             type="number"
             value={propertyTax}
-            onChange={(e) => {
-              setPropertyTax(e.target.value);
-              setTimeout(handleCalculate, 0);
-            }}
+            onChange={(e) => setPropertyTax(e.target.value)}
             placeholder="0.5"
             step="0.1"
             className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100"
@@ -170,10 +161,7 @@ export default function MortgageCalculatorEnhanced() {
           <input
             type="number"
             value={insurance}
-            onChange={(e) => {
-              setInsurance(e.target.value);
-              setTimeout(handleCalculate, 0);
-            }}
+            onChange={(e) => setInsurance(e.target.value)}
             placeholder="0.36"
             step="0.01"
             className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100"

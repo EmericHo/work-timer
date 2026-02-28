@@ -1,15 +1,12 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useMemo } from "react";
 
 export default function CompoundInterestCalculator() {
   const [principal, setPrincipal] = useState<string>("");
   const [rate, setRate] = useState<string>("");
   const [time, setTime] = useState<string>("");
   const [frequency, setFrequency] = useState<number>(1);
-  const [finalAmount, setFinalAmount] = useState<number>(0);
-  const [totalInterest, setTotalInterest] = useState<number>(0);
-  const [yearlyGrowth, setYearlyGrowth] = useState<Array<{year: number, amount: number}>>([]);
 
   const frequencies = {
     1: "Annuellement",
@@ -19,32 +16,27 @@ export default function CompoundInterestCalculator() {
     365: "Quotidiennement",
   };
 
-  const handleCalculate = () => {
+  const { finalAmount, totalInterest, yearlyGrowth } = useMemo(() => {
     const p = parseFloat(principal);
     const r = parseFloat(rate) / 100;
     const t = parseFloat(time);
     const n = frequency;
 
     if (isNaN(p) || isNaN(r) || isNaN(t) || p <= 0 || t <= 0) {
-      setFinalAmount(0);
-      setTotalInterest(0);
-      setYearlyGrowth([]);
-      return;
+      return { finalAmount: 0, totalInterest: 0, yearlyGrowth: [] };
     }
 
     const final = p * Math.pow(1 + r / n, n * t);
     const interest = final - p;
-
-    setFinalAmount(final);
-    setTotalInterest(interest);
 
     const growth: Array<{year: number, amount: number}> = [];
     for (let year = 1; year <= Math.min(t, 20); year++) {
       const amount = p * Math.pow(1 + r / n, n * year);
       growth.push({ year, amount });
     }
-    setYearlyGrowth(growth);
-  };
+
+    return { finalAmount: final, totalInterest: interest, yearlyGrowth: growth };
+  }, [principal, rate, time, frequency]);
 
   const copyToClipboard = (text: string) => {
     navigator.clipboard.writeText(text).then(
@@ -62,10 +54,7 @@ export default function CompoundInterestCalculator() {
         <input
           type="number"
           value={principal}
-          onChange={(e) => {
-            setPrincipal(e.target.value);
-            setTimeout(handleCalculate, 0);
-          }}
+          onChange={(e) => setPrincipal(e.target.value)}
           placeholder="10000"
           step="0.01"
           className="w-full px-4 py-3 text-xl border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100"
@@ -79,10 +68,7 @@ export default function CompoundInterestCalculator() {
         <input
           type="number"
           value={rate}
-          onChange={(e) => {
-            setRate(e.target.value);
-            setTimeout(handleCalculate, 0);
-          }}
+          onChange={(e) => setRate(e.target.value)}
           placeholder="5"
           step="0.1"
           className="w-full px-4 py-3 text-xl border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100"
@@ -96,10 +82,7 @@ export default function CompoundInterestCalculator() {
         <input
           type="number"
           value={time}
-          onChange={(e) => {
-            setTime(e.target.value);
-            setTimeout(handleCalculate, 0);
-          }}
+          onChange={(e) => setTime(e.target.value)}
           placeholder="10"
           step="1"
           min="1"
@@ -113,10 +96,7 @@ export default function CompoundInterestCalculator() {
         </label>
         <select
           value={frequency}
-          onChange={(e) => {
-            setFrequency(Number(e.target.value));
-            setTimeout(handleCalculate, 0);
-          }}
+          onChange={(e) => setFrequency(Number(e.target.value))}
           className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100"
         >
           {Object.entries(frequencies).map(([value, label]) => (

@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import Link from "next/link";
-import SCIBalanceSheetGenerator from "@/components/SCIBalanceSheetGenerator";
+import SCIBalanceSheetGenerator from "@/components/SCIBalanceSheetGeneratorDynamic";
 
 export const metadata: Metadata = {
   title: "Générateur de Bilan SCI - Outil Gratuit pour Société Civile Immobilière 2025",
