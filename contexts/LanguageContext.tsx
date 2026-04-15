@@ -34,6 +34,9 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     storeLanguage(lang);
   };
 
+  /**
+   * Resolves a dot-notated translation key against a translation object.
+   */
   const resolveTranslation = (translationSet: unknown, keys: string[]): string | undefined => {
     let value: unknown = translationSet;
 
@@ -55,7 +58,13 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     if (currentLanguageValue !== undefined) return currentLanguageValue;
 
     const fallbackValue = resolveTranslation(translations[defaultLanguage], keys);
-    return fallbackValue ?? '';
+    if (fallbackValue !== undefined) return fallbackValue;
+
+    if (process.env.NODE_ENV !== 'production') {
+      console.warn(`[i18n] Missing translation key: "${key}"`);
+    }
+
+    return '';
   };
 
   return (
