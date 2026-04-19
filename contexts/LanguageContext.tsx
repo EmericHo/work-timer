@@ -34,38 +34,37 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     storeLanguage(lang);
   };
 
-  const t = (key: string): string => {
-    if (!isClient) return key;
-    
-    const keys = key.split('.');
-    
-    // Get translations for current language or fall back to default
-    const langTranslations = translations[language] || translations[defaultLanguage];
-    if (!langTranslations) return key;
-    
-    let value: Record<string, unknown> = langTranslations as Record<string, unknown>;
-    
-    for (const k of keys) {
-      if (value && typeof value === 'object' && k in value) {
-        value = value[k] as Record<string, unknown>;
-      } else {
-        // Fallback to default language if key not found
-        const fallbackTranslations = translations[defaultLanguage];
-        if (!fallbackTranslations) return key;
-        
-        value = fallbackTranslations as Record<string, unknown>;
-        for (const fallbackKey of keys) {
-          if (value && typeof value === 'object' && fallbackKey in value) {
-            value = value[fallbackKey] as Record<string, unknown>;
-          } else {
-            return key; // Return key if not found
-          }
-        }
-        break;
+  /**
+   * Resolves a dot-notated translation key against a translation object.
+   */
+  const resolveTranslation = (translationSet: unknown, keys: string[]): string | undefined => {
+    let value: unknown = translationSet;
+
+    for (const keyPart of keys) {
+      if (!value || typeof value !== 'object' || !(keyPart in (value as Record<string, unknown>))) {
+        return undefined;
       }
+      value = (value as Record<string, unknown>)[keyPart];
     }
-    
-    return typeof value === 'string' ? value : key;
+
+    return typeof value === 'string' ? value : undefined;
+  };
+
+  const t = (key: string): string => {
+    const keys = key.split('.');
+    const selectedLanguage = isClient ? language : defaultLanguage;
+
+    const currentLanguageValue = resolveTranslation(translations[selectedLanguage], keys);
+    if (currentLanguageValue !== undefined) return currentLanguageValue;
+
+    const fallbackValue = resolveTranslation(translations[defaultLanguage], keys);
+    if (fallbackValue !== undefined) return fallbackValue;
+
+    if (process.env.NODE_ENV !== 'production') {
+      console.warn(`[i18n] Missing translation key: "${key}"`);
+    }
+
+    return '';
   };
 
   return (
